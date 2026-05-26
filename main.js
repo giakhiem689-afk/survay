@@ -839,6 +839,7 @@ function getFilteredResponses(sourceData = latestDashboardData) {
 adminLoginBtn?.addEventListener('click', async () => {
   if (adminPassword?.value === ADMIN_PASSWORD) {
     adminLogin?.classList.add('hidden');
+    document.getElementById('adminAuthOverlay')?.classList.add('hidden');
     adminDashboard?.classList.remove('hidden');
     if (adminLoginStatus) adminLoginStatus.textContent = '';
     showToast('Chào mừng Quản trị viên!', 'success');
