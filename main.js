@@ -533,50 +533,120 @@ function generateAcademicReport(discipline, method, motivation, wellbeing, suppo
   updateBar('barWellbeing', 'valWellbeing', wellbeing);
   updateBar('barSupport', 'valSupport', support);
 
-  // Define dimension advices
-  const dimensions = [
-    { name: 'discipline', score: discipline, title: 'Chuyên cần & Kỷ luật', text: 'Bạn nên thiết lập lại thời khóa biểu cá nhân, ghi chú tất cả deadline vào điện thoại và đặt báo thức sớm hơn 15 phút trước tiết học.' },
-    { name: 'method', score: method, title: 'Phương pháp học tập', text: 'Hãy tập thói quen xem bài trước khi lên lớp 10 phút, ghi chép lại các từ khóa cốt lõi và dành 20 phút ôn lại kiến thức ngay trong ngày.' },
-    { name: 'motivation', score: motivation, title: 'Động lực & Mục tiêu', text: 'Hãy thảo luận định hướng học tập cùng cố vấn, thiết lập một mục tiêu nhỏ khả thi trong 2 tuần tới để lấy lại tự tin học tập.' },
-    { name: 'wellbeing', score: wellbeing, title: 'Cân bằng cuộc sống & Tinh thần', text: 'Đảm bảo giấc ngủ sâu từ 7-8 tiếng và rà soát lại quỹ thời gian đi làm thêm hoặc giải trí ngoài giờ để tránh suy nhược, kiệt sức.' },
-    { name: 'support', score: support, title: 'Chủ động tìm hỗ trợ', text: 'Nhận hỗ trợ là thế mạnh của người tự học. Hãy tích cực trao đổi bài với bạn học và đặt câu hỏi cho giảng viên đứng lớp khi gặp bài khó.' }
-  ];
+  // Aspect comments mapping based on 1-5 rating (20-100 points)
+  const aspectComments = {
+    discipline: {
+      name: 'Chuyên cần & Kỷ luật',
+      comments: {
+        1: "Bạn đang gặp nhiều khó khăn trong việc duy trì sự chuyên cần và tính kỷ luật trong học tập. Việc đi học chưa đều, dễ trì hoãn hoặc chưa hoàn thành tốt các nhiệm vụ học tập có thể ảnh hưởng lớn đến kết quả học tập trong thời gian tới.",
+        2: "Bạn đã có ý thức tham gia học tập nhưng vẫn chưa duy trì được sự ổn định. Đôi lúc còn thiếu tập trung, chưa quản lý tốt thời gian hoặc chưa hình thành thói quen học tập đều đặn.",
+        3: "Bạn có mức độ chuyên cần và kỷ luật tương đối ổn định. Bạn đã biết sắp xếp việc học và hoàn thành phần lớn nhiệm vụ học tập, tuy nhiên vẫn cần cải thiện thêm tính chủ động và sự đều đặn.",
+        4: "Bạn thể hiện tinh thần học tập nghiêm túc, có trách nhiệm và duy trì được sự ổn định trong học tập. Bạn đã có thói quen học tập tích cực và biết quản lý thời gian khá hiệu quả.",
+        5: "Bạn có tinh thần học tập rất tốt, duy trì được tính kỷ luật cao và sự chuyên cần đáng ghi nhận. Đây là nền tảng quan trọng giúp bạn phát triển bền vững và đạt được nhiều mục tiêu học tập trong tương lai."
+      }
+    },
+    method: {
+      name: 'Phương pháp học tập',
+      comments: {
+        1: "Bạn có thể đang học theo cảm tính hoặc chưa tìm được phương pháp học phù hợp với bản thân. Điều này khiến việc tiếp thu kiến thức chưa hiệu quả và dễ tạo cảm giác áp lực khi học tập.",
+        2: "Bạn đã bắt đầu hình thành cách học riêng nhưng hiệu quả chưa thực sự ổn định. Việc ghi nhớ, ôn tập hoặc áp dụng kiến thức đôi lúc còn gặp khó khăn.",
+        3: "Bạn đã có phương pháp học tập tương đối phù hợp và bước đầu biết cách tổ chức việc học. Tuy nhiên, vẫn còn cơ hội để cải thiện khả năng tự học và tối ưu hiệu quả học tập.",
+        4: "Bạn có phương pháp học tập khá hiệu quả, biết cách ghi chú, ôn tập và chủ động tiếp cận kiến thức. Điều này giúp bạn duy trì kết quả học tập tương đối tốt.",
+        5: "Bạn sở hữu phương pháp học tập hiệu quả và phù hợp với bản thân. Bạn biết cách tự học, tư duy hệ thống và chủ động cải thiện năng lực học tập của mình một cách tích cực."
+      }
+    },
+    motivation: {
+      name: 'Động lực & Mục tiêu',
+      comments: {
+        1: "Bạn có thể đang cảm thấy thiếu động lực hoặc chưa xác định rõ mục tiêu học tập và định hướng cá nhân. Điều này dễ khiến bạn mất năng lượng và khó duy trì sự cố gắng lâu dài.",
+        2: "Bạn đã có một số mong muốn và định hướng cho bản thân nhưng chưa thực sự rõ ràng hoặc ổn định. Đôi lúc bạn vẫn cảm thấy mơ hồ hoặc thiếu động lực để tiếp tục cố gắng.",
+        3: "Bạn đã có động lực học tập ở mức tương đối và bắt đầu xác định được một số mục tiêu cho bản thân. Tuy nhiên, bạn vẫn cần củng cố thêm sự kiên trì và định hướng dài hạn.",
+        4: "Bạn có mục tiêu học tập khá rõ ràng và duy trì được tinh thần cố gắng tích cực. Bạn hiểu được ý nghĩa của việc học đối với tương lai của mình.",
+        5: "Bạn có động lực học tập mạnh mẽ và định hướng phát triển rõ ràng. Bạn thể hiện tinh thần cầu tiến, biết đặt mục tiêu và nỗ lực nghiêm túc để đạt được mục tiêu đó."
+      }
+    },
+    wellbeing: {
+      name: 'Cân bằng cuộc sống & Tinh thần',
+      comments: {
+        1: "Bạn có thể đang gặp nhiều áp lực trong cuộc sống hoặc tinh thần chưa thực sự ổn định. Điều này có thể ảnh hưởng đến khả năng tập trung, học tập và sinh hoạt hằng ngày.",
+        2: "Bạn đã cố gắng cân bằng giữa học tập và cuộc sống nhưng đôi lúc vẫn cảm thấy căng thẳng, mệt mỏi hoặc thiếu thời gian nghỉ ngơi hợp lý.",
+        3: "Bạn duy trì được trạng thái tinh thần ở mức tương đối ổn định và có khả năng cân bằng giữa học tập và cuộc sống trong phần lớn thời gian.",
+        4: "Bạn có khả năng quản lý cảm xúc và cân bằng cuộc sống khá tốt. Bạn biết dành thời gian cho học tập, nghỉ ngơi và chăm sóc bản thân một cách hợp lý.",
+        5: "Bạn duy trì được trạng thái tinh thần tích cực và sự cân bằng tốt trong cuộc sống. Đây là yếu tố rất quan trọng giúp bạn học tập hiệu quả và phát triển lâu dài."
+      }
+    },
+    support: {
+      name: 'Chủ động tìm hỗ trợ',
+      comments: {
+        1: "Bạn có xu hướng tự chịu đựng khó khăn một mình hoặc chưa sẵn sàng tìm kiếm sự hỗ trợ khi cần thiết. Điều này có thể khiến áp lực học tập kéo dài và khó được tháo gỡ kịp thời.",
+        2: "Bạn đôi lúc đã tìm kiếm sự hỗ trợ nhưng còn khá ngại chia sẻ hoặc chưa biết cách kết nối với các nguồn hỗ trợ phù hợp.",
+        3: "Bạn đã có ý thức tìm kiếm hỗ trợ khi cần thiết và bước đầu biết chủ động trao đổi với giảng viên, bạn bè hoặc nhà trường để giải quyết khó khăn.",
+        4: "Bạn khá chủ động trong việc tìm kiếm sự hỗ trợ và biết tận dụng các nguồn lực xung quanh để cải thiện việc học tập cũng như tinh thần của bản thân.",
+        5: "Bạn có tinh thần chủ động rất tốt, sẵn sàng kết nối và tìm kiếm hỗ trợ phù hợp khi gặp khó khăn. Đây là một kỹ năng quan trọng giúp bạn phát triển hiệu quả và bền vững."
+      }
+    }
+  };
 
-  // Identify all warnings (score <= 2: Rất yếu / Yếu)
-  const warnings = dimensions.filter(d => d.score <= 2);
   const adviceBox = document.getElementById('reportAdviceBox');
   const adviceList = document.getElementById('reportAdviceList');
 
   if (adviceBox && adviceList) {
-    if (warnings.length > 0) {
-      // Dynamic rendering of multiple warning areas
-      adviceBox.style.borderLeftColor = 'var(--uef-red)';
-      adviceBox.style.background = 'var(--uef-red-light)';
+    const titleElem = adviceBox.querySelector('h5');
+    if (titleElem) titleElem.textContent = 'Nhận xét chi tiết theo từng khía cạnh học vụ';
+
+    adviceBox.style.borderLeftColor = 'var(--uef-blue)';
+    adviceBox.style.background = 'rgba(255, 255, 255, 0.85)';
+    
+    const aspectKeys = [
+      { key: 'discipline', rating: discipline },
+      { key: 'method', rating: method },
+      { key: 'motivation', rating: motivation },
+      { key: 'wellbeing', rating: wellbeing },
+      { key: 'support', rating: support }
+    ];
+
+    adviceList.innerHTML = aspectKeys.map(item => {
+      const data = aspectComments[item.key];
+      const name = data.name;
+      const score = (item.rating || 3) * 20;
+      const text = data.comments[item.rating || 3] || '';
       
-      const titleElem = adviceBox.querySelector('h5');
-      if (titleElem) titleElem.textContent = `Lưu ý học vụ ưu tiên cần cải thiện (${warnings.length})`;
+      let colorBorder = '';
+      let colorBg = '';
+      let textColor = '';
       
-      adviceList.innerHTML = warnings.map(w => `
-        <div style="margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(225, 29, 72, 0.08);">
-          <strong style="color: var(--uef-red-dark); font-size: 13.5px;">• Khía cạnh: ${escapeHtml(w.title)} (Thang điểm: ${w.score}/5)</strong>
-          <p style="margin: 4px 0 0; font-size: 13px; color: var(--text-muted); line-height: 1.5;">${escapeHtml(w.text)}</p>
+      if (score === 20) {
+        colorBorder = '#e11d48'; 
+        colorBg = '#fff1f2';
+        textColor = '#9f1239';
+      } else if (score === 40) {
+        colorBorder = '#f59e0b'; 
+        colorBg = '#fffbeb';
+        textColor = '#92400e';
+      } else if (score === 60) {
+        colorBorder = '#3b82f6'; 
+        colorBg = '#eff6ff';
+        textColor = '#1e40af';
+      } else if (score === 80) {
+        colorBorder = '#10b981'; 
+        colorBg = '#ecfdf5';
+        textColor = '#065f46';
+      } else { // 100
+        colorBorder = '#059669'; 
+        colorBg = '#f0fdf4';
+        textColor = '#065f46';
+      }
+
+      return `
+        <div style="margin-bottom: 16px; padding: 16px; border-radius: 12px; border-left: 5px solid ${colorBorder}; background: ${colorBg}; border-top: 1px solid rgba(0,0,0,0.02); border-right: 1px solid rgba(0,0,0,0.02); border-bottom: 1px solid rgba(0,0,0,0.02); box-shadow: 0 4px 10px rgba(0,0,0,0.01); text-align: left;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 8px;">
+            <strong style="color: ${textColor}; font-size: 14px;">${escapeHtml(name)}</strong>
+            <span style="font-size: 11px; font-weight: 800; color: white; background: ${colorBorder}; padding: 2px 8px; border-radius: 100px;">${score}/100 điểm</span>
+          </div>
+          <p style="margin: 0; font-size: 13px; color: var(--text-muted); line-height: 1.55; font-weight: 500;">${escapeHtml(text)}</p>
         </div>
-      `).join('');
-    } else {
-      // Green style congratulating the student (No warnings at all)
-      adviceBox.style.borderLeftColor = 'var(--success)';
-      adviceBox.style.background = 'var(--success-light)';
-      
-      const titleElem = adviceBox.querySelector('h5');
-      if (titleElem) titleElem.textContent = 'Chúc mừng! Sức khỏe học tập đang ở trạng thái tốt';
-      
-      adviceList.innerHTML = `
-        <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6;">
-          Tất cả các khía cạnh học vụ và đời sống của bạn đều đạt từ mức Ổn định trở lên. Không phát hiện yếu tố nào rơi vào diện cảnh báo học tập. 
-          Hãy tiếp tục duy trì phương pháp học và thói quen tích cực hiện tại nhé!
-        </p>
       `;
-    }
+    }).join('');
   }
 }
 
