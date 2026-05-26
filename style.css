@@ -1189,6 +1189,27 @@ body {
   margin-bottom: 32px;
 }
 
+.announcement-toolbar input[type="text"],
+.announcement-toolbar select {
+  padding: 12px 18px;
+  font-size: 14.5px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--bg-border);
+  background: white;
+  color: var(--text-main);
+  outline: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.announcement-toolbar input[type="text"]:focus,
+.announcement-toolbar select:focus {
+  border-color: var(--uef-red);
+  box-shadow: 0 0 0 4px rgba(255, 116, 140, 0.15);
+  background: white;
+}
+
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1205,10 +1226,28 @@ body {
 }
 
 /* ADMIN PAGE SECTION */
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.35); /* Tối mờ vừa phải */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 .admin-login {
   max-width: 480px;
-  margin: 80px auto;
+  margin: 0; /* Tinh chỉnh không margin vì modal đã căn giữa */
   padding: 40px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .admin-login-header {
