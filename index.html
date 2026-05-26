@@ -826,24 +826,27 @@
     <!-- ===================== HỆ THỐNG QUẢN TRỊ ẨN ===================== -->
     <section id="admin" class="page">
       <div class="container section">
-        <!-- Khung đăng nhập Quản trị -->
-        <div id="adminLogin" class="glass-panel admin-login">
-          <div class="admin-login-header">
-            <div class="eyebrow" style="margin-bottom: 8px;">Security Panel</div>
-            <h3>Hệ thống Quản trị UEF</h3>
-            <p>Vui lòng đăng nhập để truy cập dữ liệu nguyện vọng sinh viên.</p>
-          </div>
+        <!-- Lớp phủ Modal Đăng nhập Quản trị -->
+        <div id="adminAuthOverlay" class="admin-modal-overlay">
+          <!-- Khung đăng nhập Quản trị -->
+          <div id="adminLogin" class="glass-panel admin-login" style="margin: 0;">
+            <div class="admin-login-header">
+              <div class="eyebrow" style="margin-bottom: 8px;">Security Panel</div>
+              <h3>Hệ thống Quản trị UEF</h3>
+              <p>Vui lòng đăng nhập để truy cập dữ liệu nguyện vọng sinh viên.</p>
+            </div>
 
-          <div class="form-group" style="margin-bottom: 20px;">
-            <label for="adminPassword">Mật khẩu xác thực</label>
-            <input id="adminPassword" type="password" placeholder="Nhập mật khẩu quản trị viên" />
-          </div>
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="adminPassword">Mật khẩu xác thực</label>
+              <input id="adminPassword" type="password" placeholder="Nhập mật khẩu quản trị viên" />
+            </div>
 
-          <div class="survey-actions" style="margin-top: 24px;">
-            <button type="button" class="primary-btn" id="adminLoginBtn" style="width: 100%;">Xác nhận Đăng nhập</button>
-          </div>
+            <div class="survey-actions" style="margin-top: 24px;">
+              <button type="button" class="primary-btn" id="adminLoginBtn" style="width: 100%;">Xác nhận Đăng nhập</button>
+            </div>
 
-          <p id="adminLoginStatus" class="form-status" style="color: var(--uef-red);"></p>
+            <p id="adminLoginStatus" class="form-status" style="color: var(--uef-red);"></p>
+          </div>
         </div>
 
         <!-- Bảng Dashboard sau khi đăng nhập -->
