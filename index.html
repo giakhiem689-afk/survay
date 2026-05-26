@@ -3,253 +3,988 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trung tâm Hỗ trợ học vụ</title>
+
+  <title>Trung tâm Hỗ trợ học vụ - UEF</title>
+  
+  <meta name="description" content="Kênh tiếp nhận nguyện vọng và hỗ trợ học tập dành cho sinh viên Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh (UEF)" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ===================== HEADER ===================== -->
   <header class="site-header">
-    <div class="container nav-wrapper">
-      <div class="brand">
-        <div class="brand-icon">UEF</div>
-        <div>
-          <p class="brand-small">TRUNG TÂM HỖ TRỢ HỌC VỤ</p>
+    <div class="nav-wrapper">
+      <div class="brand" onclick="showPage('home')">
+        <div class="brand-logo-container">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Trung tâm Hỗ trợ học vụ</span>
+          <span class="brand-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM</span>
         </div>
       </div>
 
       <nav class="nav-menu">
         <button class="nav-link active" data-page="home">Trang chủ</button>
-        <button class="nav-link" data-page="announcements">Thông báo</button>
+        <!-- Tạm ẩn trang Nguồn lực theo yêu cầu -->
+        <!-- <button class="nav-link" data-page="resources">Nguồn lực</button> -->
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- ===================== TRANG CHỦ ===================== -->
     <section id="home" class="page active">
-      <section class="hero scientific-hero">
+      <!-- HERO -->
+      <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <p class="eyebrow">Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh</p>
-            <h2 class="hero-title">
+            <div class="eyebrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a10 10 0 0 0-10 10c0 5.25 10 10 10 10s10-4.75 10-10A10 10 0 0 0 12 2z"></path>
+              </svg>
+              UEF Academic Support Center
+            </div>
+            <h1 class="hero-title">
               Trung tâm <span>Hỗ trợ học vụ</span>
-            </h2>
+            </h1>
             <p class="hero-desc">
-              Người bạn đồng hành cùng sinh viên trong hành trình học tập và trưởng thành tại UEF.
+              Người bạn đồng hành cùng sinh viên trong hành trình học tập, duy trì ổn định và phát huy tối đa tiềm năng tại UEF.
             </p>
 
             <div class="hero-actions">
-              <button class="primary-btn" data-page="announcements">Xem thông báo</button>
-              <a class="secondary-btn link-btn" href="#support-flow">Quy trình hỗ trợ</a>
+              <a class="primary-btn link-btn" href="#survey-section">
+                Bắt đầu khảo sát
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 18px; height: 18px;">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <!-- Tạm ẩn nút xem nguồn lực theo yêu cầu -->
+              <!-- <button class="secondary-btn" data-page="resources">Xem nguồn lực</button> -->
             </div>
           </div>
 
           <div class="hero-dashboard" aria-label="Bảng thông tin hỗ trợ học vụ">
-            <div class="dashboard-card dashboard-main">
-              <div>
-                <p class="dashboard-label">Academic Support Services</p>
-                <h3>Chăm sóc - Tư vấn - Hỗ trợ<br/>Đồng hành cùng bạn!</h3>
-                <p class="eyebrow">Giáo dục toàn diện - Học tập suốt đời</p>
+            <div class="glass-panel dashboard-card-wrap">
+              <span class="brand-title" style="color: var(--uef-blue-dark); font-size: 11px;">Giáo dục toàn diện - Học tập suốt đời</span>
+              <h3>Khảo sát nguyện vọng Hỗ trợ</h3>
+              
+              <div class="dashboard-features">
+                <p class="dashboard-desc">
+                  Khảo sát được thực hiện nhằm lắng nghe nhu cầu, nguyện vọng và những khó khăn của Bạn. Thông qua những chia sẻ của Bạn, Trung tâm Hỗ trợ học vụ mong muốn có thể đồng hành và hỗ trợ Bạn cách tốt nhất.
+                  <br/>
+                  <strong style="color: var(--uef-red-dark); font-weight: 700; margin-top: 6px; display: inline-block;">
+                    Mỗi ý kiến của Bạn đều vô cùng quý giá!
+                  </strong>
+                </p>
+              </div>
+
+              <div class="dashboard-note">
+                <div class="dashboard-note-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <p>Đồng hành - Phục vụ - Thân thiện<br />Lắng nghe - Cải tiến - Hoàn thiện</p>
+              </div>
             </div>
-            </div>
-            <div class="dashboard-note">
-              <span>🎓</span>
-              <p>Đồng hành - Phục vụ - Thân thiện<br />Lắng nghe - Cải tiến - Hoàn thiện</p>
-            </div>
-          
           </div>
         </div>
       </section>
 
-      <section class="container section mission-section">
+      <!-- GIỚI THIỆU NHIỆM VỤ -->
+      <section class="container section">
         <div class="section-heading">
-          <h2>Trung tâm Hỗ trợ học vụ sẽ hỗ trợ bạn!</h2>
+          <div class="eyebrow" style="margin-bottom: 8px;">Nhiệm vụ trọng tâm</div>
+          <h2>Trung tâm Hỗ trợ học vụ giúp gì cho bạn?</h2>
+          <p class="section-desc">Chúng tôi thực hiện nhiều chương trình hỗ trợ thiết thực để bạn an tâm học tập hiệu quả tại trường.</p>
         </div>
 
         <div class="mission-grid">
-          <article class="mission-card">
-            <span class="mission-number">01</span>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 5H3v14h18V5zm-2 12H5V7h14v10zM7 9h10v2H7V9zm0 4h7v2H7v-2z"></path>
+              </svg>
+            </div>
             <h3>Tư vấn học vụ</h3>
-            <p>Giải đáp quy định, quy chế, thông báo, thời khóa biểu, kế hoạch học tập và kết quả học tập.</p>
+            <p>Giải đáp quy định, quy chế, thông báo, thời khóa biểu, kế hoạch học tập và kết quả học tập của sinh viên.</p>
           </article>
 
-          <article class="mission-card">
-            <span class="mission-number">02</span>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path>
+              </svg>
+            </div>
             <h3>Xử lý thủ tục</h3>
-            <p>Hỗ trợ bảo lưu, nhập học lại, chuyển trường, chuyển ngành, đăng ký học phần và các thủ tục liên quan.</p>
+            <p>Hỗ trợ thủ tục bảo lưu, nhập học lại, chuyển trường, chuyển ngành, đăng ký học phần và các giấy tờ liên quan.</p>
           </article>
 
-          <article class="mission-card">
-            <span class="mission-number">03</span>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+              </svg>
+            </div>
             <h3>Chăm sóc học tập</h3>
-            <p>Theo dõi, tư vấn và đề xuất phương án hỗ trợ sinh viên có kết quả học tập chưa tốt.</p>
+            <p>Theo sát tiến độ, tư vấn cá nhân hóa và đề xuất các giải pháp hỗ trợ sinh viên khi gặp kết quả chưa mong muốn.</p>
           </article>
 
-          <article class="mission-card">
-            <span class="mission-number">04</span>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"></path>
+              </svg>
+            </div>
             <h3>Lộ trình học tập</h3>
-            <p>Phối hợp với khoa để hỗ trợ sinh viên, phụ huynh về chuyên ngành, chương trình và kế hoạch học tập.</p>
+            <p>Phối hợp cùng các Khoa chuyên ngành định hướng lộ trình học, kế hoạch đăng ký học phần tối ưu cho sinh viên.</p>
           </article>
 
-          <article class="mission-card wide-card">
-            <span class="mission-number">05</span>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"></path>
+              </svg>
+            </div>
             <h3>Truyền thông học vụ</h3>
-            <p>Cung cấp thông tin về kế hoạch giảng dạy, các lưu ý học vụ, kết quả học tập và mốc thời gian quan trọng.</p>
+            <p>Cập nhật liên tục kế hoạch giảng dạy, lưu ý đăng ký học phần, kết quả học tập và các mốc thời gian quan trọng trên các cổng thông tin chính thức.</p>
           </article>
 
-           <article class="mission-card wide-card">
-            <span class="mission-number">06</span>
-            <h3>Và rất nhiều hỗ trợ khác!</h3>
-            <p>Trong bất kỳ trường hợp, vấn đề, thắc mắc nào cần hỗ trợ, Bạn có thể liên hệ ngay Trung tâm Hỗ trợ học vụ tại Tầng 2-Trụ sở 141 Điện Biên Phủ hoặc các kênh hỗ trợ trực tuyến bạn nhé!</p>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="container section">
-        <div class="section-heading">
-          <h2>KHẢO SÁT NGUYỆN VỌNG HỖ TRỢ HỌC TẬP</h2>
-        </div>
-
-        <div class="announcement-list">
-          <article class="announcement-card">
-            <div class="announcement-date">
-              <strong>01</strong>
+          <article class="glass-panel mission-card">
+            <div class="mission-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"></path>
+              </svg>
             </div>
-            <div class="announcement-content">
-              <span class="tag">Khảo sát nguyện vọng</span>
-              <h3>Hỗ trợ Sinh viên gặp phải các vấn đề khó khăn ảnh hưởng đến học tập</h3>
-              <p>Dòng này sẽ viết mô tả khảo sát, nhưng chưa biết nên viết gì, sẽ bổ sung sau</p>
-              <button class="read-more-btn">Xem chi tiết</button>
-            </div>
-          </article>
-
-          <article class="announcement-card">
-            <div class="announcement-date">
-             <strong>02</strong>
-            </div>
-            <div class="announcement-content">
-              <span class="tag">Khảo sát nguyện vọng</span>
-              <h3>Hỗ trợ sinh viên Bứt phá học tập, đạt học lực Khá / Giỏi</h3>
-              <p>Dòng này sẽ viết mô tả khảo sát, nhưng chưa biết nên viết gì, sẽ bổ sung sau</p>
-              <button class="read-more-btn">Xem chi tiết</button>
-            </div>
-          </article>
-
-          <article class="announcement-card">
-            <div class="announcement-date">
-              <strong>03</strong>
-            </div>
-            <div class="announcement-content">
-              <span class="tag">Khảo sát nguyện vọng</span>
-              <h3>Hỗ trợ sinh viên phát triển mở rộng cơ hội học tập, định hướng nghề nghiệp</h3>
-              <p>Dòng này sẽ viết mô tả khảo sát, nhưng chưa biết nên viết gì, sẽ bổ sung sau</p>
-              <button class="read-more-btn">Xem chi tiết</button>
-            </div>
+            <h3>Liên hệ chúng tôi</h3>
+            <p>Gặp khó khăn? Đừng ngại liên hệ trực tiếp tại Tầng 2 - Trụ sở 141 Điện Biên Phủ hoặc qua các cổng trực tuyến. Chúng tôi luôn sẵn sàng lắng nghe bạn!</p>
           </article>
         </div>
       </section>
 
-
-      <section class="container section">
+      <!-- ===================== KHẢO SÁT CHÍNH ===================== -->
+      <section class="container section survey-section" id="survey-section">
         <div class="section-heading">
-          <h2>Nhóm Công tác chính tại Trung tâm Hỗ trợ học vụ</h2>
+          <div class="eyebrow" style="margin-bottom: 8px;">Khảo sát nguyện vọng</div>
+          <h2>Bắt đầu chia sẻ nguyện vọng</h2>
+          <p class="section-desc">Hãy hoàn thành khảo sát ngắn để giúp Trung tâm hiểu đúng tình hình học tập và đưa ra giải pháp hỗ trợ phù hợp nhất.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="service-icon pink">📄</div>
-            <h3>Thủ tục học vụ</h3>
-            <p>Hướng dẫn xác nhận sinh viên, bảo lưu, chuyển ngành và các thủ tục liên quan.</p>
+        <form id="surveyForm" class="survey-wrapper">
+          <!-- Tiến trình khảo sát -->
+          <div class="survey-progress-wrap">
+            <div class="survey-progress">
+              <div class="survey-progress-bar" id="surveyProgressBar"></div>
+            </div>
+            <div class="survey-step-list">
+              <div class="survey-step-indicator active" data-step-indicator="1">
+                <div class="step-num">1</div>
+                <span>Xác thực</span>
+              </div>
+              <div class="survey-step-indicator" data-step-indicator="2">
+                <div class="step-num">2</div>
+                <span>Thông tin</span>
+              </div>
+              <div class="survey-step-indicator" data-step-indicator="3">
+                <div class="step-num">3</div>
+                <span>Tự đánh giá</span>
+              </div>
+              <div class="survey-step-indicator" data-step-indicator="4">
+                <div class="step-num">4</div>
+                <span>Nhu cầu</span>
+              </div>
+              <div class="survey-step-indicator" data-step-indicator="5">
+                <div class="step-num">5</div>
+                <span>Báo cáo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BƯỚC 1: XÁC THỰC EMAIL -->
+          <div class="survey-step active" data-step="1">
+            <h3>Xác nhận Email sinh viên</h3>
+            <p class="step-desc">Mã OTP sẽ được gửi về email sinh viên do nhà trường cấp để xác minh tài khoản của bạn.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="studentId">Mã số sinh viên (MSSV)</label>
+                <input id="studentId" name="studentId" type="text" placeholder="Nhập mã số sinh viên" required />
+              </div>
+
+              <div class="form-group">
+                <label for="studentEmail">Email sinh viên UEF</label>
+                <input id="studentEmail" name="studentEmail" type="email" placeholder="Nhập email @uef.edu.vn" required />
+              </div>
+            </div>
+
+            <div class="survey-actions">
+              <button type="button" class="primary-btn" id="sendOtpBtn">Gửi mã OTP</button>
+            </div>
+
+            <div id="otpBox" class="otp-box hidden">
+              <div class="form-group">
+                <label for="otpCode">Mã OTP xác thực</label>
+                <input id="otpCode" name="otpCode" type="text" inputmode="numeric" placeholder="Nhập mã OTP gồm 6 chữ số" />
+              </div>
+
+              <div class="survey-actions" style="margin-top: 14px;">
+                <button type="button" class="primary-btn" id="verifyOtpBtn">Xác minh & Tiếp tục</button>
+              </div>
+            </div>
+
+            <p id="otpStatus" class="form-status"></p>
+          </div>
+
+          <!-- BƯỚC 2: THÔNG TIN CHI TIẾT -->
+          <div class="survey-step" data-step="2">
+            <h3>Thông tin cá nhân</h3>
+            <p class="step-desc">Cung cấp phương thức liên lạc để Trung tâm có thể liên hệ hỗ trợ bạn.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Họ và tên</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Nhập họ và tên của bạn" />
+              </div>
+
+              <div class="form-group">
+                <label for="phoneNumber">Số điện thoại liên hệ</label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Nhập số điện thoại di động" />
+              </div>
+            </div>
+
+            <div class="survey-actions">
+              <button type="button" class="secondary-btn" data-prev-step="1">Quay lại</button>
+              <button type="button" class="primary-btn" data-next-step="3">Tiếp tục</button>
+            </div>
+          </div>
+
+          <!-- BƯỚC 3: PHIẾU TỰ ĐÁNH GIÁ (TIẾT GIẢM TEXT - DÙNG HOVER ANIMATED SVGS) -->
+          <div class="survey-step" data-step="3">
+            <h3>Tự đánh giá Sức khỏe Học tập</h3>
+            <p class="step-desc">Hãy tự đánh giá khách quan 5 khía cạnh cốt lõi ảnh hưởng trực tiếp đến kết quả học tập của bạn.</p>
+
+            <!-- Dòng chú thích phương án trả lời bằng Icon Legend 3D -->
+            <div class="glass-panel" style="padding: 16px 20px; margin-bottom: 28px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 12px; border-radius: var(--radius-md);">
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; color: #d83a56;">
+                <svg viewBox="0 0 100 100" style="width:24px;height:24px;overflow:visible;"><defs><radialGradient id="lgSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="lgSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="lgTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><circle cx="50" cy="50" r="45" fill="url(#lgSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#lgSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#lgTear)" /></svg>
+                1. Rất yếu
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; color: #f59e0b;">
+                <svg viewBox="0 0 100 100" style="width:24px;height:24px;overflow:visible;"><defs><radialGradient id="lgWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="lgWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#lgWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#lgWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                2. Yếu
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; color: #3b82f6;">
+                <svg viewBox="0 0 100 100" style="width:24px;height:24px;overflow:visible;"><defs><radialGradient id="lgNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="lgNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#lgNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#lgNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                3. Tạm ổn
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; color: #10b981;">
+                <svg viewBox="0 0 100 100" style="width:24px;height:24px;overflow:visible;"><defs><radialGradient id="lgSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="lgSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#lgSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#lgSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                4. Tốt
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; color: #e11d48;">
+                <svg viewBox="0 0 100 100" style="width:24px;height:24px;overflow:visible;"><defs><radialGradient id="lgExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="lgExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="lgTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><circle cx="50" cy="50" r="45" fill="url(#lgExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#lgExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#lgTongue)" /></svg>
+                5. Rất tốt
+              </div>
+            </div>
+
+            <div class="assessment-container">
+              <!-- Khía cạnh 1 -->
+              <div class="assessment-category">
+                <div class="category-header">
+                  <div class="cat-num">1</div>
+                  <h4>Chuyên cần & Kỷ luật (Đi học đầy đủ, đúng tiết, hoàn thành bài tập)</h4>
+                </div>
+                <div class="assessment-options">
+                  <label class="opt-card">
+                    <input type="radio" name="disciplineRating" value="1" required />
+                    <!-- SVG 1: Sad 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="dsSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="dsSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="dsTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#dsSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#dsSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#dsTear)" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="disciplineRating" value="2" />
+                    <!-- SVG 2: Worried 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="dsWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="dsWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#dsWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#dsWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="disciplineRating" value="3" />
+                    <!-- SVG 3: Neutral 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="dsNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="dsNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#dsNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#dsNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="disciplineRating" value="4" />
+                    <!-- SVG 4: Smile 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="dsSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="dsSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#dsSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#dsSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="disciplineRating" value="5" />
+                    <!-- SVG 5: Excited 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="dsExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="dsExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="dsTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#dsExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#dsExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#lgTongue)" /></svg>
+                  </label>
+                </div>
+                <!-- Checkbox cần hỗ trợ ngay -->
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                  <label class="need-support-label">
+                    <input type="checkbox" name="needSupportDiscipline" value="yes" />
+                    <span>Em cần hỗ trợ về vấn đề Chuyên cần & Kỷ luật ngay</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Khía cạnh 2 -->
+              <div class="assessment-category">
+                <div class="category-header">
+                  <div class="cat-num">2</div>
+                  <h4>Phương pháp học tập (Xem bài trước, ghi chép và chủ động ôn tập)</h4>
+                </div>
+                <div class="assessment-options">
+                  <label class="opt-card">
+                    <input type="radio" name="methodRating" value="1" required />
+                    <!-- SVG 1: Sad 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mtSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="mtSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="mtTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mtSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mtSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#mtTear)" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="methodRating" value="2" />
+                    <!-- SVG 2: Worried 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mtWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="mtWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mtWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mtWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="methodRating" value="3" />
+                    <!-- SVG 3: Neutral 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mtNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="mtNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mtNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mtNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="methodRating" value="4" />
+                    <!-- SVG 4: Smile 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mtSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="mtSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mtSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mtSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="methodRating" value="5" />
+                    <!-- SVG 5: Excited 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mtExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="mtExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="mtTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mtExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mtExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#mtTongue)" /></svg>
+                  </label>
+                </div>
+                <!-- Checkbox cần hỗ trợ ngay -->
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                  <label class="need-support-label">
+                    <input type="checkbox" name="needSupportMethod" value="yes" />
+                    <span>Em cần hỗ trợ về vấn đề Phương pháp học tập ngay</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Khía cạnh 3 -->
+              <div class="assessment-category">
+                <div class="category-header">
+                  <div class="cat-num">3</div>
+                  <h4>Động lực & Mục tiêu (Tin vào bản thân, có định hướng học tập rõ ràng)</h4>
+                </div>
+                <div class="assessment-options">
+                  <label class="opt-card">
+                    <input type="radio" name="motivationRating" value="1" required />
+                    <!-- SVG 1: Sad 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mvSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="mvSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="mvTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mvSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mvSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#mvTear)" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="motivationRating" value="2" />
+                    <!-- SVG 2: Worried 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mvWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="mvWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mvWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mvWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="motivationRating" value="3" />
+                    <!-- SVG 3: Neutral 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mvNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="mvNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mvNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mvNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="motivationRating" value="4" />
+                    <!-- SVG 4: Smile 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mvSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="mvSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mvSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mvSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="motivationRating" value="5" />
+                    <!-- SVG 5: Excited 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="mvExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="mvExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="mvTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#mvExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#mvExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#mtTongue)" /></svg>
+                  </label>
+                </div>
+                <!-- Checkbox cần hỗ trợ ngay -->
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                  <label class="need-support-label">
+                    <input type="checkbox" name="needSupportMotivation" value="yes" />
+                    <span>Em cần hỗ trợ về vấn đề Động lực học tập ngay</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Khía cạnh 4 -->
+              <div class="assessment-category">
+                <div class="category-header">
+                  <div class="cat-num">4</div>
+                  <h4>Cân bằng cuộc sống & Tinh thần (Giấc ngủ, sức khỏe, kiểm soát stress)</h4>
+                </div>
+                <div class="assessment-options">
+                  <label class="opt-card">
+                    <input type="radio" name="wellbeingRating" value="1" required />
+                    <!-- SVG 1: Sad 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="wbSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="wbSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="wbTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#wbSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#wbSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#wbTear)" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="wellbeingRating" value="2" />
+                    <!-- SVG 2: Worried 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="wbWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="wbWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#wbWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#wbWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="wellbeingRating" value="3" />
+                    <!-- SVG 3: Neutral 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="wbNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="wbNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#wbNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#wbNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="wellbeingRating" value="4" />
+                    <!-- SVG 4: Smile 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="wbSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="wbSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#wbSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#wbSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="wellbeingRating" value="5" />
+                    <!-- SVG 5: Excited 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="wbExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="wbExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="wbTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#wbExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#wbExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#mtTongue)" /></svg>
+                  </label>
+                </div>
+                <!-- Checkbox cần hỗ trợ ngay -->
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                  <label class="need-support-label">
+                    <input type="checkbox" name="needSupportWellbeing" value="yes" />
+                    <span>Em cần hỗ trợ về Cân bằng & Tinh thần ngay</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Khía cạnh 5 -->
+              <div class="assessment-category">
+                <div class="category-header">
+                  <div class="cat-num">5</div>
+                  <h4>Chủ động tìm hỗ trợ (Hỏi giảng viên, kết nối bạn bè, liên hệ các văn phòng hỗ trợ)</h4>
+                </div>
+                <div class="assessment-options">
+                  <label class="opt-card">
+                    <input type="radio" name="supportRating" value="1" required />
+                    <!-- SVG 1: Sad 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="spSad" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ff7b90" /><stop offset="50%" stop-color="#e11d48" /><stop offset="100%" stop-color="#880e2f" /></radialGradient><linearGradient id="spSadH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="spTear" cx="35%" cy="30%" r="55%"><stop offset="0%" stop-color="#90e0ef" /><stop offset="60%" stop-color="#00b4d8" /><stop offset="100%" stop-color="#0077b6" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#spSad)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#spSadH)" transform="rotate(-20 40 22)" /><ellipse cx="34" cy="46" rx="5" ry="6" fill="#4a0010" /><ellipse cx="66" cy="46" rx="5" ry="6" fill="#4a0010" /><path d="M26 38 Q34 32 38 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M74 38 Q66 32 62 39" fill="none" stroke="#4a0010" stroke-width="3" stroke-linecap="round" /><path d="M35 72 Q50 58 65 72" fill="none" stroke="#4a0010" stroke-width="5.5" stroke-linecap="round" /><path d="M31 52 C31 52 26 62 26 67 C26 70 28 72 31 72 C34 72 36 70 36 67 C36 62 31 52 31 52 Z" fill="url(#spTear)" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="supportRating" value="2" />
+                    <!-- SVG 2: Worried 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="spWorried" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffd166" /><stop offset="50%" stop-color="#f59e0b" /><stop offset="100%" stop-color="#9a5a00" /></radialGradient><linearGradient id="spWorriedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#spWorried)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#spWorriedH)" transform="rotate(-20 40 22)" /><ellipse cx="35" cy="46" rx="5" ry="6" fill="#4a2a00" /><ellipse cx="65" cy="46" rx="5" ry="6" fill="#4a2a00" /><path d="M26 37 Q35 37 39 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M74 37 Q65 37 61 34" fill="none" stroke="#4a2a00" stroke-width="3" stroke-linecap="round" /><path d="M38 68 Q50 58 62 68" fill="none" stroke="#4a2a00" stroke-width="4.5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="supportRating" value="3" />
+                    <!-- SVG 3: Neutral 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="spNeutral" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#90caf9" /><stop offset="50%" stop-color="#3b82f6" /><stop offset="100%" stop-color="#0d47a1" /></radialGradient><linearGradient id="spNeutralH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#spNeutral)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#spNeutralH)" transform="rotate(-20 40 22)" /><circle cx="35" cy="46" r="5" fill="#001d4a" /><circle cx="65" cy="46" r="5" fill="#001d4a" /><line x1="34" y1="65" x2="66" y2="65" stroke="#001d4a" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="supportRating" value="4" />
+                    <!-- SVG 4: Smile 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="spSmile" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#a7f3d0" /><stop offset="50%" stop-color="#10b981" /><stop offset="100%" stop-color="#044e34" /></radialGradient><linearGradient id="spSmileH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#spSmile)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#spSmileH)" transform="rotate(-20 40 22)" /><path d="M28 46 Q35 38 42 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M58 46 Q65 38 72 46" fill="none" stroke="#012b1d" stroke-width="4.5" stroke-linecap="round" /><path d="M34 60 Q50 78 66 60" fill="none" stroke="#012b1d" stroke-width="5" stroke-linecap="round" /></svg>
+                  </label>
+                  <label class="opt-card">
+                    <input type="radio" name="supportRating" value="5" />
+                    <!-- SVG 5: Excited 3D -->
+                    <svg class="emoji-svg" viewBox="0 0 100 100"><defs><radialGradient id="spExcited" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ffb3c1" /><stop offset="50%" stop-color="#ff4d6d" /><stop offset="100%" stop-color="#800f2f" /></radialGradient><linearGradient id="spExcitedH" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="white" stop-opacity="0.65" /><stop offset="100%" stop-color="white" stop-opacity="0" /></linearGradient><radialGradient id="spTongue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff8fa3" /><stop offset="100%" stop-color="#ff4d6d" /></radialGradient></defs><ellipse cx="50" cy="92" rx="35" ry="5" fill="rgba(0,0,0,0.15)" /><circle cx="50" cy="50" r="44" fill="url(#spExcited)" /><ellipse cx="40" cy="22" rx="16" ry="8" fill="url(#spExcitedH)" transform="rotate(-20 40 22)" /><path d="M33 34 L36 41 L43 42 L38 47 L39 54 L33 50 L27 54 L28 47 L23 42 L30 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M67 34 L70 41 L77 42 L72 47 L73 54 L67 50 L61 54 L62 47 L57 42 L64 41 Z" fill="#fff" stroke="#ffb703" stroke-width="1.5" /><path d="M30 58 C30 58 35 78 50 78 C65 78 70 58 70 58 Z" fill="#3a0007" /><path d="M40 70 C40 70 45 78 50 78 C55 78 60 70 60 70 C60 70 50 72 40 70 Z" fill="url(#mtTongue)" /></svg>
+                  </label>
+                </div>
+                <!-- Checkbox cần hỗ trợ ngay -->
+                <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                  <label class="need-support-label">
+                    <input type="checkbox" name="needSupportSupport" value="yes" />
+                    <span>Em cần hỗ trợ về Chủ động tìm hỗ trợ ngay</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="survey-actions">
+              <button type="button" class="secondary-btn" data-prev-step="2">Quay lại</button>
+              <button type="button" class="primary-btn" data-next-step="4">Tiếp tục</button>
+            </div>
+          </div>
+
+          <!-- BƯỚC 4: NHU CẦU HỖ TRỢ CHI TIẾT (ĐÃ LOẠI BỎ HỌC PHẦN NỢ & THÊM CHỌN NGÀY/KHUNG GIỜ VALIDATION) -->
+          <div class="survey-step" data-step="4">
+            <h3>Chi tiết Khó khăn & Nhu cầu</h3>
+            <p class="step-desc">Hãy cho Trung tâm biết thêm về các khó khăn cụ thể và thông tin đặt lịch hẹn liên hệ của bạn.</p>
+
+            <div class="form-group full-width">
+              <label>Khó khăn chính bạn đang gặp phải (Có thể chọn nhiều)</label>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Không theo kịp bài học" />
+                  <span>Không theo kịp bài học</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Chưa biết cách tự học" />
+                  <span>Chưa biết cách tự học</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Mất động lực học tập" />
+                  <span>Mất động lực học tập</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Khó quản lý thời gian" />
+                  <span>Khó quản lý thời gian</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Chưa rõ lộ trình học tập" />
+                  <span>Chưa rõ lộ trình học tập</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="difficulties" value="Lo lắng về điểm số" />
+                  <span>Lo lắng về điểm số</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Nội dung muốn được hỗ trợ nhất (Có thể chọn nhiều)</label>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Tư vấn lộ trình học tập" />
+                  <span>Tư vấn lộ trình</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Hướng dẫn phương pháp học" />
+                  <span>Phương pháp học</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Nhắc tiến độ học tập" />
+                  <span>Tiến độ đào tạo</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Tư vấn đăng ký học phần" />
+                  <span>Đăng ký học phần</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Kết nối Khoa hoặc cố vấn" />
+                  <span>Động lực / Kỷ luật</span>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="supportNeeds" value="Định hướng phát triển thêm" />
+                  <span>Cải thiện điểm số</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Thiết lập lịch hẹn liên hệ -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Trung tâm có thể chủ động liên hệ bạn không?</label>
+                <div class="choice-grid" style="grid-template-columns: 1fr;">
+                  <label class="choice-card" style="min-height: 52px;">
+                    <input type="radio" name="contactNeed" value="Có, em đồng ý" required />
+                    <span>Có, sẵn lòng chia sẻ</span>
+                  </label>
+                  <label class="choice-card" style="min-height: 52px;">
+                    <input type="radio" name="contactNeed" value="Chỉ khi thật sự cần" />
+                    <span>Chỉ khi thật sự cần</span>
+                  </label>
+                  <label class="choice-card" style="min-height: 52px;">
+                    <input type="radio" name="contactNeed" value="Chưa cần liên hệ" />
+                    <span>Chưa cần liên hệ lúc này</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredContactDate">Ngày liên hệ mong muốn (Thứ 2 - Sáng Thứ 7)</label>
+                <input type="date" id="preferredContactDate" name="preferredContactDate" required />
+                
+                <!-- Hộp cảnh báo lịch hẹn nghỉ -->
+                <p id="dateTimeWarning" class="form-status hidden" style="color: var(--uef-red-dark); font-size: 12.5px; font-weight: 700; margin-top: 8px; text-align: left; line-height: 1.4;"></p>
+
+                <label style="margin-top: 16px;">Khung giờ liên hệ trong ngày</label>
+                <div class="choice-grid" style="grid-template-columns: 1fr 1.2fr; gap: 8px;">
+                  <label class="choice-card" style="min-height: 48px; padding: 6px 12px; font-size: 13px;">
+                    <input type="radio" name="preferredContactTime" value="Buổi sáng" required />
+                    <span>Sáng (7h30 - 11h30)</span>
+                  </label>
+                  <label class="choice-card" style="min-height: 48px; padding: 6px 12px; font-size: 13px;">
+                    <input type="radio" name="preferredContactTime" value="Buổi chiều" />
+                    <span>Chiều (13h30 - 16h30)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="note">Điều muốn chia sẻ thêm với Trung tâm <span class="optional-text">(Không bắt buộc)</span></label>
+              <textarea id="note" name="note" rows="3" placeholder="Ví dụ: Em cần tư vấn về thủ tục bảo lưu, hoặc cần kết nối nhóm học tập môn Toán cao cấp..."></textarea>
+            </div>
+
+            <div class="survey-actions">
+              <button type="button" class="secondary-btn" data-prev-step="3">Quay lại</button>
+              <button type="submit" class="primary-btn" id="submitSurveyBtn">
+                Gửi khảo sát ngay
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 18px; height: 18px;">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- BƯỚC 5: KẾT QUẢ VÀ BÁO CÁO CÁ NHÂN HÓA -->
+          <div class="survey-step" data-step="5">
+            <div class="thankyou-card">
+              <div class="eyebrow" style="background: var(--success-light); color: var(--success); border-color: rgba(16, 185, 129, 0.1);">Hoàn thành khảo sát</div>
+              <h3>Khảo sát thành công!</h3>
+              <p class="step-desc" style="margin-bottom: 20px;">Trung tâm đã ghi nhận phản hồi của bạn. Một bản sao chi tiết sẽ được gửi tới email sinh viên.</p>
+
+              <!-- BIỂU ĐỒ BÁO CÁO SỨC KHỎE HỌC TẬP -->
+              <div class="report-grid">
+                <div class="radial-chart-wrap">
+                  <svg class="circle-svg" width="160" height="160" viewBox="0 0 160 160">
+                    <defs>
+                      <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="var(--uef-blue)" />
+                        <stop offset="100%" stop-color="var(--uef-red)" />
+                      </linearGradient>
+                    </defs>
+                    <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
+                    <circle class="circle-fill" id="reportSvgCircle" cx="80" cy="80" r="70"></circle>
+                  </svg>
+                  <div class="chart-text-box">
+                    <span class="chart-score" id="reportScoreText">0</span>
+                    <span class="chart-label">Điểm số</span>
+                  </div>
+                </div>
+
+                <div class="report-details-box">
+                  <div class="report-header-text">
+                    <h4 id="reportTitleText">Kết quả phân tích</h4>
+                    <p id="reportDescText">Đang tải phân tích dữ liệu học vụ của bạn...</p>
+                  </div>
+
+                  <div class="bar-charts">
+                    <h5>Điểm các khía cạnh (thang 100)</h5>
+                    
+                    <div class="bar-row">
+                      <div class="bar-info">
+                        <span class="bar-title">Chuyên cần & Kỷ luật</span>
+                        <span class="bar-value" id="valDiscipline">0/100</span>
+                      </div>
+                      <div class="bar-bg"><div class="bar-fill" id="barDiscipline"></div></div>
+                    </div>
+
+                    <div class="bar-row">
+                      <div class="bar-info">
+                        <span class="bar-title">Phương pháp học tập</span>
+                        <span class="bar-value" id="valMethod">0/100</span>
+                      </div>
+                      <div class="bar-bg"><div class="bar-fill" id="barMethod"></div></div>
+                    </div>
+
+                    <div class="bar-row">
+                      <div class="bar-info">
+                        <span class="bar-title">Động lực & Mục tiêu</span>
+                        <span class="bar-value" id="valMotivation">0/100</span>
+                      </div>
+                      <div class="bar-bg"><div class="bar-fill" id="barMotivation"></div></div>
+                    </div>
+
+                    <div class="bar-row">
+                      <div class="bar-info">
+                        <span class="bar-title">Cân bằng cuộc sống & Tinh thần</span>
+                        <span class="bar-value" id="valWellbeing">0/100</span>
+                      </div>
+                      <div class="bar-bg"><div class="bar-fill" id="barWellbeing"></div></div>
+                    </div>
+
+                    <div class="bar-row">
+                      <div class="bar-info">
+                        <span class="bar-title">Chủ động tìm hỗ trợ</span>
+                        <span class="bar-value" id="valSupport">0/100</span>
+                      </div>
+                      <div class="bar-bg"><div class="bar-fill" id="barSupport"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hộp lời khuyên cá nhân hóa -->
+              <div class="advice-box" id="reportAdviceBox">
+                <h5>Khuyến nghị học vụ ưu tiên</h5>
+                <div class="advice-list" id="reportAdviceList">...</div>
+              </div>
+
+              <div class="survey-actions" style="margin-top: 32px;">
+                <button type="button" class="secondary-btn" id="resetSurveyBtn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                  </svg>
+                  Làm khảo sát mới
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <!-- ===================== NGUỒN LỰC HỖ TRỢ (TẠM ẨN) =====================
+    <section id="resources" class="page">
+      <section class="container section">
+        <div class="section-heading">
+          <div class="eyebrow" style="margin-bottom: 8px;">Thư viện tài nguyên</div>
+          <h2>Nguồn lực hỗ trợ học tập UEF</h2>
+          <p class="section-desc">Tổng hợp các quy định học vụ, biểu mẫu thường dùng và các bí quyết phát triển năng lực bản thân hiệu quả.</p>
+        </div>
+
+        <div class="announcement-toolbar">
+          <input id="resourceSearchInput" type="text" placeholder="Nhập từ khóa tìm kiếm nguồn lực..." />
+          <select id="resourceCategoryFilter">
+            <option value="all">Tất cả danh mục</option>
+            <option value="hoc-vu">Quy định & Thủ tục học vụ</option>
+            <option value="hoc-tap">Phương pháp học tập hiệu quả</option>
+            <option value="online">Học vụ & Công nghệ Online</option>
+            <option value="phat-trien">Phát triển & Định hướng vươn xa</option>
+          </select>
+        </div>
+
+        <div class="resource-grid">
+          <article class="glass-panel service-card resource-card" data-resource-category="hoc-vu">
+            <div class="service-icon-box red">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <h3>Quy định học vụ cần biết</h3>
+            <p>Các thông tin cơ bản về đăng ký học phần, cảnh báo học tập, điều kiện dự thi và các mốc quy chế bắt buộc tại UEF.</p>
           </article>
 
-          <article class="service-card">
-            <div class="service-icon blue">💻</div>
-            <h3>Học vụ online</h3>
-            <p>Hỗ trợ LMS, tài khoản học tập, lịch học, lịch thi và các vấn đề trực tuyến.</p>
+          <article class="glass-panel service-card resource-card" data-resource-category="hoc-vu">
+            <div class="service-icon-box blue">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </div>
+            <h3>Biểu mẫu học vụ online</h3>
+            <p>Hệ thống tổng hợp biểu mẫu đơn xin bảo lưu, nhập học lại, chuyển trường, chuyển ngành và xác nhận thông tin sinh viên.</p>
           </article>
 
-          <article class="service-card">
-            <div class="service-icon yellow">🌱</div>
-            <h3>Chăm sóc học tập</h3>
-            <p>Theo dõi tiến độ học tập, nhắc nhở sinh viên và hỗ trợ các trường hợp cần tư vấn.</p>
+          <article class="glass-panel service-card resource-card" data-resource-category="online">
+            <div class="service-icon-box yellow">
+              <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+            </div>
+            <h3>Hỗ trợ LMS và Tài khoản</h3>
+            <p>Cẩm nang xử lý nhanh các vấn đề kết nối hệ thống LMS, tài khoản cổng thông tin, lịch thi và phòng học trực tuyến.</p>
           </article>
 
-          <article class="service-card">
-            <div class="service-icon purple">📣</div>
-            <h3>Truyền thông học vụ</h3>
-            <p>Cập nhật thông báo, kế hoạch học kỳ, mốc thời gian và hướng dẫn học vụ.</p>
+          <article class="glass-panel service-card resource-card" data-resource-category="hoc-tap">
+            <div class="service-icon-box purple">
+              <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.89 12.5L12 15.82l6.11-3.32V17H5.89v-4.5z"/></svg>
+            </div>
+            <h3>Phương pháp tự học tối ưu</h3>
+            <p>Gợi ý phương pháp lập kế hoạch học cá nhân, quản lý thời gian thi cử và phương thức ghi nhớ bài sâu trên lớp.</p>
+          </article>
+
+          <article class="glass-panel service-card resource-card" data-resource-category="hoc-tap">
+            <div class="service-icon-box red">
+              <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h3>Củng cố & Lấp lỗ hổng kiến thức</h3>
+            <p>Tài nguyên đặc biệt dành cho sinh viên gặp môn học khó, nợ học phần, giúp định vị và xây dựng lại kế hoạch học tập.</p>
+          </article>
+
+          <article class="glass-panel service-card resource-card" data-resource-category="phat-trien">
+            <div class="service-icon-box blue">
+              <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            </div>
+            <h3>Phát triển kỹ năng & Định hướng</h3>
+            <p>Hệ thống hóa tài liệu giúp sinh viên Giỏi/Xuất sắc nâng cao khả năng nghiên cứu khoa học, săn học bổng và tiếp cận thực tập sớm.</p>
+          </article>
+
+          <article class="glass-panel service-card resource-card" data-resource-category="hoc-vu">
+            <div class="service-icon-box yellow">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            </div>
+            <h3>Các mốc thời gian học vụ chính</h3>
+            <p>Thời khóa biểu cụ thể cho việc đăng ký học phần, hạn nộp học phí, các đợt thi học kỳ và thời điểm xét tốt nghiệp.</p>
+          </article>
+
+          <article class="glass-panel service-card resource-card" data-resource-category="phat-trien">
+            <div class="service-icon-box purple">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+            </div>
+            <h3>Kết nối Mạng lưới hỗ trợ UEF</h3>
+            <p>Thông tin danh sách email, số điện thoại liên hệ trực tiếp của Ban cố vấn học tập, trợ lý học vụ các Khoa chuyên môn.</p>
           </article>
         </div>
       </section>
     </section>
+    ====================================================================== -->
 
-    <section id="announcements" class="page">
-      <section class="container section">
+    <!-- ===================== HỆ THỐNG QUẢN TRỊ ẨN ===================== -->
+    <section id="admin" class="page">
+      <div class="container section">
+        <!-- Khung đăng nhập Quản trị -->
+        <div id="adminLogin" class="glass-panel admin-login">
+          <div class="admin-login-header">
+            <div class="eyebrow" style="margin-bottom: 8px;">Security Panel</div>
+            <h3>Hệ thống Quản trị UEF</h3>
+            <p>Vui lòng đăng nhập để truy cập dữ liệu nguyện vọng sinh viên.</p>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label for="adminPassword">Mật khẩu xác thực</label>
+            <input id="adminPassword" type="password" placeholder="Nhập mật khẩu quản trị viên" />
+          </div>
+
+          <div class="survey-actions" style="margin-top: 24px;">
+            <button type="button" class="primary-btn" id="adminLoginBtn" style="width: 100%;">Xác nhận Đăng nhập</button>
+          </div>
+
+          <p id="adminLoginStatus" class="form-status" style="color: var(--uef-red);"></p>
+        </div>
+
+        <!-- Bảng Dashboard sau khi đăng nhập -->
+        <div id="adminDashboard" class="admin-dashboard-wrap hidden">
+          <div class="section-heading" style="text-align: left; margin-bottom: 30px;">
+            <div class="eyebrow" style="margin-bottom: 8px;">Admin Dashboard</div>
+            <h2>Bảng tổng hợp nguyện vọng hỗ trợ học vụ</h2>
+            <p class="section-desc" style="margin-left: 0;">Theo dõi tình trạng khảo sát, nhóm hỗ trợ của sinh viên và xuất dữ liệu phục vụ xử lý.</p>
+          </div>
+
+          <!-- Thống kê tổng hợp dạng thẻ -->
+          <div class="dashboard-summary-grid">
+            <article class="glass-panel metric-card">
+              <strong id="totalResponses">0</strong>
+              <span>Tổng phản hồi</span>
+            </article>
+
+            <article class="glass-panel metric-card">
+              <strong id="groupIntensive">0</strong>
+              <span>Cần hỗ trợ sâu</span>
+            </article>
+
+            <article class="glass-panel metric-card">
+              <strong id="groupImprove">0</strong>
+              <span>Cần cải thiện</span>
+            </article>
+
+            <article class="glass-panel metric-card">
+              <strong id="groupDevelop">0</strong>
+              <span>Phát triển thêm</span>
+            </article>
+          </div>
+
+          <!-- Bộ lọc dữ liệu -->
+          <div class="announcement-toolbar admin-toolbar">
+            <input id="adminSearchInput" type="text" placeholder="Tìm theo MSSV, email, họ tên, nội dung hỗ trợ..." style="flex: 2;" />
+            <select id="adminGroupFilter" style="flex: 1;">
+              <option value="all">Tất cả nhóm</option>
+              <option value="Cần hỗ trợ sâu">Cần hỗ trợ sâu</option>
+              <option value="Cần cải thiện">Cần cải thiện</option>
+              <option value="Theo dõi định kỳ">Theo dõi định kỳ</option>
+              <option value="Phát triển thêm">Phát triển thêm</option>
+            </select>
+          </div>
+
+          <!-- Hành động -->
+          <div class="admin-actions">
+            <button type="button" class="primary-btn" id="refreshDashboardBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+              Cập nhật dữ liệu
+            </button>
+            <button type="button" class="secondary-btn" id="exportCsvBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+              </svg>
+              Xuất CSV
+            </button>
+            <button type="button" class="secondary-btn" id="clearDemoDataBtn" style="color: var(--uef-red); border-color: rgba(225,29,72,0.2);">
+              Xóa dữ liệu demo
+            </button>
+          </div>
+
+          <!-- Bảng dữ liệu -->
+          <div class="table-wrapper">
+            <table class="responses-table">
+              <thead>
+                <tr>
+                  <th>Thời gian</th>
+                  <th>MSSV</th>
+                  <th>Họ và tên</th>
+                  <th>Email</th>
+                  <th>Nhóm hỗ trợ</th>
+                  <th>Số điện thoại</th>
+                  <th>Mô tả khó khăn</th>
+                  <th>Nội dung hỗ trợ</th>
+                </tr>
+              </thead>
+              <tbody id="responsesTableBody">
+                <tr>
+                  <td colspan="8" class="empty-row">Chưa có dữ liệu khảo sát.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUY TRÌNH HỖ TRỢ (FLOW CHÍNH) - CHUYỂN TỪ TRANG CHỦ SANG -->
+      <section class="container section" style="padding-top: 40px; padding-bottom: 40px;">
         <div class="section-heading">
-          <p class="eyebrow">Cập nhật học vụ</p>
-          <h2>Thông báo mới nhất</h2>
+          <div class="eyebrow" style="margin-bottom: 8px;">Quy trình xử lý</div>
+          <h2>Các bước tiếp nhận & Xử lý nguyện vọng</h2>
+          <p class="section-desc">Chúng tôi tối giản hóa quy trình để sinh viên có thể tiếp cận sự hỗ trợ nhanh nhất.</p>
         </div>
 
-        <div class="announcement-toolbar">
-          <input id="searchInput" type="text" placeholder="Tìm thông báo..." />
-          <select id="categoryFilter">
-            <option value="all">Tất cả</option>
-            <option value="ke-hoach">Kế hoạch học tập</option>
-            <option value="dang-ky">Đăng ký học phần</option>
-            <option value="ho-tro">Hỗ trợ sinh viên</option>
-          </select>
-        </div>
-
-        <div class="announcement-list">
-          <article class="announcement-card" data-category="ke-hoach">
-            <div class="announcement-date">
-              <strong>20</strong>
-              <span>05/2026</span>
+        <div class="service-grid">
+          <article class="glass-panel service-card">
+            <div class="service-icon-box red">
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             </div>
-            <div class="announcement-content">
-              <span class="tag">Kế hoạch học tập</span>
-              <h3>Thông báo kế hoạch học kỳ 2B năm học 2025-2026</h3>
-              <p>Sinh viên theo dõi thời gian học, lịch thi và các mốc học vụ quan trọng trong học kỳ.</p>
-              <button class="read-more-btn">Xem chi tiết</button>
-            </div>
+            <h3>1. Khảo sát nhanh</h3>
+            <p>Sinh viên thực hiện xác thực OTP và trả lời 5 khía cạnh tự đánh giá học vụ.</p>
           </article>
 
-          <article class="announcement-card" data-category="dang-ky">
-            <div class="announcement-date">
-              <strong>18</strong>
-              <span>05/2026</span>
+          <article class="glass-panel service-card">
+            <div class="service-icon-box blue">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
             </div>
-            <div class="announcement-content">
-              <span class="tag">Đăng ký học phần</span>
-              <h3>Hướng dẫn đăng ký học phần</h3>
-              <p>Sinh viên kiểm tra tài khoản, công nợ và thực hiện đăng ký học phần đúng thời gian quy định.</p>
-              <button class="read-more-btn">Xem chi tiết</button>
-            </div>
+            <h3>2. Gửi dữ liệu</h3>
+            <p>Hệ thống tự động lưu trữ lên Google Sheets và gửi email xác nhận chi tiết về cho sinh viên.</p>
           </article>
 
-          <article class="announcement-card" data-category="ho-tro">
-            <div class="announcement-date">
-              <strong>15</strong>
-              <span>05/2026</span>
+          <article class="glass-panel service-card">
+            <div class="service-icon-box yellow">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
             </div>
-            <div class="announcement-content">
-              <span class="tag">Hỗ trợ sinh viên</span>
-              <h3>Hướng dẫn liên hệ Trung tâm Hỗ trợ học vụ</h3>
-              <p>Sinh viên chuẩn bị mã số sinh viên, nội dung cần hỗ trợ và minh chứng liên quan nếu có.</p>
-              <button class="read-more-btn">Xem chi tiết</button>
+            <h3>3. Phân nhóm</h3>
+            <p>Hệ thống tự phân nhóm ưu tiên ("Cần hỗ trợ sâu", "Cần cải thiện", v.v.) dựa trên điểm số đánh giá.</p>
+          </article>
+
+          <article class="glass-panel service-card">
+            <div class="service-icon-box purple">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
             </div>
+            <h3>4. Đồng hành hỗ trợ</h3>
+            <p>Trung tâm phối hợp với các Khoa, CVHT để liên hệ và lên phương án hỗ trợ kịp thời cho từng sinh viên.</p>
           </article>
         </div>
       </section>
     </section>
   </main>
 
+  <!-- ===================== site-footer ===================== -->
   <footer class="site-footer">
-    <p>© 2026 Trung tâm Hỗ trợ học vụ UEF</p>
+    <p>© 2026 Trung tâm Hỗ trợ học vụ UEF - Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh</p>
   </footer>
+
+  <!-- Container chứa Toast thông báo -->
+  <div class="toast-container" id="toastContainer"></div>
 
   <script src="main.js"></script>
 </body>
