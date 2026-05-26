@@ -84,6 +84,10 @@ body {
 }
 
 /* Layout Utilities */
+.hidden {
+  display: none !important;
+}
+
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
@@ -1232,22 +1236,114 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(15, 23, 42, 0.35); /* Tối mờ vừa phải */
+  background: rgba(15, 23, 42, 0.35);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
   animation: fadeIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
+.admin-modal-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+}
+
 .admin-login {
-  max-width: 480px;
-  margin: 0; /* Tinh chỉnh không margin vì modal đã căn giữa */
-  padding: 40px;
-  box-shadow: var(--shadow-lg);
+  max-width: 420px;
+  width: 90%;
+  margin: 0;
+  padding: 45px 32px 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15), var(--shadow-glow);
   border: 1px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: visible;
+  transition: var(--transition);
+}
+
+.admin-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 32px 72px rgba(15, 23, 42, 0.2), 0 16px 36px rgba(255, 116, 140, 0.3);
+}
+
+/* 3D Lock Icon Styling */
+.admin-lock-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -77px;
+  margin-bottom: 20px;
+}
+
+.admin-lock-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--uef-red), var(--uef-red-dark));
+  color: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 
+    0 10px 24px rgba(225, 29, 72, 0.4),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.2),
+    inset 0 4px 10px rgba(255, 255, 255, 0.4);
+  border: 4px solid white;
+  transform-style: preserve-3d;
+  animation: floatLock 3s ease-in-out infinite;
+}
+
+.admin-lock-icon svg {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes floatLock {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-6px) rotate(5deg); }
+}
+
+/* Password field with toggle */
+.password-field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-field-wrapper input {
+  padding-right: 50px !important;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: var(--transition);
+  outline: none;
+}
+
+.toggle-password-btn:hover {
+  color: var(--uef-red-dark);
+  background: rgba(255, 116, 140, 0.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.toggle-password-btn:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .admin-login-header {
