@@ -901,14 +901,7 @@ document.getElementById('refreshDashboardBtn')?.addEventListener('click', async 
   showToast('Đã làm mới dữ liệu.', 'success');
 });
 
-document.getElementById('clearDemoDataBtn')?.addEventListener('click', () => {
-  const confirmed = confirm('Bạn có chắc chắn muốn xóa dữ liệu khảo sát demo đang lưu tạm thời ở trình duyệt này? Dữ liệu trên Google Sheet sẽ KHÔNG bị ảnh hưởng.');
-  if (!confirmed) return;
 
-  localStorage.removeItem(STORAGE_KEY);
-  showToast('Đã xóa dữ liệu demo trên thiết bị này.', 'success');
-  renderDashboard();
-});
 
 // CSV Export Utility (Updated with new column sets)
 document.getElementById('exportCsvBtn')?.addEventListener('click', () => {
