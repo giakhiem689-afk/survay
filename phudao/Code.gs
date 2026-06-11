@@ -154,16 +154,17 @@ function verifyOtp(data) {
 // --- API 3: GHI NHẬN ĐIỂM DANH ---
 function submitAttendance(data) {
   const subject = cleanText(data.subject);
-  const email = cleanEmail(data.email);
+  const isUnauthenticated = data.isUnauthenticated === true || String(data.isUnauthenticated).toLowerCase() === 'true';
+  const email = isUnauthenticated ? (cleanText(data.email) || 'Không xác thực') : cleanEmail(data.email);
   const fullName = cleanText(data.fullName);
   const studentId = cleanText(data.studentId);
 
-  if (!subject || !email || !fullName || !studentId) {
+  if (!subject || !fullName || !studentId || (!isUnauthenticated && !email)) {
     return { success: false, message: 'Thiếu thông tin điểm danh bắt buộc.' };
   }
 
   // Xác minh xem email này có thực sự vừa qua xác thực OTP không
-  if (!wasOtpVerified(email)) {
+  if (!isUnauthenticated && !wasOtpVerified(email)) {
     return { success: false, message: 'Bạn chưa xác thực OTP hoặc phiên xác thực đã hết hạn.' };
   }
 

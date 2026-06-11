@@ -19,6 +19,7 @@ let qrTimer = null;
 let qrExpireTime = 0;
 let pollingTimer = null;
 let otpCooldownTimer = null;
+let isAuthRequired = true; // Chế độ xác thực mặc định là true
 
 // DOM Elements
 const toastContainer = document.getElementById('toastContainer');
@@ -213,16 +214,26 @@ function initRoute() {
     teacherFlow.classList.add('hidden');
     studentFlow.classList.remove('hidden');
     
+    // Đọc tham số auth từ URL
+    isAuthRequired = params.get('auth') !== 'false';
+    
     // Check QR expiration
     const check = verifyQrToken(subject, token);
     if (!check.valid) {
       studentStepEmail.classList.add('hidden');
+      studentStepInfo.classList.add('hidden');
       studentExpiredScreen.classList.remove('hidden');
       showToast(check.reason, 'error');
     } else {
       studentSubjectTitle.textContent = subject;
       studentExpiredScreen.classList.add('hidden');
-      studentStepEmail.classList.remove('hidden');
+      if (isAuthRequired) {
+        studentStepEmail.classList.remove('hidden');
+        studentStepInfo.classList.add('hidden');
+      } else {
+        studentStepEmail.classList.add('hidden');
+        studentStepInfo.classList.remove('hidden');
+      }
     }
   } else {
     currentRole = 'teacher';
@@ -253,6 +264,15 @@ function initRoute() {
       if (e.key === 'Enter') handleTeacherLogin();
     });
     teacherLoginBtn.addEventListener('click', handleTeacherLogin);
+
+    // Lắng nghe sự kiện thay đổi chế độ điểm danh của giảng viên
+    document.querySelectorAll('input[name="attendanceMode"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (currentSubject) {
+          generateQrCode();
+        }
+      });
+    });
   }
 }
 
@@ -369,7 +389,9 @@ function generateQrCode() {
   
   // Create student attendance URL
   const baseUrl = window.location.href.split('?')[0];
-  const url = `${baseUrl}?role=student&subject=${encodeURIComponent(currentSubject)}&token=${token}`;
+  const selectedMode = document.querySelector('input[name="attendanceMode"]:checked')?.value || 'auth';
+  const authParam = selectedMode === 'auth' ? '' : '&auth=false';
+  const url = `${baseUrl}?role=student&subject=${encodeURIComponent(currentSubject)}&token=${token}${authParam}`;
 
   // Call QR Server API to generate image
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
@@ -531,7 +553,7 @@ verifyStudentOtpBtn.addEventListener('click', async () => {
 });
 
 submitAttendanceBtn.addEventListener('click', async () => {
-  const email = studentEmailInput.value.trim().toLowerCase();
+  const email = isAuthRequired ? studentEmailInput.value.trim().toLowerCase() : 'Không xác thực';
   const fullName = studentNameInput.value.trim();
   const studentId = studentIdInput.value.trim();
   infoError.textContent = '';
@@ -554,7 +576,8 @@ submitAttendanceBtn.addEventListener('click', async () => {
     subject: currentSubject,
     email: email,
     fullName: fullName,
-    studentId: studentId
+    studentId: studentId,
+    isUnauthenticated: !isAuthRequired
   });
 
   if (res.success) {

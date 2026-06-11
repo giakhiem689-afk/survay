@@ -742,3 +742,61 @@ body {
     height: 200px;
   }
 }
+
+/* Attendance Mode Selector */
+.attendance-mode-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.mode-option {
+  cursor: pointer;
+  display: block;
+}
+
+.mode-option input {
+  display: none;
+}
+
+.mode-box {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--bg-border);
+  background: white;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.mode-option:hover .mode-box {
+  border-color: var(--uef-blue);
+  transform: translateY(-2px);
+}
+
+.mode-option input:checked + .mode-box {
+  border-color: var(--uef-blue-dark);
+  background: var(--uef-blue-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.mode-box strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.mode-option input:checked + .mode-box strong {
+  color: var(--uef-blue-dark);
+}
+
+.mode-box span {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+}

@@ -66,6 +66,24 @@
               <h2 id="currentSubjectTitle">Môn học</h2>
               <p>Trình chiếu mã này để sinh viên quét điểm danh</p>
             </div>
+
+            <!-- Lựa chọn chế độ điểm danh: Xác thực vs Không xác thực -->
+            <div class="attendance-mode-selector">
+              <label class="mode-option">
+                <input type="radio" name="attendanceMode" value="auth" checked>
+                <span class="mode-box">
+                  <strong>Xác thực OTP</strong>
+                  <span>Gửi OTP qua email uef.edu.vn</span>
+                </span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="attendanceMode" value="no-auth">
+                <span class="mode-box">
+                  <strong>Điểm danh nhanh</strong>
+                  <span>Chỉ nhập Họ tên & MSSV</span>
+                </span>
+              </label>
+            </div>
             
             <div class="qr-display-container">
               <div id="qrExpiredOverlay" class="qr-expired-overlay hidden">
