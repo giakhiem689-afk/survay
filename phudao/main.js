@@ -293,8 +293,21 @@ function handleTeacherLogin() {
 
 function loadSubjects() {
   let list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY));
+  
+  // Migration to automatically remove Tiếng Anh 1 and Tiếng Anh 2 for existing users
+  const migratedKey = 'uef_phudao_subjects_migrated_v2';
+  if (!localStorage.getItem(migratedKey)) {
+    if (list) {
+      list = list.filter(sub => sub !== 'Tiếng Anh 1' && sub !== 'Tiếng Anh 2');
+    } else {
+      list = ['Xác suất thống kê'];
+    }
+    localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
+    localStorage.setItem(migratedKey, 'true');
+  }
+
   if (!list || list.length === 0) {
-    list = ['Xác suất thống kê', 'Tiếng Anh 1', 'Tiếng Anh 2'];
+    list = ['Xác suất thống kê'];
     localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
   }
   renderSubjectButtons(list);
