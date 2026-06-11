@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điểm danh học phụ đạo - UEF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <main class="main-container">
+    <!-- ================= TEACHER ROLE FLOW ================= -->
+    <div id="teacherFlow" class="flow-container hidden">
+      <!-- 1. Password Verification Overlay / Card -->
+      <div id="teacherAuth" class="glass-card auth-card">
+        <div class="card-header">
+          <div class="eyebrow">Giảng viên</div>
+          <h2>Hệ thống Điểm danh</h2>
+          <p>Nhập mật mã để mở khóa trang quản lý điểm danh phụ đạo.</p>
+        </div>
+        <div class="form-group">
+          <label for="teacherPassword">Mật mã truy cập</label>
+          <div class="password-input-wrapper">
+            <input type="password" id="teacherPassword" placeholder="Nhập mật mã giảng viên">
+            <button type="button" id="toggleTeacherPass" class="icon-btn" aria-label="Hiện mật mã">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="eye-icon">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <p id="authError" class="error-msg"></p>
+        </div>
+        <button type="button" id="teacherLoginBtn" class="primary-btn w-100">
+          Xác nhận Mở khóa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 2. Main Dashboard (unlocked) -->
+      <div id="teacherDashboard" class="dashboard-grid hidden">
+        <!-- Sidebar: Subject selection -->
+        <aside class="glass-card sidebar">
+          <div class="sidebar-header">
+            <h3>Danh sách môn học</h3>
+            <p>Chọn môn học để bắt đầu điểm danh</p>
+          </div>
+          <div id="subjectList" class="subject-buttons-container">
+            <!-- Subject buttons injected here -->
+          </div>
+        </aside>
+
+        <!-- Main Panel: QR & Attendance Table -->
+        <section class="main-panel">
+          <!-- QR Panel -->
+          <div id="qrPanel" class="glass-card qr-card hidden">
+            <div class="qr-header">
+              <h2 id="currentSubjectTitle">Môn học</h2>
+              <p>Trình chiếu mã này để sinh viên quét điểm danh</p>
+            </div>
+            
+            <div class="qr-display-container">
+              <div id="qrExpiredOverlay" class="qr-expired-overlay hidden">
+                <div class="expired-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="expired-icon">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <p>Mã QR đã hết hạn!</p>
+                  <button type="button" id="regenerateQrBtn" class="primary-btn">
+                    Tạo mã mới
+                  </button>
+                </div>
+              </div>
+              <div id="qrCodeImageContainer">
+                <img id="qrCodeImage" src="" alt="Mã QR điểm danh">
+              </div>
+            </div>
+
+            <div class="qr-timer-container">
+              <span class="timer-label">Hiệu lực mã QR còn:</span>
+              <span id="qrCountdown" class="timer-countdown">02:00</span>
+            </div>
+          </div>
+
+          <!-- Attendance Table Panel -->
+          <div id="attendancePanel" class="glass-card table-card hidden">
+            <div class="table-header">
+              <h3>Bảng thông tin điểm danh</h3>
+              <span id="attendanceCount" class="badge">Đã điểm danh: 0</span>
+            </div>
+            <div class="table-scroll-wrapper">
+              <table class="attendance-table">
+                <thead>
+                  <tr>
+                    <th>Họ và tên</th>
+                    <th>Mã số sinh viên (MSSV)</th>
+                    <th>Thời gian điểm danh</th>
+                  </tr>
+                </thead>
+                <tbody id="attendanceTableBody">
+                  <tr>
+                    <td colspan="3" class="empty-table">Chưa có sinh viên nào điểm danh môn này.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ================= STUDENT ROLE FLOW ================= -->
+    <div id="studentFlow" class="flow-container hidden">
+      <div class="glass-card student-card">
+        <!-- QR Expired Screen -->
+        <div id="studentExpiredScreen" class="student-screen hidden text-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="error-svg-icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          <h2>Mã QR đã hết hạn</h2>
+          <p>Mã QR này chỉ có hiệu lực trong 2 phút. Vui lòng yêu cầu giảng viên tạo lại mã mới để điểm danh.</p>
+        </div>
+
+        <!-- Step 1: Email Form -->
+        <div id="studentStepEmail" class="student-screen">
+          <div class="card-header text-center">
+            <div class="eyebrow">Sinh viên UEF</div>
+            <h2 id="studentSubjectTitle">Điểm danh môn học</h2>
+            <p>Nhập email sinh viên để nhận mã xác thực OTP 4 số.</p>
+          </div>
+          <div class="form-group">
+            <label for="studentEmail">Email sinh viên UEF</label>
+            <input type="email" id="studentEmail" placeholder="Nhập email @uef.edu.vn">
+            <p id="emailError" class="error-msg"></p>
+          </div>
+          <button type="button" id="sendStudentOtpBtn" class="primary-btn w-100">
+            Nhận mã xác thực
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Step 2: OTP Form -->
+        <div id="studentStepOtp" class="student-screen hidden">
+          <div class="card-header text-center">
+            <h2>Xác minh OTP</h2>
+            <p>Mã OTP gồm 4 số đã được gửi về email của bạn.</p>
+          </div>
+          <div class="form-group">
+            <label for="studentOtp">Mã OTP (4 chữ số)</label>
+            <input type="text" id="studentOtp" maxlength="4" placeholder="Nhập mã OTP 4 số" style="letter-spacing: 0.5rem; text-align: center; font-size: 1.5rem; font-weight: 800;">
+            <p id="otpError" class="error-msg"></p>
+            <p id="otpTimerMsg" style="text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 10px;"></p>
+          </div>
+          <button type="button" id="verifyStudentOtpBtn" class="primary-btn w-100">
+            Xác minh & Tiếp tục
+          </button>
+        </div>
+
+        <!-- Step 3: Info Form -->
+        <div id="studentStepInfo" class="student-screen hidden">
+          <div class="card-header text-center">
+            <h2>Thông tin sinh viên</h2>
+            <p>Nhập họ tên và MSSV để hoàn thành việc điểm danh.</p>
+          </div>
+          <div class="form-group">
+            <label for="studentName">Họ và tên</label>
+            <input type="text" id="studentName" placeholder="Nhập họ và tên có dấu">
+          </div>
+          <div class="form-group">
+            <label for="studentId">Mã số sinh viên (MSSV)</label>
+            <input type="text" id="studentId" placeholder="Nhập MSSV (ví dụ: 205030123)">
+            <p id="infoError" class="error-msg"></p>
+          </div>
+          <button type="button" id="submitAttendanceBtn" class="primary-btn w-100">
+            Xác nhận Điểm danh
+          </button>
+        </div>
+
+        <!-- Step 4: Success Screen -->
+        <div id="studentStepSuccess" class="student-screen hidden text-center">
+          <div class="success-checkmark">
+            <div class="check-icon">
+              <span class="icon-line line-tip"></span>
+              <span class="icon-line line-long"></span>
+              <div class="icon-circle"></div>
+              <div class="icon-fix"></div>
+            </div>
+          </div>
+          <h2 style="color: var(--success); margin-top: 24px;">Điểm danh thành công!</h2>
+          <p>Thông tin điểm danh của bạn đã được ghi nhận trên hệ thống môn học.</p>
+          <div style="margin-top: 28px; font-weight: 700; color: var(--text-muted);">
+            Cảm ơn bạn và chúc bạn học tốt!
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
