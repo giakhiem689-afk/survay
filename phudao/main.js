@@ -192,6 +192,10 @@ async function simulateLocalApi(payload) {
       else if (action === 'createSubject') {
         resolve({ success: true, message: 'Môn học mới đã được cấu hình.' });
       }
+      else if (action === 'getSubjects') {
+        const list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY)) || ['Xác suất thống kê'];
+        resolve({ success: true, subjects: list });
+      }
     }, 400);
   });
 }
@@ -550,6 +554,53 @@ submitAttendanceBtn.addEventListener('click', async () => {
   submitAttendanceBtn.disabled = false;
   submitAttendanceBtn.textContent = 'Xác nhận Điểm danh';
 });
+
+// --- REFRESH BUTTON LOGIC ---
+const refreshDataBtn = document.getElementById('refreshDataBtn');
+const refreshIcon = document.getElementById('refreshIcon');
+
+if (refreshDataBtn) {
+  refreshDataBtn.addEventListener('click', async () => {
+    if (refreshDataBtn.disabled) return;
+    refreshDataBtn.disabled = true;
+    if (refreshIcon) {
+      refreshIcon.style.transform = 'rotate(360deg)';
+    }
+
+    try {
+      showToast('Đang làm mới dữ liệu từ Google Sheets...', 'info');
+      // 1. Sync subjects list
+      const res = await callApi({ action: 'getSubjects' });
+      if (res.success && res.subjects && res.subjects.length > 0) {
+        localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(res.subjects));
+        loadSubjects();
+        
+        // If currentSubject is active, reload its attendance
+        if (currentSubject) {
+          if (!res.subjects.includes(currentSubject)) {
+            // Select first subject if old one was deleted
+            selectSubject(res.subjects[0]);
+          } else {
+            await loadAttendance();
+          }
+        }
+        showToast('Đã làm mới dữ liệu từ Google Sheets!', 'success');
+      } else {
+        showToast(res.message || 'Không thể lấy dữ liệu từ Google Sheets.', 'error');
+      }
+    } catch (e) {
+      console.error(e);
+      showToast('Có lỗi xảy ra khi làm mới.', 'error');
+    } finally {
+      setTimeout(() => {
+        refreshDataBtn.disabled = false;
+        if (refreshIcon) {
+          refreshIcon.style.transform = 'none';
+        }
+      }, 500);
+    }
+  });
+}
 
 // --- HELPER FUNCTIONS ---
 function escapeHtml(value) {

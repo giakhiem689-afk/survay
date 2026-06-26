@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.0.3">
+  <link rel="stylesheet" href="style.css?v=1.0.4">
 </head>
 <body>
   <!-- Toast Notification Container -->
@@ -25,6 +25,24 @@
           <div class="sidebar-header">
             <h3>Danh sách môn học</h3>
             <p>Chọn môn học để bắt đầu điểm danh</p>
+            <div class="utility-buttons" style="margin-top: 12px; display: flex; gap: 8px;">
+              <a href="https://docs.google.com/spreadsheets/d/1djq1LbSh_4mewr5Lj7qa2thJ3PTU5jsxPvAqtNPrUpY/edit" target="_blank" class="secondary-btn btn-sm" style="flex: 1; padding: 8px 10px; font-size: 11px; border-radius: 8px; text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 4px; font-weight: 700; color: var(--text-main); border: 1px solid var(--bg-border); background: white;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Bảng tính gốc
+              </a>
+              <button type="button" id="refreshDataBtn" class="secondary-btn btn-sm" style="flex: 1; padding: 8px 10px; font-size: 11px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 4px; font-weight: 700; cursor: pointer; color: var(--text-main); border: 1px solid var(--bg-border); background: white;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" id="refreshIcon" style="width: 14px; height: 14px; transition: transform 0.5s ease;">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+                Làm mới
+              </button>
+            </div>
           </div>
           <div id="subjectList" class="subject-buttons-container">
             <!-- Subject buttons injected here -->
@@ -186,6 +204,6 @@
     </div>
   </main>
 
-  <script src="main.js?v=1.0.3"></script>
+  <script src="main.js?v=1.0.4"></script>
 </body>
 </html>

@@ -40,6 +40,7 @@ function doPost(e) {
     if (action === 'submitAttendance') return jsonResponse(submitAttendance(data));
     if (action === 'getAttendance') return jsonResponse(getAttendance(data));
     if (action === 'createSubject') return jsonResponse(createSubject(data));
+    if (action === 'getSubjects') return jsonResponse(getSubjects(data));
 
     return jsonResponse({
       success: false,
@@ -302,4 +303,30 @@ function jsonResponse(data) {
   return ContentService
     .createTextOutput(JSON.stringify(data))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+// --- API 6: LẤY DANH SÁCH MÔN HỌC (CÁC SHEET CON) ---
+function getSubjects(data) {
+  try {
+    const ss = SpreadsheetApp.openById(SHEET_ID);
+    const sheets = ss.getSheets();
+    const subjects = [];
+    
+    for (let i = 0; i < sheets.length; i++) {
+      const name = sheets[i].getName().trim();
+      if (name !== OTP_SHEET) {
+        subjects.push(name);
+      }
+    }
+    
+    return {
+      success: true,
+      subjects: subjects
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: 'Lỗi tải danh sách môn: ' + error.message
+    };
+  }
 }
