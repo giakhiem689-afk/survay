@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.0.2">
+  <link rel="stylesheet" href="style.css?v=1.0.3">
 </head>
 <body>
   <!-- Toast Notification Container -->
@@ -16,34 +16,7 @@
   <main class="main-container">
     <!-- ================= TEACHER ROLE FLOW ================= -->
     <div id="teacherFlow" class="flow-container hidden">
-      <!-- 1. Password Verification Overlay / Card -->
-      <div id="teacherAuth" class="glass-card auth-card">
-        <div class="card-header">
-          <div class="eyebrow">Giảng viên</div>
-          <h2>Hệ thống Điểm danh</h2>
-          <p>Nhập mật mã để mở khóa trang quản lý điểm danh phụ đạo.</p>
-        </div>
-        <div class="form-group">
-          <label for="teacherPassword">Mật mã truy cập</label>
-          <div class="password-input-wrapper">
-            <input type="password" id="teacherPassword" placeholder="Nhập mật mã giảng viên">
-            <button type="button" id="toggleTeacherPass" class="icon-btn" aria-label="Hiện mật mã">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="eye-icon">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </button>
-          </div>
-          <p id="authError" class="error-msg"></p>
-        </div>
-        <button type="button" id="teacherLoginBtn" class="primary-btn w-100">
-          Xác nhận Mở khóa
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
-      </div>
+      <!-- 1. Password Verification Removed (Direct Access) -->
 
       <!-- 2. Main Dashboard (unlocked) -->
       <div id="teacherDashboard" class="dashboard-grid hidden">
@@ -67,23 +40,7 @@
               <p>Trình chiếu mã này để sinh viên quét điểm danh</p>
             </div>
 
-            <!-- Lựa chọn chế độ điểm danh: Xác thực vs Không xác thực -->
-            <div class="attendance-mode-selector">
-              <label class="mode-option">
-                <input type="radio" name="attendanceMode" value="auth" checked>
-                <span class="mode-box">
-                  <strong>Xác thực OTP</strong>
-                  <span>Gửi OTP qua email uef.edu.vn</span>
-                </span>
-              </label>
-              <label class="mode-option">
-                <input type="radio" name="attendanceMode" value="no-auth">
-                <span class="mode-box">
-                  <strong>Điểm danh nhanh</strong>
-                  <span>Chỉ nhập Họ tên & MSSV</span>
-                </span>
-              </label>
-            </div>
+            <!-- Chế độ mặc định: Điểm danh nhanh không OTP -->
             
             <div class="qr-display-container">
               <div id="qrExpiredOverlay" class="qr-expired-overlay hidden">
@@ -229,6 +186,6 @@
     </div>
   </main>
 
-  <script src="main.js?v=1.0.2"></script>
+  <script src="main.js?v=1.0.3"></script>
 </body>
 </html>

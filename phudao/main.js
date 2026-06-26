@@ -19,16 +19,11 @@ let qrTimer = null;
 let qrExpireTime = 0;
 let pollingTimer = null;
 let otpCooldownTimer = null;
-let isAuthRequired = true; // Chế độ xác thực mặc định là true
+let isAuthRequired = false; // Chế độ xác thực mặc định là false
 
 // DOM Elements
 const toastContainer = document.getElementById('toastContainer');
 const teacherFlow = document.getElementById('teacherFlow');
-const teacherAuth = document.getElementById('teacherAuth');
-const teacherPasswordInput = document.getElementById('teacherPassword');
-const toggleTeacherPassBtn = document.getElementById('toggleTeacherPass');
-const authError = document.getElementById('authError');
-const teacherLoginBtn = document.getElementById('teacherLoginBtn');
 const teacherDashboard = document.getElementById('teacherDashboard');
 const subjectListContainer = document.getElementById('subjectList');
 const qrPanel = document.getElementById('qrPanel');
@@ -214,8 +209,8 @@ function initRoute() {
     teacherFlow.classList.add('hidden');
     studentFlow.classList.remove('hidden');
     
-    // Đọc tham số auth từ URL
-    isAuthRequired = params.get('auth') !== 'false';
+    // Đọc tham số auth từ URL (mặc định là false để chuyển thẳng sang trang nhập thông tin)
+    isAuthRequired = params.get('auth') === 'true';
     
     // Check QR expiration
     const check = verifyQrToken(subject, token);
@@ -239,55 +234,8 @@ function initRoute() {
     currentRole = 'teacher';
     studentFlow.classList.add('hidden');
     teacherFlow.classList.remove('hidden');
-    
-    // Set password visibility toggle
-    toggleTeacherPassBtn.addEventListener('click', () => {
-      const isPassword = teacherPasswordInput.type === 'password';
-      teacherPasswordInput.type = isPassword ? 'text' : 'password';
-      const eyeIcon = toggleTeacherPassBtn.querySelector('.eye-icon');
-      if (isPassword) {
-        eyeIcon.innerHTML = `
-          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-          <line x1="1" y1="1" x2="23" y2="23"></line>
-        `;
-        toggleTeacherPassBtn.setAttribute('aria-label', 'Ẩn mật mã');
-      } else {
-        eyeIcon.innerHTML = `
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-          <circle cx="12" cy="12" r="3"></circle>
-        `;
-        toggleTeacherPassBtn.setAttribute('aria-label', 'Hiện mật mã');
-      }
-    });
-
-    teacherPasswordInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') handleTeacherLogin();
-    });
-    teacherLoginBtn.addEventListener('click', handleTeacherLogin);
-
-    // Lắng nghe sự kiện thay đổi chế độ điểm danh của giảng viên
-    document.querySelectorAll('input[name="attendanceMode"]').forEach(radio => {
-      radio.addEventListener('change', () => {
-        if (currentSubject) {
-          generateQrCode();
-        }
-      });
-    });
-  }
-}
-
-// --- TEACHER LOGIN & DASHBOARD ---
-function handleTeacherLogin() {
-  const password = teacherPasswordInput.value.trim();
-  if (password === TEACHER_PASSWORD) {
-    teacherAuth.classList.add('hidden');
     teacherDashboard.classList.remove('hidden');
-    authError.textContent = '';
-    showToast('Chào mừng Giảng viên!', 'success');
     loadSubjects();
-  } else {
-    authError.textContent = 'Mật mã truy cập chưa chính xác.';
-    showToast('Đăng nhập thất bại.', 'error');
   }
 }
 
@@ -402,9 +350,7 @@ function generateQrCode() {
   
   // Create student attendance URL
   const baseUrl = window.location.href.split('?')[0];
-  const selectedMode = document.querySelector('input[name="attendanceMode"]:checked')?.value || 'auth';
-  const authParam = selectedMode === 'auth' ? '' : '&auth=false';
-  const url = `${baseUrl}?role=student&subject=${encodeURIComponent(currentSubject)}&token=${token}${authParam}`;
+  const url = `${baseUrl}?role=student&subject=${encodeURIComponent(currentSubject)}&token=${token}&auth=false`;
 
   // Call QR Server API to generate image
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
