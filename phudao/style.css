@@ -930,7 +930,7 @@ body {
 }
 
 .modal-attendance-table th {
-  background: rgba(255, 255, 255, 0.05);
+  background: #0f172a;
   padding: 10px 8px;
   font-size: 11px;
   font-weight: 700;

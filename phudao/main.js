@@ -479,11 +479,13 @@ function updateAttendanceTable(records) {
   // Render modal table rows
   if (modalAttendanceTableBody) {
     modalAttendanceTableBody.innerHTML = records.map((rec, index) => {
+      // Extract only time part (HH:mm:ss) from the full timestamp if it has a space
+      const displayTime = rec.time && rec.time.includes(' ') ? rec.time.split(' ')[1] : rec.time;
       return `
         <tr>
           <td><strong>${escapeHtml(rec.fullName)}</strong></td>
           <td><code style="font-family: monospace; font-size: 11px; background: rgba(255, 255, 255, 0.08); padding: 2px 6px; border-radius: 4px;">${escapeHtml(rec.studentId)}</code></td>
-          <td style="text-align: right; color: #94a3b8;">${escapeHtml(rec.time)}</td>
+          <td style="text-align: right; color: #94a3b8; font-family: monospace; font-size: 11px;">${escapeHtml(displayTime)}</td>
         </tr>
       `;
     }).join('');
