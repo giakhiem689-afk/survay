@@ -25,6 +25,7 @@ let isAuthRequired = false; // Chế độ xác thực mặc định là false
 const toastContainer = document.getElementById('toastContainer');
 const teacherFlow = document.getElementById('teacherFlow');
 const teacherDashboard = document.getElementById('teacherDashboard');
+const syncStatusBadge = document.getElementById('syncStatusBadge');
 const subjectListContainer = document.getElementById('subjectList');
 const qrPanel = document.getElementById('qrPanel');
 const currentSubjectTitle = document.getElementById('currentSubjectTitle');
@@ -312,6 +313,7 @@ function loadSubjects() {
 }
 
 async function autoSyncSubjects() {
+  if (syncStatusBadge) syncStatusBadge.style.display = 'inline-flex';
   try {
     const res = await callApi({ action: 'getSubjects' });
     if (res.success && res.subjects && res.subjects.length > 0) {
@@ -338,6 +340,8 @@ async function autoSyncSubjects() {
     }
   } catch (e) {
     console.error('Lỗi tự động đồng bộ môn học:', e);
+  } finally {
+    if (syncStatusBadge) syncStatusBadge.style.display = 'none';
   }
 }
 
