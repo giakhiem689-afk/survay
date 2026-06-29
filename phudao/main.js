@@ -34,6 +34,15 @@ const qrExpiredOverlay = document.getElementById('qrExpiredOverlay');
 const regenerateQrBtn = document.getElementById('regenerateQrBtn');
 const qrCodeImage = document.getElementById('qrCodeImage');
 const qrCountdown = document.getElementById('qrCountdown');
+const zoomQrBtn = document.getElementById('zoomQrBtn');
+
+// QR Zoom Modal DOM Elements
+const qrModal = document.getElementById('qrModal');
+const modalSubjectTitle = document.getElementById('modalSubjectTitle');
+const modalQrCodeImage = document.getElementById('modalQrCodeImage');
+const modalQrCountdown = document.getElementById('modalQrCountdown');
+const closeQrModalBtn = document.getElementById('closeQrModalBtn');
+
 const attendancePanel = document.getElementById('attendancePanel');
 const attendanceCount = document.getElementById('attendanceCount');
 const attendanceTableBody = document.getElementById('attendanceTableBody');
@@ -391,12 +400,16 @@ function startQrCountdown() {
     if (timeLeft <= 0) {
       clearInterval(qrTimer);
       qrCountdown.textContent = '00:00';
+      if (modalQrCountdown) modalQrCountdown.textContent = '00:00';
       qrExpiredOverlay.classList.remove('hidden');
+      if (qrModal) qrModal.classList.remove('active');
       showToast('Mã QR điểm danh đã hết hạn.', 'error');
     } else {
       const minutes = Math.floor(timeLeft / 60);
       const seconds = timeLeft % 60;
-      qrCountdown.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      const formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      qrCountdown.textContent = formattedTime;
+      if (modalQrCountdown) modalQrCountdown.textContent = formattedTime;
     }
   };
 
@@ -635,6 +648,7 @@ function clearSelectedSubject() {
   // Hide panels
   qrPanel.classList.add('hidden');
   attendancePanel.classList.add('hidden');
+  if (qrModal) qrModal.classList.remove('active');
 
   // Clear timers
   clearInterval(qrTimer);
@@ -645,6 +659,49 @@ if (backToSubjectsBtn) {
   backToSubjectsBtn.addEventListener('click', () => {
     clearSelectedSubject();
     showToast('Đã quay về danh sách môn học.', 'info');
+  });
+}
+
+// --- QR ZOOM MODAL LOGIC ---
+if (zoomQrBtn) {
+  zoomQrBtn.addEventListener('click', () => {
+    if (!currentSubject || !qrCodeImage.src) return;
+    
+    // Show high resolution version of the QR code (500x500)
+    const highResUrl = qrCodeImage.src.replace('size=250x250', 'size=500x500');
+    modalQrCodeImage.src = highResUrl;
+    
+    // Update modal content
+    modalSubjectTitle.textContent = currentSubject;
+    
+    // Synchronize countdown timer text
+    const now = Math.floor(Date.now() / 1000);
+    const timeLeft = qrExpireTime - now;
+    if (timeLeft > 0) {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      modalQrCountdown.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    } else {
+      modalQrCountdown.textContent = '00:00';
+    }
+    
+    // Show Modal
+    qrModal.classList.add('active');
+  });
+}
+
+if (closeQrModalBtn) {
+  closeQrModalBtn.addEventListener('click', () => {
+    qrModal.classList.remove('active');
+  });
+}
+
+if (qrModal) {
+  // Close modal when clicking on the dark backdrop overlay
+  qrModal.addEventListener('click', (e) => {
+    if (e.target === qrModal) {
+      qrModal.classList.remove('active');
+    }
   });
 }
 
