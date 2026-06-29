@@ -240,6 +240,7 @@ function initRoute() {
     teacherFlow.classList.remove('hidden');
     teacherDashboard.classList.remove('hidden');
     loadSubjects();
+    autoSyncSubjects();
   }
 }
 
@@ -263,6 +264,37 @@ function loadSubjects() {
     localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
   }
   renderSubjectButtons(list);
+}
+
+async function autoSyncSubjects() {
+  try {
+    const res = await callApi({ action: 'getSubjects' });
+    if (res.success && res.subjects && res.subjects.length > 0) {
+      localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(res.subjects));
+      
+      const oldSubject = currentSubject;
+      
+      // Render updated list of buttons
+      renderSubjectButtons(res.subjects);
+      
+      if (!oldSubject) {
+        // No subject was selected yet, select the first one
+        selectSubject(res.subjects[0]);
+      } else if (!res.subjects.includes(oldSubject)) {
+        // If current subject was deleted, select the first one
+        selectSubject(res.subjects[0]);
+      } else {
+        // Just refresh the attendance table of active subject without changing QR
+        currentSubject = oldSubject;
+        document.querySelectorAll('.subject-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.querySelector('span').textContent === oldSubject);
+        });
+        await loadAttendance();
+      }
+    }
+  } catch (e) {
+    console.error('Lỗi tự động đồng bộ môn học:', e);
+  }
 }
 
 function renderSubjectButtons(subjects) {
