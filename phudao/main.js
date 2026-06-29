@@ -15,6 +15,7 @@ const LOCAL_ATTENDANCE_PREFIX = 'uef_phudao_attendance_';
 // State Management
 let currentRole = 'teacher'; // 'teacher' hoặc 'student'
 let currentSubject = '';
+let subjectsList = []; // Danh sách môn học lưu trong bộ nhớ
 let qrTimer = null;
 let qrExpireTime = 0;
 let pollingTimer = null;
@@ -240,76 +241,17 @@ function initRoute() {
     studentFlow.classList.add('hidden');
     teacherFlow.classList.remove('hidden');
     teacherDashboard.classList.remove('hidden');
+    
+    // Clear any previous selection on fresh entry
+    clearSelectedSubject();
+    
     loadSubjects();
-    
-    // Khôi phục trạng thái môn học đang chọn từ LocalStorage nếu có
-    const savedSubject = localStorage.getItem('uef_phudao_active_subject');
-    const savedToken = localStorage.getItem('uef_phudao_active_qr_token');
-    const savedExpire = localStorage.getItem('uef_phudao_active_qr_expire');
-    
-    if (savedSubject) {
-      currentSubject = savedSubject;
-      
-      // Hiển thị panel môn học
-      currentSubjectTitle.textContent = savedSubject;
-      qrPanel.classList.remove('hidden');
-      attendancePanel.classList.remove('hidden');
-      
-      // Highlight nút môn học tương ứng
-      document.querySelectorAll('.subject-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.querySelector('span').textContent === savedSubject);
-      });
-
-      // Khôi phục mã QR nếu chưa hết hạn 2 phút
-      const now = Math.floor(Date.now() / 1000);
-      if (savedToken && savedExpire && parseInt(savedExpire) > now) {
-        qrExpireTime = parseInt(savedExpire);
-        const baseUrl = window.location.href.split('?')[0];
-        const url = `${baseUrl}?role=student&subject=${encodeURIComponent(savedSubject)}&token=${savedToken}&auth=false`;
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
-        qrCodeImage.src = qrUrl;
-        
-        qrExpiredOverlay.classList.add('hidden');
-        startQrCountdown();
-      } else {
-        // Nếu đã hết hạn hoặc không có, hiển thị lớp phủ báo hết hạn để tạo mã mới
-        qrExpiredOverlay.classList.remove('hidden');
-        qrCountdown.textContent = '00:00';
-      }
-
-      // Reset bảng & Tải dữ liệu điểm danh
-      updateAttendanceTable([]);
-      loadAttendance();
-      
-      // Khởi động lại Timer tự động cập nhật
-      clearInterval(pollingTimer);
-      pollingTimer = setInterval(loadAttendance, 5000);
-    }
-    
     autoSyncSubjects();
   }
 }
 
 function loadSubjects() {
-  let list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY));
-  
-  // Migration to automatically remove Tiếng Anh 1 and Tiếng Anh 2 for existing users
-  const migratedKey = 'uef_phudao_subjects_migrated_v2';
-  if (!localStorage.getItem(migratedKey)) {
-    if (list) {
-      list = list.filter(sub => sub !== 'Tiếng Anh 1' && sub !== 'Tiếng Anh 2');
-    } else {
-      list = ['Xác suất thống kê'];
-    }
-    localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
-    localStorage.setItem(migratedKey, 'true');
-  }
-
-  if (!list || list.length === 0) {
-    list = ['Xác suất thống kê'];
-    localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
-  }
-  renderSubjectButtons(list);
+  renderSubjectButtons(subjectsList);
 }
 
 async function autoSyncSubjects() {
@@ -317,15 +259,15 @@ async function autoSyncSubjects() {
   try {
     const res = await callApi({ action: 'getSubjects' });
     if (res.success && res.subjects && res.subjects.length > 0) {
-      localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(res.subjects));
+      subjectsList = res.subjects;
       
       const oldSubject = currentSubject;
       
       // Render updated list of buttons
-      renderSubjectButtons(res.subjects);
+      renderSubjectButtons(subjectsList);
       
       if (oldSubject) {
-        if (!res.subjects.includes(oldSubject)) {
+        if (!subjectsList.includes(oldSubject)) {
           // If current subject was deleted, clear selection
           clearSelectedSubject();
         } else {
@@ -379,8 +321,7 @@ async function handleAddSubject() {
   if (!name || !name.trim()) return;
 
   const cleanName = name.trim();
-  const list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY)) || [];
-  if (list.includes(cleanName)) {
+  if (subjectsList.includes(cleanName)) {
     showToast('Môn học này đã tồn tại trong danh sách.', 'error');
     return;
   }
@@ -389,10 +330,8 @@ async function handleAddSubject() {
   const res = await callApi({ action: 'createSubject', subject: cleanName });
   
   if (res.success) {
-    list.push(cleanName);
-    localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(list));
-    renderSubjectButtons(list);
     showToast('Khởi tạo môn học thành công!', 'success');
+    await autoSyncSubjects();
     selectSubject(cleanName);
   } else {
     showToast(res.message || 'Lỗi tạo môn học.', 'error');
@@ -401,7 +340,6 @@ async function handleAddSubject() {
 
 function selectSubject(subjectName) {
   currentSubject = subjectName;
-  localStorage.setItem('uef_phudao_active_subject', subjectName);
   
   // Highlight active button
   document.querySelectorAll('.subject-btn').forEach(btn => {
@@ -442,11 +380,6 @@ function generateQrCode() {
   qrCodeImage.src = qrUrl;
 
   qrExpireTime = timestamp + 120; // 2 minutes (120s)
-  
-  // Lưu thông tin QR đang chạy để khôi phục khi tải lại trang
-  localStorage.setItem('uef_phudao_active_qr_token', token);
-  localStorage.setItem('uef_phudao_active_qr_expire', qrExpireTime);
-  
   startQrCountdown();
 }
 
@@ -658,7 +591,7 @@ if (refreshDataBtn) {
       // 1. Sync subjects list
       const res = await callApi({ action: 'getSubjects' });
       if (res.success && res.subjects && res.subjects.length > 0) {
-        localStorage.setItem(LOCAL_SUBJECTS_KEY, JSON.stringify(res.subjects));
+        subjectsList = res.subjects;
         loadSubjects();
         
         // If currentSubject is active, reload its attendance
