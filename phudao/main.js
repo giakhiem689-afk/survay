@@ -240,6 +240,51 @@ function initRoute() {
     teacherFlow.classList.remove('hidden');
     teacherDashboard.classList.remove('hidden');
     loadSubjects();
+    
+    // Khôi phục trạng thái môn học đang chọn từ LocalStorage nếu có
+    const savedSubject = localStorage.getItem('uef_phudao_active_subject');
+    const savedToken = localStorage.getItem('uef_phudao_active_qr_token');
+    const savedExpire = localStorage.getItem('uef_phudao_active_qr_expire');
+    
+    if (savedSubject) {
+      currentSubject = savedSubject;
+      
+      // Hiển thị panel môn học
+      currentSubjectTitle.textContent = savedSubject;
+      qrPanel.classList.remove('hidden');
+      attendancePanel.classList.remove('hidden');
+      
+      // Highlight nút môn học tương ứng
+      document.querySelectorAll('.subject-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.querySelector('span').textContent === savedSubject);
+      });
+
+      // Khôi phục mã QR nếu chưa hết hạn 2 phút
+      const now = Math.floor(Date.now() / 1000);
+      if (savedToken && savedExpire && parseInt(savedExpire) > now) {
+        qrExpireTime = parseInt(savedExpire);
+        const baseUrl = window.location.href.split('?')[0];
+        const url = `${baseUrl}?role=student&subject=${encodeURIComponent(savedSubject)}&token=${savedToken}&auth=false`;
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
+        qrCodeImage.src = qrUrl;
+        
+        qrExpiredOverlay.classList.add('hidden');
+        startQrCountdown();
+      } else {
+        // Nếu đã hết hạn hoặc không có, hiển thị lớp phủ báo hết hạn để tạo mã mới
+        qrExpiredOverlay.classList.remove('hidden');
+        qrCountdown.textContent = '00:00';
+      }
+
+      // Reset bảng & Tải dữ liệu điểm danh
+      updateAttendanceTable([]);
+      loadAttendance();
+      
+      // Khởi động lại Timer tự động cập nhật
+      clearInterval(pollingTimer);
+      pollingTimer = setInterval(loadAttendance, 5000);
+    }
+    
     autoSyncSubjects();
   }
 }
@@ -352,6 +397,7 @@ async function handleAddSubject() {
 
 function selectSubject(subjectName) {
   currentSubject = subjectName;
+  localStorage.setItem('uef_phudao_active_subject', subjectName);
   
   // Highlight active button
   document.querySelectorAll('.subject-btn').forEach(btn => {
@@ -392,6 +438,11 @@ function generateQrCode() {
   qrCodeImage.src = qrUrl;
 
   qrExpireTime = timestamp + 120; // 2 minutes (120s)
+  
+  // Lưu thông tin QR đang chạy để khôi phục khi tải lại trang
+  localStorage.setItem('uef_phudao_active_qr_token', token);
+  localStorage.setItem('uef_phudao_active_qr_expire', qrExpireTime);
+  
   startQrCountdown();
 }
 
