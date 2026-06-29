@@ -44,6 +44,8 @@ const modalQrCountdown = document.getElementById('modalQrCountdown');
 const closeQrModalBtn = document.getElementById('closeQrModalBtn');
 const modalAttendanceCount = document.getElementById('modalAttendanceCount');
 const modalAttendanceTableBody = document.getElementById('modalAttendanceTableBody');
+const modalQrExpiredOverlay = document.getElementById('modalQrExpiredOverlay');
+const modalRegenerateQrBtn = document.getElementById('modalRegenerateQrBtn');
 
 const attendancePanel = document.getElementById('attendancePanel');
 const attendanceCount = document.getElementById('attendanceCount');
@@ -378,6 +380,7 @@ function selectSubject(subjectName) {
 function generateQrCode() {
   clearInterval(qrTimer);
   qrExpiredOverlay.classList.add('hidden');
+  if (modalQrExpiredOverlay) modalQrExpiredOverlay.classList.add('hidden');
 
   const timestamp = Math.floor(Date.now() / 1000);
   const token = generateQrToken(currentSubject, timestamp);
@@ -389,6 +392,11 @@ function generateQrCode() {
   // Call QR Server API to generate image
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
   qrCodeImage.src = qrUrl;
+
+  if (modalQrCodeImage) {
+    const highResUrl = qrUrl.replace('size=250x250', 'size=500x500');
+    modalQrCodeImage.src = highResUrl;
+  }
 
   qrExpireTime = timestamp + 120; // 2 minutes (120s)
   startQrCountdown();
@@ -404,7 +412,7 @@ function startQrCountdown() {
       qrCountdown.textContent = '00:00';
       if (modalQrCountdown) modalQrCountdown.textContent = '00:00';
       qrExpiredOverlay.classList.remove('hidden');
-      if (qrModal) qrModal.classList.remove('active');
+      if (modalQrExpiredOverlay) modalQrExpiredOverlay.classList.remove('hidden');
       showToast('Mã QR điểm danh đã hết hạn.', 'error');
     } else {
       const minutes = Math.floor(timeLeft / 60);
@@ -752,8 +760,10 @@ if (zoomQrBtn) {
       const minutes = Math.floor(timeLeft / 60);
       const seconds = timeLeft % 60;
       modalQrCountdown.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      if (modalQrExpiredOverlay) modalQrExpiredOverlay.classList.add('hidden');
     } else {
       modalQrCountdown.textContent = '00:00';
+      if (modalQrExpiredOverlay) modalQrExpiredOverlay.classList.remove('hidden');
     }
     
     // Show Modal
@@ -768,6 +778,14 @@ if (closeQrModalBtn) {
   closeQrModalBtn.addEventListener('click', async () => {
     if (qrModal) qrModal.classList.remove('active');
     await exitFullscreen();
+  });
+}
+
+if (modalRegenerateQrBtn) {
+  modalRegenerateQrBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    generateQrCode();
+    showToast('Đã tạo mã QR mới.', 'success');
   });
 }
 
