@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.1.0">
+  <link rel="stylesheet" href="style.css?v=1.1.1">
 </head>
 <body>
   <!-- Toast Notification Container -->
@@ -241,25 +241,25 @@
   <div id="qrModal" class="qr-modal">
     <div class="qr-modal-content">
       <button type="button" id="closeQrModalBtn" class="qr-modal-close" aria-label="Đóng">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width: 20px; height: 20px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="width: 24px; height: 24px;">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
-      <h2 id="modalSubjectTitle" style="margin-bottom: 8px; color: var(--uef-blue-dark); font-size: 24px; font-weight: 800; text-align: center; font-family: 'Be Vietnam Pro', sans-serif;">Môn học</h2>
-      <p style="margin-bottom: 24px; color: var(--text-muted); font-size: 14px; text-align: center; font-weight: 500; font-family: 'Be Vietnam Pro', sans-serif;">Sinh viên quét mã này để điểm danh nhanh</p>
+      <h2 id="modalSubjectTitle" style="margin-bottom: 8px; color: white; font-size: 32px; font-weight: 800; text-align: center; font-family: 'Be Vietnam Pro', sans-serif;">Môn học</h2>
+      <p style="margin-bottom: 32px; color: #94a3b8; font-size: 16px; text-align: center; font-weight: 500; font-family: 'Be Vietnam Pro', sans-serif;">Sinh viên quét mã này để điểm danh nhanh</p>
       
-      <div class="modal-qr-wrapper" style="background: white; padding: 20px; border-radius: 16px; box-shadow: var(--shadow-md); display: flex; justify-content: center; align-items: center; margin-bottom: 20px; border: 1px solid var(--bg-border);">
-        <img id="modalQrCodeImage" src="" alt="Mã QR Phóng to" style="width: 320px; height: 320px; object-fit: contain;">
+      <div class="modal-qr-wrapper">
+        <img id="modalQrCodeImage" src="" alt="Mã QR Phóng to">
       </div>
       
       <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: 'Be Vietnam Pro', sans-serif;">
-        <span style="font-size: 12px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Mã QR hết hạn sau</span>
-        <div id="modalQrCountdown" style="font-size: 32px; font-weight: 800; color: var(--uef-orange); font-family: monospace;">02:00</div>
+        <span style="font-size: 14px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Mã QR hết hạn sau</span>
+        <div id="modalQrCountdown" style="font-size: 48px; font-weight: 800; color: #f97316; font-family: monospace;">02:00</div>
       </div>
     </div>
   </div>
 
-  <script src="main.js?v=1.1.0"></script>
+  <script src="main.js?v=1.1.1"></script>
 </body>
 </html>

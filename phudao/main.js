@@ -648,7 +648,12 @@ function clearSelectedSubject() {
   // Hide panels
   qrPanel.classList.add('hidden');
   attendancePanel.classList.add('hidden');
-  if (qrModal) qrModal.classList.remove('active');
+  
+  // Close modal and exit fullscreen if active
+  if (qrModal) {
+    qrModal.classList.remove('active');
+    exitFullscreen();
+  }
 
   // Clear timers
   clearInterval(qrTimer);
@@ -663,8 +668,48 @@ if (backToSubjectsBtn) {
 }
 
 // --- QR ZOOM MODAL LOGIC ---
+async function enterFullscreen() {
+  try {
+    if (qrModal.requestFullscreen) {
+      await qrModal.requestFullscreen();
+    } else if (qrModal.webkitRequestFullscreen) { /* Safari */
+      await qrModal.webkitRequestFullscreen();
+    } else if (qrModal.msRequestFullscreen) { /* IE11 */
+      await qrModal.msRequestFullscreen();
+    }
+  } catch (err) {
+    console.warn("Fullscreen API not supported or blocked:", err);
+  }
+}
+
+async function exitFullscreen() {
+  try {
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        await document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        await document.webkitExitFullscreen();
+      }
+    }
+  } catch (err) {
+    console.warn("Error exiting fullscreen:", err);
+  }
+}
+
+// Listen for fullscreen change event (e.g. user presses ESC)
+document.addEventListener('fullscreenchange', () => {
+  if (!document.fullscreenElement && qrModal) {
+    qrModal.classList.remove('active');
+  }
+});
+document.addEventListener('webkitfullscreenchange', () => {
+  if (!document.webkitFullscreenElement && qrModal) {
+    qrModal.classList.remove('active');
+  }
+});
+
 if (zoomQrBtn) {
-  zoomQrBtn.addEventListener('click', () => {
+  zoomQrBtn.addEventListener('click', async () => {
     if (!currentSubject || !qrCodeImage.src) return;
     
     // Show high resolution version of the QR code (500x500)
@@ -687,20 +732,25 @@ if (zoomQrBtn) {
     
     // Show Modal
     qrModal.classList.add('active');
+    
+    // Enter native browser fullscreen mode
+    await enterFullscreen();
   });
 }
 
 if (closeQrModalBtn) {
-  closeQrModalBtn.addEventListener('click', () => {
-    qrModal.classList.remove('active');
+  closeQrModalBtn.addEventListener('click', async () => {
+    if (qrModal) qrModal.classList.remove('active');
+    await exitFullscreen();
   });
 }
 
 if (qrModal) {
-  // Close modal when clicking on the dark backdrop overlay
-  qrModal.addEventListener('click', (e) => {
+  // Close modal and exit fullscreen when clicking on the dark backdrop overlay
+  qrModal.addEventListener('click', async (e) => {
     if (e.target === qrModal) {
       qrModal.classList.remove('active');
+      await exitFullscreen();
     }
   });
 }
