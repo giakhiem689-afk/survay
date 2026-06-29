@@ -1,4 +1,4 @@
-const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJ5lz96KRB61s76NuCuqqvNtXa5Wc6LZjdH8mcBqTVUBG9z0IA0PZ23CcLm7t8j-cB/exec';
+const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzMgFwyByPLSrGnEJoX2L4_ZduRQZvf4Z9VjBCNY5CRWfr4bdmGIueW34Cc8Yp8X4bC/exec';
 
 // DOM Elements
 const statTotalSubjects = document.getElementById('statTotalSubjects');

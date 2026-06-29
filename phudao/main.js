@@ -5,7 +5,7 @@
 
 // Cấu hình Google Apps Script Endpoint cho file điểm danh phụ đạo
 // Sau khi bạn deploy Web App từ Google Sheets phụ đạo, hãy dán URL vào đây
-const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJ5lz96KRB61s76NuCuqqvNtXa5Wc6LZjdH8mcBqTVUBG9z0IA0PZ23CcLm7t8j-cB/exec'; 
+const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzMgFwyByPLSrGnEJoX2L4_ZduRQZvf4Z9VjBCNY5CRWfr4bdmGIueW34Cc8Yp8X4bC/exec'; 
 
 const TEACHER_PASSWORD = 'phudao2026';
 const SALT = 'uef_phudao_2026'; // Mã muối bảo mật
@@ -42,6 +42,8 @@ const modalSubjectTitle = document.getElementById('modalSubjectTitle');
 const modalQrCodeImage = document.getElementById('modalQrCodeImage');
 const modalQrCountdown = document.getElementById('modalQrCountdown');
 const closeQrModalBtn = document.getElementById('closeQrModalBtn');
+const modalAttendanceCount = document.getElementById('modalAttendanceCount');
+const modalAttendanceTableBody = document.getElementById('modalAttendanceTableBody');
 
 const attendancePanel = document.getElementById('attendancePanel');
 const attendanceCount = document.getElementById('attendanceCount');
@@ -434,16 +436,27 @@ async function loadAttendance() {
 
 function updateAttendanceTable(records) {
   attendanceCount.textContent = `Đã điểm danh: ${records.length}`;
+  if (modalAttendanceCount) {
+    modalAttendanceCount.textContent = `Đã điểm danh: ${records.length}`;
+  }
+
   if (records.length === 0) {
     attendanceTableBody.innerHTML = `
       <tr>
         <td colspan="3" class="empty-table">Chưa có sinh viên nào điểm danh môn này.</td>
       </tr>
     `;
+    if (modalAttendanceTableBody) {
+      modalAttendanceTableBody.innerHTML = `
+        <tr>
+          <td colspan="3" class="modal-empty-table" style="text-align: center; color: #64748b; padding: 40px 0; font-size: 14px;">Chưa có sinh viên nào điểm danh.</td>
+        </tr>
+      `;
+    }
     return;
   }
 
-  // Render rows with vibrant, cyclic colors
+  // Render main dashboard table rows with vibrant, cyclic colors
   attendanceTableBody.innerHTML = records.map((rec, index) => {
     const colorIndex = (index % 5) + 1; // row-color-1 to row-color-5
     return `
@@ -454,6 +467,19 @@ function updateAttendanceTable(records) {
       </tr>
     `;
   }).join('');
+
+  // Render modal table rows
+  if (modalAttendanceTableBody) {
+    modalAttendanceTableBody.innerHTML = records.map((rec, index) => {
+      return `
+        <tr>
+          <td><strong>${escapeHtml(rec.fullName)}</strong></td>
+          <td><code style="font-family: monospace; font-size: 14px; background: rgba(255, 255, 255, 0.05); padding: 4px 8px; border-radius: 6px;">${escapeHtml(rec.studentId)}</code></td>
+          <td style="text-align: right; color: #94a3b8;">${escapeHtml(rec.time)}</td>
+        </tr>
+      `;
+    }).join('');
+  }
 }
 
 // --- STUDENT FLOW INTERACTION ---
