@@ -194,7 +194,7 @@ async function simulateLocalApi(payload) {
         resolve({ success: true, message: 'Môn học mới đã được cấu hình.' });
       }
       else if (action === 'getSubjects') {
-        const list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY)) || ['Xác suất thống kê'];
+        const list = JSON.parse(localStorage.getItem(LOCAL_SUBJECTS_KEY)) || [''];
         resolve({ success: true, subjects: list });
       }
     }, 400);
