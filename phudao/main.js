@@ -5,7 +5,7 @@
 
 // Cấu hình Google Apps Script Endpoint cho file điểm danh phụ đạo
 // Sau khi bạn deploy Web App từ Google Sheets phụ đạo, hãy dán URL vào đây
-const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxo9zJkI3BwFt58rJktDrDbzvIx_arZubllovesOnXL1Hcr-zwtO-vY8oGmwiwZmOhe/exec'; 
+const GOOGLE_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzJ5lz96KRB61s76NuCuqqvNtXa5Wc6LZjdH8mcBqTVUBG9z0IA0PZ23CcLm7t8j-cB/exec'; 
 
 const TEACHER_PASSWORD = 'phudao2026';
 const SALT = 'uef_phudao_2026'; // Mã muối bảo mật
