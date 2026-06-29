@@ -41,6 +41,7 @@ function doPost(e) {
     if (action === 'getAttendance') return jsonResponse(getAttendance(data));
     if (action === 'createSubject') return jsonResponse(createSubject(data));
     if (action === 'getSubjects') return jsonResponse(getSubjects(data));
+    if (action === 'getSummaryStats') return jsonResponse(getSummaryStats(data));
 
     return jsonResponse({
       success: false,
@@ -329,4 +330,76 @@ function getSubjects(data) {
       message: 'Lỗi tải danh sách môn: ' + error.message
     };
   }
+}
+
+// --- API 7: THỐNG KÊ TỔNG HỢP ---
+function getSummaryStats(data) {
+  try {
+    const ss = SpreadsheetApp.openById(SHEET_ID);
+    const sheets = ss.getSheets();
+    
+    let totalCheckins = 0;
+    const subjectStats = [];
+    const uniqueStudents = new Set();
+    const dailyStatsMap = {}; // mapping dateString -> checkinCount
+    
+    for (let i = 0; i < sheets.length; i++) {
+      const sheet = sheets[i];
+      const name = sheet.getName().trim();
+      if (name === OTP_SHEET) continue;
+      
+      const values = sheet.getDataRange().getValues();
+      const checkinCount = Math.max(0, values.length - 1);
+      totalCheckins += checkinCount;
+      
+      subjectStats.push({
+        subject: name,
+        count: checkinCount
+      });
+      
+      // Aggregate unique students and daily stats
+      for (let r = 1; r < values.length; r++) {
+        const timestamp = values[r][0];
+        const studentId = String(values[r][1]).trim();
+        if (studentId) {
+          uniqueStudents.add(studentId);
+        }
+        
+        // Daily stats aggregation
+        if (timestamp instanceof Date) {
+          const dateStr = formatDateOnlyStr(timestamp);
+          dailyStatsMap[dateStr] = (dailyStatsMap[dateStr] || 0) + 1;
+        }
+      }
+    }
+    
+    // Convert dailyStatsMap to sorted array
+    const dailyStats = Object.keys(dailyStatsMap).map(dateStr => {
+      return { date: dateStr, count: dailyStatsMap[dateStr] };
+    });
+    // Sort chronologically by date
+    dailyStats.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    return {
+      success: true,
+      totalSubjects: subjectStats.length,
+      totalCheckins: totalCheckins,
+      totalUniqueStudents: uniqueStudents.size,
+      subjectStats: subjectStats,
+      dailyStats: dailyStats
+    };
+    
+  } catch (error) {
+    return {
+      success: false,
+      message: 'Lỗi thống kê: ' + error.message
+    };
+  }
+}
+
+function formatDateOnlyStr(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
 }
