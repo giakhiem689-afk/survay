@@ -277,19 +277,18 @@ async function autoSyncSubjects() {
       // Render updated list of buttons
       renderSubjectButtons(res.subjects);
       
-      if (!oldSubject) {
-        // No subject was selected yet, select the first one
-        selectSubject(res.subjects[0]);
-      } else if (!res.subjects.includes(oldSubject)) {
-        // If current subject was deleted, select the first one
-        selectSubject(res.subjects[0]);
-      } else {
-        // Just refresh the attendance table of active subject without changing QR
-        currentSubject = oldSubject;
-        document.querySelectorAll('.subject-btn').forEach(btn => {
-          btn.classList.toggle('active', btn.querySelector('span').textContent === oldSubject);
-        });
-        await loadAttendance();
+      if (oldSubject) {
+        if (!res.subjects.includes(oldSubject)) {
+          // If current subject was deleted, clear selection
+          clearSelectedSubject();
+        } else {
+          // Just refresh the attendance table of active subject without changing QR
+          currentSubject = oldSubject;
+          document.querySelectorAll('.subject-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.querySelector('span').textContent === oldSubject);
+          });
+          await loadAttendance();
+        }
       }
     }
   } catch (e) {
@@ -610,8 +609,8 @@ if (refreshDataBtn) {
         // If currentSubject is active, reload its attendance
         if (currentSubject) {
           if (!res.subjects.includes(currentSubject)) {
-            // Select first subject if old one was deleted
-            selectSubject(res.subjects[0]);
+            // Clear selection if old one was deleted
+            clearSelectedSubject();
           } else {
             await loadAttendance();
           }
@@ -631,6 +630,33 @@ if (refreshDataBtn) {
         }
       }, 500);
     }
+  });
+}
+
+// --- BACK TO SUBJECTS LOGIC ---
+const backToSubjectsBtn = document.getElementById('backToSubjectsBtn');
+
+function clearSelectedSubject() {
+  currentSubject = '';
+  
+  // Remove active class from buttons
+  document.querySelectorAll('.subject-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Hide panels
+  qrPanel.classList.add('hidden');
+  attendancePanel.classList.add('hidden');
+
+  // Clear timers
+  clearInterval(qrTimer);
+  clearInterval(pollingTimer);
+}
+
+if (backToSubjectsBtn) {
+  backToSubjectsBtn.addEventListener('click', () => {
+    clearSelectedSubject();
+    showToast('Đã quay về danh sách môn học.', 'info');
   });
 }
 
