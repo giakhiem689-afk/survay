@@ -474,7 +474,7 @@ function updateAttendanceTable(records) {
       return `
         <tr>
           <td><strong>${escapeHtml(rec.fullName)}</strong></td>
-          <td><code style="font-family: monospace; font-size: 14px; background: rgba(255, 255, 255, 0.05); padding: 4px 8px; border-radius: 6px;">${escapeHtml(rec.studentId)}</code></td>
+          <td><code style="font-family: monospace; font-size: 11px; background: rgba(255, 255, 255, 0.08); padding: 2px 6px; border-radius: 4px;">${escapeHtml(rec.studentId)}</code></td>
           <td style="text-align: right; color: #94a3b8;">${escapeHtml(rec.time)}</td>
         </tr>
       `;
