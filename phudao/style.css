@@ -876,12 +876,12 @@ body {
 /* Split Screen Modal Layout */
 .qr-modal-split-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.45fr 0.55fr;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
-  padding: 80px 40px 40px 40px;
-  gap: 40px;
+  max-width: 1500px;
+  padding: 60px 40px 30px 40px;
+  gap: 24px;
   align-items: center;
   color: white;
 }
@@ -979,12 +979,12 @@ body {
 }
 
 .qr-modal-left .modal-qr-wrapper img {
-  width: 45vh;
-  height: 45vh;
+  width: 62vh;
+  height: 62vh;
   max-width: 80vw;
-  max-height: 50vh;
-  min-width: 250px;
-  min-height: 250px;
+  max-height: 65vh;
+  min-width: 280px;
+  min-height: 280px;
   object-fit: contain;
 }
 
