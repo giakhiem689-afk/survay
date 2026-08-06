@@ -1,4 +1,4 @@
-// Script điều khiển Cẩm nang Học vụ GVCN UEF (Chuẩn 100% Nguyên bản & Pastel Vivid Contrast)
+// Script điều khiển Cẩm nang Học vụ GVCN UEF (Mindmap, Interactive GPA & Scholarship Widgets)
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const clearSearchBtn = document.getElementById('clearSearchBtn');
@@ -7,13 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const topicsList = document.getElementById('topicsList');
   const topicCountBadge = document.getElementById('topicCountBadge');
   const sectionHeading = document.getElementById('sectionHeading');
-
-  // Lightbox Modal Elements
-  const lightboxModal = document.getElementById('lightboxModal');
-  const lightboxOverlay = document.getElementById('lightboxOverlay');
-  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
-  const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxImg = document.getElementById('lightboxImg');
 
   let activeFilter = 'all';
   let searchQuery = '';
@@ -50,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Render Topic Cards
+  // Render Topic Accordions
   function renderTopics() {
     const filtered = getFilteredTopics();
     topicCountBadge.textContent = `${filtered.length} chuyên đề`;
@@ -63,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
           <p style="font-size: 16px; font-weight: 700; color: var(--text-main);">Không tìm thấy chuyên đề quy chế phù hợp từ khóa.</p>
-          <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử từ khóa khác (ví dụ: "gpa", "điểm danh", "thi", "rèn luyện").</p>
+          <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử từ khóa khác (ví dụ: "gpa", "thi", "rèn luyện", "học lại").</p>
         </div>
       `;
       return;
@@ -93,68 +86,20 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="card-content">
-            <!-- Embedded Infographic Image Box -->
-            <div class="infographic-box">
-              <div class="infographic-header">
-                <span>🖼️ Ảnh Infographic Học vụ Gốc từ UEF</span>
-                <button type="button" class="view-img-btn" data-img="${topic.infographicImg}" data-title="${escapeHtml(topic.title)}">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    <line x1="11" y1="8" x2="11" y2="14"></line>
-                    <line x1="8" y1="11" x2="14" y2="11"></line>
-                  </svg>
-                  Phóng to Ảnh Infographic
-                </button>
-              </div>
-              <div class="infographic-img-container" data-img="${topic.infographicImg}" data-title="${escapeHtml(topic.title)}">
-                <img src="${topic.infographicImg}" alt="Infographic ${escapeHtml(topic.title)} - UEF Gốc" loading="lazy">
-              </div>
-            </div>
-
-            <!-- Detailed Text & Rules -->
             ${topic.content}
           </div>
         </article>
       `;
     }).join('');
 
-    // Attach Accordion Toggle
+    // Accordion Toggle Handlers
     document.querySelectorAll('.topic-card .card-header').forEach(header => {
       header.addEventListener('click', () => {
         const card = header.parentElement;
         card.classList.toggle('open');
       });
     });
-
-    // Attach Lightbox Modal Trigger to Buttons & Image Containers
-    document.querySelectorAll('.view-img-btn, .infographic-img-container').forEach(trigger => {
-      trigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const imgSrc = trigger.getAttribute('data-img');
-        const title = trigger.getAttribute('data-title');
-        openLightbox(imgSrc, title);
-      });
-    });
   }
-
-  // Lightbox Modal Handlers
-  function openLightbox(imgSrc, title) {
-    if (lightboxModal && lightboxImg) {
-      lightboxImg.src = imgSrc;
-      lightboxTitle.textContent = title;
-      lightboxModal.classList.add('active');
-    }
-  }
-
-  function closeLightbox() {
-    if (lightboxModal) {
-      lightboxModal.classList.remove('active');
-    }
-  }
-
-  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
-  if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
 
   // Filter Topics Data
   function getFilteredTopics() {
@@ -179,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Search Event Listeners
+  // Search Input Listeners
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.trim();
@@ -188,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionHeading.textContent = `Kết quả tìm kiếm cho "${searchQuery}"`;
       } else {
         clearSearchBtn.classList.add('hidden');
-        sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ Chính thức';
+        sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ';
       }
       renderAll();
     });
@@ -199,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.value = '';
       searchQuery = '';
       clearSearchBtn.classList.add('hidden');
-      sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ Chính thức';
+      sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ';
       renderAll();
     });
   }
@@ -214,11 +159,109 @@ document.addEventListener('DOMContentLoaded', () => {
       if (activeFilter === 'danger') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên đang gặp Khó khăn';
       else if (activeFilter === 'warning') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên Bứt phá GPA';
       else if (activeFilter === 'success') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên Học vượt / Song ngành';
-      else sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ Chính thức';
+      else sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ';
 
       renderAll();
     });
   });
+
+  // -------------------------------------------------------------
+  // 🧮 INTERACTIVE WIDGET 1: GPA CALCULATOR LOGIC
+  // -------------------------------------------------------------
+  const calcGpaBtn = document.getElementById('calcGpaBtn');
+  if (calcGpaBtn) {
+    calcGpaBtn.addEventListener('click', () => {
+      const processScore = parseFloat(document.getElementById('inputProcessScore').value) || 0;
+      const processWeight = parseFloat(document.getElementById('inputProcessWeight').value) || 40;
+      const examScore = parseFloat(document.getElementById('inputExamScore').value) || 0;
+      const examWeight = parseFloat(document.getElementById('inputExamWeight').value) || 60;
+
+      // Calculate Total Score 10
+      const total10 = Math.round(((processScore * (processWeight / 100)) + (examScore * (examWeight / 100))) * 10) / 10;
+
+      // Determine Grade & GPA 4.0
+      let gradeLetter = 'F';
+      let gpa4 = 0.0;
+      let statusBadge = '<span class="status-badge badge-danger-bold">Kém (Không đạt - Phải học lại)</span>';
+
+      if (total10 >= 8.5) {
+        gradeLetter = 'A'; gpa4 = 4.0;
+        statusBadge = '<span class="status-badge badge-green">Xuất sắc</span>';
+      } else if (total10 >= 8.0) {
+        gradeLetter = 'B+'; gpa4 = 3.5;
+        statusBadge = '<span class="status-badge badge-green">Giỏi</span>';
+      } else if (total10 >= 7.0) {
+        gradeLetter = 'B'; gpa4 = 3.0;
+        statusBadge = '<span class="status-badge badge-blue">Khá</span>';
+      } else if (total10 >= 6.5) {
+        gradeLetter = 'C+'; gpa4 = 2.5;
+        statusBadge = '<span class="status-badge badge-orange">Trung bình khá</span>';
+      } else if (total10 >= 5.5) {
+        gradeLetter = 'C'; gpa4 = 2.0;
+        statusBadge = '<span class="status-badge badge-orange">Trung bình</span>';
+      } else if (total10 >= 5.0) {
+        gradeLetter = 'D+'; gpa4 = 1.5;
+        statusBadge = '<span class="status-badge badge-red">Trung bình yếu</span>';
+      } else if (total10 >= 4.0) {
+        gradeLetter = 'D'; gpa4 = 1.0;
+        statusBadge = '<span class="status-badge badge-red">Yếu (Đạt)</span>';
+      }
+
+      document.getElementById('resTotal10').textContent = total10.toFixed(1);
+      document.getElementById('resGradeLetter').textContent = gradeLetter;
+      document.getElementById('resGpa4').textContent = gpa4.toFixed(1);
+      document.getElementById('resStatusBadge').innerHTML = statusBadge;
+    });
+  }
+
+  // -------------------------------------------------------------
+  // 🏅 INTERACTIVE WIDGET 2: SCHOLARSHIP RETENTION CHECKER
+  // -------------------------------------------------------------
+  const checkScholarshipBtn = document.getElementById('checkScholarshipBtn');
+  if (checkScholarshipBtn) {
+    checkScholarshipBtn.addEventListener('click', () => {
+      const tier = document.getElementById('selectScholarshipTier').value;
+      const studentGpa = parseFloat(document.getElementById('inputStudentGpa').value) || 0;
+      const studentConduct = parseInt(document.getElementById('inputStudentConduct').value) || 0;
+
+      let minGpa = 3.70;
+      let minConduct = 90;
+      let tierName = '100%';
+
+      if (tier === '50') {
+        minGpa = 3.40; minConduct = 80; tierName = '50%';
+      } else if (tier === '25') {
+        minGpa = 3.20; minConduct = 70; tierName = '25%';
+      }
+
+      const gpaPassed = studentGpa >= minGpa;
+      const conductPassed = studentConduct >= minConduct;
+      const isQualified = gpaPassed && conductPassed;
+
+      const scholarshipResultBox = document.getElementById('scholarshipResultBox');
+
+      if (isQualified) {
+        scholarshipResultBox.innerHTML = `
+          <div class="alert-box alert-warning" style="background:#f0fdf4; border-color:#bbf7d0; color:#15803d; margin:0;">
+            <div class="alert-title">🎉 ĐỦ ĐIỀU KIỆN DUY TRÌ HỌC BỔNG ${tierName}!</div>
+            <p>Sinh viên đạt đủ cả 2 chỉ tiêu: GPA <strong>${studentGpa.toFixed(2)} / ${minGpa.toFixed(2)}</strong> và Điểm rèn luyện <strong>${studentConduct} / ${minConduct} điểm</strong>.</p>
+          </div>
+        `;
+      } else {
+        let reasons = [];
+        if (!gpaPassed) reasons.push(`GPA thiếu ${(minGpa - studentGpa).toFixed(2)} điểm (yêu cầu &ge; ${minGpa.toFixed(2)})`);
+        if (!conductPassed) reasons.push(`Điểm rèn luyện thiếu ${minConduct - studentConduct} điểm (yêu cầu &ge; ${minConduct})`);
+
+        scholarshipResultBox.innerHTML = `
+          <div class="alert-box alert-danger" style="margin:0;">
+            <div class="alert-title">⚠️ CHƯA ĐỦ ĐIỀU KIỆN DUY TRÌ HỌC BỔNG ${tierName}</div>
+            <p><strong>Lý do chưa đạt:</strong> ${reasons.join(', ')}.</p>
+            <p style="margin-top:6px; font-size:12px;">👉 <em>Lời khuyên: Lập kế hoạch đăng ký học cải thiện điểm và tham gia các hoạt động ngoại khóa để nâng điểm rèn luyện trong đợt tới.</em></p>
+          </div>
+        `;
+      }
+    });
+  }
 
   // Helper Escape HTML
   function escapeHtml(str) {

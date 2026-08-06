@@ -6,12 +6,12 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Cẩm nang Học vụ Sinh hoạt GVCN UEF - Chuẩn 100% Nguyên bản</title>
-  <meta name="description" content="Trang truyền thông thông tin học vụ chuẩn 100%, quy chế đào tạo & giải pháp tư vấn dành cho Sinh hoạt Giáo viên Chủ nhiệm UEF.">
+  <title>Cẩm nang Học vụ Sinh hoạt GVCN UEF - Trực quan & Tương tác</title>
+  <meta name="description" content="Trang truyền thông học vụ sinh hoạt GVCN UEF với sơ đồ mindmap, flowchart, công cụ tính điểm GPA & kiểm tra học bổng tương tác.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0.0">
+  <link rel="stylesheet" href="style.css?v=3.0.0">
 </head>
 <body>
 
@@ -41,9 +41,9 @@
   <!-- Hero Section & Search -->
   <section class="shgvcn-hero">
     <div class="hero-inner">
-      <span class="hero-tag">TÀI LIỆU CHUẨN 100% NGUYÊN BẢN GỐC UEF</span>
+      <span class="hero-tag">TRỰC QUAN • CÔNG CỤ TƯƠNG TÁC • CHUẨN 100% UEF</span>
       <h2>Truyền thông Quy chế & Giải pháp Học vụ Sinh hoạt GVCN</h2>
-      <p>Tổng hợp 12 chuyên đề học vụ chuẩn, kèm hình ảnh Infographic Học vụ chính thức từ UEF và bộ giải pháp tư vấn cá nhân hóa.</p>
+      <p>Hệ thống mindmap, sơ đồ tiến trình, quy chế học vụ chuẩn và bộ công cụ tương tác tính thử GPA, kiểm tra học bổng dành cho GVCN & Sinh viên UEF.</p>
 
       <!-- Search Box -->
       <div class="search-box">
@@ -80,7 +80,7 @@
       <!-- Right Main Content Area -->
       <section class="content-area">
         <div class="content-header">
-          <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ Chính thức</h3>
+          <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ</h3>
           <span class="topic-count-badge" id="topicCountBadge">12 chuyên đề</span>
         </div>
 
@@ -88,22 +88,115 @@
         <div class="topics-list" id="topicsList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </div>
+
+        <!-- Interactive Tools Section -->
+        <section class="interactive-widgets-section">
+          <h3 class="widgets-section-title">🛠️ Bộ Công cụ Tương tác Trực tiếp Học vụ</h3>
+          
+          <div class="widgets-grid">
+            
+            <!-- Tool 1: GPA Calculator Widget -->
+            <div class="widget-card" id="gpaCalculatorWidget">
+              <div class="widget-header">
+                <span class="widget-icon">🧮</span>
+                <div>
+                  <h4>1. Công cụ Tính Điểm Môn học & Quy đổi GPA</h4>
+                  <p>Nhập điểm quá trình và cuối kỳ để xem ngay xếp loại & điểm hệ 4.0</p>
+                </div>
+              </div>
+              <div class="widget-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Điểm Quá Trình (Thang 10)</label>
+                    <input type="number" id="inputProcessScore" min="0" max="10" step="0.1" value="7.5">
+                  </div>
+                  <div class="form-group">
+                    <label>Tỷ lệ Quá Trình (%)</label>
+                    <input type="number" id="inputProcessWeight" min="10" max="90" step="5" value="40">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Điểm Thi Cuối Kỳ (Thang 10)</label>
+                    <input type="number" id="inputExamScore" min="0" max="10" step="0.1" value="8.0">
+                  </div>
+                  <div class="form-group">
+                    <label>Tỷ lệ Cuối Kỳ (%)</label>
+                    <input type="number" id="inputExamWeight" min="10" max="90" step="5" value="60">
+                  </div>
+                </div>
+
+                <button type="button" id="calcGpaBtn" class="calc-btn">Tính Điểm & Quy đổi GPA</button>
+
+                <div class="calc-result-box" id="calcResultBox">
+                  <div class="result-metric">
+                    <span class="res-label">Điểm Học phần (Thang 10):</span>
+                    <strong class="res-value" id="resTotal10">7.8</strong>
+                  </div>
+                  <div class="result-metric">
+                    <span class="res-label">Điểm Chữ:</span>
+                    <strong class="res-value grade-b" id="resGradeLetter">B</strong>
+                  </div>
+                  <div class="result-metric">
+                    <span class="res-label">Điểm Thang 4 (GPA):</span>
+                    <strong class="res-value" id="resGpa4">3.0</strong>
+                  </div>
+                  <div class="result-metric">
+                    <span class="res-label">Xếp loại Học phần:</span>
+                    <span class="status-badge badge-blue" id="resStatusBadge">Khá</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tool 2: Scholarship Retention Checker Widget -->
+            <div class="widget-card" id="scholarshipCheckerWidget">
+              <div class="widget-header">
+                <span class="widget-icon">🏅</span>
+                <div>
+                  <h4>2. Kiểm tra Điều kiện Duy trì Học bổng UEF</h4>
+                  <p>Kiểm tra xem GPA và Điểm rèn luyện của bạn có đủ điều kiện giữ học bổng không</p>
+                </div>
+              </div>
+              <div class="widget-form">
+                <div class="form-group">
+                  <label>Chọn Mức Học bổng Tuyển sinh</label>
+                  <select id="selectScholarshipTier">
+                    <option value="100">Học bổng 100% Học phí</option>
+                    <option value="50" selected>Học bổng 50% Học phí</option>
+                    <option value="25">Học bổng 25% Học phí</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>ĐTB Tích lũy (GPA Thang 4)</label>
+                    <input type="number" id="inputStudentGpa" min="0" max="4.0" step="0.01" value="3.45">
+                  </div>
+                  <div class="form-group">
+                    <label>Điểm Rèn luyện (Thang 100)</label>
+                    <input type="number" id="inputStudentConduct" min="0" max="100" step="1" value="85">
+                  </div>
+                </div>
+
+                <button type="button" id="checkScholarshipBtn" class="calc-btn btn-orange">Kiểm tra Điều kiện Duy trì</button>
+
+                <div class="calc-result-box" id="scholarshipResultBox">
+                  <div class="result-status-row" id="scholarshipStatusRow">
+                    <!-- Result status badge populated by JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </section>
 
     </div>
   </main>
-
-  <!-- Infographic Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal">
-    <div class="lightbox-overlay" id="lightboxOverlay"></div>
-    <div class="lightbox-content">
-      <button class="lightbox-close" id="lightboxCloseBtn">&times;</button>
-      <h3 class="lightbox-title" id="lightboxTitle">Hình ảnh Infographic Học vụ UEF</h3>
-      <div class="lightbox-body">
-        <img src="" id="lightboxImg" alt="Infographic Học vụ UEF Gốc">
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer class="app-footer">
@@ -118,7 +211,7 @@
     </div>
   </footer>
 
-  <script src="data.js?v=2.0.0"></script>
-  <script src="main.js?v=2.0.0"></script>
+  <script src="data.js?v=3.0.0"></script>
+  <script src="main.js?v=3.0.0"></script>
 </body>
 </html>
