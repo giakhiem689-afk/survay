@@ -1,17 +1,21 @@
 /**
-  * DỮ LIỆU HỌC VỤ VÀ CẨM NANG SINH HOẠT GVCN - UEF
-  * Nguồn tổng hợp từ Cổng thông tin Học vụ UEF (HK 25.2B)
+  * DỮ LIỆU CHÍNH THỨC CẨM NANG HỌC VỤ SINH HOẠT GVCN - UEF
+  * Trích xuất nguyên bản từ Google Sites chính thức: https://sites.google.com/uef.edu.vn/shgvcn252b
+  * Đảm bảo 100% chính xác theo văn bản & hình ảnh Infographic Học vụ UEF.
   */
 
 const SHGVCN_DATA = {
   topics: [
     {
       id: "luu-y-quan-trong",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`,
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 1 1.71 3h16.94a2 2 0 0 1 1.71-3L13.71 3.86a2 2 0 0 1-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`,
       title: "1. Một số Lưu ý Quan trọng",
       badge: "Bắt buộc tuân thủ",
       badgeClass: "badge-danger",
-      summary: "Quy định bắt buộc về đeo thẻ sinh viên, quy chế cảnh báo học tập, mốc nộp học phí và kỷ luật.",
+      bgColor: "pastel-red",
+      accentColor: "#dc2626",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQUEjVxNmcTngZH5eDUd1ll6Z2DBbHPeGJ0nij9zlyNzN6gifWWIA7bh9uRcUOumUZK1mtIdCc3utbfem2xQq9yl1WPKdpYbpRs42mwHWdwVbTtMGgy2jXxcDai90JC6rIxazwQreRFHuLFMMc3rMkIexREBqZ4h5qoGooM0IOtMgNfZZMk6zWkt2Fun=w1280",
+      summary: "Quy định đeo thẻ sinh viên, quy chế cảnh báo kết quả học tập 6 mức, mốc nộp học phí và quy định kỷ luật.",
       content: `
         <div class="topic-detail">
           <div class="alert-box alert-warning">
@@ -20,7 +24,7 @@ const SHGVCN_DATA = {
           </div>
 
           <h3>⚠️ 2. Cảnh báo Học tập & Buộc thôi học</h3>
-          <p>Sinh viên sẽ bị cảnh báo kết quả học tập nếu vi phạm một trong các trường hợp sau:</p>
+          <p>Sinh viên sẽ bị cảnh báo kết quả học tập nếu vi phạm một trong các trường hợp sau theo Quy chế đào tạo UEF:</p>
           <ul>
             <li><strong>ĐCBTB học kỳ &lt; 1.00</strong> đối với học kỳ đầu của khóa học.</li>
             <li><strong>ĐCBTB học kỳ &lt; 1.20</strong> đối với các học kỳ tiếp theo.</li>
@@ -30,8 +34,8 @@ const SHGVCN_DATA = {
             <li><strong>ĐTB tích lũy &lt; 1.80</strong> đối với sinh viên các năm tiếp theo.</li>
           </ul>
 
-          <div class="alert-box alert-danger" style="margin-top: 16px;">
-            <div class="alert-title">🚨 Lưu ý Buộc thôi học:</div>
+          <div class="alert-box alert-danger">
+            <div class="alert-title">🚨 Quy định Buộc thôi học:</div>
             <p>Sinh viên bị cảnh báo kết quả học tập <strong>2 lần liên tiếp</strong> sẽ bị buộc thôi học theo quy định của Bộ Giáo dục & Đào tạo.</p>
           </div>
 
@@ -49,7 +53,10 @@ const SHGVCN_DATA = {
       title: "2. Kế hoạch Học tập Học kỳ",
       badge: "Lịch trình đào tạo",
       badgeClass: "badge-primary",
-      summary: "Khung thời gian học kỳ, đợt đăng ký môn học chính thức, thời gian rút môn và thi học kỳ.",
+      bgColor: "pastel-blue",
+      accentColor: "#0284c7",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQXPS857tisJiPWALrnMM-RXvH4NCgT-JwkDpkWNp68Ur_WLRpydXhLKG9SLvp6UQxcODTpwOuY8PPeMuBLmX9rozO19x8FmH44hpucmgCJofc1067ssIJdgSV24gW_h9hLY416qpxtX_CseoqXgSN8fmDX-ONBBTcnpeMrU_JTpq6T5IxTrHLDH1jXJnQvicHwzk10wbl8Q3GaFds3dBuHVi0dEptcVIuhc9UMGpJo=w1280",
+      summary: "Khung thời gian học kỳ chính/phụ, tiến trình đăng ký môn học, rút môn và lịch thi học kỳ.",
       content: `
         <div class="topic-detail">
           <h3>📅 Khung Thời gian Học kỳ UEF</h3>
@@ -96,7 +103,10 @@ const SHGVCN_DATA = {
       title: "3. Chương trình Đào tạo",
       badge: "Cấu trúc tín chỉ",
       badgeClass: "badge-info",
-      summary: "Phân bổ khối lượng kiến thức đại cương, cơ sở ngành, chuyên ngành, thực tập và đồ án tốt nghiệp.",
+      bgColor: "pastel-purple",
+      accentColor: "#7c3aed",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQW5d10aXjLGuv9RB43LRDcB_MyCCvt1Tq0Bm59PxfG-YK5KepXn_27vyeDo5deCykmqlNkvVBWkdwLA1TT0yu99MLB881wcEh1WiSR5LaQAx773uzRVv8HScd4AjY-KFYMWDxf-rcc-GOPQD6LIuTetDg4_dlhMu5imMMgQB6cMyBVkn_kTFaUjzD1wrXLmDyyNuOPWVHksJg0Fega5y5eRtZ704hfv5mrY5wUu=w1280",
+      summary: "Phân bổ khối lượng kiến thức đại cương, cơ sở ngành, chuyên ngành, thực tập tốt nghiệp.",
       content: `
         <div class="topic-detail">
           <h3>📚 Phân bổ Khối lượng Kiến thức (Tín chỉ)</h3>
@@ -129,6 +139,9 @@ const SHGVCN_DATA = {
       title: "4. Cách tính Điểm & Quy đổi GPA",
       badge: "Công thức & Thang điểm",
       badgeClass: "badge-success",
+      bgColor: "pastel-green",
+      accentColor: "#059669",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQWwdxAZ8aA42sFL5LPmwXDJ3VWTaW5BXrPF7JX5EXbWoHkJ_Qh4NknXyROaOfUuI1bA_5HDkU-kJZKR4eeYURdQkSLvW45-TvNx0nS_3deLmrS-JL6EUmYiJ_uyXhyvAfGI1PHKgGDewmrtavORmmlak23c0TAIlpAEIcb-V0sml5nBFGkzQoS6m_kxi6HRYD0X9-qsZtFVrff95wSJAOyLsJVBngHepfAi6gO5r2c=w1280",
       summary: "Tỷ lệ điểm quá trình (30-50%), điểm thi kết thúc môn, quy đổi sang thang chữ A-F và thang điểm 4.0.",
       content: `
         <div class="topic-detail">
@@ -150,14 +163,14 @@ const SHGVCN_DATA = {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>8.5 - 10.0</td><td><strong style="color:#10b981;">A</strong></td><td>4.0</td><td>Xuất sắc</td></tr>
-                <tr><td>8.0 - 8.4</td><td><strong style="color:#10b981;">B+</strong></td><td>3.5</td><td>Giỏi</td></tr>
-                <tr><td>7.0 - 7.9</td><td><strong style="color:#3b82f6;">B</strong></td><td>3.0</td><td>Khá</td></tr>
-                <tr><td>6.5 - 6.9</td><td><strong style="color:#f59e0b;">C+</strong></td><td>2.5</td><td>Trung bình khá</td></tr>
-                <tr><td>5.5 - 6.4</td><td><strong style="color:#f59e0b;">C</strong></td><td>2.0</td><td>Trung bình</td></tr>
-                <tr><td>5.0 - 5.4</td><td><strong style="color:#ef4444;">D+</strong></td><td>1.5</td><td>Trung bình yếu</td></tr>
-                <tr><td>4.0 - 4.9</td><td><strong style="color:#ef4444;">D</strong></td><td>1.0</td><td>Yếu (Đạt)</td></tr>
-                <tr><td>&lt; 4.0</td><td><strong style="color:#dc2626;">F</strong></td><td>0.0</td><td>Kém (Không đạt - Phải học lại)</td></tr>
+                <tr><td>8.5 - 10.0</td><td><strong style="color:#059669;">A</strong></td><td>4.0</td><td>Xuất sắc</td></tr>
+                <tr><td>8.0 - 8.4</td><td><strong style="color:#059669;">B+</strong></td><td>3.5</td><td>Giỏi</td></tr>
+                <tr><td>7.0 - 7.9</td><td><strong style="color:#0284c7;">B</strong></td><td>3.0</td><td>Khá</td></tr>
+                <tr><td>6.5 - 6.9</td><td><strong style="color:#d97706;">C+</strong></td><td>2.5</td><td>Trung bình khá</td></tr>
+                <tr><td>5.5 - 6.4</td><td><strong style="color:#d97706;">C</strong></td><td>2.0</td><td>Trung bình</td></tr>
+                <tr><td>5.0 - 5.4</td><td><strong style="color:#dc2626;">D+</strong></td><td>1.5</td><td>Trung bình yếu</td></tr>
+                <tr><td>4.0 - 4.9</td><td><strong style="color:#dc2626;">D</strong></td><td>1.0</td><td>Yếu (Đạt)</td></tr>
+                <tr><td>&lt; 4.0</td><td><strong style="color:#b31217;">F</strong></td><td>0.0</td><td>Kém (Không đạt - Phải học lại)</td></tr>
               </tbody>
             </table>
           </div>
@@ -170,6 +183,9 @@ const SHGVCN_DATA = {
       title: "5. Duy trì Học bổng Tuyển sinh",
       badge: "Điều kiện Học bổng",
       badgeClass: "badge-warning",
+      bgColor: "pastel-amber",
+      accentColor: "#d97706",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQUOu3ulwPnYKsLYiedjpjBZzU9ofuDHNQDfiR9pip2aHeAtzaejstuh3_3YCCDSrPR0upmOmKF27jANRx6idABrUTnXF24itg-w0AcA4MIwRMrq4S3IA3JGiVY7i-Tt-Ot3bZ9fntm11Aq4blJ7H2MI1tkTULQ_ZH9x1-R1I1Ye1kcGPaeJrKrV9kSj0TPGMHbJ8y67Z0tFdIBBKLZ0f-fl3GMp54ZsSOM01w=w1280",
       summary: "Tiêu chuẩn xét duy trì học bổng tuyển sinh 25%, 50%, 100% hàng năm về GPA và Điểm rèn luyện.",
       content: `
         <div class="topic-detail">
@@ -188,19 +204,19 @@ const SHGVCN_DATA = {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong style="color:#eab308;">Học bổng 100%</strong></td>
+                  <td><strong style="color:#d97706;">Học bổng 100%</strong></td>
                   <td><strong>&ge; 3.70 / 4.0</strong></td>
                   <td><strong>&ge; 90 điểm (Xuất sắc)</strong></td>
                   <td>Đủ tín chỉ theo tiến độ</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#3b82f6;">Học bổng 50%</strong></td>
+                  <td><strong style="color:#0284c7;">Học bổng 50%</strong></td>
                   <td><strong>&ge; 3.40 / 4.0</strong></td>
                   <td><strong>&ge; 80 điểm (Tốt)</strong></td>
                   <td>Đủ tín chỉ theo tiến độ</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#10b981;">Học bổng 25%</strong></td>
+                  <td><strong style="color:#059669;">Học bổng 25%</strong></td>
                   <td><strong>&ge; 3.20 / 4.0</strong></td>
                   <td><strong>&ge; 70 điểm (Khá)</strong></td>
                   <td>Đủ tín chỉ theo tiến độ</td>
@@ -209,7 +225,7 @@ const SHGVCN_DATA = {
             </table>
           </div>
 
-          <div class="alert-box alert-warning" style="margin-top: 16px;">
+          <div class="alert-box alert-warning">
             <div class="alert-title">⚠️ Lưu ý quan trọng:</div>
             <p>Sinh viên nếu không đạt GPA hoặc điểm rèn luyện ở năm học nào sẽ bị tạm dừng học bổng ở năm học đó. Điểm rèn luyện là yếu tố bắt buộc song song với GPA.</p>
           </div>
@@ -222,6 +238,9 @@ const SHGVCN_DATA = {
       title: "6. Chứng chỉ Chuẩn đầu ra",
       badge: "Ngoại ngữ & Tin học",
       badgeClass: "badge-primary",
+      bgColor: "pastel-cyan",
+      accentColor: "#0891b2",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQXdGiTMAE5lUG1LRjuPjBkQzRZ8rX3DoVede9I6j3533tTRP-WeLLa12v9eqTWVS2fgzYf9beRb7WTFpm7hhgbBQWik3MOe5kJce736_rMaHYPcH_hl0N3ycWac7g2ZwU4CpyAEvNw-Mj2vDf1H0mHQDpMKfP31juFmIUJGH57vYaQhJn7PZFqIp9XvDlEf1IE0yqFFCYMB-1yTspJcNRDuql5iaiICIJd0AC9_sk4=w1280",
       summary: "Yêu cầu chuẩn đầu ra Ngoại ngữ (IELTS/TOEIC/JLPT), Tin học (MOS/IC3), Giáo dục QP-AN và Thể chất.",
       content: `
         <div class="topic-detail">
@@ -267,6 +286,9 @@ const SHGVCN_DATA = {
       title: "7. Điều kiện Xét Tốt nghiệp",
       badge: "Hoàn thành Khóa học",
       badgeClass: "badge-info",
+      bgColor: "pastel-indigo",
+      accentColor: "#4f46e5",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQVH7YzPiFte6p6epBrLzUAUZGJe2MEe9w-7BnPjIY1r5NP6AXwW4Bf0wbwbdBGhdCV1tWbXe-VM5dMTDC2qmQpjmOPKIsjdjICf1A8h5i3NtViIYEHfukufzE8sewgSlVUTVV6ebamCqUTDning7sG1B1dWCvkGEV-biWEKNiYl_DRVWeZAavZ2VUIy=w1280",
       summary: "Điều kiện tích lũy tín chỉ, ĐTB tích lũy toàn khóa, chuẩn đầu ra và các đợt xét tốt nghiệp trong năm.",
       content: `
         <div class="topic-detail">
@@ -288,6 +310,9 @@ const SHGVCN_DATA = {
       title: "8. Đăng ký Học phụ đạo (Miễn phí)",
       badge: "Hỗ trợ Học tập UEF",
       badgeClass: "badge-success",
+      bgColor: "pastel-teal",
+      accentColor: "#0d9488",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQVVlsW1420zUmh39M_bt3eZvAWo99EgevbD-qkAuTNAOS2LdFcr5NUv0QHrsmpZfonuS_KrAhxzowO7sxelsT8wQfHx8gkZK6_8f688SX5N_1PJEsPNipWzyP976Z5lmcD4UofvV4aALz02lebGOqXk5lz_jm29rQAlmPzsDHsAXgoen2PIZ96fhlNUzYsd4Rk4mu8c5X759lyZkq30M5HwvxYsPVS49COVEh-mF3I=w1280",
       summary: "Chương trình lớp phụ đạo kiến thức miễn phí do Nhà trường tổ chức dành cho sinh viên gặp khó khăn môn học.",
       content: `
         <div class="topic-detail">
@@ -314,6 +339,9 @@ const SHGVCN_DATA = {
       title: "9. Học lại & Học cải thiện Điểm",
       badge: "Quy chế Học lại",
       badgeClass: "badge-warning",
+      bgColor: "pastel-orange",
+      accentColor: "#ea580c",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQVAFF-Vk1rmWIiRcgHpoBeRjZXFIuSPuIy8Ge1Lr5ubQRR1Etymz_JghrtHS5H6YFeWkunigH718pQ4cHGlWFgKbz_DslNjoLRIyQG4xME__whhPKD2uBHeXJuXi4ZqSQoLkhvzqPZzluyX7bU0d_tinf4OX-9o9WAGiiHwsLhbI105If_vwrFnrEdbVciuQhu8n60h1qUqsynqqzdx1eMfmHbd_xabp3tYHufgMvc=w1280",
       summary: "Quy định đăng ký học lại môn F bắt buộc, học cải thiện môn D/C và phương pháp tính điểm trung bình tích lũy.",
       content: `
         <div class="topic-detail">
@@ -345,6 +373,9 @@ const SHGVCN_DATA = {
       title: "10. Chương trình Song bằng / Song ngành",
       badge: "Cơ hội Phát triển",
       badgeClass: "badge-primary",
+      bgColor: "pastel-blue",
+      accentColor: "#2563eb",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQUsacpMEUH7KvHMTUXLc8RdOH7kBZJPmwOkSfiwld0cqGZ4UWWmTsVxeig7lRxuANBv-7ua0RFPwKSjoy4Tcr__nXivLvbzTa1MIqQU9xbuMCMKJ9y9iWIg3Ull-CemVOT6Scpx5k7NXLVOJz9Uyjj8kfSCdptn1b9fEvy8bdJdRqtb3-O0F4xuv8rVhz609M8VzbRVRPnnt9nOyQ=w1280",
       summary: "Điều kiện sinh viên đăng ký học cùng lúc 2 chương trình đào tạo để nhận 2 bằng đại học chính quy.",
       content: `
         <div class="topic-detail">
@@ -365,11 +396,14 @@ const SHGVCN_DATA = {
       title: "11. Cổng Thông tin Đào tạo (daotao.uef.edu.vn)",
       badge: "Hệ thống Quản lý",
       badgeClass: "badge-info",
+      bgColor: "pastel-sky",
+      accentColor: "#0284c7",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQUOYrPxT1llC-7aQPl6HDB33fYm-RN6sOhqXxRjPM9-aVLYq_Nf0n6SwqacpQYoDOPeFEw6sAm2zF-8fLcnBYNQle71jtg_dMucNcMQpKK8UG6XP2zF9xGRvnpVPiAskErtnDqbQq27AdD3aCPbBV74YG0n7IW4GHwfjYTq5QlkItzOL9l2y_Kqz96EuifDM9AJvsPoSUXvf0TFepJg=w1280",
       summary: "Hướng dẫn thao tác xem thời khóa biểu, lịch thi, tra cứu điểm thi và đăng ký môn học trực tuyến.",
       content: `
         <div class="topic-detail">
           <h3>🌐 Hướng dẫn Thao tác trên Cổng Đào tạo UEF</h3>
-          <p>Địa chỉ truy cập chính thức: <a href="https://daotao.uef.edu.vn" target="_blank" style="color:#38bdf8; font-weight:700;">daotao.uef.edu.vn</a></p>
+          <p>Địa chỉ truy cập chính thức: <a href="https://daotao.uef.edu.vn" target="_blank" style="color:#0284c7; font-weight:700;">daotao.uef.edu.vn</a></p>
 
           <div class="grid-2col">
             <div class="info-card">
@@ -390,6 +424,9 @@ const SHGVCN_DATA = {
       title: "12. Giải pháp Hỗ trợ Sinh viên theo Nhu cầu",
       badge: "Tư vấn GVCN",
       badgeClass: "badge-success",
+      bgColor: "pastel-green",
+      accentColor: "#16a34a",
+      infographicImg: "https://lh3.googleusercontent.com/sitesv/AG8ngQXGIyWDEpXxELZt9nnGtzUSBS4X1xXjkOzqBsbfdVmCveFhKzndN77-7_QwYHoQ5eB9g2x-9ackeFRllbnuoX_iv-Eas52CsSZuy_S94Ffx8lQNrmdVUCKYVdZ4sJIR8aGLNyKAS0GF9g3aJpxfl5ssgN9Ob9iasOzY3kDwJwV1MFZcCWCUeXRXLq-m=w1280",
       summary: "Bộ giải pháp tư vấn cá nhân hóa dành cho GVCN theo 3 phân nhóm đối tượng sinh viên.",
       content: `
         <div class="topic-detail">

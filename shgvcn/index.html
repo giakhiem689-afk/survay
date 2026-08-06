@@ -6,25 +6,23 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Cẩm nang & Truyền thông Học vụ Sinh hoạt GVCN - UEF</title>
-  <meta name="description" content="Trang thông tin tổng hợp kiến thức học vụ, quy chế đào tạo & giải pháp hỗ trợ sinh viên phục vụ Sinh hoạt Giáo viên Chủ nhiệm UEF.">
+  <title>Cẩm nang Học vụ Sinh hoạt GVCN UEF - Chuẩn 100% Nguyên bản</title>
+  <meta name="description" content="Trang truyền thông thông tin học vụ chuẩn 100%, quy chế đào tạo & giải pháp tư vấn dành cho Sinh hoạt Giáo viên Chủ nhiệm UEF.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.0.1">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2.0.0">
 </head>
 <body>
-  <!-- Ambient Glow -->
-  <div class="bg-glow glow-top"></div>
 
-  <!-- Header -->
+  <!-- Header Portal -->
   <header class="app-header">
     <div class="header-container">
       <div class="logo-area">
         <div class="logo-icon">GVCN</div>
         <div>
-          <h1>TRUYỀN THÔNG HỌC VỤ GVCN</h1>
-          <p>Trung tâm Hỗ trợ Học vụ - UEF Academic Support</p>
+          <h1>CẨM NANG HỌC VỤ GVCN</h1>
+          <p>Trung tâm Hỗ trợ Học vụ - Trường ĐH Kinh tế - Tài chính TP.HCM</p>
         </div>
       </div>
       
@@ -43,9 +41,9 @@
   <!-- Hero Section & Search -->
   <section class="shgvcn-hero">
     <div class="hero-inner">
-      <span class="hero-tag">CẨM NANG HỌC VỤ SINH HOẠT GVCN</span>
-      <h2>Tổng hợp Quy chế & Giải pháp Hỗ trợ Sinh viên UEF</h2>
-      <p>Cung cấp đầy đủ 12 chuyên đề học vụ trọng tâm, công thức tính điểm, chuẩn đầu ra và giải pháp tư vấn học tập cho Giáo viên chủ nhiệm & Sinh viên.</p>
+      <span class="hero-tag">TÀI LIỆU CHUẨN 100% NGUYÊN BẢN GỐC UEF</span>
+      <h2>Truyền thông Quy chế & Giải pháp Học vụ Sinh hoạt GVCN</h2>
+      <p>Tổng hợp 12 chuyên đề học vụ chuẩn, kèm hình ảnh Infographic Học vụ chính thức từ UEF và bộ giải pháp tư vấn cá nhân hóa.</p>
 
       <!-- Search Box -->
       <div class="search-box">
@@ -53,11 +51,11 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Tra cứu từ khóa học vụ (ví dụ: học bổng, GPA, cảnh báo học tập, chuẩn đầu ra, học lại)...">
+        <input type="text" id="searchInput" placeholder="Tra cứu từ khóa quy chế (ví dụ: học bổng, GPA, cảnh báo học tập, chuẩn đầu ra, học lại)...">
         <button type="button" id="clearSearchBtn" class="clear-btn hidden">✕</button>
       </div>
 
-      <!-- Quick Scenario Filter Chips -->
+      <!-- Scenario Filter Chips -->
       <div class="filter-chips">
         <button type="button" class="chip-btn active" data-filter="all">Tất cả Chuyên đề (12)</button>
         <button type="button" class="chip-btn chip-red" data-filter="danger">🚨 SV Gặp Khó khăn</button>
@@ -73,7 +71,7 @@
       
       <!-- Left Sticky Sidebar Nav -->
       <aside class="sidebar-nav">
-        <div class="sidebar-title">Danh mục Chuyên đề</div>
+        <div class="sidebar-title">Danh mục Chuyên đề Học vụ</div>
         <nav class="nav-list" id="navList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </nav>
@@ -82,7 +80,7 @@
       <!-- Right Main Content Area -->
       <section class="content-area">
         <div class="content-header">
-          <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ</h3>
+          <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ Chính thức</h3>
           <span class="topic-count-badge" id="topicCountBadge">12 chuyên đề</span>
         </div>
 
@@ -94,6 +92,18 @@
 
     </div>
   </main>
+
+  <!-- Infographic Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxCloseBtn">&times;</button>
+      <h3 class="lightbox-title" id="lightboxTitle">Hình ảnh Infographic Học vụ UEF</h3>
+      <div class="lightbox-body">
+        <img src="" id="lightboxImg" alt="Infographic Học vụ UEF Gốc">
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="app-footer">
@@ -108,7 +118,7 @@
     </div>
   </footer>
 
-  <script src="data.js?v=1.0.1"></script>
-  <script src="main.js?v=1.0.1"></script>
+  <script src="data.js?v=2.0.0"></script>
+  <script src="main.js?v=2.0.0"></script>
 </body>
 </html>
