@@ -9,39 +9,39 @@
 */
 
 :root {
-  /* Brand Accent Colors - Pastel Pink Theme */
-  --uef-red: #ff748c;          /* Hồng pastel ấm sáng */
-  --uef-red-dark: #d83a56;     /* Hồng đậm để viết chữ rõ ràng và nhấn nút */
-  --uef-red-light: #fff0f2;    /* Hồng pastel cực nhẹ để làm nền */
-  --uef-blue: #5c92ff;         /* Xanh lam pastel hài hòa */
-  --uef-blue-dark: #3a75e8;    /* Xanh lam đậm làm màu phụ */
-  --uef-blue-light: #f0f4ff;   /* Xanh lam nhạt làm nền phụ */
+  /* Brand Accent Colors - UEF Red & Navy Slate Theme */
+  --uef-red: #b31217;
+  --uef-red-dark: #900a0e;
+  --uef-red-light: #fff1f2;
+  --uef-blue: #0284c7;
+  --uef-blue-dark: #0f2b52;
+  --uef-blue-light: #f0f9ff;
   
   /* UI Colors */
-  --text-main: #0f172a;      /* slate 900 */
-  --text-muted: #475569;     /* slate 600 */
-  --text-light: #94a3b8;     /* slate 400 */
-  --bg-surface: rgba(255, 255, 255, 0.82);
-  --bg-border: rgba(226, 232, 240, 0.8);
-  --bg-border-focus: rgba(92, 146, 255, 0.35);
+  --text-main: #0f172a;      /* High contrast slate 900 */
+  --text-muted: #334155;     /* slate 700 */
+  --text-light: #64748b;     /* slate 500 */
+  --bg-surface: #ffffff;
+  --bg-border: #e2e8f0;
+  --bg-border-focus: #0284c7;
   
   /* State Colors */
-  --success: #10b981;        /* emerald 500 */
-  --success-light: #ecfdf5;
-  --warning: #f59e0b;        /* amber 500 */
+  --success: #059669;
+  --success-light: #f0fdf4;
+  --warning: #d97706;
   --warning-light: #fffbeb;
-  --purple: #8b5cf6;         /* violet 500 */
-  --purple-light: #f5f3ff;
+  --purple: #7c3aed;
+  --purple-light: #faf5ff;
   
   /* Design Tokens */
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 10px;
-  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.03);
-  --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 48px rgba(15, 23, 42, 0.12);
-  --shadow-glow: 0 12px 28px rgba(255, 116, 140, 0.25);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 4px 14px rgba(179, 18, 23, 0.25);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Base Resets & Background */
@@ -58,14 +58,12 @@ html {
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
   color: var(--text-main);
-  line-height: 1.5;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(255, 116, 140, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(92, 146, 255, 0.06) 0%, transparent 40%),
-    linear-gradient(135deg, #fdf8f9, #faf5f6 60%, #fff0f2 100%);
+  line-height: 1.6;
+  background-color: #f8fafc;
   min-height: 100vh;
   overflow-x: hidden;
   padding-bottom: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Custom Scrollbar */
@@ -109,8 +107,7 @@ body {
   line-height: 1.2;
   color: var(--text-main);
   background: linear-gradient(135deg, var(--text-main) 30%, var(--uef-red-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
   margin-top: 8px;
 }
 
@@ -132,30 +129,29 @@ body {
   border-radius: var(--radius-lg);
 }
 
-/* Floating Glass Header */
+/* Sticky Portal Header */
 .site-header {
   position: sticky;
-  top: 16px;
+  top: 0;
   z-index: 1000;
-  width: min(1200px, 94%);
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  box-shadow: 
-    0 4px 30px rgba(0, 0, 0, 0.03),
-    0 1px 0 rgba(255, 255, 255, 0.4) inset;
-  transition: var(--transition);
+  width: 100%;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--bg-border);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 24px;
 }
 
 .nav-wrapper {
-  min-height: 76px;
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0;
 }
 
 .brand {
@@ -357,8 +353,7 @@ body {
 .hero-title span {
   display: block;
   background: linear-gradient(135deg, var(--uef-red), var(--uef-blue-dark));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
 }
 
 .hero-desc {
