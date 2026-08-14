@@ -128,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="badge ${topic.badgeClass}">${escapeHtml(topic.badge)}</span>
               <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 20px; height: 20px;">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
