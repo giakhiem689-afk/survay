@@ -107,19 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activeTopicViewer.innerHTML = `
       <article class="topic-detail-card">
-        <!-- Topic Header Banner -->
-        <div class="topic-detail-header" style="background: linear-gradient(135deg, var(--${topic.bgColor}-bg) 0%, #ffffff 100%);">
-          <div class="header-main-info">
+        <!-- Topic Header Banner - Enlarge & Center Title -->
+        <div class="topic-detail-header" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+          <div class="header-main-info centered-topic-header">
             <div class="topic-large-icon" style="background: white; color: ${topic.accentColor}; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1.5px solid var(--border-card);">
               ${topic.icon}
             </div>
-            <div>
-              <span class="topic-order-badge" style="background: var(--${topic.bgColor}-bg); color: ${topic.accentColor}; border: 1px solid var(--border-card);">
-                Mục ${activeTopicIndex + 1} / ${totalTopics}
-              </span>
-              <h2 class="active-topic-title">${escapeHtml(topic.title)}</h2>
-              <p class="active-topic-summary">${escapeHtml(topic.summary)}</p>
-            </div>
+            <h2 class="active-topic-title">${escapeHtml(topic.title)}</h2>
           </div>
         </div>
 
