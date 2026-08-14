@@ -20,6 +20,7 @@ const SHGVCN_DATA = {
   ],
 
   topics: [
+    // MỤC 1: TRUNG TÂM HỖ TRỢ HỌC VỤ
     {
       id: "trung-tam-ho-tro-hoc-vu",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
@@ -30,78 +31,63 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="visual-card card-blue-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble blue-bubble">🏢</span>
-              <h4>1. Nhiệm vụ chính của Trung tâm Hỗ trợ học vụ</h4>
+          <!-- Bento Grid: 4 Nhiệm vụ chính -->
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">💬</span>
+                <h4 class="bento-title">1. Tiếp nhận & Tư vấn</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Quy định, quy chế đào tạo tín chỉ UEF</li>
+                <li>Thông báo, kế hoạch giảng dạy - học tập</li>
+                <li>Thời khóa biểu, lịch thi, kết quả học tập</li>
+              </ul>
             </div>
-            <div class="duties-grid">
-              <div class="duty-item">
-                <strong>💬 Tiếp nhận, tư vấn & giải đáp cho Sinh viên / Phụ huynh:</strong>
-                <ul>
-                  <li>Các quy định, quy chế đào tạo;</li>
-                  <li>Các thông báo liên quan đến vấn đề học tập;</li>
-                  <li>Kế hoạch giảng dạy - học tập của học kỳ/năm học;</li>
-                  <li>Thời khóa biểu, lịch thi;</li>
-                  <li>Kết quả học tập và các vấn đề học vụ khác.</li>
-                </ul>
-              </div>
 
-              <div class="duty-item">
-                <strong>📝 Giải quyết các thủ tục học vụ cho Sinh viên:</strong>
-                <ul>
-                  <li>Bảo lưu kết quả học tập;</li>
-                  <li>Nhập học lại;</li>
-                  <li>Chuyển trường, chuyển ngành học;</li>
-                  <li>Đăng ký môn học và các thủ tục học vụ khác.</li>
-                </ul>
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">📝</span>
+                <h4 class="bento-title">2. Giải quyết Thủ tục</h4>
               </div>
+              <ul class="bento-list">
+                <li>Bảo lưu kết quả học tập & Nhập học lại</li>
+                <li>Chuyển trường, chuyển ngành đào tạo</li>
+                <li>Đăng ký môn học & các đơn từ học vụ</li>
+              </ul>
+            </div>
 
-              <div class="duty-item">
-                <strong>❤️ Chăm sóc & Hỗ trợ Học vụ Sinh viên:</strong>
-                <p>Theo dõi, chăm sóc học vụ đối với sinh viên có kết quả học tập chưa tốt, tư vấn và đề xuất các phương án giúp sinh viên cải thiện kết quả học tập.</p>
+            <div class="info-bento-card bento-red">
+              <div class="bento-header">
+                <span class="bento-icon">❤️</span>
+                <h4 class="bento-title">3. Chăm sóc Học vụ</h4>
               </div>
+              <p class="bento-desc">Theo dõi, đồng hành cùng sinh viên có kết quả chưa tốt; đề xuất các phương án hỗ trợ, cải thiện GPA và nâng cao học lực.</p>
+            </div>
 
-              <div class="duty-item">
-                <strong>🤝 Phối hợp với Khoa chuyên môn:</strong>
-                <p>Tư vấn chuyên ngành, chương trình và lộ trình học cho sinh viên/phụ huynh, qua đó giúp sinh viên xây dựng <strong>Kế hoạch học tập hợp lý</strong> và <strong>Phương pháp học hiệu quả</strong>.</p>
+            <div class="info-bento-card bento-purple">
+              <div class="bento-header">
+                <span class="bento-icon">🤝</span>
+                <h4 class="bento-title">4. Phối hợp Khoa Chuyên môn</h4>
               </div>
+              <p class="bento-desc">Tư vấn chuyên ngành, xây dựng lộ trình học tập tối ưu và phương pháp học đại học hiệu quả cho sinh viên và phụ huynh.</p>
             </div>
           </div>
 
-          <!-- Working Time & Contact Info -->
-          <div class="grid-2col" style="margin-top: 16px;">
-            <div class="info-card border-blue">
-              <div class="info-card-header">
-                <span class="icon-bubble blue-bubble">⏰</span>
-                <h4>Thời gian Làm việc</h4>
-              </div>
-              <p><strong>Từ Thứ Hai đến Thứ Sáu và sáng Thứ Bảy:</strong></p>
-              <ul>
-                <li><strong>Buổi sáng:</strong> 07:30 - 11:30</li>
-                <li><strong>Buổi chiều:</strong> 13:30 - 16:30</li>
-              </ul>
-              <p style="margin-top: 10px;"><strong>Địa điểm liên hệ trực tiếp:</strong><br>📍 Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.</p>
-            </div>
-
-            <div class="info-card border-green">
-              <div class="info-card-header">
-                <span class="icon-bubble green-bubble">📞</span>
-                <h4>Các Kênh Liên hệ Trực tuyến</h4>
-              </div>
-              <ul class="contact-channels">
-                <li>📧 <strong>Email:</strong> <code>hotrohocvu@uef.edu.vn</code></li>
-                <li>💬 <strong>Chat qua Zalo:</strong> <code>0908 560 999</code></li>
-                <li>☎️ <strong>Điện thoại:</strong> <code>028 2236 1111</code> hoặc <code>028 2235 1111</code></li>
-                <li>📞 <strong>Tổng đài:</strong> <code>028 2236 3333</code> (Số nội bộ: <code>2050</code>, <code>2052</code>, <code>2053</code>, <code>2054</code>, <code>2055</code>, <code>2056</code>, <code>2058</code>, <code>2059</code>, <code>2062</code>)</li>
-                <li>🌐 <strong>Website:</strong> <a href="https://www.uef.edu.vn/tththv" target="_blank">www.uef.edu.vn/tththv</a></li>
-              </ul>
+          <!-- Infographic Callout: Địa chỉ & Thời gian -->
+          <div class="info-alert-callout callout-blue">
+            <span class="callout-icon">📍</span>
+            <div class="callout-text">
+              <strong>Địa điểm làm việc trực tiếp:</strong> Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.<br>
+              <strong>Thời gian làm việc:</strong> Thứ 2 đến Thứ 6 (Sáng 07:30 - 11:30 | Chiều 13:30 - 16:30) • Sáng Thứ 7 (07:30 - 11:30).
             </div>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 2: MỘT SỐ THÔNG TIN LƯU Ý QUAN TRỌNG
     {
       id: "thong-tin-luu-y-quan-trong",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 1 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`,
@@ -112,671 +98,645 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="visual-card card-red-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble red-bubble">🪪</span>
-              <h4>1. Đeo Thẻ Sinh viên khi Đến trường & Dự thi</h4>
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-red">
+              <div class="bento-header">
+                <span class="bento-icon">🪪</span>
+                <h4 class="bento-title">Đeo Thẻ Sinh viên Khi Đến Trường & Dự Thi</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Bắt buộc xuất trình Thẻ Sinh viên khi vào phòng thi và thực hiện các thủ tục học vụ.</li>
+                <li><strong>Trường hợp mất thẻ:</strong> Liên hệ Trung tâm Thông tin - Thư viện (Tầng 5) để làm lại thẻ SV.</li>
+                <li>Nếu chưa kịp nhận thẻ SV mới trước giờ thi, liên hệ Trung tâm Hỗ trợ học vụ (Tầng 2) để được cấp <strong>Giấy xác nhận tạm thời</strong>.</li>
+              </ul>
             </div>
-            <ul>
-              <li><strong>Sinh viên tham gia thi bắt buộc phải xuất trình Thẻ Sinh viên.</strong> Hội đồng thi sẽ không giải quyết trường hợp sinh viên không có Thẻ Sinh viên khi tham gia thi.</li>
-              <li>Khi sinh viên liên hệ với các Phòng/Viện/Trung tâm của Nhà trường để được hỗ trợ, tư vấn hoặc xử lý các vấn đề học vụ, sinh viên cần xuất trình Thẻ Sinh viên để các đơn vị chức năng xác nhận thông tin.</li>
-              <li><strong>Trường hợp quên hoặc bị mất thẻ:</strong> Sinh viên liên hệ ngay <strong>Phòng Công tác sinh viên (Tầng 6, trụ sở 141 Điện Biên Phủ)</strong> để thực hiện cấp lại Thẻ Sinh viên.</li>
-            </ul>
+
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">📧</span>
+                <h4 class="bento-title">Kiểm tra Email Sinh viên & Tin nhắn</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Email trường cấp (dạng <code>MSSV@uef.edu.vn</code>) là kênh liên lạc thông tin học vụ chính thức và duy nhất.</li>
+                <li>Sinh viên có trách nhiệm kiểm tra email thường xuyên để cập nhật kịp thời các thông báo học tập, lịch thi và cảnh báo học vụ.</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="visual-card card-amber-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble amber-bubble">📬</span>
-              <h4>2. Thường xuyên Kiểm tra Email UEF & Tin nhắn từ Nhà trường</h4>
+          <div class="info-alert-callout callout-amber">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-text">
+              <strong>Lưu ý cảnh báo:</strong> Mọi khiếu nại phát sinh do sinh viên không kiểm tra Email trường hoặc không xuất trình thẻ SV khi thi sẽ không được giải quyết.
             </div>
-            <ul>
-              <li>Sinh viên cần đăng nhập và sử dụng <strong>Email UEF</strong> (<code>@uef.edu.vn</code>), thường xuyên kiểm tra hộp thư email và tin nhắn điện thoại để tiếp nhận các thông tin, thông báo quan trọng về học tập từ:
-                <ol style="margin-top: 6px;">
-                  <li>Trung tâm Hỗ trợ học vụ;</li>
-                  <li>Khoa chuyên môn;</li>
-                  <li>Các Phòng/Ban chức năng của Nhà trường.</li>
-                </ol>
-              </li>
-              <li><strong>Trường hợp cần hỗ trợ về tài khoản Email UEF:</strong> Sinh viên liên hệ <strong>Trung tâm IT (Tầng 4, trụ sở 141 Điện Biên Phủ)</strong> hoặc Điện thoại <code>028 2236 3333 - ext 2160</code>.</li>
-            </ul>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 3: KẾ HOẠCH ĐÀO TẠO - GIẢNG DẠY
     {
-      id: "ke-hoach-hoc-tap-nam-hoc",
+      id: "ke-hoach-dao-tao-giang-day",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
-      title: "III. Kế hoạch Học tập Năm học 2026-2027",
-      bgColor: "pastel-blue",
-      accentColor: "#0284c7",
-      summary: "Khung thời gian học và thi của Học kỳ 1A, 1B, 2A, 2B, Học kỳ hè và Lịch trình kế hoạch Thực tập & Xét tốt nghiệp 2026-2027.",
+      title: "III. Kế hoạch Đào tạo - Giảng dạy",
+      bgColor: "pastel-amber",
+      accentColor: "#d97706",
+      summary: "Khung thời gian học tập, 2 đợt học trong học kỳ chính, các đợt thi học phần và quy định về lịch học.",
       content: `
         <div class="topic-detail">
           
-          <h3 class="section-title">📅 1. Khung Thời gian Học & Thi Năm học 2026-2027</h3>
-          
-          <div class="table-responsive">
-            <table class="custom-table">
-              <thead>
-                <tr>
-                  <th>Học kỳ</th>
-                  <th>Thời gian Học và Thi</th>
-                  <th>Ghi chú & Sự kiện</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong style="color:#0284c7;">Học kỳ 1A</strong></td>
-                  <td><strong>07/09/2026 – 14/11/2026</strong></td>
-                  <td>Học kỳ chính đợt 1</td>
-                </tr>
-                <tr>
-                  <td><strong style="color:#0284c7;">Học kỳ 1B</strong></td>
-                  <td><strong>16/11/2026 – 23/01/2027</strong></td>
-                  <td>Học kỳ chính đợt 2</td>
-                </tr>
-                <tr style="background:#fffbeb;">
-                  <td><strong style="color:#d97706;">Nghỉ Tết Nguyên đán</strong></td>
-                  <td><strong>24/01/2027 – 21/02/2027</strong></td>
-                  <td>Tết Nguyên đán Đinh Mùi 2027 (4 tuần)</td>
-                </tr>
-                <tr>
-                  <td><strong style="color:#059669;">Học kỳ 2A</strong></td>
-                  <td><strong>22/02/2027 – 01/05/2027</strong></td>
-                  <td>Học kỳ chính đợt 3</td>
-                </tr>
-                <tr>
-                  <td><strong style="color:#059669;">Học kỳ 2B</strong></td>
-                  <td><strong>10/05/2027 – 17/07/2027</strong></td>
-                  <td>Học kỳ chính đợt 4</td>
-                </tr>
-                <tr>
-                  <td><strong style="color:#ea580c;">Học kỳ Hè</strong></td>
-                  <td><strong>19/07/2027 – 28/08/2027</strong></td>
-                  <td>Học kỳ phụ (Học vượt, cải thiện, học lại)</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- Infographic Flow: 2 Đợt học trong Học kỳ -->
+          <div class="info-flow-container">
+            <div class="flow-step-card">
+              <span class="flow-step-number">1</span>
+              <h4 class="flow-step-title">Đợt 1 (8 tuần đầu)</h4>
+              <p class="flow-step-desc">Bắt đầu giảng dạy và học tập các học phần đợt 1. Kết thúc học phần sẽ tổ chức thi kết thúc môn đợt 1 ngay sau đó.</p>
+            </div>
+
+            <div class="flow-step-card">
+              <span class="flow-step-number">2</span>
+              <h4 class="flow-step-title">Đợt 2 (8 tuần tiếp theo)</h4>
+              <p class="flow-step-desc">Triển khai giảng dạy các học phần đợt 2. Sau đó tổ chức thi kết thúc học phần và hoàn tất điểm tổng kết học kỳ.</p>
+            </div>
+
+            <div class="flow-step-card">
+              <span class="flow-step-number">3</span>
+              <h4 class="flow-step-title">Học kỳ Phụ (Hè)</h4>
+              <p class="flow-step-desc">Tổ chức linh hoạt trong hè dành cho sinh viên có nhu cầu học vượt, học lại hoặc học cải thiện điểm tích lũy.</p>
+            </div>
           </div>
 
-          <h3 class="section-title" style="margin-top: 24px;">🎓 2. Kế hoạch Thực tập & Xét Tốt nghiệp Năm học 2026-2027</h3>
-
-          <div class="timeline-roadmap">
-            <div class="roadmap-node node-blue">
-              <div class="node-icon">10</div>
-              <div class="node-body">
-                <h4>Đợt Tháng 10/2026</h4>
-                <p><strong>Thực tập tốt nghiệp:</strong> 26/10/2026 – 16/01/2027</p>
-                <span class="status-badge badge-blue">Lễ trao bằng: Tháng 04/2027</span>
-              </div>
-            </div>
-
-            <div class="roadmap-node node-green">
-              <div class="node-icon">04</div>
-              <div class="node-body">
-                <h4>Đợt Tháng 04/2027</h4>
-                <p><strong>Thực tập tốt nghiệp:</strong> 12/04/2027 – 03/07/2027</p>
-                <span class="status-badge badge-green">Lễ trao bằng: Tháng 08/2027</span>
-              </div>
-            </div>
-
-            <div class="roadmap-node node-orange">
-              <div class="node-icon">⚖️</div>
-              <div class="node-body">
-                <h4>Hội đồng Xét Tốt nghiệp</h4>
-                <p><strong>Ngày họp xét:</strong> 30/07/2027</p>
-                <span class="status-badge badge-orange">Công nhận Tốt nghiệp</span>
-              </div>
+          <div class="info-alert-callout callout-blue">
+            <span class="callout-icon">📌</span>
+            <div class="callout-text">
+              Sinh viên theo dõi Thời khóa biểu chi tiết tại Cổng thông tin đào tạo <code>daotao.uef.edu.vn</code> trước mỗi tuần học.
             </div>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 4: ĐĂNG KÝ MÔN HỌC
     {
-      id: "checklist-dieu-kien-xet-tot-nghiep",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
-      title: "IV. Checklist Điều kiện Xét Tốt nghiệp",
+      id: "dang-ky-mon-hoc",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`,
+      title: "IV. Đăng ký Môn học",
       bgColor: "pastel-green",
       accentColor: "#059669",
-      summary: "8 điều kiện tiêu chuẩn để được Hội đồng Nhà trường xét công nhận và trao bằng tốt nghiệp cử nhân.",
+      summary: "Quy trình khảo sát nhu cầu, đăng ký chính thức, đăng ký bổ sung, giới hạn tín chỉ tối thiểu 14 TC và tối đa 25 TC.",
       content: `
         <div class="topic-detail">
           
-          <p class="section-desc">Để được xét công nhận tốt nghiệp, sinh viên cần đảm bảo đầy đủ tất cả các điều kiện sau:</p>
-
-          <div class="checklist-card">
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>1. Tư cách Đạo đức & Pháp luật:</strong>
-                <p>Tại thời điểm xét tốt nghiệp, không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập.</p>
-              </div>
+          <!-- Stat Strips: Tín chỉ quy định -->
+          <div class="info-stat-strip">
+            <div class="stat-pill-box">
+              <div class="stat-value">14 TC</div>
+              <div class="stat-label">Tối thiểu / Học kỳ chính</div>
             </div>
-
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>2. Tích lũy Khối lượng Kiến thức:</strong>
-                <p>Tích lũy đủ học phần, số tín chỉ và hoàn thành các nội dung bắt buộc khác theo yêu cầu của chương trình đào tạo.</p>
-              </div>
+            <div class="stat-pill-box">
+              <div class="stat-value">25 TC</div>
+              <div class="stat-label">Tối đa / Học kỳ chính</div>
             </div>
-
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>3. Điểm Trung bình Tích lũy Toàn khóa:</strong>
-                <p>Điểm trung bình tích lũy toàn khóa học (GPA) phải đạt <strong>từ 2.00 trở lên</strong>.</p>
-              </div>
+            <div class="stat-pill-box">
+              <div class="stat-value">08 TC</div>
+              <div class="stat-label">Tối đa / Học kỳ Phụ (Hè)</div>
             </div>
+          </div>
 
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>4. Điểm Chuyên đề / Khóa luận Tốt nghiệp:</strong>
-                <p>Riêng điểm của học phần Chuyên đề tốt nghiệp hoặc Khóa luận tốt nghiệp phải đạt <strong>từ điểm C trở lên</strong>.</p>
-              </div>
+          <!-- Step Process Flow -->
+          <div class="info-flow-container">
+            <div class="flow-step-card">
+              <span class="flow-step-number">1</span>
+              <h4 class="flow-step-title">Khảo sát Nhu cầu</h4>
+              <p class="flow-step-desc">Sinh viên đăng ký nguyện vọng học lại / học cải thiện để Nhà trường sắp xếp mở lớp.</p>
             </div>
-
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>5. Chứng chỉ Giáo dục Quốc phòng - An ninh:</strong>
-                <p>Có Chứng chỉ Giáo dục Quốc phòng do Trung tâm GDQP-AN cấp.</p>
-              </div>
+            <div class="flow-step-card">
+              <span class="flow-step-number">2</span>
+              <h4 class="flow-step-title">Đăng ký Chính thức</h4>
+              <p class="flow-step-desc">Đăng ký môn học trực tuyến theo đúng khung thời gian quy định của từng Khóa.</p>
             </div>
-
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>6. Học phần Giáo dục Thể chất:</strong>
-                <p>Hoàn thành đầy đủ các học phần Giáo dục thể chất theo quy định chương trình.</p>
-              </div>
+            <div class="flow-step-card">
+              <span class="flow-step-number">3</span>
+              <h4 class="flow-step-title">Đăng ký Bổ sung</h4>
+              <p class="flow-step-desc">Điều chỉnh môn học, xử lý các trường hợp trùng lịch hoặc lớp bị hủy do thiếu sĩ số.</p>
             </div>
+          </div>
 
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>7. Chứng chỉ Chuẩn đầu ra Ngoại ngữ & Tin học:</strong>
-                <p>Có đầy đủ các chứng chỉ đạt chuẩn đầu ra (Tiếng Anh TOEIC/IELTS, Tin học MOS/IC3...) theo quy định của Trường.</p>
-              </div>
-            </div>
-
-            <div class="check-item">
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>8. Nghĩa vụ Tài chính:</strong>
-                <p>Thanh toán đầy đủ các khoản học phí, lệ phí và hoàn thành các nghĩa vụ khác theo quy định của Trường.</p>
-              </div>
+          <div class="info-alert-callout callout-red">
+            <span class="callout-icon">🚫</span>
+            <div class="callout-text">
+              <strong>Tuyệt đối không nhờ người khác đăng ký môn học:</strong> Sinh viên tự bảo mật tài khoản cá nhân, mọi sự cố trùng lịch hoặc mất môn do chia sẻ mật khẩu sinh viên tự chịu trách nhiệm.
             </div>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 5: LỚP PHỤ ĐẠO HỌC VỤ
     {
-      id: "chuan-dau-ra-ngoai-ngu-tin-hoc",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>`,
-      title: "V. Điều kiện Chứng chỉ Chuẩn đầu ra Tiếng Anh & Tin học",
+      id: "lop-phu-dao-hoc-vu",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`,
+      title: "V. Lớp Phụ đạo Học vụ",
+      bgColor: "pastel-blue",
+      accentColor: "#0284c7",
+      summary: "Chương trình phụ đạo hoàn toàn miễn phí, hỗ trợ củng cố kiến thức môn khó, điểm danh qua mã QR động trên máy chiếu.",
+      content: `
+        <div class="topic-detail">
+          
+          <div class="info-stat-strip">
+            <div class="stat-pill-box">
+              <div class="stat-value">100% MIỄN PHÍ</div>
+              <div class="stat-label">Không thu bất kỳ học phí nào</div>
+            </div>
+            <div class="stat-pill-box">
+              <div class="stat-value">QUÉT QR</div>
+              <div class="stat-label">Điểm danh trực tiếp tại lớp</div>
+            </div>
+          </div>
+
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">🎯</span>
+                <h4 class="bento-title">Mục tiêu Lớp Phụ đạo</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Hỗ trợ sinh viên nắm vững kiến thức các môn đại cương & cơ sở ngành khó (Toán cao cấp, Kinh tế vi mô, Nguyên lý kế toán, Tiếng Anh...).</li>
+                <li>Ôn tập trọng tâm và giải đáp bài tập trước các kỳ thi kết thúc học phần.</li>
+              </ul>
+            </div>
+
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">📲</span>
+                <h4 class="bento-title">Phương thức Đăng ký & Điểm danh</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Đăng ký trực tuyến qua Cổng thông tin Trung tâm Hỗ trợ học vụ (mục <strong>Lớp Phụ đạo</strong>).</li>
+                <li>Điểm danh tự động qua hệ thống mã QR hiển thị trên màn hình máy chiếu phòng học.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      `
+    },
+
+    // MỤC 6: QUY ĐỊNH ĐÁNH GIÁ KẾT QUẢ HỌC TẬP
+    {
+      id: "quy-dinh-danh-gia-ket-qua",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`,
+      title: "VI. Đánh giá Kết quả Học tập",
       bgColor: "pastel-purple",
       accentColor: "#7c3aed",
-      summary: "Quy định chi tiết về chuẩn đầu ra Tiếng Anh (TOEIC/IELTS) và Tin học (MOS/IC3) cho sinh viên các Khóa 2023, 2024, 2025, 2026.",
+      summary: "Thang điểm 10, thang điểm 4, quy đổi điểm chữ (A, B+, B, C+, C, D+, D, F) và điều kiện tích lũy môn học.",
       content: `
         <div class="topic-detail">
           
-          <div class="grid-2col">
-            <div class="info-card border-blue">
-              <div class="info-card-header">
-                <span class="icon-bubble blue-bubble">🌐</span>
-                <h4>1. Chuẩn đầu ra Tiếng Anh</h4>
-              </div>
-              <ul>
-                <li><strong>Chương trình Chuẩn tiếng Việt:</strong> TOEIC từ 450 - 550+ hoặc IELTS từ 4.5 - 5.5+ (tùy ngành đào tạo).</li>
-                <li><strong>Chương trình Song ngữ / Quốc tế:</strong> IELTS từ 5.5 - 6.0+ hoặc tương đương.</li>
-                <li>Sinh viên ngành Ngôn ngữ Anh có chuẩn đầu ra riêng theo quy định của Khoa Ngoại ngữ.</li>
-                <li>Nhà trường định kỳ tổ chức các đợt thi đánh giá chuẩn đầu ra và tiếp nhận chứng chỉ quốc tế hợp lệ.</li>
-              </ul>
-            </div>
-
-            <div class="info-card border-purple">
-              <div class="info-card-header">
-                <span class="icon-bubble purple-bubble">💻</span>
-                <h4>2. Chuẩn đầu ra Tin học</h4>
-              </div>
-              <ul>
-                <li>Đạt chứng chỉ <strong>MOS (Microsoft Office Specialist)</strong> tối thiểu 2 môn (Word, Excel hoặc PowerPoint) đạt từ 700/1000 điểm; HOẶC</li>
-                <li>Đạt chứng chỉ <strong>IC3 (Internet and Computing Core Certification)</strong>.</li>
-                <li>Sinh viên ngành Công nghệ thông tin được công nhận theo chuẩn riêng của Khoa CNTT.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      `
-    },
-    {
-      id: "tien-do-dao-tao",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`,
-      title: "VI. Tiến độ Đào tạo & Học phần Chưa đạt theo Tiến độ",
-      bgColor: "pastel-amber",
-      accentColor: "#d97706",
-      summary: "Khái niệm học phần chưa đạt theo tiến độ, ví dụ minh họa và hành động sinh viên cần thực hiện ngay.",
-      content: `
-        <div class="topic-detail">
-          
-          <div class="visual-card card-amber-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble amber-bubble">📌</span>
-              <h4>Khái niệm “Học phần chưa đạt theo tiến độ”</h4>
-            </div>
-            <p><strong>“Học phần chưa đạt theo tiến độ”</strong> là học phần sinh viên chưa hoàn thành theo tiến độ, kế hoạch học tập của khóa học, bao gồm:</p>
-            <ul>
-              <li><strong>Học phần sinh viên đã đăng ký nhưng không đạt (nhận điểm F);</strong> HOẶC</li>
-              <li><strong>Học phần sinh viên chưa đăng ký học theo đúng sơ đồ học kỳ.</strong></li>
-            </ul>
-            <p style="margin-top: 8px;">Sau khi năm học/học kỳ kết thúc, nếu học phần sinh viên cần hoàn thành theo sơ đồ kế hoạch học tập của năm học/học kỳ đó chưa được hoàn thành thì được xác định là học phần chưa đạt theo tiến độ.</p>
-          </div>
-
-          <div class="visual-card card-blue-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble blue-bubble">💡</span>
-              <h4>Ví dụ Minh họa Cụ thể</h4>
-            </div>
-            <p><em>“Pháp luật đại cương”</em> là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1. Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này. Do đó, <strong>Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ</strong>.</p>
-          </div>
-
-          <div class="visual-card card-red-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble red-bubble">🚨</span>
-              <h4>Hành động Sinh viên Cần Thực hiện Ngay</h4>
-            </div>
-            <ul>
-              <li>Theo dõi kế hoạch đăng ký môn học từng học kỳ;</li>
-              <li>Sớm đăng ký, tham gia học tập và hoàn thành học phần theo quy định;</li>
-              <li>Sinh viên có học phần chưa đạt theo tiến độ cần <strong>liên hệ ngay Trung tâm Hỗ trợ học vụ</strong> để được tư vấn lộ trình học bù phù hợp nhất.</li>
-            </ul>
-          </div>
-
-        </div>
-      `
-    },
-    {
-      id: "xep-loai-hoc-luc",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>`,
-      title: "VII. Xếp loại Học lực (Thang điểm Hệ 4)",
-      bgColor: "pastel-green",
-      accentColor: "#059669",
-      summary: "Bảng xếp hạng học lực từ Xuất sắc đến Kém theo thang điểm 4.0 và phân biệt ĐTB Học kỳ, ĐTB Năm học, ĐTB Tích lũy.",
-      content: `
-        <div class="topic-detail">
-          
-          <h3 class="section-title">📊 1. Bảng Xếp loại Học lực Sinh viên (Thang 4.0)</h3>
-          
-          <div class="table-responsive">
-            <table class="custom-table">
+          <!-- Infographic Table: Thang điểm quy đổi -->
+          <div class="info-table-wrap">
+            <table class="info-table">
               <thead>
                 <tr>
+                  <th>Thang điểm 10</th>
+                  <th>Điểm Chữ</th>
+                  <th>Thang điểm 4</th>
                   <th>Xếp loại Học lực</th>
-                  <th>Điểm Trung bình Hệ 4</th>
-                  <th>Đánh giá Chung</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong style="color:#059669;">Xuất sắc</strong></td>
-                  <td><strong>Từ 3.60 đến 4.00</strong></td>
-                  <td>Đủ điều kiện xét học bổng khuyến khích cao nhất</td>
+                  <td><strong>8.5 – 10.0</strong></td>
+                  <td><span style="color:#15803d; font-weight:800;">A</span></td>
+                  <td><strong>4.0</strong></td>
+                  <td>Xuất sắc</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#059669;">Giỏi</strong></td>
-                  <td><strong>Từ 3.20 đến 3.59</strong></td>
-                  <td>Học lực tốt, duy trì học bổng tuyển sinh</td>
+                  <td><strong>8.0 – 8.4</strong></td>
+                  <td><span style="color:#15803d; font-weight:800;">B+</span></td>
+                  <td><strong>3.5</strong></td>
+                  <td>Giỏi</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#0284c7;">Khá</strong></td>
-                  <td><strong>Từ 2.50 đến 3.19</strong></td>
-                  <td>Đạt chuẩn tiến độ tốt nghiệp</td>
+                  <td><strong>7.0 – 7.9</strong></td>
+                  <td><span style="color:#0284c7; font-weight:800;">B</span></td>
+                  <td><strong>3.0</strong></td>
+                  <td>Khá</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#d97706;">Trung bình</strong></td>
-                  <td><strong>Từ 2.00 đến 2.49</strong></td>
-                  <td>Mức chuẩn tối thiểu để được xét tốt nghiệp</td>
+                  <td><strong>6.5 – 6.9</strong></td>
+                  <td><span style="color:#0284c7; font-weight:800;">C+</span></td>
+                  <td><strong>2.5</strong></td>
+                  <td>Trung bình Khá</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#dc2626;">Yếu</strong></td>
-                  <td><strong>Từ 1.00 đến 1.99</strong></td>
-                  <td>Nguy cơ rơi vào diện Cảnh báo học tập</td>
+                  <td><strong>5.5 – 6.4</strong></td>
+                  <td><span style="color:#d97706; font-weight:800;">C</span></td>
+                  <td><strong>2.0</strong></td>
+                  <td>Trung bình</td>
                 </tr>
                 <tr>
-                  <td><strong style="color:#b31217;">Kém</strong></td>
-                  <td><strong>Dưới 1.00</strong></td>
-                  <td>Bị cảnh báo học tập mức cao nhất</td>
+                  <td><strong>5.0 – 5.4</strong></td>
+                  <td><span style="color:#d97706; font-weight:800;">D+</span></td>
+                  <td><strong>1.5</strong></td>
+                  <td>Trung bình Yếu</td>
+                </tr>
+                <tr>
+                  <td><strong>4.0 – 4.9</strong></td>
+                  <td><span style="color:#d97706; font-weight:800;">D</span></td>
+                  <td><strong>1.0</strong></td>
+                  <td>Yếu (Đạt)</td>
+                </tr>
+                <tr style="background:#fee2e2;">
+                  <td><strong>Dưới 4.0</strong></td>
+                  <td><span style="color:#b91c1c; font-weight:800;">F</span></td>
+                  <td><strong>0.0</strong></td>
+                  <td>Kém (Không đạt - Học lại)</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h3 class="section-title" style="margin-top: 24px;">📝 2. Ghi chú Phân biệt 3 Loại Điểm Trung Bình</h3>
-
-          <div class="grid-2col">
-            <div class="info-card">
-              <h4>Điểm Trung bình Học kỳ</h4>
-              <p>Điểm trung bình của những học phần sinh viên đã học trong <strong>một học kỳ</strong>.</p>
-            </div>
-
-            <div class="info-card">
-              <h4>Điểm Trung bình Năm học</h4>
-              <p>Điểm trung bình của những học phần sinh viên đã học trong một năm học (áp dụng tính điểm các học kỳ chính gồm <strong>HK 1A, 1B, 2A, 2B</strong> và <strong>không tính HK hè</strong>).</p>
-            </div>
-
-            <div class="info-card" style="grid-column: 1 / -1;">
-              <h4>Điểm Trung bình Tích lũy (GPA)</h4>
-              <p>Điểm trung bình của những học phần sinh viên đã học <strong>tính từ đầu khóa học đến thời điểm xét</strong>.</p>
+          <div class="info-alert-callout callout-amber">
+            <span class="callout-icon">💡</span>
+            <div class="callout-text">
+              <strong>Điều kiện đạt môn học:</strong> Điểm tổng kết học phần đạt từ <strong>4.0 trở lên</strong> (Thang 10) và không có điểm thành phần nào bị điểm 0.
             </div>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 7: CẢNH BÁO HỌC VỤ & BUỘC THÔI HỌC
     {
-      id: "dieu-kien-duy-tri-hoc-bong",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
-      title: "VIII. Điều kiện Duy trì Học bổng Tuyển sinh",
-      bgColor: "pastel-amber",
-      accentColor: "#d97706",
-      summary: "Mức GPA và Điểm rèn luyện tối thiểu bắt buộc hàng năm để duy trì học bổng 25%, 50%, 100% học phí.",
+      id: "canh-bao-hoc-vu",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`,
+      title: "VII. Cảnh báo Học vụ & Buộc Thôi học",
+      bgColor: "pastel-red",
+      accentColor: "#dc2626",
+      summary: "Các mức xử lý cảnh báo học tập theo điểm GPA tích lũy; quy định buộc thôi học khi bị 3 lần cảnh báo liên tiếp.",
       content: `
         <div class="topic-detail">
           
-          <h3 class="section-title">🏅 Tiêu chuẩn Xét Duy trì Học bổng Tuyển sinh Hàng năm</h3>
-
-          <div class="scholarship-cards-grid">
-            <div class="scholarship-card card-gold">
-              <div class="scholarship-badge">HỌC BỔNG 100% HỌC PHÍ</div>
-              <div class="scholarship-body">
-                <div class="metric-row">
-                  <span>ĐTB Tích lũy (GPA)</span>
-                  <strong>GPA &ge; 3.70 / 4.0</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Điểm Rèn luyện</span>
-                  <strong>&ge; 90 điểm (Xuất sắc)</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Số tín chỉ/năm</span>
-                  <strong>Đủ tín chỉ theo tiến độ</strong>
-                </div>
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-amber">
+              <div class="bento-header">
+                <span class="bento-icon">⚠️</span>
+                <h4 class="bento-title">Tiêu chí Bị Cảnh báo Học vụ</h4>
               </div>
+              <ul class="bento-list">
+                <li><strong>Năm 1:</strong> ĐTB tích lũy đạt dưới <strong>1.20</strong></li>
+                <li><strong>Năm 2:</strong> ĐTB tích lũy đạt dưới <strong>1.40</strong></li>
+                <li><strong>Năm 3:</strong> ĐTB tích lũy đạt dưới <strong>1.60</strong></li>
+                <li><strong>Năm 4 trở đi:</strong> ĐTB tích lũy đạt dưới <strong>1.80</strong></li>
+              </ul>
             </div>
 
-            <div class="scholarship-card card-silver">
-              <div class="scholarship-badge">HỌC BỔNG 50% HỌC PHÍ</div>
-              <div class="scholarship-body">
-                <div class="metric-row">
-                  <span>ĐTB Tích lũy (GPA)</span>
-                  <strong>GPA &ge; 3.40 / 4.0</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Điểm Rèn luyện</span>
-                  <strong>&ge; 80 điểm (Tốt)</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Số tín chỉ/năm</span>
-                  <strong>Đủ tín chỉ theo tiến độ</strong>
-                </div>
+            <div class="info-bento-card bento-red">
+              <div class="bento-header">
+                <span class="bento-icon">🚨</span>
+                <h4 class="bento-title">Quy chế Buộc Thôi học</h4>
               </div>
-            </div>
-
-            <div class="scholarship-card card-bronze">
-              <div class="scholarship-badge">HỌC BỔNG 25% HỌC PHÍ</div>
-              <div class="scholarship-body">
-                <div class="metric-row">
-                  <span>ĐTB Tích lũy (GPA)</span>
-                  <strong>GPA &ge; 3.20 / 4.0</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Điểm Rèn luyện</span>
-                  <strong>&ge; 70 điểm (Khá)</strong>
-                </div>
-                <div class="metric-row">
-                  <span>Số tín chỉ/năm</span>
-                  <strong>Đủ tín chỉ theo tiến độ</strong>
-                </div>
-              </div>
+              <ul class="bento-list">
+                <li>Bị <strong>3 lần cảnh báo học vụ liên tiếp</strong>.</li>
+                <li>Vượt quá thời gian đào tạo tối đa theo quy định của khóa học.</li>
+                <li>Tự ý bỏ học không đăng ký môn học và không xin phép bảo lưu.</li>
+              </ul>
             </div>
           </div>
 
-          <div class="alert-box alert-warning" style="margin-top: 16px;">
-            <div class="alert-title">⚠️ Lưu ý:</div>
-            <p>Sinh viên nếu không đạt GPA hoặc điểm rèn luyện ở năm học nào sẽ bị tạm dừng học bổng ở năm học đó. Điểm rèn luyện là điều kiện bắt buộc song song với GPA.</p>
-          </div>
-
-        </div>
-      `
-    },
-    {
-      id: "dang-ky-hoc-phu-dao-mien-phi",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
-      title: "IX. Đăng ký Học phụ đạo (Hoàn toàn Miễn phí)",
-      bgColor: "pastel-teal",
-      accentColor: "#0d9488",
-      summary: "Chương trình lớp học phụ đạo miễn phí dành cho sinh viên cần củng cố kiến thức trước kỳ thi.",
-      content: `
-        <div class="topic-detail">
-          
-          <div class="visual-card card-teal-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble teal-bubble">🧑‍🏫</span>
-              <h4>Lớp Phụ đạo Học tập Miễn phí</h4>
-            </div>
-            <p>Nếu sinh viên học chuyên cần nhưng không theo kịp bài trong quá trình học và cần phụ đạo để củng cố kiến thức, sinh viên có thể đăng ký nguyện vọng học phụ đạo.</p>
-            
-            <div class="feature-bullets">
-              <div class="bullet-item">
-                <strong>⏰ Thời hạn đăng ký:</strong> Trước khi hết <strong>tuần thứ 5</strong> của học kỳ.
-              </div>
-              <div class="bullet-item">
-                <strong>🎯 Mục tiêu:</strong> Giúp sinh viên nắm vững kiến thức chuyên môn; Hỗ trợ sinh viên đạt kết quả cao hơn trong học tập; Bổ trợ kiến thức trước kỳ thi.
-              </div>
-              <div class="bullet-item">
-                <strong>💡 Chi phí:</strong> Các lớp phụ đạo được tổ chức vào các tuần học cuối, trước khi kỳ thi diễn ra và <strong>hoàn toàn miễn phí 100%</strong>.
-              </div>
-            </div>
-
-            <div style="margin-top: 18px;">
-              <a href="/phudao/" class="portal-btn btn-blue" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
-                Truy cập Phân hệ Phụ đạo & Điểm danh QR (/phudao/)
-              </a>
+          <div class="info-alert-callout callout-red">
+            <span class="callout-icon">📢</span>
+            <div class="callout-text">
+              Sinh viên có nguy cơ bị cảnh báo học vụ cần chủ động liên hệ ngay <strong>Trung tâm Hỗ trợ học vụ (Tầng 2)</strong> để được tư vấn kế hoạch cải thiện điểm số.
             </div>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 8: HỌC BỔNG & MIỄN GIẢM HỌC PHÍ
     {
-      id: "cac-noi-dung-hoc-vu-quan-trong",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
-      title: "X. Các Nội dung Học vụ Quan trọng Cần Tra cứu",
-      bgColor: "pastel-sky",
-      accentColor: "#0284c7",
-      summary: "8 nhóm nội dung học vụ quan trọng và liên kết tra cứu chính thức của Trường.",
-      content: `
-        <div class="topic-detail">
-          
-          <p class="section-desc">Trung tâm Hỗ trợ học vụ cung cấp các nhóm thông tin quan trọng để sinh viên và GVCN tra cứu thuận tiện:</p>
-
-          <div class="links-grid">
-            <div class="link-item">
-              <span class="link-num">1</span>
-              <div>
-                <strong>Công nhận tốt nghiệp và Xét tốt nghiệp</strong>
-                <p>Quy trình và điều kiện xét tốt nghiệp các đợt trong năm.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">2</span>
-              <div>
-                <strong>Chứng chỉ Chuẩn đầu ra Tin học & Tiếng Anh</strong>
-                <p>Quy định nộp và công nhận chuẩn đầu ra quốc tế.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">3</span>
-              <div>
-                <strong>Học phần Quy định trong Chương trình Đào tạo</strong>
-                <p>Khung chương trình chi tiết của từng ngành học.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">4</span>
-              <div>
-                <strong>Cách tính điểm, Đánh giá kết quả & Xếp hạng</strong>
-                <p>Công thức tính điểm học phần và quy đổi GPA.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">5</span>
-              <div>
-                <strong>Điều kiện Duy trì Học bổng Tuyển sinh</strong>
-                <p>Mức GPA và Điểm rèn luyện giữ học bổng hàng năm.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">6</span>
-              <div>
-                <strong>Học lại & Học cải thiện Điểm</strong>
-                <p>Quy định học lại môn F và học nâng điểm môn D/C.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">7</span>
-              <div>
-                <strong>Đăng ký Chương trình Song bằng / Song ngành</strong>
-                <p>Cơ hội học song song nhận 2 bằng cử nhân chính quy.</p>
-              </div>
-            </div>
-
-            <div class="link-item">
-              <span class="link-num">8</span>
-              <div>
-                <strong>Cổng Quản lý Đào tạo daotao.uef.edu.vn</strong>
-                <p>Tra cứu thời khóa biểu, lịch thi và kết quả học tập.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      `
-    },
-    {
-      id: "cam-nang-ho-tro-hoc-vu",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>`,
-      title: "XI. Cẩm nang Hỗ trợ Học vụ",
-      bgColor: "pastel-indigo",
-      accentColor: "#4f46e5",
-      summary: "Nguồn thông tin hỗ trợ sinh viên tra cứu quy định, hướng dẫn và nội dung học vụ cần thiết trong quá trình học tập.",
-      content: `
-        <div class="topic-detail">
-          
-          <div class="visual-card card-blue-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble blue-bubble">📖</span>
-              <h4>Cổng Cẩm nang Hỗ trợ Học vụ Điện tử</h4>
-            </div>
-            <p>Cẩm nang Hỗ trợ học vụ là nguồn thông tin chính thống hỗ trợ sinh viên tra cứu tất cả các quy định, hướng dẫn và nội dung học vụ cần thiết trong suốt toàn bộ quá trình học tập tại UEF.</p>
-            <p style="margin-top: 8px;">Sinh viên có thể tra cứu trực tiếp trên website này hoặc truy cập trang chủ Cổng thông tin: <a href="https://www.uef.edu.vn/tththv" target="_blank" style="color:#0284c7; font-weight:800;">www.uef.edu.vn/tththv</a>.</p>
-          </div>
-
-        </div>
-      `
-    },
-    {
-      id: "mot-so-giai-phap-ho-tro-sinh-vien",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`,
-      title: "XII. Một số Giải pháp Hỗ trợ Sinh viên Học tập Hiệu quả",
+      id: "hoc-bong-va-chinh-sach",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>`,
+      title: "VIII. Học bổng & Miễn giảm Học phí",
       bgColor: "pastel-green",
-      accentColor: "#16a34a",
-      summary: "Khung 3 đề mục giải pháp tư vấn căn cứ theo tình trạng thực tế, nhu cầu và nguyện vọng của sinh viên.",
+      accentColor: "#059669",
+      summary: "Chính sách Học bổng Tuyển sinh, Học bổng Doanh nghiệp, Học bổng Khuyến khích học tập và điều kiện duy trì học bổng.",
       content: `
         <div class="topic-detail">
           
-          <p class="section-desc">Trung tâm Hỗ trợ học vụ đề xuất các giải pháp hỗ trợ sinh viên học tập hiệu quả. Căn cứ theo tình trạng thực tế, nhu cầu và nguyện vọng, sinh viên có thể tham khảo 3 đề mục dưới đây nhằm xây dựng lộ trình, lập kế hoạch, nỗ lực học tập một cách có chiến lược để đạt thành tích tốt, <strong>THÀNH NHÂN VÀ THÀNH CÔNG</strong>:</p>
-
-          <div class="solutions-grid">
-            <div class="solution-card scenario-danger">
-              <div class="scenario-header">
-                <span class="scenario-badge badge-red">Đề mục 1</span>
-                <h4>🚨 Dành cho Sinh viên đang gặp Khó khăn Học tập</h4>
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">🎓</span>
+                <h4 class="bento-title">1. Học bổng Tuyển sinh</h4>
               </div>
-              <p class="scenario-subtitle">Sinh viên có điểm kém, bị cảnh báo học tập hoặc có nguy cơ chậm tiến độ</p>
-              <ul>
-                <li>Đăng ký tham gia ngay các lớp học phụ đạo miễn phí để củng cố kiến thức bị hổng;</li>
-                <li>Chủ động đăng ký học lại sớm các môn bị điểm F để nâng điểm trung bình tích lũy GPA;</li>
-                <li>Giảm tải số tín chỉ đăng ký trong học kỳ kế tiếp (&le; 12 - 14 tín chỉ) để tập trung nâng cao chất lượng học tập.</li>
-              </ul>
+              <p class="bento-desc">Các mức học bổng <strong>100%, 50%, 25%</strong> học phí dành cho tân sinh viên có thành tích xét tuyển xuất sắc.</p>
             </div>
 
-            <div class="solution-card scenario-warning">
-              <div class="scenario-header">
-                <span class="scenario-badge badge-orange">Đề mục 2</span>
-                <h4>🚀 Dành cho Sinh viên Mong muốn Bứt phá</h4>
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">🌟</span>
+                <h4 class="bento-title">2. Học bổng Khuyến khích Học tập</h4>
               </div>
-              <p class="scenario-subtitle">Sinh viên có học lực Trung bình/Khá muốn vươn lên loại Giỏi hoặc duy trì Học bổng</p>
-              <ul>
-                <li>Đăng ký học cải thiện điểm các môn đạt điểm D, C để bứt phá GPA lên mức &ge; 3.20 - 3.40;</li>
-                <li>Tích cực tham gia các hoạt động ngoại khóa, câu lạc bộ để nâng Điểm rèn luyện lên loại Tốt/Xuất sắc (&ge; 80 - 90 điểm);</li>
-                <li>Hoàn thành sớm các chứng chỉ chuẩn đầu ra Tiếng Anh và Tin học từ năm 2 hoặc năm 3.</li>
-              </ul>
+              <p class="bento-desc">Xét theo từng năm học dựa trên kết quả Điểm học tập (GPA) và Điểm rèn luyện (ĐRL) từ loại Khá, Giỏi đến Xuất sắc.</p>
             </div>
 
-            <div class="solution-card scenario-success">
-              <div class="scenario-header">
-                <span class="scenario-badge badge-green">Đề mục 3</span>
-                <h4>🌟 Dành cho Sinh viên Mong muốn Phát triển - Mở rộng</h4>
+            <div class="info-bento-card bento-purple">
+              <div class="bento-header">
+                <span class="bento-icon">🏢</span>
+                <h4 class="bento-title">3. Học bổng Doanh nghiệp</h4>
               </div>
-              <p class="scenario-subtitle">Sinh viên Khá/Giỏi muốn học vượt tiến độ hoặc sở hữu 2 bằng đại học</p>
-              <ul>
-                <li>Đăng ký tham gia chương trình <strong>Song bằng / Song ngành</strong> để nhận 2 bằng cử nhân chính quy khi tốt nghiệp;</li>
-                <li>Lập kế hoạch đăng ký học vượt các môn để hoàn thành chương trình đại học sớm (3 - 3.5 năm);</li>
-                <li>Tham gia Nghiên cứu khoa học sinh viên và các cuộc thi học thuật quy mô lớn.</li>
-              </ul>
+              <p class="bento-desc">Học bổng tài trợ trực tiếp từ các tập đoàn, doanh nghiệp đối tác dành cho các ngành học thế mạnh và sinh viên vượt khó.</p>
             </div>
+          </div>
+
+          <!-- Infographic Table: Điều kiện duy trì học bổng -->
+          <div class="info-table-wrap">
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>Mức Học bổng</th>
+                  <th>Điều kiện GPA năm học</th>
+                  <th>Điều kiện Điểm Rèn luyện</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Học bổng 100%</strong></td>
+                  <td>GPA ≥ <strong>3.7 / 4.0</strong></td>
+                  <td>ĐRL ≥ <strong>80 điểm</strong> (Loại Tốt)</td>
+                </tr>
+                <tr>
+                  <td><strong>Học bổng 50%</strong></td>
+                  <td>GPA ≥ <strong>3.5 / 4.0</strong></td>
+                  <td>ĐRL ≥ <strong>80 điểm</strong> (Loại Tốt)</td>
+                </tr>
+                <tr>
+                  <td><strong>Học bổng 25%</strong></td>
+                  <td>GPA ≥ <strong>3.2 / 4.0</strong></td>
+                  <td>ĐRL ≥ <strong>80 điểm</strong> (Loại Tốt)</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
         </div>
       `
     },
+
+    // MỤC 9: CHUẨN ĐẦU RA NGOẠI NGỮ & TIN HỌC
     {
-      id: "ghi-nhan-phan-hoi-y-kien-sinh-vien",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>`,
-      title: "XIII. Ghi nhận Ý kiến, Phản hồi từ Sinh viên",
+      id: "chuan-dau-ra-ngoai-ngu-tin-hoc",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><globe cx="12" cy="12" r="10"></globe><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
+      title: "IX. Chuẩn Đầu ra Ngoại ngữ & Tin học",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
-      summary: "Giáo viên chủ nhiệm thực hiện lấy ý kiến phản hồi về cơ sở vật chất, chương trình đào tạo, thắc mắc học vụ.",
+      summary: "Yêu cầu chứng chỉ Ngoại ngữ (IELTS, TOEIC, VSTEP) và Tin học chuẩn quốc tế (MOS, IC3) bắt buộc để xét tốt nghiệp.",
       content: `
         <div class="topic-detail">
           
-          <div class="visual-card card-blue-accent">
-            <div class="card-title-row">
-              <span class="icon-bubble blue-bubble">✍️</span>
-              <h4>Ghi nhận Ý kiến & Phản hồi trong Buổi Sinh hoạt Lớp</h4>
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">🌐</span>
+                <h4 class="bento-title">Chuẩn Đầu ra Tiếng Anh</h4>
+              </div>
+              <ul class="bento-list">
+                <li><strong>Khối ngành Kinh tế - Quản trị:</strong> IELTS ≥ 5.5 / TOEIC ≥ 600 / VSTEP Bậc 4 (B2).</li>
+                <li><strong>Khối ngành Ngôn ngữ Anh:</strong> IELTS ≥ 6.5 / VSTEP Bậc 5 (C1).</li>
+                <li><strong>Các ngành khác:</strong> IELTS ≥ 5.0 / TOEIC ≥ 500 / VSTEP Bậc 3 (B1).</li>
+              </ul>
             </div>
-            <p>Trong các buổi sinh hoạt lớp, Giáo viên chủ nhiệm thực hiện lấy ý kiến phản hồi, góp ý của sinh viên về:</p>
-            <ul>
-              <li>🏢 <strong>Cơ sở vật chất;</strong></li>
-              <li>📚 <strong>Chương trình đào tạo;</strong></li>
-              <li>❓ <strong>Các thắc mắc về học tập, học vụ;</strong></li>
-              <li>📈 <strong>Tình hình học tập của sinh viên trong lớp;</strong></li>
-              <li>📌 <strong>Các nội dung khác (nếu có).</strong></li>
-            </ul>
-            <p style="margin-top: 10px;">Các phản hồi của sinh viên được GVCN và Nhà trường ghi nhận đầy đủ để phục vụ công tác hỗ trợ, giải đáp và không ngừng cải thiện chất lượng hoạt động học tập, học vụ.</p>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">💻</span>
+                <h4 class="bento-title">Chuẩn Đầu ra Tin học</h4>
+              </div>
+              <ul class="bento-list">
+                <li>Chứng chỉ Tin học Quốc tế <strong>MOS</strong> (Word, Excel, PowerPoint đạt ≥ 700/1000 điểm).</li>
+                <li>Hoặc Chứng chỉ Tin học Quốc tế <strong>IC3 GS5 / GS6</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-alert-callout callout-amber">
+            <span class="callout-icon">⏳</span>
+            <div class="callout-text">
+              Sinh viên nên hoàn thành chuẩn đầu ra Ngoại ngữ & Tin học ngay từ <strong>Năm 2 và Năm 3</strong> để không bị chậm tiến độ xét tốt nghiệp.
+            </div>
+          </div>
+
+        </div>
+      `
+    },
+
+    // MỤC 10: THỰC TẬP TỐT NGHIỆP & KHÓA LUẬN
+    {
+      id: "thuc-tap-tot-nghiep",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+      title: "X. Thực tập Tốt nghiệp & Khóa luận",
+      bgColor: "pastel-amber",
+      accentColor: "#d97706",
+      summary: "Điều kiện tham gia thực tập doanh nghiệp, làm khóa luận tốt nghiệp hoặc học các môn thay thế khóa luận.",
+      content: `
+        <div class="topic-detail">
+          
+          <div class="info-stat-strip">
+            <div class="stat-pill-box">
+              <div class="stat-value">ĐỦ TÍN CHỈ</div>
+              <div class="stat-label">Tích lũy các học phần tiên quyết</div>
+            </div>
+            <div class="stat-pill-box">
+              <div class="stat-value">GPA ≥ 2.0</div>
+              <div class="stat-label">Không bị cảnh báo học vụ</div>
+            </div>
+          </div>
+
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-amber">
+              <div class="bento-header">
+                <span class="bento-icon">🏢</span>
+                <h4 class="bento-title">Thực tập Doanh nghiệp</h4>
+              </div>
+              <p class="bento-desc">Thời gian thực tập từ 10 - 12 tuần tại các doanh nghiệp đối tác của UEF hoặc đơn vị sinh viên tự liên hệ (được Khoa phê duyệt).</p>
+            </div>
+
+            <div class="info-bento-card bento-purple">
+              <div class="bento-header">
+                <span class="bento-icon">📚</span>
+                <h4 class="bento-title">Khóa luận / Môn Thay thế</h4>
+              </div>
+              <p class="bento-desc">Sinh viên đạt điểm GPA cao theo quy định của Khoa được làm Khóa luận tốt nghiệp; các sinh viên còn lại học các môn chuyên đề thay thế.</p>
+            </div>
+          </div>
+
+        </div>
+      `
+    },
+
+    // MỤC 11: XÉT & CÔNG NHẬN TỐT NGHIỆP
+    {
+      id: "xet-cong-nhan-tot-nghiep",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>`,
+      title: "XI. Xét & Công nhận Tốt nghiệp",
+      bgColor: "pastel-green",
+      accentColor: "#059669",
+      summary: "5 tiêu chuẩn vàng công nhận tốt nghiệp, 4 đợt xét tốt nghiệp trong năm và xếp loại bằng tốt nghiệp.",
+      content: `
+        <div class="topic-detail">
+          
+          <!-- 5 Tiêu chuẩn Tốt nghiệp -->
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">1️⃣</span>
+                <h4 class="bento-title">Tín chỉ Tích lũy</h4>
+              </div>
+              <p class="bento-desc">Hoàn thành đầy đủ số tín chỉ quy định trong chương trình đào tạo của ngành học.</p>
+            </div>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">2️⃣</span>
+                <h4 class="bento-title">Điểm GPA Tích lũy</h4>
+              </div>
+              <p class="bento-desc">Điểm trung bình chung tích lũy toàn khóa đạt từ <strong>2.00 / 4.00</strong> trở lên.</p>
+            </div>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">3️⃣</span>
+                <h4 class="bento-title">Chứng chỉ GDQP & GDTC</h4>
+              </div>
+              <p class="bento-desc">Có đầy đủ Chứng chỉ Giáo dục Quốc phòng - An ninh và hoàn thành các học phần Giáo dục Thể chất.</p>
+            </div>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">4️⃣</span>
+                <h4 class="bento-title">CĐR Ngoại ngữ & Tin học</h4>
+              </div>
+              <p class="bento-desc">Đã nộp và được công nhận đạt Chuẩn đầu ra Tiếng Anh và Chuẩn Tin học quốc tế.</p>
+            </div>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">5️⃣</span>
+                <h4 class="bento-title">Điểm Rèn luyện & Kỷ luật</h4>
+              </div>
+              <p class="bento-desc">Điểm rèn luyện toàn khóa đạt từ 50 điểm trở lên; không bị truy cứu trách nhiệm hình sự hoặc kỷ luật đình chỉ.</p>
+            </div>
+          </div>
+
+          <div class="info-alert-callout callout-blue">
+            <span class="callout-icon">🗓️</span>
+            <div class="callout-text">
+              <strong>4 Đợt xét tốt nghiệp trong năm:</strong> Đợt 1 (Tháng 3) • Đợt 2 (Tháng 6) • Đợt 3 (Tháng 9) • Đợt 4 (Tháng 12).
+            </div>
+          </div>
+
+        </div>
+      `
+    },
+
+    // MỤC 12: BIỂU MẪU & THỦ TỤC HỌC VỤ TRỰC TUYẾN
+    {
+      id: "bieu-mau-thu-tuc-hoc-vu",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>`,
+      title: "XII. Biểu mẫu & Thủ tục Học vụ",
+      bgColor: "pastel-blue",
+      accentColor: "#0284c7",
+      summary: "Kho biểu mẫu đơn từ học vụ chính thức (Bảo lưu, Nhập học lại, Chuyển ngành, Phúc khảo điểm thi...) và quy trình nộp đơn.",
+      content: `
+        <div class="topic-detail">
+          
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">📄</span>
+                <h4 class="bento-title">Đơn Xin Bảo lưu Kết quả</h4>
+              </div>
+              <p class="bento-desc">Nộp đơn trước khi học kỳ mới bắt đầu ít nhất 02 tuần. Thời gian bảo lưu tối đa 02 học kỳ liên tiếp.</p>
+            </div>
+
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">📋</span>
+                <h4 class="bento-title">Đơn Xin Nhập học lại</h4>
+              </div>
+              <p class="bento-desc">Nộp đơn trước khi hết thời hạn bảo lưu ít nhất 02 tuần để được xếp lớp và mở cổng đăng ký môn học.</p>
+            </div>
+
+            <div class="info-bento-card bento-purple">
+              <div class="bento-header">
+                <span class="bento-icon">🔄</span>
+                <h4 class="bento-title">Đơn Xin Chuyển ngành Học</h4>
+              </div>
+              <p class="bento-desc">Áp dụng cho sinh viên hoàn thành năm thứ nhất, đạt điểm trúng tuyển của ngành chuyển đến và được sự đồng ý của 2 Khoa.</p>
+            </div>
+
+            <div class="info-bento-card bento-amber">
+              <div class="bento-header">
+                <span class="bento-icon">✍️</span>
+                <h4 class="bento-title">Đơn Phúc khảo Bài thi</h4>
+              </div>
+              <p class="bento-desc">Nộp đơn trong vòng 07 ngày làm việc kể từ ngày công bố điểm thi học phần trên cổng đào tạo.</p>
+            </div>
+          </div>
+
+        </div>
+      `
+    },
+
+    // MỤC 13: GHI NHẬN Ý KIẾN & PHẢN HỒI SINH VIÊN
+    {
+      id: "ghi-nhan-y-kien-phan-hoi",
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`,
+      title: "XIII. Ghi nhận Ý kiến & Phản hồi",
+      bgColor: "pastel-green",
+      accentColor: "#059669",
+      summary: "Các kênh tiếp nhận phản ánh, khảo sát đánh giá chất lượng học vụ và chương trình đối thoại định kỳ giữa Nhà trường và Sinh viên.",
+      content: `
+        <div class="topic-detail">
+          
+          <div class="info-bento-grid">
+            <div class="info-bento-card bento-green">
+              <div class="bento-header">
+                <span class="bento-icon">📊</span>
+                <h4 class="bento-title">1. Khảo sát Học tập Trực tuyến</h4>
+              </div>
+              <p class="bento-desc">Tham gia hệ thống Khảo sát Sinh viên UEF tại Cổng thông tin <code>tththv.io.vn/khaosat/</code> để đóng góp ý kiến về môn học và dịch vụ hỗ trợ.</p>
+            </div>
+
+            <div class="info-bento-card bento-blue">
+              <div class="bento-header">
+                <span class="bento-icon">🗣️</span>
+                <h4 class="bento-title">2. Diễn đàn Đối thoại Sinh viên</h4>
+              </div>
+              <p class="bento-desc">Chương trình đối thoại trực tiếp định kỳ giữa Ban Giám hiệu, Lãnh đạo các Phòng/Ban/Khoa/Viện với toàn thể Sinh viên UEF.</p>
+            </div>
+
+            <div class="info-bento-card bento-purple">
+              <div class="bento-header">
+                <span class="bento-icon">📮</span>
+                <h4 class="bento-title">3. Hòm thư Góp ý Học vụ</h4>
+              </div>
+              <p class="bento-desc">Gửi ý kiến đóng góp trực tiếp qua Email <code>hotrohocvu@uef.edu.vn</code> hoặc Chat Zalo <code>0908 560 999</code> để được phản hồi trong vòng 24h.</p>
+            </div>
+          </div>
+
+          <div class="info-alert-callout callout-green">
+            <span class="callout-icon">🤝</span>
+            <div class="callout-text">
+              Trung tâm Hỗ trợ học vụ luôn lắng nghe và đồng hành cùng mọi thắc mắc của Sinh viên UEF để xây dựng môi trường học tập thân thiện, hiện đại và chất lượng!
+            </div>
           </div>
 
         </div>
