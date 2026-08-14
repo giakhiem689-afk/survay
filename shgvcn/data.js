@@ -13,10 +13,10 @@ const SHGVCN_DATA = {
   },
   
   khoaList: [
-    { id: "k2023", name: "Khóa 2023", cover: "assets/bia_khoa_2023.png", note: "Năm thứ 4 - Giai đoạn Chuẩn bị Thực tập & Tốt nghiệp" },
-    { id: "k2024", name: "Khóa 2024", cover: "assets/bia_khoa_2024.png", note: "Năm thứ 3 - Giai đoạn Chuyên ngành & Chuẩn đầu ra" },
-    { id: "k2025", name: "Khóa 2025", cover: "assets/bia_khoa_2025.png", note: "Năm thứ 2 - Giai đoạn Cơ sở ngành & Học bổng" },
-    { id: "k2026", name: "Khóa 2026", cover: "assets/bia_khoa_2026.png", note: "Năm thứ 1 - Giai đoạn Đại cương & Thích ứng đại học" }
+    { id: "k2023", name: "Khóa 2023", cover: "assets/bia_khoa_2023.png" },
+    { id: "k2024", name: "Khóa 2024", cover: "assets/bia_khoa_2024.png" },
+    { id: "k2025", name: "Khóa 2025", cover: "assets/bia_khoa_2025.png" },
+    { id: "k2026", name: "Khóa 2026", cover: "assets/bia_khoa_2026.png" }
   ],
 
   topics: [

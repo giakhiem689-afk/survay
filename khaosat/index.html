@@ -17,26 +17,28 @@
 
 <body>
   <!-- ===================== HEADER ===================== -->
-  <header class="site-header">
-    <div class="nav-wrapper">
-      <div class="brand" onclick="showPage('home')">
-        <div class="brand-logo-container">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-            <path d="M2 17l10 5 10-5"></path>
-            <path d="M2 12l10 5 10-5"></path>
-          </svg>
+  <header class="site-header" style="background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; padding: 14px 24px;">
+    <div class="nav-wrapper" style="max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+      <a href="/" class="brand" style="text-decoration: none; display: flex; align-items: center; gap: 14px; color: inherit; cursor: pointer;">
+        <span class="uef-text" style="color: #b31217; font-size: 32px; font-weight: 900; line-height: 1; letter-spacing: 0.5px;">UEF</span>
+        <div class="brand-text" style="display: flex; flex-direction: column;">
+          <span class="brand-title" style="font-size: 16px; font-weight: 800; color: #0f2b52;">CỔNG THÔNG TIN TRUNG TÂM HỖ TRỢ HỌC VỤ</span>
+          <span class="brand-subtitle" style="font-size: 11.5px; color: #64748b; font-weight: 600;">Khảo sát Ý kiến Sinh viên • Trường Đại học Kinh tế - Tài chính TP.HCM</span>
         </div>
-        <div class="brand-text">
-          <span class="brand-title">Trung tâm Hỗ trợ học vụ</span>
-          <span class="brand-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM</span>
-        </div>
-      </div>
+      </a>
 
-      <nav class="nav-menu">
-        <button class="nav-link active" data-page="home">Trang chủ</button>
-        <!-- Tạm ẩn trang Nguồn lực theo yêu cầu -->
-        <!-- <button class="nav-link" data-page="resources">Nguồn lực</button> -->
+      <nav class="nav-menu" style="display: flex; gap: 10px; align-items: center;">
+        <button class="nav-link active" data-page="home" style="background: #fff1f2; border: 1.5px solid #fecdd3; padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 700; color: #dc2626; cursor: pointer;">Khảo sát SV</button>
+        <a href="/phudao/" class="nav-link" style="background: white; border: 1.5px solid #e2e8f0; padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 700; color: #334155; text-decoration: none;">Phụ đạo</a>
+        <a href="/shgvcn/" class="nav-link" style="background: #f0fdf4; border: 1.5px solid #bbf7d0; padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 700; color: #059669; text-decoration: none;">Sinh hoạt GVCN</a>
+        <a href="/congcu/" class="nav-link" style="background: white; border: 1.5px solid #e2e8f0; padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 700; color: #334155; text-decoration: none;">Công cụ hỗ trợ</a>
+        <a href="/" class="nav-link" style="background: #0f2b52; color: white; border: none; padding: 8px 18px; border-radius: 100px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 14px; height: 14px;">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Portal Hub
+        </a>
       </nav>
     </div>
   </header>

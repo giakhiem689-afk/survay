@@ -11,29 +11,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4.0.0">
+  <link rel="stylesheet" href="style.css?v=5.0.0">
 </head>
 <body>
 
-  <!-- Header Portal -->
+  <!-- Header Portal (No Home return button for SHGVCN) -->
   <header class="app-header">
     <div class="header-container">
-      <a href="/" class="brand-link" style="text-decoration:none; display:flex; align-items:center; gap:14px; color:inherit;">
-        <span class="uef-text" style="color:var(--uef-red); font-size:30px; font-weight:900; line-height:1; user-select:none;">UEF</span>
-        <div>
-          <h1 style="font-size:16px; font-weight:800; color:var(--uef-blue-dark);">CỔNG THÔNG TIN TRUNG TÂM HỖ TRỢ HỌC VỤ</h1>
-          <p style="font-size:12px; color:var(--text-muted); font-weight:600;">Thông tin Học vụ Sinh hoạt GVCN • Học kỳ 1A Năm học 2026-2027</p>
+      <div class="brand-group">
+        <span class="uef-text">UEF</span>
+        <div class="brand-text-group">
+          <h1 class="brand-title">CỔNG THÔNG TIN TRUNG TÂM HỖ TRỢ HỌC VỤ</h1>
+          <p class="brand-subtitle">Thông tin Học vụ Sinh hoạt GVCN • Học kỳ 1A / Năm học 2026-2027</p>
         </div>
-      </a>
-      
-      <div class="header-actions">
-        <a href="/" class="secondary-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px; height:16px;">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-          </svg>
-          Portal Hub
-        </a>
       </div>
     </div>
   </header>
@@ -45,34 +35,26 @@
       <h2>Tài liệu Thông tin Học vụ Sinh hoạt Lớp</h2>
       <p>Tổng hợp đầy đủ quy định, kế hoạch học tập, điều kiện xét tốt nghiệp, chuẩn đầu ra và giải pháp hỗ trợ sinh viên học tập hiệu quả từ Trung tâm Hỗ trợ học vụ UEF.</p>
 
-      <!-- Khóa Tabs Selector -->
+      <!-- Khóa Tabs Selector (Simple: Khóa 2023, Khóa 2024, ...) -->
       <div class="khoa-tabs-container">
         <div class="khoa-tabs" id="khoaTabs">
           <button type="button" class="khoa-tab-btn active" data-khoa="k2023">
             <span class="tab-title">Khóa 2023</span>
-            <span class="tab-sub">Năm 4 (Tốt nghiệp)</span>
           </button>
           <button type="button" class="khoa-tab-btn" data-khoa="k2024">
             <span class="tab-title">Khóa 2024</span>
-            <span class="tab-sub">Năm 3 (Chuyên ngành)</span>
           </button>
           <button type="button" class="khoa-tab-btn" data-khoa="k2025">
             <span class="tab-title">Khóa 2025</span>
-            <span class="tab-sub">Năm 2 (Cơ sở ngành)</span>
           </button>
           <button type="button" class="khoa-tab-btn" data-khoa="k2026">
             <span class="tab-title">Khóa 2026</span>
-            <span class="tab-sub">Năm 1 (Đại cương)</span>
           </button>
         </div>
 
         <!-- Khóa Banner Preview Card -->
         <div class="khoa-banner-card" id="khoaBannerCard">
           <img id="khoaBannerImg" src="assets/bia_khoa_2023.png" alt="Bìa Sinh hoạt GVCN Khóa 2023" loading="lazy">
-          <div class="khoa-banner-overlay">
-            <h3 id="khoaBannerTitle">Tài liệu Sinh hoạt GVCN Khóa 2023</h3>
-            <p id="khoaBannerDesc">Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Chuẩn bị Thực tập & Xét Tốt nghiệp</p>
-          </div>
         </div>
       </div>
 
@@ -82,16 +64,8 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Tra cứu nội dung (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại)...">
+        <input type="text" id="searchInput" placeholder="Tra cứu nội dung thông tin học vụ (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại)...">
         <button type="button" id="clearSearchBtn" class="clear-btn hidden">✕</button>
-      </div>
-
-      <!-- Scenario Filter Chips -->
-      <div class="filter-chips">
-        <button type="button" class="chip-btn active" data-filter="all">Tất cả 13 Chuyên đề</button>
-        <button type="button" class="chip-btn chip-red" data-filter="danger">🚨 SV Gặp Khó khăn</button>
-        <button type="button" class="chip-btn chip-orange" data-filter="warning">🚀 SV Bứt phá GPA</button>
-        <button type="button" class="chip-btn chip-green" data-filter="success">🌟 SV Học vượt / Song ngành</button>
       </div>
     </div>
   </section>
@@ -102,7 +76,7 @@
       
       <!-- Left Sticky Sidebar Nav -->
       <aside class="sidebar-nav">
-        <div class="sidebar-title">Danh mục 13 Chuyên đề Học vụ</div>
+        <div class="sidebar-title">Mục lục Thông tin Học vụ</div>
         <nav class="nav-list" id="navList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </nav>
@@ -111,118 +85,14 @@
       <!-- Right Main Content Area -->
       <section class="content-area">
         <div class="content-header">
-          <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ</h3>
-          <span class="topic-count-badge" id="topicCountBadge">13 chuyên đề</span>
+          <h3 id="sectionHeading">Nội dung Thông tin Học vụ</h3>
+          <span class="topic-count-badge" id="topicCountBadge">13 mục nội dung</span>
         </div>
 
         <!-- Topics Accordion List -->
         <div class="topics-list" id="topicsList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </div>
-
-        <!-- Interactive Tools Section -->
-        <section class="interactive-widgets-section">
-          <h3 class="widgets-section-title">🛠️ Bộ Công cụ Tương tác Trực tiếp Học vụ</h3>
-          
-          <div class="widgets-grid">
-            
-            <!-- Tool 1: GPA Calculator Widget -->
-            <div class="widget-card" id="gpaCalculatorWidget">
-              <div class="widget-header">
-                <span class="widget-icon">🧮</span>
-                <div>
-                  <h4>1. Công cụ Tính Điểm Môn học & Quy đổi GPA</h4>
-                  <p>Nhập điểm quá trình và cuối kỳ để xem xếp loại & điểm hệ 4.0</p>
-                </div>
-              </div>
-              <div class="widget-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Điểm Quá Trình (Thang 10)</label>
-                    <input type="number" id="inputProcessScore" min="0" max="10" step="0.1" value="7.5">
-                  </div>
-                  <div class="form-group">
-                    <label>Tỷ lệ Quá Trình (%)</label>
-                    <input type="number" id="inputProcessWeight" min="10" max="90" step="5" value="40">
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Điểm Thi Cuối Kỳ (Thang 10)</label>
-                    <input type="number" id="inputExamScore" min="0" max="10" step="0.1" value="8.0">
-                  </div>
-                  <div class="form-group">
-                    <label>Tỷ lệ Cuối Kỳ (%)</label>
-                    <input type="number" id="inputExamWeight" min="10" max="90" step="5" value="60">
-                  </div>
-                </div>
-
-                <button type="button" id="calcGpaBtn" class="calc-btn">Tính Điểm & Quy đổi GPA</button>
-
-                <div class="calc-result-box" id="calcResultBox">
-                  <div class="result-metric">
-                    <span class="res-label">Điểm Học phần (Thang 10):</span>
-                    <strong class="res-value" id="resTotal10">7.8</strong>
-                  </div>
-                  <div class="result-metric">
-                    <span class="res-label">Điểm Chữ:</span>
-                    <strong class="res-value grade-b" id="resGradeLetter">B</strong>
-                  </div>
-                  <div class="result-metric">
-                    <span class="res-label">Điểm Thang 4 (GPA):</span>
-                    <strong class="res-value" id="resGpa4">3.0</strong>
-                  </div>
-                  <div class="result-metric">
-                    <span class="res-label">Xếp loại Học phần:</span>
-                    <span class="status-badge badge-blue" id="resStatusBadge">Khá</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tool 2: Scholarship Retention Checker Widget -->
-            <div class="widget-card" id="scholarshipCheckerWidget">
-              <div class="widget-header">
-                <span class="widget-icon">🏅</span>
-                <div>
-                  <h4>2. Kiểm tra Điều kiện Duy trì Học bổng UEF</h4>
-                  <p>Kiểm tra xem GPA và Điểm rèn luyện của bạn có đủ điều kiện giữ học bổng không</p>
-                </div>
-              </div>
-              <div class="widget-form">
-                <div class="form-group">
-                  <label>Chọn Mức Học bổng Tuyển sinh</label>
-                  <select id="selectScholarshipTier">
-                    <option value="100">Học bổng 100% Học phí</option>
-                    <option value="50" selected>Học bổng 50% Học phí</option>
-                    <option value="25">Học bổng 25% Học phí</option>
-                  </select>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>ĐTB Tích lũy (GPA Thang 4)</label>
-                    <input type="number" id="inputStudentGpa" min="0" max="4.0" step="0.01" value="3.45">
-                  </div>
-                  <div class="form-group">
-                    <label>Điểm Rèn luyện (Thang 100)</label>
-                    <input type="number" id="inputStudentConduct" min="0" max="100" step="1" value="85">
-                  </div>
-                </div>
-
-                <button type="button" id="checkScholarshipBtn" class="calc-btn btn-orange">Kiểm tra Điều kiện Duy trì</button>
-
-                <div class="calc-result-box" id="scholarshipResultBox">
-                  <div class="result-status-row" id="scholarshipStatusRow">
-                    <!-- Populated by JS -->
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
 
       </section>
 
@@ -236,16 +106,10 @@
         <p><strong>Trung tâm Hỗ trợ Học vụ - Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</strong></p>
         <p style="margin-top: 4px; color: var(--text-muted);">Tầng 2, 141 - 145 Điện Biên Phủ, P. Gia Định, TP.HCM • Hotline: 028 2236 1111 • Email: hotrohocvu@uef.edu.vn</p>
       </div>
-      <div class="footer-links">
-        <a href="/">Portal Hub</a>
-        <a href="/phudao/">Phụ đạo</a>
-        <a href="/thphudao/">Thống kê Phụ đạo</a>
-        <a href="/khaosat/">Khảo sát SV</a>
-      </div>
     </div>
   </footer>
 
-  <script src="data.js?v=4.0.0"></script>
-  <script src="main.js?v=4.0.0"></script>
+  <script src="data.js?v=5.0.0"></script>
+  <script src="main.js?v=5.0.0"></script>
 </body>
 </html>
