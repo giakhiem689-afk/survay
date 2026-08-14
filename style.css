@@ -151,11 +151,19 @@ body {
   opacity: 0.75;
 }
 
-.nav-btn:hover {
-  background: #f1f5f9;
-  border-color: var(--border-card-hover);
-  color: var(--uef-blue-dark);
-  transform: translateY(-1px);
+.nav-btn.active {
+  background: var(--uef-blue-dark) !important;
+  color: white !important;
+  border-color: var(--uef-blue-dark) !important;
+  box-shadow: 0 4px 14px rgba(15, 43, 82, 0.28) !important;
+}
+
+.nav-btn.active .nav-icon {
+  stroke: white;
+}
+
+.nav-btn.active .lock-pill {
+  opacity: 0.9;
 }
 
 .nav-btn-primary {
