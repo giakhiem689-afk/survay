@@ -1,5 +1,5 @@
 /* =========================================================
-   UEF ACADEMIC SUPPORT PORTAL - SHARED UNIFIED DESIGN SYSTEM
+   UEF ACADEMIC SUPPORT PORTAL - AESTHETIC DESIGN SYSTEM
    ========================================================= */
 
 :root {
@@ -7,6 +7,7 @@
   --portal-uef-red-dark: #900a0e;
   --portal-uef-blue-dark: #0f2b52;
   --portal-uef-blue-light: #f0f9ff;
+  --portal-vivid-blue: #0284c7;
   --portal-border-color: #e2e8f0;
   --portal-border-hover: #cbd5e1;
   --portal-text-main: #0f172a;
@@ -36,7 +37,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
-/* Fixed Global Header - Exact 68px height on all pages to prevent any shift */
+/* Fixed Global Header - Sleek 64px Height */
 .portal-global-header {
   position: sticky !important;
   top: 0 !important;
@@ -44,10 +45,10 @@ body {
   right: 0 !important;
   z-index: 9999 !important;
   width: 100% !important;
-  height: 68px !important;
+  height: 64px !important;
   background: rgba(255, 255, 255, 0.96) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   border-bottom: 1.5px solid #e2e8f0 !important;
   padding: 0 24px !important;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
@@ -71,7 +72,7 @@ body {
   text-decoration: none !important;
   display: flex !important;
   align-items: center !important;
-  gap: 14px !important;
+  gap: 12px !important;
   color: inherit !important;
   user-select: none !important;
   flex-shrink: 0 !important;
@@ -79,7 +80,7 @@ body {
 
 .portal-uef-logo-text {
   color: #b31217 !important;
-  font-size: 32px !important;
+  font-size: 30px !important;
   font-weight: 900 !important;
   letter-spacing: 0.5px !important;
   line-height: 1 !important;
@@ -91,27 +92,27 @@ body {
 }
 
 .portal-brand-title {
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 800 !important;
   color: #0f2b52 !important;
   letter-spacing: -0.2px !important;
   margin: 0 !important;
-  line-height: 1.25 !important;
+  line-height: 1.2 !important;
 }
 
 .portal-brand-subtitle {
-  font-size: 11.5px !important;
+  font-size: 11px !important;
   color: #64748b !important;
   font-weight: 600 !important;
   margin: 0 !important;
-  line-height: 1.25 !important;
+  line-height: 1.2 !important;
 }
 
 /* Navigation Menu */
 .portal-header-nav {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 8px !important;
   flex-shrink: 0 !important;
 }
 
@@ -119,35 +120,35 @@ body {
   background: #ffffff !important;
   border: 1.5px solid #e2e8f0 !important;
   color: #334155 !important;
-  height: 40px !important;
-  padding: 0 18px !important;
+  height: 38px !important;
+  padding: 0 16px !important;
   border-radius: 100px !important;
-  font-size: 13.5px !important;
+  font-size: 13px !important;
   font-weight: 700 !important;
   font-family: inherit !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
   box-sizing: border-box !important;
 }
 
 .portal-nav-btn svg {
-  width: 16px !important;
-  height: 16px !important;
+  width: 15px !important;
+  height: 15px !important;
   flex-shrink: 0 !important;
 }
 
 .portal-nav-btn:hover {
-  background: #f1f5f9 !important;
+  background: #f8fafc !important;
   border-color: #cbd5e1 !important;
   color: #0f2b52 !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Active Highlight State */
@@ -155,7 +156,7 @@ body {
   background: #0f2b52 !important;
   color: #ffffff !important;
   border-color: #0f2b52 !important;
-  box-shadow: 0 4px 14px rgba(15, 43, 82, 0.28) !important;
+  box-shadow: 0 3px 12px rgba(15, 43, 82, 0.25) !important;
 }
 
 .portal-nav-btn.active svg {
@@ -171,7 +172,7 @@ body {
 .portal-modal-overlay {
   position: fixed !important;
   inset: 0 !important;
-  background: rgba(15, 23, 42, 0.6) !important;
+  background: rgba(15, 23, 42, 0.65) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
   display: flex !important;
@@ -205,11 +206,13 @@ body {
   transform: scale(1) !important;
 }
 
-/* UNIFIED GLOBAL FOOTER SYSTEM */
+/* =========================================================
+   AESTHETIC UNIFIED GLOBAL FOOTER
+   ========================================================= */
 .portal-global-footer {
   background: #ffffff !important;
   border-top: 1.5px solid #e2e8f0 !important;
-  padding: 44px 24px 24px 24px !important;
+  padding: 44px 24px 20px 24px !important;
   margin-top: 60px !important;
   font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif !important;
   color: #0f172a !important;
@@ -220,10 +223,26 @@ body {
   max-width: 1300px !important;
   margin: 0 auto !important;
   display: grid !important;
-  grid-template-columns: 1.2fr 1fr 1.2fr !important;
-  gap: 36px !important;
-  padding-bottom: 32px !important;
+  grid-template-columns: 1.1fr 1fr 1.2fr !important;
+  gap: 28px !important;
+  padding-bottom: 28px !important;
   border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.portal-footer-col {
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 20px !important;
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.2s ease !important;
+}
+
+.portal-footer-col:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
 }
 
 .footer-brand-header {
@@ -235,14 +254,14 @@ body {
 
 .footer-uef-badge {
   color: #b31217 !important;
-  font-size: 28px !important;
+  font-size: 26px !important;
   font-weight: 900 !important;
   line-height: 1 !important;
   letter-spacing: 0.5px !important;
 }
 
 .footer-title {
-  font-size: 15px !important;
+  font-size: 14px !important;
   font-weight: 800 !important;
   color: #0f2b52 !important;
   margin: 0 !important;
@@ -250,21 +269,21 @@ body {
 }
 
 .footer-subtitle {
-  font-size: 11.5px !important;
+  font-size: 11px !important;
   color: #64748b !important;
   font-weight: 600 !important;
   margin: 2px 0 0 0 !important;
 }
 
 .footer-address, .footer-times {
-  font-size: 13px !important;
+  font-size: 12.5px !important;
   color: #334155 !important;
-  line-height: 1.6 !important;
-  margin: 8px 0 0 0 !important;
+  line-height: 1.55 !important;
+  margin: 6px 0 0 0 !important;
 }
 
 .footer-section-title {
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-weight: 800 !important;
   color: #0f2b52 !important;
   margin: 0 0 14px 0 !important;
@@ -282,7 +301,7 @@ body {
 }
 
 .footer-links-list li {
-  font-size: 13px !important;
+  font-size: 12.5px !important;
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
@@ -292,14 +311,14 @@ body {
 .link-label {
   font-weight: 700 !important;
   color: #64748b !important;
-  min-width: 70px !important;
+  min-width: 68px !important;
 }
 
 .footer-link {
   color: #0284c7 !important;
   text-decoration: none !important;
   font-weight: 600 !important;
-  transition: color 0.2s ease !important;
+  transition: color 0.15s ease !important;
 }
 
 .footer-link:hover {
@@ -308,7 +327,7 @@ body {
 }
 
 .footer-phone-block p {
-  font-size: 13px !important;
+  font-size: 12.5px !important;
   color: #334155 !important;
   line-height: 1.5 !important;
   margin: 0 !important;
@@ -325,48 +344,62 @@ body {
 }
 
 .extension-numbers {
-  margin-top: 12px !important;
-  padding: 10px 12px !important;
-  background: #f8fafc !important;
+  margin-top: 10px !important;
+  padding: 8px 10px !important;
+  background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 12px !important;
 }
 
 .ext-label {
   display: block !important;
-  font-size: 11.5px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
   color: #64748b !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 5px !important;
 }
 
 .ext-tags {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 6px !important;
+  gap: 5px !important;
 }
 
 .ext-tags span {
-  background: #ffffff !important;
-  border: 1px solid #cbd5e1 !important;
-  padding: 2px 7px !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 2px 6px !important;
   border-radius: 6px !important;
-  font-size: 11.5px !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
   color: #0f2b52 !important;
 }
 
 .portal-footer-bottom {
   max-width: 1300px !important;
-  margin: 20px auto 0 auto !important;
+  margin: 16px auto 0 auto !important;
   text-align: center !important;
-  font-size: 12px !important;
+  font-size: 11.5px !important;
   color: #64748b !important;
 }
 
 @media (max-width: 992px) {
+  .portal-global-header {
+    height: auto !important;
+    padding: 10px 16px !important;
+  }
+  .portal-header-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .portal-header-nav {
+    width: 100% !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+  }
   .portal-footer-container {
     grid-template-columns: 1fr !important;
-    gap: 28px !important;
+    gap: 20px !important;
   }
 }
