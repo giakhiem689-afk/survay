@@ -58,63 +58,79 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Hero Section */
+/* Hero Section - Centered & Balanced */
 .shgvcn-hero {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-bottom: 1.5px solid var(--border-card);
-  padding: 32px 24px 28px 24px;
+  padding: 36px 24px 30px 24px;
+  text-align: center;
 }
 
-.hero-content {
-  max-width: 1300px;
+.hero-inner {
+  max-width: 860px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-meta-badge {
+.hero-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: var(--pastel-red-bg);
   border: 1px solid var(--pastel-red-border);
   color: var(--uef-red);
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 100px;
   font-size: 11.5px;
   font-weight: 800;
   margin-bottom: 10px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .shgvcn-hero h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
   color: var(--uef-blue-dark);
   letter-spacing: -0.3px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  text-align: center;
 }
 
-.hero-desc {
-  font-size: 13px;
+.hero-inner p {
+  font-size: 13.5px;
   color: var(--text-sub);
-  max-width: 900px;
-  margin-bottom: 20px;
+  max-width: 760px;
+  line-height: 1.6;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
-/* Khóa Selector */
-.khoa-selector-wrap {
-  margin-bottom: 16px;
+/* Centered Khóa Selector */
+.khoa-tabs-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .khoa-tabs {
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 14px;
 }
 
 .khoa-tab-btn {
   background: white;
   border: 1.5px solid var(--border-card);
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 100px;
   cursor: pointer;
   font-weight: 700;
@@ -137,15 +153,16 @@ body {
   box-shadow: 0 4px 12px rgba(15, 43, 82, 0.25);
 }
 
-/* Banner Card */
+/* Banner Card - Centered with max-width */
 .khoa-banner-card {
-  margin-top: 14px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
   border-radius: 16px;
   overflow: hidden;
   border: 1.5px solid var(--border-card);
   box-shadow: var(--shadow-sm);
   background: white;
+  margin: 0 auto;
 }
 
 .khoa-banner-card img {
@@ -155,11 +172,12 @@ body {
   display: block;
 }
 
-/* Search Box */
+/* Search Box - Centered */
 .search-box {
   position: relative;
-  margin-top: 16px;
-  max-width: 700px;
+  width: 100%;
+  max-width: 640px;
+  margin: 18px auto 0 auto;
 }
 
 .search-box input {
