@@ -6,53 +6,86 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Cổng Thông tin & Quản lý Học vụ UEF</title>
-  <meta name="description" content="Trang chủ Cổng thông tin & Hệ thống Quản lý Học vụ UEF - Trường Đại học Kinh tế - Tài chính TP.HCM">
+  <title>Cổng thông tin Trung tâm Hỗ trợ học vụ - UEF</title>
+  <meta name="description" content="Cổng thông tin Trung tâm Hỗ trợ học vụ - Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2.0.1">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3.0.0">
 </head>
 <body>
-  <!-- Background Glow FX -->
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
 
   <!-- Header Portal -->
   <header class="app-header">
     <div class="header-container">
-      <div class="logo-area">
-        <div class="logo-icon">UEF</div>
-        <div>
-          <h1>HỌC VỤ UEF PORTAL</h1>
-          <p>Trung tâm Hỗ trợ Học vụ - Trường ĐH Kinh tế - Tài chính TP.HCM</p>
+      
+      <!-- Brand Logo: Red UEF text without box -->
+      <a href="/" class="brand-link">
+        <span class="uef-text">UEF</span>
+        <div class="brand-text-group">
+          <h1 class="brand-title">Cổng thông tin Trung tâm Hỗ trợ học vụ</h1>
+          <p class="brand-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM</p>
         </div>
-      </div>
-      <div class="header-status">
-        <span class="status-indicator">
-          <span class="pulse-dot"></span>
-          Hệ thống đang hoạt động
-        </span>
-      </div>
+      </a>
+
+      <!-- 4 Main Navigation Menu Buttons -->
+      <nav class="header-nav">
+        <button type="button" class="nav-btn protected-link" data-url="/khaosat/" data-module="Khảo sát Sinh viên">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-icon">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+          <span>Khảo sát Sinh viên</span>
+          <span class="lock-pill">🔒</span>
+        </button>
+
+        <button type="button" class="nav-btn protected-link" data-url="/phudao/" data-module="Lớp Phụ đạo & Điểm danh">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-icon">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Phụ đạo</span>
+          <span class="lock-pill">🔒</span>
+        </button>
+
+        <a href="/shgvcn/" class="nav-btn nav-btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-icon">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          <span>Sinh hoạt GVCN</span>
+        </a>
+
+        <button type="button" class="nav-btn protected-link" data-url="/congcu/" data-module="Công cụ Hỗ trợ Học vụ">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-icon">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+          </svg>
+          <span>Công cụ hỗ trợ</span>
+          <span class="lock-pill">🔒</span>
+        </button>
+      </nav>
+
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="portal-hero">
     <div class="hero-container">
-      <span class="hero-badge">CỔNG THÔNG TIN TÍCH HỢP</span>
-      <h1 class="hero-title">Hệ thống Quản lý & Hỗ trợ Học vụ UEF</h1>
+      <span class="hero-badge">TRUNG TÂM HỖ TRỢ HỌC VỤ UEF</span>
+      <h2 class="hero-title">Nền tảng Quản trị & Truyền thông Học vụ Tích hợp</h2>
       <p class="hero-subtitle">
-        Nền tảng tập trung kết nối các phân hệ Khảo sát sinh viên, Điểm danh Phụ đạo, Sinh hoạt GVCN và Bộ công cụ tiện ích học vụ dành cho Giảng viên & Sinh viên UEF.
+        Truy cập nhanh các phân hệ nghiệp vụ, khảo sát ý kiến sinh viên, điểm danh phụ đạo QR, cẩm nang sinh hoạt giáo viên chủ nhiệm và bộ công cụ học vụ tiện ích.
       </p>
     </div>
   </section>
 
-  <!-- Main Modules Branch Grid -->
+  <!-- Main Modules Grid -->
   <main class="portal-main">
     <div class="modules-grid">
       
-      <!-- Module 1: Khảo sát sinh viên -->
+      <!-- Module 1: Khảo sát sinh viên (Protected) -->
       <article class="module-card card-khaosat">
         <div class="card-accent accent-red"></div>
         <div class="card-body">
@@ -63,10 +96,10 @@
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
               </svg>
             </div>
-            <span class="module-tag tag-red">Xác thực OTP Email</span>
+            <span class="module-tag tag-red">🔒 Yêu cầu Mật khẩu</span>
           </div>
 
-          <h2 class="module-title">1. Khảo sát Sinh viên</h2>
+          <h3 class="module-title">1. Khảo sát Sinh viên</h3>
           <p class="module-desc">
             Hệ thống khảo sát ý kiến & đánh giá dành cho sinh viên UEF, bảo mật xác thực danh tính qua mã OTP gửi về Email trường <code>@uef.edu.vn</code>.
           </p>
@@ -77,18 +110,18 @@
           </div>
 
           <div class="card-actions">
-            <a href="/khaosat/" class="portal-btn btn-red">
-              Truy cập Khảo sát
+            <button type="button" class="portal-btn btn-red protected-link" data-url="/khaosat/" data-module="Khảo sát Sinh viên">
+              <span>Truy cập Khảo sát</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </article>
 
-      <!-- Module 2: Phụ đạo & Điểm danh -->
+      <!-- Module 2: Phụ đạo & Điểm danh (Protected) -->
       <article class="module-card card-phudao">
         <div class="card-accent accent-blue"></div>
         <div class="card-body">
@@ -101,12 +134,12 @@
                 <rect x="3" y="14" width="7" height="7"></rect>
               </svg>
             </div>
-            <span class="module-tag tag-blue">QR Code & Trình chiếu</span>
+            <span class="module-tag tag-blue">🔒 Yêu cầu Mật khẩu</span>
           </div>
 
-          <h2 class="module-title">2. Lớp Phụ đạo & Điểm danh</h2>
+          <h3 class="module-title">2. Lớp Phụ đạo & Điểm danh</h3>
           <p class="module-desc">
-            Quản lý lớp phụ đạo, tạo mã QR đếm ngược 2 phút, giao diện chia đôi máy chiếu toàn màn hình hiển thị danh sách sinh viên quét mã thời gian thực.
+            Quản lý lớp học phụ đạo miễn phí, tạo mã QR động đếm ngược 2 phút, giao diện chia đôi máy chiếu toàn màn hình hiển thị danh sách quét mã tức thì.
           </p>
 
           <div class="module-features">
@@ -115,21 +148,21 @@
           </div>
 
           <div class="card-actions duo-actions">
-            <a href="/phudao/" class="portal-btn btn-blue">
-              Điểm danh QR
+            <button type="button" class="portal-btn btn-blue protected-link" data-url="/phudao/" data-module="Lớp Phụ đạo & Điểm danh">
+              <span>Điểm danh QR</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
-            <a href="/thphudao/" class="portal-btn btn-blue-outline">
-              Thống kê tổng hợp
-            </a>
+            </button>
+            <button type="button" class="portal-btn btn-blue-outline protected-link" data-url="/thphudao/" data-module="Thống kê Tổng hợp Phụ đạo">
+              <span>Thống kê tổng hợp</span>
+            </button>
           </div>
         </div>
       </article>
 
-      <!-- Module 3: Sinh hoạt Giáo viên Chủ nhiệm -->
+      <!-- Module 3: Sinh hoạt Giáo viên Chủ nhiệm (Free Access) -->
       <article class="module-card card-shgvcn">
         <div class="card-accent accent-green"></div>
         <div class="card-body">
@@ -140,22 +173,22 @@
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
             </div>
-            <span class="module-tag tag-green">Phiếu Tự Đánh giá</span>
+            <span class="module-tag tag-green">⚡ Truy cập Tự do</span>
           </div>
 
-          <h2 class="module-title">3. Sinh hoạt GVCN</h2>
+          <h3 class="module-title">3. Sinh hoạt GVCN</h3>
           <p class="module-desc">
-            Biểu mẫu tự đánh giá và quản lý thông tin sinh hoạt lớp của Giáo viên chủ nhiệm theo từng học kỳ, tổng hợp dữ liệu theo dõi quá trình học tập của lớp.
+            Cẩm nang thông tin học vụ chính thức 13 chuyên đề HK 26.1A, kế hoạch học tập, điều kiện xét tốt nghiệp, chuẩn đầu ra và công cụ tính GPA tương tác.
           </p>
 
           <div class="module-features">
-            <span class="feature-item">✓ Phiếu tự đánh giá HK</span>
-            <span class="feature-item">✓ Quản lý sinh hoạt lớp</span>
+            <span class="feature-item">✓ 13 Chuyên đề Học vụ Chuẩn</span>
+            <span class="feature-item">✓ Công cụ Tính GPA & Học bổng</span>
           </div>
 
           <div class="card-actions">
             <a href="/shgvcn/" class="portal-btn btn-green">
-              Truy cập GVCN
+              <span>Truy cập Cẩm nang GVCN</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -165,7 +198,7 @@
         </div>
       </article>
 
-      <!-- Module 4: Công cụ Hỗ trợ -->
+      <!-- Module 4: Công cụ Hỗ trợ (Protected) -->
       <article class="module-card card-congcu">
         <div class="card-accent accent-purple"></div>
         <div class="card-body">
@@ -175,10 +208,10 @@
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
               </svg>
             </div>
-            <span class="module-tag tag-purple">Tiện ích & Tra cứu</span>
+            <span class="module-tag tag-purple">🔒 Yêu cầu Mật khẩu</span>
           </div>
 
-          <h2 class="module-title">4. Công cụ Hỗ trợ</h2>
+          <h3 class="module-title">4. Công cụ Hỗ trợ</h3>
           <p class="module-desc">
             Bộ công cụ học vụ tiện ích hỗ trợ tính điểm GPA, tính điểm rèn luyện dự kiến, tra cứu biểu mẫu đơn từ và quy chế đào tạo UEF.
           </p>
@@ -189,13 +222,13 @@
           </div>
 
           <div class="card-actions">
-            <a href="/congcu/" class="portal-btn btn-purple">
-              Khám phá Công cụ
+            <button type="button" class="portal-btn btn-purple protected-link" data-url="/congcu/" data-module="Công cụ Hỗ trợ Học vụ">
+              <span>Khám phá Công cụ</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </article>
@@ -203,24 +236,57 @@
     </div>
   </main>
 
+  <!-- Password Security Modal -->
+  <div class="password-modal-wrapper" id="passwordModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card" id="modalCard">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn">✕</button>
+      
+      <div class="modal-header">
+        <div class="modal-lock-icon">🔒</div>
+        <h3 class="modal-title">Xác thực Quyền truy cập</h3>
+        <p class="modal-desc">Vui lòng nhập mật khẩu để truy cập phân hệ <strong id="targetModuleName" style="color:var(--uef-blue-dark);">...</strong></p>
+      </div>
+
+      <form id="passwordForm" class="modal-form">
+        <div class="input-wrapper">
+          <input type="password" id="passwordInput" placeholder="Nhập mật khẩu (9 số 0)..." autocomplete="off" autofocus>
+          <button type="button" class="toggle-pwd-btn" id="togglePwdBtn" title="Hiện/ẩn mật khẩu">👁️</button>
+        </div>
+        
+        <div class="error-msg hidden" id="passwordError">
+          ⚠️ Mật khẩu không chính xác! Vui lòng nhập đúng <code>000000000</code>.
+        </div>
+
+        <button type="submit" class="submit-pwd-btn" id="submitPwdBtn">
+          <span>Xác nhận Truy cập</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px; height:16px;">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- Portal Footer -->
   <footer class="portal-footer">
     <div class="footer-container">
       <div class="footer-info">
         <h3>Trung tâm Hỗ trợ Học vụ - UEF</h3>
-        <p>Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh (UEF)</p>
-        <p class="copyright">© 2026 UEF Academic Support Center. All rights reserved.</p>
+        <p>Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh</p>
+        <p class="copyright">© 2026 UEF Academic Support Center • Tầng 2, 141 - 145 Điện Biên Phủ, P. Gia Định, TP.HCM</p>
       </div>
       <div class="footer-links">
-        <a href="/khaosat/">Khảo sát SV</a>
-        <a href="/phudao/">Phụ đạo</a>
-        <a href="/thphudao/">Thống kê Phụ đạo</a>
+        <button type="button" class="footer-link-btn protected-link" data-url="/khaosat/" data-module="Khảo sát SV">Khảo sát SV 🔒</button>
+        <button type="button" class="footer-link-btn protected-link" data-url="/phudao/" data-module="Phụ đạo">Phụ đạo 🔒</button>
+        <button type="button" class="footer-link-btn protected-link" data-url="/thphudao/" data-module="Thống kê Phụ đạo">Thống kê Phụ đạo 🔒</button>
         <a href="/shgvcn/">Sinh hoạt GVCN</a>
-        <a href="/congcu/">Công cụ Hỗ trợ</a>
+        <button type="button" class="footer-link-btn protected-link" data-url="/congcu/" data-module="Công cụ Hỗ trợ">Công cụ Hỗ trợ 🔒</button>
       </div>
     </div>
   </footer>
 
-  <script src="main.js?v=2.0.1"></script>
+  <script src="main.js?v=3.0.0"></script>
 </body>
 </html>
