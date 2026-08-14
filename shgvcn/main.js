@@ -1,4 +1,4 @@
-// Script điều khiển Cẩm nang Học vụ GVCN UEF (Mindmap, Interactive GPA & Scholarship Widgets)
+// Script điều khiển Thông tin Học vụ Sinh hoạt GVCN - HK 26.1A (13 Chuyên đề Chuẩn xác UEF)
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const clearSearchBtn = document.getElementById('clearSearchBtn');
@@ -8,8 +8,58 @@ document.addEventListener('DOMContentLoaded', () => {
   const topicCountBadge = document.getElementById('topicCountBadge');
   const sectionHeading = document.getElementById('sectionHeading');
 
+  // Khóa Tabs Elements
+  const khoaTabBtns = document.querySelectorAll('.khoa-tab-btn');
+  const khoaBannerImg = document.getElementById('khoaBannerImg');
+  const khoaBannerTitle = document.getElementById('khoaBannerTitle');
+  const khoaBannerDesc = document.getElementById('khoaBannerDesc');
+
   let activeFilter = 'all';
   let searchQuery = '';
+  let selectedKhoa = 'k2023';
+
+  const khoaMeta = {
+    k2023: {
+      name: "Khóa 2023",
+      cover: "assets/bia_khoa_2023.png",
+      title: "Tài liệu Sinh hoạt GVCN Khóa 2023",
+      desc: "Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Chuẩn bị Thực tập & Xét Tốt nghiệp"
+    },
+    k2024: {
+      name: "Khóa 2024",
+      cover: "assets/bia_khoa_2024.png",
+      title: "Tài liệu Sinh hoạt GVCN Khóa 2024",
+      desc: "Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Chuyên ngành & Hoàn thiện Chuẩn đầu ra"
+    },
+    k2025: {
+      name: "Khóa 2025",
+      cover: "assets/bia_khoa_2025.png",
+      title: "Tài liệu Sinh hoạt GVCN Khóa 2025",
+      desc: "Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Cơ sở ngành & Duy trì Học bổng tuyển sinh"
+    },
+    k2026: {
+      name: "Khóa 2026",
+      cover: "assets/bia_khoa_2026.png",
+      title: "Tài liệu Sinh hoạt GVCN Khóa 2026",
+      desc: "Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Đại cương & Thích ứng môi trường đại học"
+    }
+  };
+
+  // Khóa Tab Switch Listener
+  khoaTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      khoaTabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedKhoa = btn.getAttribute('data-khoa');
+
+      const meta = khoaMeta[selectedKhoa];
+      if (meta) {
+        khoaBannerImg.src = meta.cover;
+        khoaBannerTitle.textContent = meta.title;
+        khoaBannerDesc.textContent = meta.desc;
+      }
+    });
+  });
 
   // 1. Render Initial Data
   function renderAll() {
@@ -55,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <p style="font-size: 16px; font-weight: 700; color: var(--text-main);">Không tìm thấy chuyên đề quy chế phù hợp từ khóa.</p>
-          <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử từ khóa khác (ví dụ: "gpa", "thi", "rèn luyện", "học lại").</p>
+          <p style="font-size: 16px; font-weight: 700; color: var(--text-main);">Không tìm thấy chuyên đề học vụ phù hợp từ khóa.</p>
+          <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử từ khóa khác (ví dụ: "tốt nghiệp", "chuẩn đầu ra", "học bổng", "gpa", "học lại").</p>
         </div>
       `;
       return;
@@ -106,11 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return SHGVCN_DATA.topics.filter(topic => {
       let matchesFilter = true;
       if (activeFilter === 'danger') {
-        matchesFilter = topic.id === 'luu-y-quan-trong' || topic.id === 'hoc-lai-va-hoc-cai-thien' || topic.id === 'dang-ky-hoc-phu-dao' || topic.id === 'giai-phap-ho-tro-sinh-vien';
+        matchesFilter = topic.id === 'thong-tin-luu-y-quan-trong' || topic.id === 'tien-do-dao-tao' || topic.id === 'dang-ky-hoc-phu-dao-mien-phi' || topic.id === 'mot-so-giai-phap-ho-tro-sinh-vien';
       } else if (activeFilter === 'warning') {
-        matchesFilter = topic.id === 'cach-tinh-diem' || topic.id === 'duy-tri-hoc-bong' || topic.id === 'giai-phap-ho-tro-sinh-vien';
+        matchesFilter = topic.id === 'xep-loai-hoc-luc' || topic.id === 'dieu-kien-duy-tri-hoc-bong' || topic.id === 'mot-so-giai-phap-ho-tro-sinh-vien';
       } else if (activeFilter === 'success') {
-        matchesFilter = topic.id === 'song-bang-song-nganh' || topic.id === 'chuong-chi-chuan-dau-ra' || topic.id === 'xet-tot-nghiep' || topic.id === 'giai-phap-ho-tro-sinh-vien';
+        matchesFilter = topic.id === 'checklist-dieu-kien-xet-tot-nghiep' || topic.id === 'chuan-dau-ra-ngoai-ngu-tin-hoc' || topic.id === 'mot-so-giai-phap-ho-tro-sinh-vien';
       }
 
       let matchesSearch = true;
@@ -158,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (activeFilter === 'danger') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên đang gặp Khó khăn';
       else if (activeFilter === 'warning') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên Bứt phá GPA';
-      else if (activeFilter === 'success') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên Học vượt / Song ngành';
+      else if (activeFilter === 'success') sectionHeading.textContent = 'Chuyên đề dành cho Sinh viên Chuẩn bị Tốt nghiệp / Bằng 2';
       else sectionHeading.textContent = 'Danh sách Chuyên đề Học vụ';
 
       renderAll();

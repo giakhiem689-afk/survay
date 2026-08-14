@@ -6,12 +6,12 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Cẩm nang Học vụ Sinh hoạt GVCN UEF - Trực quan & Tương tác</title>
-  <meta name="description" content="Trang truyền thông học vụ sinh hoạt GVCN UEF với sơ đồ mindmap, flowchart, công cụ tính điểm GPA & kiểm tra học bổng tương tác.">
+  <title>Thông tin Học vụ Sinh hoạt GVCN - HK 26.1A | UEF</title>
+  <meta name="description" content="Tài liệu Thông tin Học vụ phục vụ Sinh hoạt Giáo viên Chủ nhiệm Học kỳ 1A/ Năm học 2026-2027 - Trung tâm Hỗ trợ Học vụ UEF.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="style.css?v=4.0.0">
 </head>
 <body>
 
@@ -19,10 +19,10 @@
   <header class="app-header">
     <div class="header-container">
       <div class="logo-area">
-        <div class="logo-icon">GVCN</div>
+        <div class="logo-icon">UEF</div>
         <div>
-          <h1>CẨM NANG HỌC VỤ GVCN</h1>
-          <p>Trung tâm Hỗ trợ Học vụ - Trường ĐH Kinh tế - Tài chính TP.HCM</p>
+          <h1>THÔNG TIN HỌC VỤ SINH HOẠT GVCN</h1>
+          <p>Học kỳ 1A / Năm học 2026-2027 • Trung tâm Hỗ trợ học vụ UEF</p>
         </div>
       </div>
       
@@ -32,18 +32,49 @@
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
-          Trang chủ Portal
+          Portal Hub
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section & Search -->
+  <!-- Khóa Selection Hero Section -->
   <section class="shgvcn-hero">
     <div class="hero-inner">
-      <span class="hero-tag">TRỰC QUAN • CÔNG CỤ TƯƠNG TÁC • CHUẨN 100% UEF</span>
-      <h2>Truyền thông Quy chế & Giải pháp Học vụ Sinh hoạt GVCN</h2>
-      <p>Hệ thống mindmap, sơ đồ tiến trình, quy chế học vụ chuẩn và bộ công cụ tương tác tính thử GPA, kiểm tra học bổng dành cho GVCN & Sinh viên UEF.</p>
+      <span class="hero-tag">CHÍNH THỨC • HỌC KỲ 1A / NĂM HỌC 2026-2027</span>
+      <h2>Tài liệu Thông tin Học vụ Sinh hoạt Lớp</h2>
+      <p>Tổng hợp đầy đủ quy định, kế hoạch học tập, điều kiện xét tốt nghiệp, chuẩn đầu ra và giải pháp hỗ trợ sinh viên học tập hiệu quả từ Trung tâm Hỗ trợ học vụ UEF.</p>
+
+      <!-- Khóa Tabs Selector -->
+      <div class="khoa-tabs-container">
+        <div class="khoa-tabs" id="khoaTabs">
+          <button type="button" class="khoa-tab-btn active" data-khoa="k2023">
+            <span class="tab-title">Khóa 2023</span>
+            <span class="tab-sub">Năm 4 (Tốt nghiệp)</span>
+          </button>
+          <button type="button" class="khoa-tab-btn" data-khoa="k2024">
+            <span class="tab-title">Khóa 2024</span>
+            <span class="tab-sub">Năm 3 (Chuyên ngành)</span>
+          </button>
+          <button type="button" class="khoa-tab-btn" data-khoa="k2025">
+            <span class="tab-title">Khóa 2025</span>
+            <span class="tab-sub">Năm 2 (Cơ sở ngành)</span>
+          </button>
+          <button type="button" class="khoa-tab-btn" data-khoa="k2026">
+            <span class="tab-title">Khóa 2026</span>
+            <span class="tab-sub">Năm 1 (Đại cương)</span>
+          </button>
+        </div>
+
+        <!-- Khóa Banner Preview Card -->
+        <div class="khoa-banner-card" id="khoaBannerCard">
+          <img id="khoaBannerImg" src="assets/bia_khoa_2023.png" alt="Bìa Sinh hoạt GVCN Khóa 2023" loading="lazy">
+          <div class="khoa-banner-overlay">
+            <h3 id="khoaBannerTitle">Tài liệu Sinh hoạt GVCN Khóa 2023</h3>
+            <p id="khoaBannerDesc">Áp dụng cho học kỳ 1A năm học 2026-2027 - Giai đoạn Chuẩn bị Thực tập & Xét Tốt nghiệp</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Search Box -->
       <div class="search-box">
@@ -51,16 +82,16 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Tra cứu từ khóa quy chế (ví dụ: học bổng, GPA, cảnh báo học tập, chuẩn đầu ra, học lại)...">
+        <input type="text" id="searchInput" placeholder="Tra cứu nội dung (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại)...">
         <button type="button" id="clearSearchBtn" class="clear-btn hidden">✕</button>
       </div>
 
       <!-- Scenario Filter Chips -->
       <div class="filter-chips">
-        <button type="button" class="chip-btn active" data-filter="all">Tất cả Chuyên đề (12)</button>
+        <button type="button" class="chip-btn active" data-filter="all">Tất cả 13 Chuyên đề</button>
         <button type="button" class="chip-btn chip-red" data-filter="danger">🚨 SV Gặp Khó khăn</button>
         <button type="button" class="chip-btn chip-orange" data-filter="warning">🚀 SV Bứt phá GPA</button>
-        <button type="button" class="chip-btn chip-green" data-filter="success">🌟 SV Học vượt / Song bằng</button>
+        <button type="button" class="chip-btn chip-green" data-filter="success">🌟 SV Học vượt / Song ngành</button>
       </div>
     </div>
   </section>
@@ -71,7 +102,7 @@
       
       <!-- Left Sticky Sidebar Nav -->
       <aside class="sidebar-nav">
-        <div class="sidebar-title">Danh mục Chuyên đề Học vụ</div>
+        <div class="sidebar-title">Danh mục 13 Chuyên đề Học vụ</div>
         <nav class="nav-list" id="navList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </nav>
@@ -81,7 +112,7 @@
       <section class="content-area">
         <div class="content-header">
           <h3 id="sectionHeading">Danh sách Chuyên đề Học vụ</h3>
-          <span class="topic-count-badge" id="topicCountBadge">12 chuyên đề</span>
+          <span class="topic-count-badge" id="topicCountBadge">13 chuyên đề</span>
         </div>
 
         <!-- Topics Accordion List -->
@@ -101,7 +132,7 @@
                 <span class="widget-icon">🧮</span>
                 <div>
                   <h4>1. Công cụ Tính Điểm Môn học & Quy đổi GPA</h4>
-                  <p>Nhập điểm quá trình và cuối kỳ để xem ngay xếp loại & điểm hệ 4.0</p>
+                  <p>Nhập điểm quá trình và cuối kỳ để xem xếp loại & điểm hệ 4.0</p>
                 </div>
               </div>
               <div class="widget-form">
@@ -184,7 +215,7 @@
 
                 <div class="calc-result-box" id="scholarshipResultBox">
                   <div class="result-status-row" id="scholarshipStatusRow">
-                    <!-- Result status badge populated by JS -->
+                    <!-- Populated by JS -->
                   </div>
                 </div>
               </div>
@@ -201,7 +232,10 @@
   <!-- Footer -->
   <footer class="app-footer">
     <div class="footer-inner">
-      <p>© 2026 Trung tâm Hỗ trợ Học vụ UEF - Trường Đại học Kinh tế - Tài chính TP.HCM</p>
+      <div>
+        <p><strong>Trung tâm Hỗ trợ Học vụ - Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</strong></p>
+        <p style="margin-top: 4px; color: var(--text-muted);">Tầng 2, 141 - 145 Điện Biên Phủ, P. Gia Định, TP.HCM • Hotline: 028 2236 1111 • Email: hotrohocvu@uef.edu.vn</p>
+      </div>
       <div class="footer-links">
         <a href="/">Portal Hub</a>
         <a href="/phudao/">Phụ đạo</a>
@@ -211,7 +245,7 @@
     </div>
   </footer>
 
-  <script src="data.js?v=3.0.0"></script>
-  <script src="main.js?v=3.0.0"></script>
+  <script src="data.js?v=4.0.0"></script>
+  <script src="main.js?v=4.0.0"></script>
 </body>
 </html>
