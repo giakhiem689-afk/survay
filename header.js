@@ -1,0 +1,244 @@
+/**
+ * =========================================================
+ * UEF ACADEMIC SUPPORT PORTAL - SHARED GLOBAL HEADER COMPONENT
+ * =========================================================
+ * Single source of truth for the entire portal navigation system.
+ */
+
+(function () {
+  'use strict';
+
+  // Master Access Password
+  const MASTER_KEY = '000000000';
+  const SESSION_AUTH_KEY = 'uef_portal_authenticated';
+
+  // Protected paths that require authentication
+  const PROTECTED_PATHS = ['/khaosat/', '/phudao/', '/thphudao/', '/congcu/'];
+
+  let pendingNavigationUrl = null;
+
+  function initPortalHeader() {
+    // Determine current path
+    const currentPath = window.location.pathname.toLowerCase();
+    const isSHGVCN = currentPath.includes('/shgvcn');
+
+    // Remove any existing manual header
+    const existingOldHeader = document.querySelector('header.site-header, header.app-header');
+    if (existingOldHeader) {
+      existingOldHeader.remove();
+    }
+
+    // Create the global header element
+    const headerEl = document.createElement('header');
+    headerEl.className = 'portal-global-header';
+
+    if (isSHGVCN) {
+      // ISOLATED SHGVCN HEADER: NO NAV BUTTONS & NO HOME LINK
+      headerEl.innerHTML = `
+        <div class="portal-header-container">
+          <div class="portal-brand-link">
+            <span class="portal-uef-logo-text">UEF</span>
+            <div class="portal-brand-text-group">
+              <h1 class="portal-brand-title">CỔNG THÔNG TIN TRUNG TÂM HỖ TRỢ HỌC VỤ</h1>
+              <p class="portal-brand-subtitle">Thông tin Học vụ Sinh hoạt GVCN • Học kỳ 1A / Năm học 2026-2027</p>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      // 5-ITEM UNIFIED NAVIGATION HEADER
+      const isHome = currentPath === '/' || currentPath === '' || currentPath.endsWith('/index.html') && !currentPath.includes('/khaosat') && !currentPath.includes('/phudao') && !currentPath.includes('/congcu');
+      const isKhaoSat = currentPath.includes('/khaosat');
+      const isPhuDao = currentPath.includes('/phudao') || currentPath.includes('/thphudao');
+      const isCongCu = currentPath.includes('/congcu');
+
+      headerEl.innerHTML = `
+        <div class="portal-header-container">
+          <a href="/" class="portal-brand-link">
+            <span class="portal-uef-logo-text">UEF</span>
+            <div class="portal-brand-text-group">
+              <h1 class="portal-brand-title">CỔNG THÔNG TIN TRUNG TÂM HỖ TRỢ HỌC VỤ</h1>
+              <p class="portal-brand-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM</p>
+            </div>
+          </a>
+
+          <nav class="portal-header-nav">
+            <a href="/" class="portal-nav-btn ${isHome ? 'active' : ''}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Trang chủ</span>
+            </a>
+
+            <a href="/khaosat/" class="portal-nav-btn portal-auth-trigger ${isKhaoSat ? 'active' : ''}" data-url="/khaosat/" data-title="Khảo sát Sinh viên">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+              <span>Khảo sát</span>
+              <span class="portal-lock-pill">🔒</span>
+            </a>
+
+            <a href="/phudao/" class="portal-nav-btn portal-auth-trigger ${isPhuDao ? 'active' : ''}" data-url="/phudao/" data-title="Lớp Phụ đạo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Phụ đạo</span>
+              <span class="portal-lock-pill">🔒</span>
+            </a>
+
+            <a href="/shgvcn/" class="portal-nav-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>SH GVCN</span>
+            </a>
+
+            <a href="/congcu/" class="portal-nav-btn portal-auth-trigger ${isCongCu ? 'active' : ''}" data-url="/congcu/" data-title="Công cụ Hỗ trợ Học vụ">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+              <span>Công cụ</span>
+              <span class="portal-lock-pill">🔒</span>
+            </a>
+          </nav>
+        </div>
+      `;
+
+      // Inject Global Security Password Modal
+      injectPasswordModal();
+    }
+
+    // Prepend header to body
+    document.body.prepend(headerEl);
+
+    // Setup auth click listeners
+    setupAuthListeners();
+  }
+
+  function injectPasswordModal() {
+    if (document.getElementById('portalSecurityModal')) return;
+
+    const modalMarkup = `
+      <div id="portalSecurityModal" class="portal-modal-overlay" aria-hidden="true">
+        <div class="portal-modal-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 44px; height: 44px; border-radius: 14px; background: #fff1f2; color: #b31217; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                🔒
+              </div>
+              <div>
+                <h3 style="font-size: 17px; font-weight: 800; color: #0f2b52; margin: 0;">Xác thực Quyền Truy cập</h3>
+                <p style="font-size: 12px; color: #64748b; margin: 2px 0 0 0;" id="portalModalTargetName">Phân hệ bảo mật</p>
+              </div>
+            </div>
+            <button type="button" id="portalModalCloseBtn" style="background: none; border: none; font-size: 18px; cursor: pointer; color: #94a3b8;">✕</button>
+          </div>
+
+          <p style="font-size: 13.5px; color: #334155; line-height: 1.5; margin-bottom: 18px;">
+            Vui lòng nhập mật khẩu bảo vệ hệ thống để tiếp tục truy cập phân hệ này:
+          </p>
+
+          <form id="portalAuthForm">
+            <div style="margin-bottom: 16px;">
+              <input type="password" id="portalPasswordInput" placeholder="Nhập mật khẩu (9 chữ số)..." autocomplete="current-password"
+                style="width: 100%; padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 14px; font-size: 15px; font-weight: 700; color: #0f172a; outline: none; transition: border-color 0.2s;" />
+              <p id="portalAuthError" style="font-size: 12px; color: #dc2626; font-weight: 700; margin-top: 6px; display: none;">
+                ✕ Mật khẩu không chính xác! Vui lòng thử lại.
+              </p>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+              <button type="button" id="portalModalCancelBtn" style="flex: 1; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 14px; background: white; color: #334155; font-weight: 700; font-size: 13.5px; cursor: pointer;">
+                Hủy bỏ
+              </button>
+              <button type="submit" id="portalModalSubmitBtn" style="flex: 1.5; padding: 12px; border: none; border-radius: 14px; background: #b31217; color: white; font-weight: 800; font-size: 13.5px; cursor: pointer; box-shadow: 0 4px 12px rgba(179, 18, 23, 0.25);">
+                Xác nhận truy cập
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', modalMarkup);
+
+    // Bind modal events
+    const modal = document.getElementById('portalSecurityModal');
+    const closeBtn = document.getElementById('portalModalCloseBtn');
+    const cancelBtn = document.getElementById('portalModalCancelBtn');
+    const form = document.getElementById('portalAuthForm');
+    const pwdInput = document.getElementById('portalPasswordInput');
+    const errText = document.getElementById('portalAuthError');
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      pwdInput.value = '';
+      errText.style.display = 'none';
+      pendingNavigationUrl = null;
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const enteredPwd = pwdInput.value.trim();
+
+      if (enteredPwd === MASTER_KEY) {
+        sessionStorage.setItem(SESSION_AUTH_KEY, 'true');
+        closeModal();
+        if (pendingNavigationUrl) {
+          window.location.href = pendingNavigationUrl;
+        }
+      } else {
+        errText.style.display = 'block';
+        pwdInput.style.borderColor = '#dc2626';
+        pwdInput.focus();
+      }
+    });
+  }
+
+  function setupAuthListeners() {
+    const isAuth = sessionStorage.getItem(SESSION_AUTH_KEY) === 'true';
+
+    document.querySelectorAll('.portal-auth-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        const targetUrl = trigger.getAttribute('data-url') || trigger.getAttribute('href');
+        const targetTitle = trigger.getAttribute('data-title') || 'Phân hệ Bảo mật';
+
+        if (!sessionStorage.getItem(SESSION_AUTH_KEY)) {
+          e.preventDefault();
+          pendingNavigationUrl = targetUrl;
+
+          const modal = document.getElementById('portalSecurityModal');
+          const targetNameEl = document.getElementById('portalModalTargetName');
+          const pwdInput = document.getElementById('portalPasswordInput');
+
+          if (modal) {
+            if (targetNameEl) targetNameEl.textContent = targetTitle;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            if (pwdInput) setTimeout(() => pwdInput.focus(), 100);
+          }
+        }
+      });
+    });
+  }
+
+  // Ensure DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPortalHeader);
+  } else {
+    initPortalHeader();
+  }
+})();
