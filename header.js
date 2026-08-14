@@ -12,9 +12,6 @@
   const MASTER_KEY = '000000000';
   const SESSION_AUTH_KEY = 'uef_portal_authenticated';
 
-  // Protected paths that require authentication
-  const PROTECTED_PATHS = ['/khaosat/', '/phudao/', '/thphudao/', '/congcu/'];
-
   let pendingNavigationUrl = null;
 
   function initPortalHeader() {
@@ -22,11 +19,8 @@
     const currentPath = window.location.pathname.toLowerCase();
     const isSHGVCN = currentPath.includes('/shgvcn');
 
-    // Remove any existing manual header
-    const existingOldHeader = document.querySelector('header.site-header, header.app-header');
-    if (existingOldHeader) {
-      existingOldHeader.remove();
-    }
+    // Remove any accidental existing headers
+    document.querySelectorAll('header.site-header, header.app-header, header.portal-global-header').forEach(el => el.remove());
 
     // Create the global header element
     const headerEl = document.createElement('header');
@@ -47,7 +41,7 @@
       `;
     } else {
       // 5-ITEM UNIFIED NAVIGATION HEADER
-      const isHome = currentPath === '/' || currentPath === '' || currentPath.endsWith('/index.html') && !currentPath.includes('/khaosat') && !currentPath.includes('/phudao') && !currentPath.includes('/congcu');
+      const isHome = currentPath === '/' || currentPath === '' || (currentPath.endsWith('/index.html') && !currentPath.includes('/khaosat') && !currentPath.includes('/phudao') && !currentPath.includes('/congcu'));
       const isKhaoSat = currentPath.includes('/khaosat');
       const isPhuDao = currentPath.includes('/phudao') || currentPath.includes('/thphudao');
       const isCongCu = currentPath.includes('/congcu');
@@ -114,8 +108,13 @@
       injectPasswordModal();
     }
 
-    // Prepend header to body
-    document.body.prepend(headerEl);
+    // Insert at placeholder or prepend to body
+    const placeholder = document.getElementById('portal-header-placeholder');
+    if (placeholder) {
+      placeholder.replaceWith(headerEl);
+    } else {
+      document.body.prepend(headerEl);
+    }
 
     // Setup auth click listeners
     setupAuthListeners();
@@ -168,7 +167,6 @@
 
     document.body.insertAdjacentHTML('beforeend', modalMarkup);
 
-    // Bind modal events
     const modal = document.getElementById('portalSecurityModal');
     const closeBtn = document.getElementById('portalModalCloseBtn');
     const cancelBtn = document.getElementById('portalModalCancelBtn');
@@ -209,8 +207,6 @@
   }
 
   function setupAuthListeners() {
-    const isAuth = sessionStorage.getItem(SESSION_AUTH_KEY) === 'true';
-
     document.querySelectorAll('.portal-auth-trigger').forEach(trigger => {
       trigger.addEventListener('click', (e) => {
         const targetUrl = trigger.getAttribute('data-url') || trigger.getAttribute('href');
@@ -235,7 +231,6 @@
     });
   }
 
-  // Ensure DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPortalHeader);
   } else {
