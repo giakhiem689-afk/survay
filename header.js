@@ -1,8 +1,8 @@
 /**
  * =========================================================
- * UEF ACADEMIC SUPPORT PORTAL - SHARED GLOBAL COMPONENT
+ * UEF ACADEMIC SUPPORT PORTAL - SPA ROUTER & GLOBAL COMPONENT
  * =========================================================
- * Single source of truth for Header, Navigation, and Footer.
+ * Seamless Instant Tab Navigation (Zero-Reload Architecture)
  */
 
 (function () {
@@ -12,61 +12,194 @@
   const SESSION_AUTH_KEY = 'uef_portal_authenticated';
 
   let pendingNavigationUrl = null;
+  const pageCache = new Map();
 
-  function initPortalHeader() {
-    // Inject Global Security Password Modal for protected routes
-    injectPasswordModal();
-    setupAuthListeners();
+  // 1. Initialize SPA Router and Events
+  function initRouter() {
+    setupTabClickListeners();
+    setupAuthModal();
+    window.addEventListener('popstate', handlePopState);
   }
 
-  function injectPasswordModal() {
-    if (document.getElementById('portalSecurityModal')) return;
+  // 2. Tab Click Listener - Intercepts Navigation for Zero-Reload Experience
+  function setupTabClickListeners() {
+    document.querySelectorAll('.portal-nav-btn, .portal-btn[href], a.portal-btn').forEach(btn => {
+      // Remove previous listener by cloning if needed
+      btn.onclick = function (e) {
+        const href = btn.getAttribute('href') || btn.getAttribute('data-url');
+        if (!href) return;
 
-    const modalMarkup = `
-      <div id="portalSecurityModal" class="portal-modal-overlay" aria-hidden="true">
-        <div class="portal-modal-card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 44px; height: 44px; border-radius: 14px; background: #fff1f2; color: #b31217; display: flex; align-items: center; justify-content: center; font-size: 20px;">
-                🔒
-              </div>
-              <div>
-                <h3 style="font-size: 17px; font-weight: 800; color: #0f2b52; margin: 0;">Xác thực Quyền Truy cập</h3>
-                <p style="font-size: 12px; color: #64748b; margin: 2px 0 0 0;" id="portalModalTargetName">Phân hệ bảo mật</p>
-              </div>
-            </div>
-            <button type="button" id="portalModalCloseBtn" style="background: none; border: none; font-size: 18px; cursor: pointer; color: #94a3b8;">✕</button>
-          </div>
+        // Isolated destination: /shgvcn/ (standard navigation)
+        if (href.includes('/shgvcn')) {
+          return; // Allow native navigation to isolated handbook
+        }
 
-          <p style="font-size: 13.5px; color: #334155; line-height: 1.5; margin-bottom: 18px;">
-            Vui lòng nhập mật khẩu bảo vệ hệ thống để tiếp tục truy cập phân hệ này:
-          </p>
+        // External links or anchors
+        if (href.startsWith('http') && !href.includes(window.location.host)) return;
+        if (href.startsWith('#')) return;
 
-          <form id="portalAuthForm">
-            <div style="margin-bottom: 16px;">
-              <input type="password" id="portalPasswordInput" placeholder="Nhập mật khẩu (9 chữ số)..." autocomplete="current-password"
-                style="width: 100%; padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 14px; font-size: 15px; font-weight: 700; color: #0f172a; outline: none; transition: border-color 0.2s;" />
-              <p id="portalAuthError" style="font-size: 12px; color: #dc2626; font-weight: 700; margin-top: 6px; display: none;">
-                ✕ Mật khẩu không chính xác! Vui lòng thử lại.
-              </p>
-            </div>
+        e.preventDefault();
 
-            <div style="display: flex; gap: 10px;">
-              <button type="button" id="portalModalCancelBtn" style="flex: 1; padding: 12px; border: 1.5px solid #e2e8f0; border-radius: 14px; background: white; color: #334155; font-weight: 700; font-size: 13.5px; cursor: pointer;">
-                Hủy bỏ
-              </button>
-              <button type="submit" id="portalModalSubmitBtn" style="flex: 1.5; padding: 12px; border: none; border-radius: 14px; background: #b31217; color: white; font-weight: 800; font-size: 13.5px; cursor: pointer; box-shadow: 0 4px 12px rgba(179, 18, 23, 0.25);">
-                Xác nhận truy cập
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    `;
+        // Check if destination requires password authentication
+        const isProtected = href.includes('/phudao') || href.includes('/congcu') || href.includes('/thphudao');
+        const isAuth = sessionStorage.getItem(SESSION_AUTH_KEY) === 'true';
 
-    document.body.insertAdjacentHTML('beforeend', modalMarkup);
+        if (isProtected && !isAuth) {
+          const targetTitle = btn.getAttribute('data-title') || btn.getAttribute('data-module') || 'Phân hệ Bảo mật';
+          openPasswordModal(href, targetTitle);
+          return;
+        }
 
+        // Perform instant SPA Navigation
+        navigateTo(href);
+      };
+    });
+  }
+
+  // 3. Instant Client-Side Page Switcher
+  async function navigateTo(url) {
+    const currentUrl = window.location.pathname;
+    const cleanUrl = url.split('?')[0].split('#')[0];
+
+    // Update active tab highlight immediately
+    updateActiveTab(cleanUrl);
+
+    // Update Browser Address Bar with History API
+    if (window.location.pathname !== cleanUrl) {
+      window.history.pushState({ url: cleanUrl }, '', url);
+    }
+
+    // Load & Render Content Seamlessly
+    await loadPageContent(cleanUrl);
+  }
+
+  // 4. Update Tab Active Highlight in Real-Time (Thứ thay đổi duy nhất trên tab là tab được chọn sẽ sáng lên)
+  function updateActiveTab(targetPath) {
+    const path = targetPath.toLowerCase();
+
+    document.querySelectorAll('.portal-nav-btn').forEach(btn => {
+      btn.classList.remove('active');
+      const href = (btn.getAttribute('href') || btn.getAttribute('data-url') || '').toLowerCase();
+
+      if (path === '/' || path === '' || path.endsWith('/index.html') && !path.includes('/khaosat') && !path.includes('/phudao') && !path.includes('/congcu')) {
+        if (href === '/' || href === '') btn.classList.add('active');
+      } else if (path.includes('/khaosat') && href.includes('/khaosat')) {
+        btn.classList.add('active');
+      } else if ((path.includes('/phudao') || path.includes('/thphudao')) && href.includes('/phudao')) {
+        btn.classList.add('active');
+      } else if (path.includes('/congcu') && href.includes('/congcu')) {
+        btn.classList.add('active');
+      } else if (path.includes('/shgvcn') && href.includes('/shgvcn')) {
+        btn.classList.add('active');
+      }
+    });
+  }
+
+  // 5. Load and Swap Page Content without touching the Header
+  async function loadPageContent(url) {
+    try {
+      let htmlText = pageCache.get(url);
+
+      if (!htmlText) {
+        const response = await fetch(url, { headers: { 'X-Requested-With': 'SPA-Router' } });
+        if (!response.ok) {
+          window.location.href = url; // Fallback to normal navigation
+          return;
+        }
+        htmlText = await response.text();
+        pageCache.set(url, htmlText);
+      }
+
+      // Parse HTML
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+
+      // Update Page Title
+      if (doc.title) document.title = doc.title;
+
+      // Extract new content (Everything between header and footer)
+      const newMain = doc.querySelector('main, .portal-main, .container.section, #home') || doc.body;
+      const currentMain = document.querySelector('main, .portal-main, .container.section, #home');
+
+      // Also get any hero section if present
+      const newHero = doc.querySelector('.portal-hero, .survey-hero-banner, .tools-hero');
+      const currentHero = document.querySelector('.portal-hero, .survey-hero-banner, .tools-hero');
+
+      // Handle Smooth Transition
+      if (currentHero && newHero) {
+        currentHero.replaceWith(newHero);
+      } else if (currentHero && !newHero) {
+        currentHero.remove();
+      } else if (!currentHero && newHero && currentMain) {
+        currentMain.parentNode.insertBefore(newHero, currentMain);
+      }
+
+      if (currentMain && newMain) {
+        currentMain.style.opacity = '0';
+        currentMain.style.transition = 'opacity 0.15s ease';
+
+        setTimeout(() => {
+          currentMain.replaceWith(newMain);
+          newMain.style.opacity = '0';
+          newMain.style.transition = 'opacity 0.2s ease';
+
+          // Re-bind scripts and event listeners for the newly injected view
+          executePageScripts(doc, url);
+          setupTabClickListeners();
+
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          setTimeout(() => { newMain.style.opacity = '1'; }, 20);
+        }, 150);
+      } else {
+        // Fallback
+        window.location.href = url;
+      }
+    } catch (err) {
+      console.warn('SPA navigation error, falling back:', err);
+      window.location.href = url;
+    }
+  }
+
+  // 6. Execute scripts for the swapped view
+  function executePageScripts(doc, url) {
+    // Inject any page-specific stylesheet not already loaded
+    doc.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !document.querySelector(`link[href="${href}"]`)) {
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.href = href;
+        document.head.appendChild(newLink);
+      }
+    });
+
+    // Execute page scripts
+    doc.querySelectorAll('script').forEach(oldScript => {
+      const src = oldScript.getAttribute('src');
+      if (src && (src.includes('header.js'))) return; // Don't re-run header
+
+      const newScript = document.createElement('script');
+      if (src) {
+        newScript.src = src.split('?')[0] + '?v=' + Date.now();
+      } else {
+        newScript.textContent = oldScript.textContent;
+      }
+      document.body.appendChild(newScript);
+    });
+  }
+
+  // 7. PopState Handler for Browser Back / Forward Buttons
+  function handlePopState(e) {
+    const targetUrl = window.location.pathname;
+    updateActiveTab(targetUrl);
+    loadPageContent(targetUrl);
+  }
+
+  // 8. Security Password Modal Setup
+  function setupAuthModal() {
     const modal = document.getElementById('portalSecurityModal');
+    if (!modal) return;
+
     const closeBtn = document.getElementById('portalModalCloseBtn');
     const cancelBtn = document.getElementById('portalModalCancelBtn');
     const form = document.getElementById('portalAuthForm');
@@ -76,8 +209,8 @@
     function closeModal() {
       modal.classList.remove('active');
       modal.setAttribute('aria-hidden', 'true');
-      pwdInput.value = '';
-      errText.style.display = 'none';
+      if (pwdInput) pwdInput.value = '';
+      if (errText) errText.style.display = 'none';
       pendingNavigationUrl = null;
     }
 
@@ -87,55 +220,44 @@
       if (e.target === modal) closeModal();
     });
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const enteredPwd = pwdInput.value.trim();
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const enteredPwd = pwdInput.value.trim();
 
-      if (enteredPwd === MASTER_KEY) {
-        sessionStorage.setItem(SESSION_AUTH_KEY, 'true');
-        closeModal();
-        if (pendingNavigationUrl) {
-          window.location.href = pendingNavigationUrl;
-        }
-      } else {
-        errText.style.display = 'block';
-        pwdInput.style.borderColor = '#dc2626';
-        pwdInput.focus();
-      }
-    });
-  }
-
-  function setupAuthListeners() {
-    document.querySelectorAll('.portal-auth-trigger, .protected-link').forEach(trigger => {
-      trigger.addEventListener('click', (e) => {
-        const targetUrl = trigger.getAttribute('data-url') || trigger.getAttribute('href');
-        const targetTitle = trigger.getAttribute('data-title') || trigger.getAttribute('data-module') || 'Phân hệ Bảo mật';
-
-        // Check if destination is protected (Phụ đạo & Công cụ)
-        const isProtected = targetUrl && (targetUrl.includes('/phudao') || targetUrl.includes('/congcu') || targetUrl.includes('/thphudao'));
-
-        if (isProtected && !sessionStorage.getItem(SESSION_AUTH_KEY)) {
-          e.preventDefault();
-          pendingNavigationUrl = targetUrl;
-
-          const modal = document.getElementById('portalSecurityModal');
-          const targetNameEl = document.getElementById('portalModalTargetName');
-          const pwdInput = document.getElementById('portalPasswordInput');
-
-          if (modal) {
-            if (targetNameEl) targetNameEl.textContent = targetTitle;
-            modal.classList.add('active');
-            modal.setAttribute('aria-hidden', 'false');
-            if (pwdInput) setTimeout(() => pwdInput.focus(), 100);
+        if (enteredPwd === MASTER_KEY) {
+          sessionStorage.setItem(SESSION_AUTH_KEY, 'true');
+          closeModal();
+          if (pendingNavigationUrl) {
+            navigateTo(pendingNavigationUrl);
           }
+        } else {
+          if (errText) errText.style.display = 'block';
+          pwdInput.style.borderColor = '#dc2626';
+          pwdInput.focus();
         }
       });
-    });
+    }
   }
 
+  function openPasswordModal(url, moduleName) {
+    pendingNavigationUrl = url;
+    const modal = document.getElementById('portalSecurityModal');
+    const targetNameEl = document.getElementById('portalModalTargetName');
+    const pwdInput = document.getElementById('portalPasswordInput');
+
+    if (modal) {
+      if (targetNameEl) targetNameEl.textContent = moduleName || 'Phân hệ Bảo mật';
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      if (pwdInput) setTimeout(() => pwdInput.focus(), 100);
+    }
+  }
+
+  // Initialize on load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPortalHeader);
+    document.addEventListener('DOMContentLoaded', initRouter);
   } else {
-    initPortalHeader();
+    initRouter();
   }
 })();
