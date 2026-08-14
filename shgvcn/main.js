@@ -1,9 +1,9 @@
-// Script điều khiển Thông tin Học vụ Sinh hoạt GVCN - HK 26.1A (Chuẩn 13 Mục Học vụ UEF)
+// Script điều khiển Thông tin Học vụ Sinh hoạt GVCN - HK 26.1A (Master-Detail Topic Viewer)
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const clearSearchBtn = document.getElementById('clearSearchBtn');
   const navList = document.getElementById('navList');
-  const topicsList = document.getElementById('topicsList');
+  const activeTopicViewer = document.getElementById('activeTopicViewer');
   const topicCountBadge = document.getElementById('topicCountBadge');
   const sectionHeading = document.getElementById('sectionHeading');
 
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let searchQuery = '';
   let selectedKhoa = 'k2023';
+  let activeTopicIndex = 0; // Mặc định mở ngay Mục 1: Trung tâm Hỗ trợ học vụ
 
   const khoaMeta = {
     k2023: { cover: "assets/bia_khoa_2023.png", alt: "Bìa Sinh hoạt GVCN Khóa 2023" },
@@ -36,95 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 1. Render Initial Data
-  function renderAll() {
-    renderSidebar();
-    renderTopics();
-  }
-
-  // Render Sidebar Navigation
-  function renderSidebar() {
-    const filtered = getFilteredTopics();
-    navList.innerHTML = filtered.map(topic => `
-      <a href="#${topic.id}" class="nav-item" data-id="${topic.id}">
-        ${topic.icon}
-        <span class="truncate">${escapeHtml(topic.title)}</span>
-      </a>
-    `).join('');
-
-    document.querySelectorAll('.nav-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const id = item.getAttribute('data-id');
-        const targetCard = document.getElementById(id);
-        if (targetCard) {
-          document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-          item.classList.add('active');
-
-          targetCard.classList.add('open');
-          targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  }
-
-  // Render Topic Accordions
-  function renderTopics() {
-    const filtered = getFilteredTopics();
-    topicCountBadge.textContent = `${filtered.length} mục nội dung`;
-
-    if (filtered.length === 0) {
-      topicsList.innerHTML = `
-        <div style="text-align: center; padding: 60px 20px; color: var(--text-muted);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 48px; height: 48px; margin-bottom: 12px; opacity: 0.5;">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <p style="font-size: 16px; font-weight: 700; color: var(--text-main);">Không tìm thấy nội dung học vụ phù hợp từ khóa.</p>
-          <p style="font-size: 13px; margin-top: 6px;">Vui lòng thử từ khóa khác (ví dụ: "tốt nghiệp", "chuẩn đầu ra", "học bổng", "gpa", "học lại").</p>
-        </div>
-      `;
-      return;
-    }
-
-    topicsList.innerHTML = filtered.map((topic, index) => {
-      const isOpen = index === 0 && !searchQuery ? 'open' : '';
-
-      return `
-        <article class="topic-card ${isOpen}" id="${topic.id}">
-          <div class="card-header">
-            <div class="header-left">
-              <div class="topic-icon" style="background: var(--${topic.bgColor}-bg); color: ${topic.accentColor};">
-                ${topic.icon}
-              </div>
-              <div class="topic-meta">
-                <h4>${escapeHtml(topic.title)}</h4>
-                <p class="topic-summary">${escapeHtml(topic.summary)}</p>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 20px; height: 20px;">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </div>
-
-          <div class="card-content">
-            ${topic.content}
-          </div>
-        </article>
-      `;
-    }).join('');
-
-    // Accordion Toggle Handlers
-    document.querySelectorAll('.topic-card .card-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const card = header.parentElement;
-        card.classList.toggle('open');
-      });
-    });
-  }
-
   // Filter Topics by Search Query
   function getFilteredTopics() {
     return SHGVCN_DATA.topics.filter(topic => {
@@ -133,6 +45,121 @@ document.addEventListener('DOMContentLoaded', () => {
       const textToSearch = `${topic.title} ${topic.summary} ${topic.content}`.toLowerCase();
       return textToSearch.includes(q);
     });
+  }
+
+  // 1. Render Sidebar Navigation (Bảng mục lục điều hướng)
+  function renderSidebar() {
+    const topics = getFilteredTopics();
+    topicCountBadge.textContent = `${topics.length} mục nội dung`;
+
+    if (topics.length === 0) {
+      navList.innerHTML = `<p style="font-size: 12px; color: var(--text-muted); padding: 10px;">Không tìm thấy mục nào.</p>`;
+      return;
+    }
+
+    navList.innerHTML = topics.map((topic, index) => {
+      const originalIndex = SHGVCN_DATA.topics.findIndex(t => t.id === topic.id);
+      const isActive = originalIndex === activeTopicIndex ? 'active' : '';
+
+      return `
+        <button type="button" class="nav-item ${isActive}" data-index="${originalIndex}" data-id="${topic.id}">
+          <span class="nav-icon-box">${topic.icon}</span>
+          <span class="truncate">${escapeHtml(topic.title)}</span>
+        </button>
+      `;
+    }).join('');
+
+    // Attach click listeners to sidebar navigation items
+    navList.querySelectorAll('.nav-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const index = parseInt(btn.getAttribute('data-index'), 10);
+        selectTopic(index);
+      });
+    });
+  }
+
+  // 2. Select and Display a Single Topic
+  function selectTopic(index) {
+    if (index < 0 || index >= SHGVCN_DATA.topics.length) return;
+    activeTopicIndex = index;
+
+    // Update Sidebar active state
+    renderSidebar();
+
+    // Render the active topic's content
+    renderActiveTopic();
+
+    // Scroll smoothly to the top of content area on mobile/small screens
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea && window.innerWidth < 900) {
+      contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // 3. Render the Active Topic Content View
+  function renderActiveTopic() {
+    const topic = SHGVCN_DATA.topics[activeTopicIndex];
+    if (!topic) return;
+
+    const totalTopics = SHGVCN_DATA.topics.length;
+    const hasPrev = activeTopicIndex > 0;
+    const hasNext = activeTopicIndex < totalTopics - 1;
+
+    activeTopicViewer.innerHTML = `
+      <article class="topic-detail-card">
+        <!-- Topic Header Banner -->
+        <div class="topic-detail-header" style="background: linear-gradient(135deg, var(--${topic.bgColor}-bg) 0%, #ffffff 100%);">
+          <div class="header-main-info">
+            <div class="topic-large-icon" style="background: white; color: ${topic.accentColor}; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1.5px solid var(--border-card);">
+              ${topic.icon}
+            </div>
+            <div>
+              <span class="topic-order-badge" style="background: var(--${topic.bgColor}-bg); color: ${topic.accentColor}; border: 1px solid var(--border-card);">
+                Mục ${activeTopicIndex + 1} / ${totalTopics}
+              </span>
+              <h2 class="active-topic-title">${escapeHtml(topic.title)}</h2>
+              <p class="active-topic-summary">${escapeHtml(topic.summary)}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topic Detail Body Content -->
+        <div class="topic-detail-body">
+          ${topic.content}
+        </div>
+
+        <!-- Bottom Navigation Controls (Prev / Next Topic) -->
+        <div class="topic-bottom-nav">
+          <button type="button" class="topic-nav-btn prev-btn" ${!hasPrev ? 'disabled' : ''} id="prevTopicBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Mục trước</span>
+          </button>
+
+          <span class="topic-counter-text">Mục ${activeTopicIndex + 1} trên tổng số ${totalTopics}</span>
+
+          <button type="button" class="topic-nav-btn next-btn" ${!hasNext ? 'disabled' : ''} id="nextTopicBtn">
+            <span>Mục tiếp theo</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width: 16px; height: 16px;">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </article>
+    `;
+
+    // Attach bottom navigation event handlers
+    const prevBtn = document.getElementById('prevTopicBtn');
+    const nextBtn = document.getElementById('nextTopicBtn');
+
+    if (prevBtn && hasPrev) {
+      prevBtn.addEventListener('click', () => selectTopic(activeTopicIndex - 1));
+    }
+
+    if (nextBtn && hasNext) {
+      nextBtn.addEventListener('click', () => selectTopic(activeTopicIndex + 1));
+    }
   }
 
   // Search Input Listeners
@@ -146,7 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
         clearSearchBtn.classList.add('hidden');
         sectionHeading.textContent = 'Nội dung Thông tin Học vụ';
       }
-      renderAll();
+      renderSidebar();
+      const filtered = getFilteredTopics();
+      if (filtered.length > 0) {
+        const firstMatchingIndex = SHGVCN_DATA.topics.findIndex(t => t.id === filtered[0].id);
+        selectTopic(firstMatchingIndex);
+      }
     });
   }
 
@@ -156,7 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
       searchQuery = '';
       clearSearchBtn.classList.add('hidden');
       sectionHeading.textContent = 'Nội dung Thông tin Học vụ';
-      renderAll();
+      renderSidebar();
+      selectTopic(0);
     });
   }
 
@@ -170,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/'/g, '&#039;');
   }
 
-  // Initial Run
-  renderAll();
+  // Initial Run: Open Topic 0 (Trung tâm Hỗ trợ Học vụ) by default
+  renderSidebar();
+  renderActiveTopic();
 });
