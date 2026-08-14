@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activeTopicViewer.innerHTML = `
       <article class="topic-detail-card">
-        <!-- Topic Header Banner - Enlarge & Center Title -->
-        <div class="topic-detail-header" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
-          <div class="header-main-info centered-topic-header">
-            <div class="topic-large-icon" style="background: white; color: ${topic.accentColor}; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1.5px solid var(--border-card);">
+        <!-- Topic Header Banner - Same Line Icon + Title with 3D Raised Style -->
+        <div class="topic-detail-header">
+          <div class="topic-title-badge-3d" style="background: linear-gradient(135deg, #ffffff 0%, var(--${topic.bgColor}-bg) 100%); border-color: var(--${topic.bgColor}-border);">
+            <div class="topic-header-icon-box" style="background: ${topic.accentColor};">
               ${topic.icon}
             </div>
             <h2 class="active-topic-title">${escapeHtml(topic.title)}</h2>
