@@ -38,67 +38,73 @@ const SHGVCN_DATA = {
             Trung tâm Hỗ trợ học vụ thực hiện các nhiệm vụ chính sau:
           </p>
 
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-blue">
-              <div class="bento-header">
-                <span class="bento-icon">1️⃣</span>
-                <h4 class="bento-title">1. Tiếp nhận, tư vấn và giải đáp</h4>
+          <div class="grid-5-balanced">
+            <!-- Row 1: 2 Cards -->
+            <div class="grid-5-row-2">
+              <div class="info-bento-card bento-blue">
+                <div class="bento-header">
+                  <span class="bento-icon">1️⃣</span>
+                  <h4 class="bento-title">1. Tiếp nhận, tư vấn và giải đáp</h4>
+                </div>
+                <p class="bento-desc">Tiếp nhận, tư vấn và giải đáp cho sinh viên/phụ huynh về:</p>
+                <ul class="bento-list">
+                  <li>Các quy định, quy chế;</li>
+                  <li>Các thông báo liên quan đến vấn đề học tập;</li>
+                  <li>Kế hoạch giảng dạy - học tập của học kỳ/năm học;</li>
+                  <li>Thời khóa biểu;</li>
+                  <li>Kết quả học tập;</li>
+                  <li>Các vấn đề học vụ khác.</li>
+                </ul>
               </div>
-              <p class="bento-desc">Tiếp nhận, tư vấn và giải đáp cho sinh viên/phụ huynh về:</p>
-              <ul class="bento-list">
-                <li>Các quy định, quy chế;</li>
-                <li>Các thông báo liên quan đến vấn đề học tập;</li>
-                <li>Kế hoạch giảng dạy - học tập của học kỳ/năm học;</li>
-                <li>Thời khóa biểu;</li>
-                <li>Kết quả học tập;</li>
-                <li>Các vấn đề học vụ khác.</li>
-              </ul>
+
+              <div class="info-bento-card bento-green">
+                <div class="bento-header">
+                  <span class="bento-icon">2️⃣</span>
+                  <h4 class="bento-title">2. Giải quyết thủ tục học vụ</h4>
+                </div>
+                <p class="bento-desc">Giải quyết các thủ tục học vụ cho sinh viên:</p>
+                <ul class="bento-list">
+                  <li>Bảo lưu kết quả học tập;</li>
+                  <li>Nhập học lại;</li>
+                  <li>Chuyển trường;</li>
+                  <li>Chuyển ngành học;</li>
+                  <li>Đăng ký môn học;</li>
+                  <li>Các thủ tục học vụ khác.</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header">
-                <span class="bento-icon">2️⃣</span>
-                <h4 class="bento-title">2. Giải quyết thủ tục học vụ</h4>
+            <!-- Row 2: 3 Cards -->
+            <div class="grid-5-row-3">
+              <div class="info-bento-card bento-red">
+                <div class="bento-header">
+                  <span class="bento-icon">3️⃣</span>
+                  <h4 class="bento-title">3. Chăm sóc, hỗ trợ học vụ</h4>
+                </div>
+                <p class="bento-desc">
+                  Chăm sóc, hỗ trợ học vụ đối với sinh viên có kết quả học tập chưa tốt, tư vấn và đề xuất các phương án giúp sinh viên cải thiện kết quả học tập.
+                </p>
               </div>
-              <p class="bento-desc">Giải quyết các thủ tục học vụ cho sinh viên:</p>
-              <ul class="bento-list">
-                <li>Bảo lưu kết quả học tập;</li>
-                <li>Nhập học lại;</li>
-                <li>Chuyển trường;</li>
-                <li>Chuyển ngành học;</li>
-                <li>Đăng ký môn học;</li>
-                <li>Các thủ tục học vụ khác.</li>
-              </ul>
-            </div>
 
-            <div class="info-bento-card bento-red">
-              <div class="bento-header">
-                <span class="bento-icon">3️⃣</span>
-                <h4 class="bento-title">3. Chăm sóc, hỗ trợ học vụ</h4>
+              <div class="info-bento-card bento-purple">
+                <div class="bento-header">
+                  <span class="bento-icon">4️⃣</span>
+                  <h4 class="bento-title">4. Phối hợp với Khoa</h4>
+                </div>
+                <p class="bento-desc">
+                  Phối hợp với Khoa để tư vấn chuyên ngành, chương trình và lộ trình học cho sinh viên/phụ huynh, qua đó giúp sinh viên xây dựng: <strong>Kế hoạch học tập hợp lý; Phương pháp học hiệu quả.</strong>
+                </p>
               </div>
-              <p class="bento-desc">
-                Chăm sóc, hỗ trợ học vụ đối với sinh viên có kết quả học tập chưa tốt, tư vấn và đề xuất các phương án giúp sinh viên cải thiện kết quả học tập.
-              </p>
-            </div>
 
-            <div class="info-bento-card bento-purple">
-              <div class="bento-header">
-                <span class="bento-icon">4️⃣</span>
-                <h4 class="bento-title">4. Phối hợp với Khoa</h4>
+              <div class="info-bento-card bento-amber">
+                <div class="bento-header">
+                  <span class="bento-icon">5️⃣</span>
+                  <h4 class="bento-title">5. Thông báo, cung cấp thông tin</h4>
+                </div>
+                <p class="bento-desc">
+                  Thông báo, cung cấp thông tin đến sinh viên/phụ huynh về: Kế hoạch giảng dạy - học tập của học kỳ/năm học; Các lưu ý về học vụ; Kết quả học tập của sinh viên; Các thông tin liên quan khác.
+                </p>
               </div>
-              <p class="bento-desc">
-                Phối hợp với Khoa để tư vấn chuyên ngành, chương trình và lộ trình học cho sinh viên/phụ huynh, qua đó giúp sinh viên xây dựng: <strong>Kế hoạch học tập hợp lý; Phương pháp học hiệu quả.</strong>
-              </p>
-            </div>
-
-            <div class="info-bento-card bento-amber">
-              <div class="bento-header">
-                <span class="bento-icon">5️⃣</span>
-                <h4 class="bento-title">5. Thông báo, cung cấp thông tin</h4>
-              </div>
-              <p class="bento-desc">
-                Thông báo, cung cấp thông tin đến sinh viên/phụ huynh về: Kế hoạch giảng dạy - học tập của học kỳ/năm học; Các lưu ý về học vụ; Kết quả học tập của sinh viên; Các thông tin liên quan khác.
-              </p>
             </div>
           </div>
 
@@ -464,7 +470,7 @@ const SHGVCN_DATA = {
             Để được xét tốt nghiệp, sinh viên cần đảm bảo đầy đủ các điều kiện:
           </p>
 
-          <div class="info-bento-grid">
+          <div class="grid-7-balanced">
             <div class="info-bento-card bento-green">
               <div class="bento-header"><span class="bento-icon">1️⃣</span><h4 class="bento-title">Kỷ luật & Tư cách</h4></div>
               <p class="bento-desc">- Tại thời điểm xét tốt nghiệp, không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập;</p>
@@ -495,8 +501,8 @@ const SHGVCN_DATA = {
               <p class="bento-desc">- Có các chứng chỉ khác đạt chuẩn đầu ra theo quy định của Trường;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">7️⃣</span><h4 class="bento-title">Học phí & Nghĩa vụ</h4></div>
+            <div class="info-bento-card bento-green card-full-span">
+              <div class="bento-header"><span class="bento-icon">7️⃣</span><h4 class="bento-title">Học phí & Nghĩa vụ Khác</h4></div>
               <p class="bento-desc">- Thanh toán đầy đủ học phí, lệ phí và hoàn thành các nghĩa vụ khác theo quy định của Trường.</p>
             </div>
           </div>
@@ -729,7 +735,7 @@ const SHGVCN_DATA = {
             Kết quả học tập được đánh giá sau <strong>từng học kỳ</strong> hoặc sau <strong>từng năm học</strong>, dựa trên kết quả các học phần nằm trong yêu cầu của chương trình đào tạo mà sinh viên đã học và có điểm theo tiêu chí sau đây:
           </p>
 
-          <div class="info-bento-grid">
+          <div class="grid-3col">
             <div class="info-bento-card bento-red">
               <div class="bento-header"><span class="bento-icon">❌</span><h4 class="bento-title">Tổng số tín chỉ không đạt</h4></div>
               <p class="bento-desc">- Tổng số tín chỉ của những học phần mà sinh viên không đạt trong một học kỳ, trong một năm học hoặc nợ đọng từ đầu khóa học.</p>
@@ -1006,7 +1012,7 @@ const SHGVCN_DATA = {
             Giáo viên chủ nhiệm thực hiện lấy ý kiến phản hồi, góp ý của sinh viên về:
           </p>
 
-          <div class="info-bento-grid">
+          <div class="grid-2x2">
             <div class="info-bento-card bento-green">
               <div class="bento-header"><span class="bento-icon">🏢</span><h4 class="bento-title">Cơ sở vật chất</h4></div>
               <p class="bento-desc">Ghi nhận các ý kiến phản ánh về cơ sở vật chất, trang thiết bị học tập.</p>

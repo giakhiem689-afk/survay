@@ -473,12 +473,7 @@ body {
    ========================================================= */
 
 /* 1. Infographic Bento Cards */
-.info-bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-  margin: 16px 0;
-}
+
 
 .info-bento-card {
   background: #ffffff;
@@ -778,4 +773,85 @@ body {
   color: var(--text-muted);
   max-width: 500px;
   line-height: 1.5;
+}
+
+
+/* =========================================================
+   SYMMETRICAL & BALANCED BENTO GRID SYSTEM
+   ========================================================= */
+
+/* Default 2-column symmetric grid (For 2 or 4 items) */
+.info-bento-grid,
+.grid-2col,
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+/* 3-column symmetric grid (For 3 or 6 items) */
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+/* 5-item Balanced Layout: Row 1 has 2 cards, Row 2 has 3 cards */
+.grid-5-balanced {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.grid-5-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.grid-5-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* 7-item Balanced Layout: 6 cards in 2x3 grid, 7th card full width */
+.grid-7-balanced {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.grid-7-balanced .card-full-span {
+  grid-column: 1 / -1;
+}
+
+/* Centered Flexbox Grid fallback to eliminate orphaned left cards */
+.grid-flex-centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.grid-flex-centered > .info-bento-card {
+  flex: 1 1 calc(50% - 16px);
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .info-bento-grid,
+  .grid-2col,
+  .grid-2x2,
+  .grid-3col,
+  .grid-5-row-2,
+  .grid-5-row-3,
+  .grid-7-balanced {
+    grid-template-columns: 1fr !important;
+  }
 }
