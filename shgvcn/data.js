@@ -1137,20 +1137,14 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 2px dashed #4ade80;">
-            <div class="placeholder-icon-wrap" style="background: #dcfce7; border-color: #bbf7d0;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #059669;">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
+          <div style="text-align: center; margin: 10px 0;">
+            <div style="background: #ffffff; border-radius: 16px; padding: 12px; border: 1.5px solid #bbf7d0; box-shadow: 0 4px 20px rgba(5,150,105,0.08); display: inline-block; max-width: 100%;">
+              <img src="assets/PP_Bangthongtin.webp?v=27.0.0" alt="Một số giải pháp hỗ trợ sinh viên học tập hiệu quả" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.06);" loading="lazy">
             </div>
-            <h4 class="placeholder-title" style="color: #15803d;">XVI. MỘT SỐ GIẢI PHÁP HỖ TRỢ SINH VIÊN HỌC TẬP HIỆU QUẢ</h4>
-            <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic giải pháp hỗ trợ sinh viên học tập hiệu quả)</p>
           </div>
 
         </div>
-      `
+`
     },
 
     // -------------------------------------------------------------------------
