@@ -191,172 +191,261 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <h4 style="font-size: 15px; font-weight: 800; color: var(--uef-blue-dark); margin-bottom: 12px;">1. Năm học 2026-2027</h4>
+          <!-- 1. Kế hoạch năm học -->
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #0284c7; color: white; border-radius: 8px; font-weight: 900; font-size: 13px;">1</span>
+            <h4 style="font-size: 16px; font-weight: 900; color: #0f2b52; margin: 0;">Năm học 2026-2027</h4>
+          </div>
 
-          <div class="info-table-wrap">
-            <table class="info-table">
+          <div class="info-table-wrap" style="box-shadow: 0 4px 14px rgba(15,43,82,0.08); border: 1.5px solid #cbd5e1;">
+            <table class="info-table" style="font-size: 12.5px;">
               <thead>
-                <tr>
-                  <th>Học kỳ</th>
-                  <th>Khóa áp dụng</th>
-                  <th>Thời gian học</th>
-                  <th>Thời gian thi / Hoạt động</th>
+                <tr style="background: linear-gradient(135deg, #0f2b52 0%, #1e3a8a 100%); color: #ffffff;">
+                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Học kỳ</th>
+                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Khóa áp dụng</th>
+                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Thời gian học</th>
+                  <th style="padding: 10px 12px; font-weight: 800;">Thời gian thi / Hoạt động</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td rowspan="3"><strong>* Học kỳ 1A:</strong><br>từ 07/09 - 14/11/2026</td>
-                  <td>Khóa 2025 và Khóa 2026:</td>
-                  <td>07/09 – 07/11/2026</td>
-                  <td>09/11 – 14/11/2026</td>
+                <!-- HK 1A -->
+                <tr style="border-top: 2px solid #bae6fd;">
+                  <td rowspan="3" style="background: #f0f9ff; color: #0369a1; font-weight: 800; border-right: 1.5px solid #bae6fd; vertical-align: middle; text-align: center;">
+                    <div style="font-size: 14px; color: #0284c7; font-weight: 900;">* Học kỳ 1A</div>
+                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">07/09 – 14/11/2026</div>
+                  </td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 6px; font-weight: 700;">07/09 – 07/11/2026</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">09/11 – 14/11/2026</span></td>
                 </tr>
                 <tr>
-                  <td>Khóa 2023 (nhóm 2) và Khóa 2024:</td>
-                  <td>07/09 – 31/10/2026</td>
-                  <td>02/11 – 14/11/2026</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 6px; font-weight: 700;">07/09 – 31/10/2026</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">02/11 – 14/11/2026</span></td>
                 </tr>
-                <tr style="background:#f0fdf4;">
-                  <td><strong>Khóa 2023 (nhóm 1):</strong></td>
-                  <td>Sinh hoạt cuối khóa: 07/09 – 12/09/2026<br>Thời gian học: 14/09 – 17/10/2026</td>
-                  <td>Thời gian thi: 19/10 – 24/10/2026<br><strong>Thời gian thực tập (12 tuần): 26/10/2026 – 16/01/2027</strong><br>Nộp báo cáo thực tập: 18/01 – 23/01/2027</td>
+                <tr style="background: #f0fdf4; border-bottom: 2px solid #bbf7d0;">
+                  <td style="font-weight: 800; color: #15803d; border-right: 1px solid #bbf7d0;">
+                    🎯 Khóa 2023 (nhóm 1)
+                  </td>
+                  <td style="border-right: 1px solid #bbf7d0;">
+                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">SHCK:</span> 07/09 – 12/09/2026</div>
+                    <div><span style="background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Học:</span> 14/09 – 17/10/2026</div>
+                  </td>
+                  <td>
+                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thi:</span> 19/10 – 24/10/2026</div>
+                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">🚀 Thực tập (12 tuần): 26/10/2026 – 16/01/2027</strong></div>
+                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp BC thực tập:</span> 18/01 – 23/01/2027</div>
+                  </td>
+                </tr>
+
+                <!-- HK 1B -->
+                <tr style="border-top: 2px solid #ddd6fe;">
+                  <td rowspan="2" style="background: #faf5ff; color: #6d28d9; font-weight: 800; border-right: 1.5px solid #ddd6fe; vertical-align: middle; text-align: center;">
+                    <div style="font-size: 14px; color: #7c3aed; font-weight: 900;">* Học kỳ 1B</div>
+                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">16/11/2026 – 23/01/2027</div>
+                  </td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #f3e8ff; color: #7c3aed; padding: 2px 8px; border-radius: 6px; font-weight: 700;">16/11/2026 – 16/01/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">18/01 – 23/01/2027</span></td>
+                </tr>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #f3e8ff; color: #7c3aed; padding: 2px 8px; border-radius: 6px; font-weight: 700;">16/11/2026 – 09/01/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">11/01 – 23/01/2027</span></td>
+                </tr>
+
+                <!-- Tết -->
+                <tr style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); border: 1.5px solid #fecdd3;">
+                  <td colspan="4" style="text-align: center; padding: 10px; color: #b91c1c; font-weight: 800; font-size: 13.5px;">
+                    🧧 <strong>* Nghỉ Tết Nguyên đán Đinh Mùi:</strong> 24/01/2027 – 21/02/2027 (4 tuần sum vầy)
+                  </td>
+                </tr>
+
+                <!-- HK 2A -->
+                <tr style="border-top: 2px solid #fed7aa;">
+                  <td rowspan="3" style="background: #fff7ed; color: #c2410c; font-weight: 800; border-right: 1.5px solid #fed7aa; vertical-align: middle; text-align: center;">
+                    <div style="font-size: 14px; color: #ea580c; font-weight: 900;">* Học kỳ 2A</div>
+                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">22/02 – 01/05/2027</div>
+                  </td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #ffedd5; color: #c2410c; padding: 2px 8px; border-radius: 6px; font-weight: 700;">22/02 – 24/04/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">26/04 – 01/05/2027</span></td>
                 </tr>
                 <tr>
-                  <td rowspan="2"><strong>* Học kỳ 1B:</strong><br>16/11/2026 - 23/01/2027</td>
-                  <td>Khóa 2025 và Khóa 2026:</td>
-                  <td>16/11/2026 – 16/01/2027</td>
-                  <td>18/01 – 23/01/2027</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #ffedd5; color: #c2410c; padding: 2px 8px; border-radius: 6px; font-weight: 700;">22/02 – 17/04/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">19/04 – 01/05/2027</span></td>
                 </tr>
-                <tr>
-                  <td>Khóa 2023 (nhóm 2) và Khóa 2024:</td>
-                  <td>16/11/2026 – 09/01/2027</td>
-                  <td>11/01 – 23/01/2027</td>
+                <tr style="background: #f0fdf4; border-bottom: 2px solid #bbf7d0;">
+                  <td style="font-weight: 800; color: #15803d; border-right: 1px solid #bbf7d0;">
+                    🎯 Khóa 2023 (nhóm 2)
+                  </td>
+                  <td style="border-right: 1px solid #bbf7d0;">
+                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">SHCK:</span> 22/02 – 27/02/2027</div>
+                    <div><span style="background: #ffedd5; color: #c2410c; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Học:</span> 01/03 – 03/04/2027</div>
+                  </td>
+                  <td>
+                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thi:</span> 05/04 – 10/04/2027</div>
+                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">🚀 Thực tập (12 tuần): 12/04 – 03/07/2027</strong></div>
+                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp BC thực tập:</span> 05/07 – 10/07/2027</div>
+                  </td>
                 </tr>
-                <tr style="background:#fee2e2;">
-                  <td colspan="4"><strong>* Nghỉ Tết Nguyên đán Đinh Mùi:</strong> 24/01 - 21/02/2027.</td>
+
+                <!-- HK 2B -->
+                <tr style="border-top: 2px solid #bbf7d0;">
+                  <td rowspan="2" style="background: #f0fdf4; color: #15803d; font-weight: 800; border-right: 1.5px solid #bbf7d0; vertical-align: middle; text-align: center;">
+                    <div style="font-size: 14px; color: #16a34a; font-weight: 900;">* Học kỳ 2B</div>
+                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">10/05 – 17/07/2027</div>
+                  </td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 6px; font-weight: 700;">10/05 – 20/07/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">12/07 – 17/07/2027</span></td>
                 </tr>
-                <tr>
-                  <td rowspan="3"><strong>* Học kỳ 2A:</strong><br>từ 22/02 - 01/05/2027</td>
-                  <td>Khóa 2026:</td>
-                  <td>22/02 – 24/04/2027</td>
-                  <td>26/04 – 01/05/2027</td>
+                <tr style="border-bottom: 2px solid #e2e8f0;">
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025</td>
+                  <td style="border-right: 1px solid #e2e8f0;"><span style="background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 6px; font-weight: 700;">10/05 – 03/07/2027</span></td>
+                  <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">05/07 – 17/07/2027</span></td>
                 </tr>
-                <tr>
-                  <td>Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025:</td>
-                  <td>22/02 – 17/04/2027</td>
-                  <td>19/04 – 01/05/2027</td>
-                </tr>
-                <tr style="background:#f0fdf4;">
-                  <td><strong>Khóa 2023 (nhóm 2):</strong></td>
-                  <td>Sinh hoạt cuối khóa: 22/02 – 27/02/2027<br>Thời gian học: 01/03 – 03/04/2027</td>
-                  <td>Thời gian thi: 05/04 – 10/04/2027<br><strong>Thời gian thực tập (12 tuần): 12/04 – 03/07/2027</strong><br>Nộp báo cáo thực tập: 05/07 – 10/07/2027</td>
-                </tr>
-                <tr>
-                  <td rowspan="2"><strong>* Học kỳ 2B:</strong><br>từ 10/05 - 17/07/2027</td>
-                  <td>Khóa 2026:</td>
-                  <td>10/05 – 20/07/2027</td>
-                  <td>12/07 – 17/07/2027</td>
-                </tr>
-                <tr>
-                  <td>Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025:</td>
-                  <td>10/05 – 03/07/2027</td>
-                  <td>05/07 – 17/07/2027</td>
-                </tr>
-                <tr>
-                  <td><strong>* Học kỳ Hè:</strong><br>từ 19/07 - 28/08/2027</td>
-                  <td colspan="2">Thời gian học: 19/07 – 21/08/2027</td>
-                  <td>Thời gian thi: 23/08 – 29/08/2027</td>
+
+                <!-- HK Hè -->
+                <tr style="background: #fefce8; border-top: 2px solid #fde047;">
+                  <td style="background: #fef9c3; color: #854d0e; font-weight: 900; border-right: 1.5px solid #fde047; text-align: center;">
+                    <div style="font-size: 14px; color: #ca8a04;">* Học kỳ Hè</div>
+                    <div style="font-size: 11px; color: #854d0e; margin-top: 2px;">19/07 – 28/08/2027</div>
+                  </td>
+                  <td colspan="2" style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">
+                    <span style="background: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 6px; font-weight: 700;">Thời gian học: 19/07 – 21/08/2027</span>
+                  </td>
+                  <td>
+                    <span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">Thời gian thi: 23/08 – 29/08/2027</span>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h4 style="font-size: 15px; font-weight: 800; color: var(--uef-blue-dark); margin: 24px 0 12px 0;">2. Kế hoạch Tốt nghiệp Năm học 2026-2027</h4>
-
-          <p style="font-weight: 700; color: var(--uef-blue-dark); margin-bottom: 6px;">2.1. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 10/2026</p>
-          <p style="font-size: 13px; margin-bottom: 8px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
-
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>Ngành</th><th>Khoa</th></tr></thead>
-              <tbody>
-                <tr><td>1. Kế toán</td><td>Khoa Tài chính - Kế toán</td></tr>
-                <tr><td>2. Kiểm toán</td><td>Khoa Tài chính - Kế toán</td></tr>
-                <tr><td>3. Tài chính - Ngân hàng</td><td>Khoa Tài chính - Kế toán</td></tr>
-                <tr><td>4. Tài chính quốc tế</td><td>Khoa Tài chính - Kế toán</td></tr>
-                <tr><td>5. Công nghệ tài chính</td><td>Khoa Tài chính - Kế toán</td></tr>
-                <tr><td>6. Kinh doanh thương mại</td><td>Khoa Quản trị kinh doanh</td></tr>
-                <tr><td>7. Marketing</td><td>Khoa Marketing</td></tr>
-                <tr><td>8. Digital Marketing</td><td>Khoa Marketing</td></tr>
-                <tr><td>9. Quản trị sự kiện</td><td>Khoa Marketing</td></tr>
-                <tr><td>10. Kinh doanh quốc tế</td><td>Khoa Kinh tế</td></tr>
-              </tbody>
-            </table>
+          <!-- 2. Kế hoạch tốt nghiệp -->
+          <div style="display: flex; align-items: center; gap: 8px; margin: 30px 0 14px 0;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #059669; color: white; border-radius: 8px; font-weight: 900; font-size: 13px;">2</span>
+            <h4 style="font-size: 16px; font-weight: 900; color: #0f2b52; margin: 0;">Kế hoạch Tốt nghiệp Năm học 2026-2027</h4>
           </div>
 
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
-              <tbody>
-                <tr><td>Tổ chức Đăng ký (trực tuyến) học phần Thực tập tốt nghiệp, Chuyên đề/Khóa luận tốt nghiệp</td><td>23/06 - 04/07/2026</td></tr>
-                <tr><td>Sinh viên nộp học phí (dự kiến)</td><td>03 - 13/08/2026</td></tr>
-                <tr><td>- Chương trình Sinh hoạt cuối khóa<br>- Công bố danh sách đơn vị tham gia Mock-Interview</td><td>tháng 07 + 08/2026<br>01/09/2026 (dự kiến)</td></tr>
-                <tr><td>Sinh hoạt cuối khóa, chương trình từ Giảng đường đến khởi nghiệp</td><td>08 - 12/09/2026</td></tr>
-                <tr><td>Công bố danh sách phân công Giảng viên hướng dẫn</td><td>13/09/2026</td></tr>
-                <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>14/09/2026</td></tr>
-                <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>21 - 23/10/2026</td></tr>
-                <tr style="background:#f0fdf4;"><td><strong>THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td><td><strong>26/10/2026 - 16/01/2027</strong></td></tr>
-                <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td>20 - 23/01/2027</td></tr>
-                <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>26 - 30/01/2027</td></tr>
-              </tbody>
-            </table>
+          <!-- 2.1 Nhóm 1 -->
+          <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 14px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="background: #15803d; color: white; font-weight: 900; font-size: 11px; padding: 2px 8px; border-radius: 100px;">NHÓM 1</span>
+              <strong style="color: #166534; font-size: 14px;">2.1. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 10/2026</strong>
+            </div>
+            <p style="font-size: 12.5px; color: #1e3a8a; margin-bottom: 8px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">1. Kế toán <small style="color:#64748b;">(Khoa TC-KT)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">2. Kiểm toán <small style="color:#64748b;">(Khoa TC-KT)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">3. Tài chính - Ngân hàng <small style="color:#64748b;">(Khoa TC-KT)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">4. Tài chính quốc tế <small style="color:#64748b;">(Khoa TC-KT)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">5. Công nghệ tài chính <small style="color:#64748b;">(Khoa TC-KT)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">6. Kinh doanh thương mại <small style="color:#64748b;">(Khoa QTKD)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">7. Marketing <small style="color:#64748b;">(Khoa Marketing)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">8. Digital Marketing <small style="color:#64748b;">(Khoa Marketing)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">9. Quản trị sự kiện <small style="color:#64748b;">(Khoa Marketing)</small></span>
+              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">10. Kinh doanh quốc tế <small style="color:#64748b;">(Khoa Kinh tế)</small></span>
+            </div>
+
+            <!-- Bảng mốc thời gian Nhóm 1 -->
+            <div class="info-table-wrap" style="margin: 0; background: white;">
+              <table class="info-table" style="font-size: 12px;">
+                <thead>
+                  <tr style="background: #15803d; color: white;">
+                    <th style="padding: 8px 10px;">NỘI DUNG (Nhóm 1 - TTTN Tháng 10/2026)</th>
+                    <th style="padding: 8px 10px; width: 190px;">THỜI GIAN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tổ chức Đăng ký (trực tuyến) học phần Thực tập tốt nghiệp, Chuyên đề/Khóa luận tốt nghiệp</td><td><span style="background: #e0f2fe; color: #0369a1; font-weight: 700; padding: 2px 6px; border-radius: 4px;">23/06 - 04/07/2026</span></td></tr>
+                  <tr><td>Sinh viên nộp học phí (dự kiến)</td><td><span style="background: #fef3c7; color: #b45309; font-weight: 700; padding: 2px 6px; border-radius: 4px;">03 - 13/08/2026</span></td></tr>
+                  <tr><td>- Chương trình Sinh hoạt cuối khóa<br>- Công bố danh sách đơn vị tham gia Mock-Interview</td><td>tháng 07 + 08/2026<br>01/09/2026 (dự kiến)</td></tr>
+                  <tr><td>Sinh hoạt cuối khóa, chương trình từ Giảng đường đến khởi nghiệp</td><td>08 - 12/09/2026</td></tr>
+                  <tr><td>Công bố danh sách phân công Giảng viên hướng dẫn</td><td><span style="background: #ede9fe; color: #6d28d9; font-weight: 700; padding: 2px 6px; border-radius: 4px;">13/09/2026</span></td></tr>
+                  <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>14/09/2026</td></tr>
+                  <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>21 - 23/10/2026</td></tr>
+                  <tr style="background: #dcfce7; border: 2px solid #16a34a;">
+                    <td><strong style="color: #15803d; font-size: 12.5px;">🏢 THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
+                    <td><strong style="color: #15803d; font-size: 12.5px;">26/10/2026 - 16/01/2027</strong></td>
+                  </tr>
+                  <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">20 - 23/01/2027</span></td></tr>
+                  <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>26 - 30/01/2027</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <p style="font-weight: 700; color: var(--uef-blue-dark); margin: 20px 0 6px 0;">2.2. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 04/2027</p>
-          <p style="font-size: 13px; margin-bottom: 8px;">Khóa 2023 - Nhóm 2 (Thực tập tốt nghiệp đợt tháng 04/2027), gồm các ngành khác nhóm 1</p>
+          <!-- 2.2 Nhóm 2 -->
+          <div style="background: #faf5ff; border: 1.5px solid #c084fc; border-radius: 12px; padding: 14px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="background: #7c3aed; color: white; font-weight: 900; font-size: 11px; padding: 2px 8px; border-radius: 100px;">NHÓM 2</span>
+              <strong style="color: #6b21a8; font-size: 14px;">2.2. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 04/2027</strong>
+            </div>
+            <p style="font-size: 12.5px; color: #581c87; margin-bottom: 10px;">Khóa 2023 - Nhóm 2 (Thực tập tốt nghiệp đợt tháng 04/2027), gồm các ngành khác nhóm 1</p>
 
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
-              <tbody>
-                <tr><td>Tổ chức Đăng ký (trực tuyến) học phần Thực tập tốt nghiệp, Chuyên đề/Khóa luận tốt nghiệp</td><td>08 - 19/12/2026</td></tr>
-                <tr><td>Sinh viên nộp học phí (dự kiến)</td><td>12 - 22/01/2027</td></tr>
-                <tr><td>- Chương trình Sinh hoạt cuối khóa<br>- Công bố danh sách đơn vị tham gia Mock-Interview</td><td>tháng 12/2026<br>09/02/2027 (dự kiến)</td></tr>
-                <tr><td>Sinh hoạt cuối khóa, chương trình từ Giảng đường đến khởi nghiệp</td><td>22 - 27/02/2027</td></tr>
-                <tr><td>Công bố danh sách phân công Giảng viên hướng dẫn</td><td>27/02/2027</td></tr>
-                <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>01/03/2027</td></tr>
-                <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>05 - 07/04/2027</td></tr>
-                <tr style="background:#f0fdf4;"><td><strong>THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td><td><strong>12/04/2027 - 03/07/2027</strong></td></tr>
-                <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td>07 - 10/07/2027</td></tr>
-                <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>14 - 21/07/2027</td></tr>
-              </tbody>
-            </table>
+            <div class="info-table-wrap" style="margin: 0; background: white;">
+              <table class="info-table" style="font-size: 12px;">
+                <thead>
+                  <tr style="background: #7c3aed; color: white;">
+                    <th style="padding: 8px 10px;">NỘI DUNG (Nhóm 2 - TTTN Tháng 04/2027)</th>
+                    <th style="padding: 8px 10px; width: 190px;">THỜI GIAN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tổ chức Đăng ký (trực tuyến) học phần Thực tập tốt nghiệp, Chuyên đề/Khóa luận tốt nghiệp</td><td><span style="background: #e0f2fe; color: #0369a1; font-weight: 700; padding: 2px 6px; border-radius: 4px;">08 - 19/12/2026</span></td></tr>
+                  <tr><td>Sinh viên nộp học phí (dự kiến)</td><td><span style="background: #fef3c7; color: #b45309; font-weight: 700; padding: 2px 6px; border-radius: 4px;">12 - 22/01/2027</span></td></tr>
+                  <tr><td>- Chương trình Sinh hoạt cuối khóa<br>- Công bố danh sách đơn vị tham gia Mock-Interview</td><td>tháng 12/2026<br>09/02/2027 (dự kiến)</td></tr>
+                  <tr><td>Sinh hoạt cuối khóa, chương trình từ Giảng đường đến khởi nghiệp</td><td>22 - 27/02/2027</td></tr>
+                  <tr><td>Công bố danh sách phân công Giảng viên hướng dẫn</td><td><span style="background: #ede9fe; color: #6d28d9; font-weight: 700; padding: 2px 6px; border-radius: 4px;">27/02/2027</span></td></tr>
+                  <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>01/03/2027</td></tr>
+                  <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>05 - 07/04/2027</td></tr>
+                  <tr style="background: #ede9fe; border: 2px solid #7c3aed;">
+                    <td><strong style="color: #6d28d9; font-size: 12.5px;">🏢 THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
+                    <td><strong style="color: #6d28d9; font-size: 12.5px;">12/04/2027 - 03/07/2027</strong></td>
+                  </tr>
+                  <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">07 - 10/07/2027</span></td></tr>
+                  <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>14 - 21/07/2027</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <p style="font-weight: 700; color: var(--uef-blue-dark); margin: 20px 0 6px 0;">2.3. TỐT NGHIỆP KHÓA 2023</p>
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
-              <tbody>
-                <tr><td>Sinh viên bổ sung các loại hồ sơ; xác nhận thông tin sử dụng cấp bằng tốt nghiệp</td><td>01 - 30/03/2027</td></tr>
-                <tr><td><strong>SINH VIÊN NỘP CÁC CHỨNG CHỈ ĐIỀU KIỆN XÉT TỐT NGHIỆP (Chứng chỉ Tiếng Anh, Chứng chỉ Tin học)</strong></td><td><strong>07 - 30/06/2027</strong></td></tr>
-                <tr style="background:#fef3c7;"><td><strong>HỌP HỘI ĐỒNG XÉT TỐT NGHIỆP THÁNG 07/2027</strong></td><td><strong>30/07/2027 (Thứ 7)</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
+          <!-- 2.3 & 2.4 -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; margin-top: 14px;">
+            <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 12px; padding: 12px;">
+              <strong style="color: #b45309; font-size: 13.5px; display: block; margin-bottom: 8px;">2.3. TỐT NGHIỆP KHÓA 2023</strong>
+              <div class="info-table-wrap" style="margin: 0; background: white;">
+                <table class="info-table" style="font-size: 12px;">
+                  <thead><tr style="background:#d97706; color:white;"><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
+                  <tbody>
+                    <tr><td>Sinh viên bổ sung các loại hồ sơ; xác nhận thông tin sử dụng cấp bằng tốt nghiệp</td><td>01 - 30/03/2027</td></tr>
+                    <tr style="background: #fef3c7;"><td><strong>SINH VIÊN NỘP CÁC CHỨNG CHỈ ĐIỀU KIỆN XÉT TỐT NGHIỆP (Chứng chỉ Tiếng Anh, Chứng chỉ Tin học)</strong></td><td><strong style="color:#b45309;">07 - 30/06/2027</strong></td></tr>
+                    <tr style="background: #fee2e2;"><td><strong>HỌP HỘI ĐỒNG XÉT TỐT NGHIỆP THÁNG 07/2027</strong></td><td><strong style="color:#b91c1c;">30/07/2027 (Thứ 7)</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-          <p style="font-weight: 700; color: var(--uef-blue-dark); margin: 20px 0 6px 0;">2.4. LỄ TRAO BẰNG TỐT NGHIỆP NĂM 2027</p>
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
-              <tbody>
-                <tr><td>Sinh viên được Xét tốt nghiệp các đợt từ tháng 10/2026 đến 03/2027<br>- Lễ bế giảng và trao bằng tốt nghiệp</td><td>Tháng 04/2027</td></tr>
-                <tr style="background:#dcfce7;"><td>Sinh viên được Xét tốt nghiệp đợt 30/07/2027<br>- Lễ bế giảng và trao bằng tốt nghiệp</td><td>Tháng 08/2027<br>(dự kiến 25-29/08/2027)</td></tr>
-              </tbody>
-            </table>
+            <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 12px;">
+              <strong style="color: #15803d; font-size: 13.5px; display: block; margin-bottom: 8px;">2.4. LỄ TRAO BẰNG TỐT NGHIỆP NĂM 2027</strong>
+              <div class="info-table-wrap" style="margin: 0; background: white;">
+                <table class="info-table" style="font-size: 12px;">
+                  <thead><tr style="background:#059669; color:white;"><th>NỘI DUNG</th><th>THỜI GIAN</th></tr></thead>
+                  <tbody>
+                    <tr><td>Sinh viên được Xét tốt nghiệp các đợt từ tháng 10/2026 đến 03/2027<br>- Lễ bế giảng và trao bằng tốt nghiệp</td><td><strong style="color:#0369a1; background:#e0f2fe; padding:2px 6px; border-radius:4px;">Tháng 04/2027</strong></td></tr>
+                    <tr style="background: #dcfce7;"><td>Sinh viên được Xét tốt nghiệp đợt 30/07/2027<br>- Lễ bế giảng và trao bằng tốt nghiệp</td><td><strong style="color:#15803d; background:#bbf7d0; padding:2px 6px; border-radius:4px;">Tháng 08/2027</strong><br><small>(dự kiến 25-29/08/2027)</small></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
         </div>
-      `
+`
     },
 
     // -------------------------------------------------------------------------
