@@ -207,8 +207,8 @@ const SHGVCN_DATA = {
             <table class="info-table" style="font-size: 12.5px;">
               <thead>
                 <tr style="background: linear-gradient(135deg, #0f2b52 0%, #1e3a8a 100%); color: #ffffff;">
-                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Học kỳ</th>
-                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Khóa áp dụng</th>
+                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15); width: 140px;">Học kỳ</th>
+                  <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15); width: 220px;">Khóa học</th>
                   <th style="padding: 10px 12px; font-weight: 800; border-right: 1px solid rgba(255,255,255,0.15);">Thời gian học</th>
                   <th style="padding: 10px 12px; font-weight: 800;">Thời gian thi / Hoạt động</th>
                 </tr>
@@ -220,27 +220,27 @@ const SHGVCN_DATA = {
                     <div style="font-size: 14px; color: #0284c7; font-weight: 900;">* Học kỳ 1A</div>
                     <div style="font-size: 11px; color: #64748b; margin-top: 2px;">07/09 – 14/11/2026</div>
                   </td>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 6px; font-weight: 700;">07/09 – 07/11/2026</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">09/11 – 14/11/2026</span></td>
                 </tr>
                 <tr>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 6px; font-weight: 700;">07/09 – 31/10/2026</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">02/11 – 14/11/2026</span></td>
                 </tr>
                 <tr style="background: #f0fdf4; border-bottom: 2px solid #bbf7d0;">
                   <td style="font-weight: 800; color: #15803d; border-right: 1px solid #bbf7d0;">
-                    🎯 Khóa 2023 (nhóm 1)
+                    Khóa 2023 (nhóm 1):
                   </td>
                   <td style="border-right: 1px solid #bbf7d0;">
-                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">SHCK:</span> 07/09 – 12/09/2026</div>
-                    <div><span style="background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Học:</span> 14/09 – 17/10/2026</div>
+                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Sinh hoạt cuối khóa:</span> 07/09 – 12/09/2026</div>
+                    <div><span style="background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thời gian học:</span> 14/09 – 17/10/2026</div>
                   </td>
                   <td>
-                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thi:</span> 19/10 – 24/10/2026</div>
-                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">🚀 Thực tập (12 tuần): 26/10/2026 – 16/01/2027</strong></div>
-                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp BC thực tập:</span> 18/01 – 23/01/2027</div>
+                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thời gian thi:</span> 19/10 – 24/10/2026</div>
+                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">Thời gian thực tập (12 tuần): 26/10/2026 – 16/01/2027</strong></div>
+                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp báo cáo thực tập:</span> 18/01 – 23/01/2027</div>
                   </td>
                 </tr>
 
@@ -250,20 +250,20 @@ const SHGVCN_DATA = {
                     <div style="font-size: 14px; color: #7c3aed; font-weight: 900;">* Học kỳ 1B</div>
                     <div style="font-size: 11px; color: #64748b; margin-top: 2px;">16/11/2026 – 23/01/2027</div>
                   </td>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2025 và Khóa 2026:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #f3e8ff; color: #7c3aed; padding: 2px 8px; border-radius: 6px; font-weight: 700;">16/11/2026 – 16/01/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">18/01 – 23/01/2027</span></td>
                 </tr>
                 <tr style="border-bottom: 2px solid #e2e8f0;">
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 2) và Khóa 2024:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #f3e8ff; color: #7c3aed; padding: 2px 8px; border-radius: 6px; font-weight: 700;">16/11/2026 – 09/01/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">11/01 – 23/01/2027</span></td>
                 </tr>
 
                 <!-- Tết -->
                 <tr style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); border: 1.5px solid #fecdd3;">
-                  <td colspan="4" style="text-align: center; padding: 10px; color: #b91c1c; font-weight: 800; font-size: 13.5px;">
-                    🧧 <strong>* Nghỉ Tết Nguyên đán Đinh Mùi:</strong> 24/01/2027 – 21/02/2027 (4 tuần sum vầy)
+                  <td colspan="4" style="text-align: center; padding: 10px; color: #b91c1c; font-weight: 800; font-size: 13px;">
+                    * Nghỉ Tết Nguyên đán Đinh Mùi: 24/01 – 21/02/2027.
                   </td>
                 </tr>
 
@@ -273,27 +273,27 @@ const SHGVCN_DATA = {
                     <div style="font-size: 14px; color: #ea580c; font-weight: 900;">* Học kỳ 2A</div>
                     <div style="font-size: 11px; color: #64748b; margin-top: 2px;">22/02 – 01/05/2027</div>
                   </td>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #ffedd5; color: #c2410c; padding: 2px 8px; border-radius: 6px; font-weight: 700;">22/02 – 24/04/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">26/04 – 01/05/2027</span></td>
                 </tr>
                 <tr>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #ffedd5; color: #c2410c; padding: 2px 8px; border-radius: 6px; font-weight: 700;">22/02 – 17/04/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">19/04 – 01/05/2027</span></td>
                 </tr>
                 <tr style="background: #f0fdf4; border-bottom: 2px solid #bbf7d0;">
                   <td style="font-weight: 800; color: #15803d; border-right: 1px solid #bbf7d0;">
-                    🎯 Khóa 2023 (nhóm 2)
+                    Khóa 2023 (nhóm 2):
                   </td>
                   <td style="border-right: 1px solid #bbf7d0;">
-                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">SHCK:</span> 22/02 – 27/02/2027</div>
-                    <div><span style="background: #ffedd5; color: #c2410c; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Học:</span> 01/03 – 03/04/2027</div>
+                    <div style="margin-bottom: 4px;"><span style="background: #ede9fe; color: #6d28d9; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Sinh hoạt cuối khóa:</span> 22/02 – 27/02/2027</div>
+                    <div><span style="background: #ffedd5; color: #c2410c; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thời gian học:</span> 01/03 – 03/04/2027</div>
                   </td>
                   <td>
-                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thi:</span> 05/04 – 10/04/2027</div>
-                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">🚀 Thực tập (12 tuần): 12/04 – 03/07/2027</strong></div>
-                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp BC thực tập:</span> 05/07 – 10/07/2027</div>
+                    <div style="margin-bottom: 4px;"><span style="background: #fef3c7; color: #b45309; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 11px;">Thời gian thi:</span> 05/04 – 10/04/2027</div>
+                    <div style="margin-bottom: 4px;"><strong style="color: #15803d; background: #dcfce7; padding: 3px 8px; border-radius: 6px; border: 1px solid #86efac; display: inline-block;">Thời gian thực tập (12 tuần): 12/04 – 03/07/2027</strong></div>
+                    <div><span style="background: #f1f5f9; color: #475569; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;">Nộp báo cáo thực tập:</span> 05/07 – 10/07/2027</div>
                   </td>
                 </tr>
 
@@ -303,12 +303,12 @@ const SHGVCN_DATA = {
                     <div style="font-size: 14px; color: #16a34a; font-weight: 900;">* Học kỳ 2B</div>
                     <div style="font-size: 11px; color: #64748b; margin-top: 2px;">10/05 – 17/07/2027</div>
                   </td>
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2026:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 6px; font-weight: 700;">10/05 – 20/07/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">12/07 – 17/07/2027</span></td>
                 </tr>
                 <tr style="border-bottom: 2px solid #e2e8f0;">
-                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025</td>
+                  <td style="font-weight: 600; color: #334155; border-right: 1px solid #e2e8f0;">Khóa 2023 (nhóm 1), Khóa 2024 và Khóa 2025:</td>
                   <td style="border-right: 1px solid #e2e8f0;"><span style="background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 6px; font-weight: 700;">10/05 – 03/07/2027</span></td>
                   <td><span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 6px; font-weight: 700;">05/07 – 17/07/2027</span></td>
                 </tr>
@@ -330,31 +330,61 @@ const SHGVCN_DATA = {
             </table>
           </div>
 
+          <!-- Ghi chú về Khóa 2023 (nhóm 1) và Khóa 2023 (nhóm 2) ngay dưới phần 1 -->
+          <div class="info-alert-callout callout-blue" style="margin: 14px 0 24px 0;">
+            <span class="callout-icon">📌</span>
+            <div class="callout-text" style="font-size: 12.5px; line-height: 1.6;">
+              <strong>Ghi chú phân nhóm Khóa 2023:</strong><br>
+              • <strong>Khóa 2023 (nhóm 1):</strong> Gồm 10 ngành đào tạo đi Thực tập tốt nghiệp đợt tháng 10/2026 (Kế toán, Kiểm toán, Tài chính - Ngân hàng, Tài chính quốc tế, Công nghệ tài chính, Kinh doanh thương mại, Marketing, Digital Marketing, Quản trị sự kiện, Kinh doanh quốc tế).<br>
+              • <strong>Khóa 2023 (nhóm 2):</strong> Gồm tất cả các ngành đào tạo còn lại đi Thực tập tốt nghiệp đợt tháng 04/2027.
+            </div>
+          </div>
+
           <!-- 2. Kế hoạch tốt nghiệp -->
-          <div style="display: flex; align-items: center; gap: 8px; margin: 30px 0 14px 0;">
+          <div style="display: flex; align-items: center; gap: 8px; margin: 28px 0 14px 0;">
             <span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #059669; color: white; border-radius: 8px; font-weight: 900; font-size: 13px;">2</span>
             <h4 style="font-size: 16px; font-weight: 900; color: #0f2b52; margin: 0;">Kế hoạch Tốt nghiệp Năm học 2026-2027</h4>
           </div>
 
           <!-- 2.1 Nhóm 1 -->
-          <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 14px; margin-bottom: 14px;">
+          <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 16px; margin-bottom: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <span style="background: #15803d; color: white; font-weight: 900; font-size: 11px; padding: 2px 8px; border-radius: 100px;">NHÓM 1</span>
               <strong style="color: #166534; font-size: 14px;">2.1. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 10/2026</strong>
             </div>
-            <p style="font-size: 12.5px; color: #1e3a8a; margin-bottom: 8px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
+            <p style="font-size: 12.5px; color: #1e3a8a; margin-bottom: 10px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
             
-            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;">
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">1. Kế toán <small style="color:#64748b;">(Khoa TC-KT)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">2. Kiểm toán <small style="color:#64748b;">(Khoa TC-KT)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">3. Tài chính - Ngân hàng <small style="color:#64748b;">(Khoa TC-KT)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">4. Tài chính quốc tế <small style="color:#64748b;">(Khoa TC-KT)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">5. Công nghệ tài chính <small style="color:#64748b;">(Khoa TC-KT)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">6. Kinh doanh thương mại <small style="color:#64748b;">(Khoa QTKD)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">7. Marketing <small style="color:#64748b;">(Khoa Marketing)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">8. Digital Marketing <small style="color:#64748b;">(Khoa Marketing)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">9. Quản trị sự kiện <small style="color:#64748b;">(Khoa Marketing)</small></span>
-              <span style="background: #ffffff; color: #0369a1; border: 1px solid #bae6fd; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700;">10. Kinh doanh quốc tế <small style="color:#64748b;">(Khoa Kinh tế)</small></span>
+            <!-- Danh sách 10 ngành xếp thành 2 cột ngăn nắp -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin-bottom: 14px;">
+              
+              <!-- Cột 1: Khoa Tài chính - Kế toán (5 ngành) -->
+              <div style="background: white; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-weight: 800; font-size: 12px; color: #0369a1; border-bottom: 1px solid #e0f2fe; padding-bottom: 4px; margin-bottom: 6px;">
+                  Khoa Tài chính - Kế toán (5 ngành)
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #334155;">
+                  <li><strong>1.</strong> Kế toán</li>
+                  <li><strong>2.</strong> Kiểm toán</li>
+                  <li><strong>3.</strong> Tài chính - Ngân hàng</li>
+                  <li><strong>4.</strong> Tài chính quốc tế</li>
+                  <li><strong>5.</strong> Công nghệ tài chính</li>
+                </ul>
+              </div>
+
+              <!-- Cột 2: Các Khoa còn lại (5 ngành) -->
+              <div style="background: white; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="font-weight: 800; font-size: 12px; color: #0369a1; border-bottom: 1px solid #e0f2fe; padding-bottom: 4px; margin-bottom: 6px;">
+                  Khoa Quản trị kinh doanh, Marketing, Kinh tế (5 ngành)
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #334155;">
+                  <li><strong>6.</strong> Kinh doanh thương mại <small style="color: #64748b;">(Khoa Quản trị kinh doanh)</small></li>
+                  <li><strong>7.</strong> Marketing <small style="color: #64748b;">(Khoa Marketing)</small></li>
+                  <li><strong>8.</strong> Digital Marketing <small style="color: #64748b;">(Khoa Marketing)</small></li>
+                  <li><strong>9.</strong> Quản trị sự kiện <small style="color: #64748b;">(Khoa Marketing)</small></li>
+                  <li><strong>10.</strong> Kinh doanh quốc tế <small style="color: #64748b;">(Khoa Kinh tế)</small></li>
+                </ul>
+              </div>
+
             </div>
 
             <!-- Bảng mốc thời gian Nhóm 1 -->
@@ -362,8 +392,8 @@ const SHGVCN_DATA = {
               <table class="info-table" style="font-size: 12px;">
                 <thead>
                   <tr style="background: #15803d; color: white;">
-                    <th style="padding: 8px 10px;">NỘI DUNG (Nhóm 1 - TTTN Tháng 10/2026)</th>
-                    <th style="padding: 8px 10px; width: 190px;">THỜI GIAN</th>
+                    <th style="padding: 8px 10px;">NỘI DUNG</th>
+                    <th style="padding: 8px 10px; width: 200px;">THỜI GIAN</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -375,10 +405,10 @@ const SHGVCN_DATA = {
                   <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>14/09/2026</td></tr>
                   <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>21 - 23/10/2026</td></tr>
                   <tr style="background: #dcfce7; border: 2px solid #16a34a;">
-                    <td><strong style="color: #15803d; font-size: 12.5px;">🏢 THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
+                    <td><strong style="color: #15803d; font-size: 12.5px;">THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
                     <td><strong style="color: #15803d; font-size: 12.5px;">26/10/2026 - 16/01/2027</strong></td>
                   </tr>
-                  <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">20 - 23/01/2027</span></td></tr>
+                  <tr><td>Sinh viên nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">20 - 23/01/2027</span></td></tr>
                   <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>26 - 30/01/2027</td></tr>
                 </tbody>
               </table>
@@ -386,7 +416,7 @@ const SHGVCN_DATA = {
           </div>
 
           <!-- 2.2 Nhóm 2 -->
-          <div style="background: #faf5ff; border: 1.5px solid #c084fc; border-radius: 12px; padding: 14px; margin-bottom: 14px;">
+          <div style="background: #faf5ff; border: 1.5px solid #c084fc; border-radius: 12px; padding: 16px; margin-bottom: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <span style="background: #7c3aed; color: white; font-weight: 900; font-size: 11px; padding: 2px 8px; border-radius: 100px;">NHÓM 2</span>
               <strong style="color: #6b21a8; font-size: 14px;">2.2. THỰC TẬP TỐT NGHIỆP ĐỢT THÁNG 04/2027</strong>
@@ -397,8 +427,8 @@ const SHGVCN_DATA = {
               <table class="info-table" style="font-size: 12px;">
                 <thead>
                   <tr style="background: #7c3aed; color: white;">
-                    <th style="padding: 8px 10px;">NỘI DUNG (Nhóm 2 - TTTN Tháng 04/2027)</th>
-                    <th style="padding: 8px 10px; width: 190px;">THỜI GIAN</th>
+                    <th style="padding: 8px 10px;">NỘI DUNG</th>
+                    <th style="padding: 8px 10px; width: 200px;">THỜI GIAN</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -410,10 +440,10 @@ const SHGVCN_DATA = {
                   <tr><td>Công bố danh sách các đơn vị, doanh nghiệp,... tiếp nhận sinh viên thực tập và vị trí thực tập</td><td>01/03/2027</td></tr>
                   <tr><td>Sinh viên nhận hồ sơ thực tập</td><td>05 - 07/04/2027</td></tr>
                   <tr style="background: #ede9fe; border: 2px solid #7c3aed;">
-                    <td><strong style="color: #6d28d9; font-size: 12.5px;">🏢 THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
+                    <td><strong style="color: #6d28d9; font-size: 12.5px;">THỰC TẬP TẠI DOANH NGHIỆP 12 TUẦN</strong></td>
                     <td><strong style="color: #6d28d9; font-size: 12.5px;">12/04/2027 - 03/07/2027</strong></td>
                   </tr>
-                  <tr><td>SV nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">07 - 10/07/2027</span></td></tr>
+                  <tr><td>Sinh viên nộp báo cáo Thực tập tốt nghiệp, Chuyên đề / Khóa luận tốt nghiệp</td><td><span style="background: #fee2e2; color: #b91c1c; font-weight: 700; padding: 2px 6px; border-radius: 4px;">07 - 10/07/2027</span></td></tr>
                   <tr><td>- Hội đồng đánh giá Khóa luận tốt nghiệp<br>- Công bố kết quả cho sinh viên</td><td>14 - 21/07/2027</td></tr>
                 </tbody>
               </table>
@@ -422,7 +452,7 @@ const SHGVCN_DATA = {
 
           <!-- 2.3 & 2.4 -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; margin-top: 14px;">
-            <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 12px; padding: 12px;">
+            <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 12px; padding: 14px;">
               <strong style="color: #b45309; font-size: 13.5px; display: block; margin-bottom: 8px;">2.3. TỐT NGHIỆP KHÓA 2023</strong>
               <div class="info-table-wrap" style="margin: 0; background: white;">
                 <table class="info-table" style="font-size: 12px;">
@@ -436,7 +466,7 @@ const SHGVCN_DATA = {
               </div>
             </div>
 
-            <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 12px;">
+            <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 14px;">
               <strong style="color: #15803d; font-size: 13.5px; display: block; margin-bottom: 8px;">2.4. LỄ TRAO BẰNG TỐT NGHIỆP NĂM 2027</strong>
               <div class="info-table-wrap" style="margin: 0; background: white;">
                 <table class="info-table" style="font-size: 12px;">
