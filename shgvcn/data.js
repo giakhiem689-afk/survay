@@ -1137,10 +1137,289 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div style="text-align: center; margin: 10px 0;">
-            <div style="background: #ffffff; border-radius: 16px; padding: 12px; border: 1.5px solid #bbf7d0; box-shadow: 0 4px 20px rgba(5,150,105,0.08); display: inline-block; max-width: 100%;">
-              <img src="assets/PP_Bangthongtin.webp?v=27.0.0" alt="Một số giải pháp hỗ trợ sinh viên học tập hiệu quả" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.06);" loading="lazy">
+          <!-- Header Banner -->
+          <div style="text-align: center; margin-bottom: 24px;">
+            <div style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f2b52 0%, #1e3a8a 100%); color: white; padding: 12px 28px; border-radius: 100px; box-shadow: 0 4px 16px rgba(15,43,82,0.25); border: 2px solid #38bdf8;">
+              <span style="font-size: 20px; margin-right: 8px;">💡</span>
+              <h3 style="margin: 0; font-size: 16px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">GIẢI PHÁP HỖ TRỢ SINH VIÊN HỌC TẬP</h3>
             </div>
+          </div>
+
+          <!-- Main Infographic Grid (2-Column Balanced Master Grid) -->
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- ROW 1: Card 1 & Card 2 -->
+            <div class="grid-2col" style="gap: 20px; margin: 0;">
+              
+              <!-- 1. ĐỊNH VỊ BẢN THÂN VÀ XÁC ĐỊNH MỤC TIÊU (Vàng / Cam) -->
+              <div style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 2px solid #f59e0b; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(245,158,11,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #fde68a; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(217,119,6,0.4);">1</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #b45309; text-transform: uppercase; line-height: 1.3;">ĐỊNH VỊ BẢN THÂN VÀ<br>XÁC ĐỊNH MỤC TIÊU</h4>
+                  </div>
+                  <span style="font-size: 28px;">🎯</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; flex: 1;">
+                  <!-- Tìm hiểu -->
+                  <div style="background: #ffffff; border: 1.5px solid #fde68a; border-radius: 12px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 12px; color: #b45309; margin-bottom: 6px; text-align: center; background: #fef3c7; padding: 3px 6px; border-radius: 6px;">Tìm hiểu</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: #334155; text-align: justify;">
+                      <li>• Bạn muốn đạt được điều gì trong việc học?</li>
+                      <li>• Vì sao bạn muốn đạt được điều đó?</li>
+                      <li>• Việc học sẽ giúp ích gì cho bạn?</li>
+                    </ul>
+                  </div>
+
+                  <!-- Xác định -->
+                  <div style="background: #ffffff; border: 1.5px solid #fde68a; border-radius: 12px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 12px; color: #b45309; margin-bottom: 6px; text-align: center; background: #fef3c7; padding: 3px 6px; border-radius: 6px;">Xác định</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: #334155; text-align: justify;">
+                      <li>• Nhìn lại tình hình học tập hiện tại của bạn: kết quả học tập, môn nào đang học tốt và môn nào đang gặp khó khăn.</li>
+                      <li>• Xác định điểm mạnh và điểm yếu của bản thân. Phát huy điểm mạnh, cải thiện điểm yếu.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Đặt mục tiêu và theo dõi -->
+                  <div style="background: #ffffff; border: 1.5px solid #fde68a; border-radius: 12px; padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 12px; color: #b45309; margin-bottom: 6px; text-align: center; background: #fef3c7; padding: 3px 6px; border-radius: 6px;">Đặt mục tiêu & theo dõi</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: #334155; text-align: justify;">
+                      <li>• Đặt mục tiêu ngắn hạn cho từng tuần hoặc từng tháng.</li>
+                      <li>• Đặt mục tiêu dài hạn trong 3 - 5 năm.</li>
+                      <li>• Thường xuyên kiểm tra lại mục tiêu và kết quả đã đạt được để biết mình đang tiến bộ đến đâu và cần thay đổi điều gì.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. TỪNG BƯỚC XÂY DỰNG KỶ LUẬT VÀ Ý THỨC HỌC TẬP (Xanh Lá) -->
+              <div style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 2px solid #16a34a; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(22,163,74,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #bbf7d0; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #22c55e 0%, #15803d 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(21,128,61,0.4);">2</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #15803d; text-transform: uppercase; line-height: 1.3;">TỪNG BƯỚC XÂY DỰNG<br>KỶ LUẬT VÀ Ý THỨC HỌC TẬP</h4>
+                  </div>
+                  <span style="font-size: 28px;">📅⏰</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; flex: 1;">
+                  <!-- Xây dựng thói quen -->
+                  <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #15803d; margin-bottom: 5px; text-align: center; background: #dcfce7; padding: 2px 4px; border-radius: 6px;">Xây dựng thói quen</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Đi học và thực hiện các công việc đúng giờ.</li>
+                      <li>- Chuẩn bị bài và tài liệu trước khi đến lớp.</li>
+                      <li>- Dành một khoảng thời gian để học mỗi ngày, thay vì chỉ học khi gần đến ngày thi.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Quản lý thời gian -->
+                  <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #15803d; margin-bottom: 5px; text-align: center; background: #dcfce7; padding: 2px 4px; border-radius: 6px;">Quản lý thời gian</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Lập Thời gian biểu.</li>
+                      <li>- Lập danh sách các việc cần làm.</li>
+                      <li>- Sắp xếp thứ tự ưu tiên các công việc, đâu là việc cần tập trung làm ngay, sau đó mới đến công việc ít quan trọng hơn.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Loại bỏ trì hoãn -->
+                  <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #15803d; margin-bottom: 5px; text-align: center; background: #dcfce7; padding: 2px 4px; border-radius: 6px;">Loại bỏ trì hoãn</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Nếu một công việc quá lớn, hãy chia thành nhiều việc nhỏ để dễ bắt đầu và dễ hoàn thành hơn.</li>
+                      <li>- Sau khi hoàn thành một việc nhỏ, bạn có thể tự thưởng cho mình để tạo thêm động lực tiếp tục.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Môi trường học tập -->
+                  <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #15803d; margin-bottom: 5px; text-align: center; background: #dcfce7; padding: 2px 4px; border-radius: 6px;">Môi trường học tập</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Chuẩn bị một góc học tập phù hợp để bạn có thể tập trung.</li>
+                      <li>- Giảm những yếu tố dễ làm bạn mất tập trung khi học, ví dụ: tiếng ồn, điện thoại hoặc các hoạt động không liên quan như lướt mạng xã hội.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 2: Card 3 & Card 4 -->
+            <div class="grid-2col" style="gap: 20px; margin: 0;">
+              
+              <!-- 3. PHƯƠNG PHÁP HỌC TẬP (Hồng / Đỏ) -->
+              <div style="background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border: 2px solid #f43f5e; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(244,63,94,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #fecdd3; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(225,29,72,0.4);">3</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #be123c; text-transform: uppercase;">PHƯƠNG PHÁP HỌC TẬP</h4>
+                  </div>
+                  <span style="font-size: 28px;">📚</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 8px; flex: 1;">
+                  <!-- Xây dựng nhóm học tập -->
+                  <div style="background: #ffffff; border: 1.5px solid #fecdd3; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #be123c; margin-bottom: 5px; text-align: center; background: #ffe4e6; padding: 2px 4px; border-radius: 6px;">Xây dựng nhóm học tập</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Tìm một người bạn có cùng mục tiêu để cùng học, nhắc nhở và hỗ trợ nhau tiến bộ.</li>
+                      <li>- Xây dựng các nhóm / cộng đồng cùng học tập.</li>
+                      <li>- Tham gia các câu lạc bộ học thuật.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Quản lý học tập -->
+                  <div style="background: #ffffff; border: 1.5px solid #fecdd3; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #be123c; margin-bottom: 5px; text-align: center; background: #ffe4e6; padding: 2px 4px; border-radius: 6px;">Quản lý học tập</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Lập kế hoạch học tập, theo dõi và đánh giá việc thực hiện.</li>
+                      <li>- Biến một mục tiêu chung thành những việc cụ thể.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Hiểu sâu bài học -->
+                  <div style="background: #ffffff; border: 1.5px solid #fecdd3; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #be123c; margin-bottom: 5px; text-align: center; background: #ffe4e6; padding: 2px 4px; border-radius: 6px;">Hiểu sâu bài học</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155; text-align: justify;">
+                      <li>- Giải thích / thuyết trình lại chủ đề vừa học với bạn bè.</li>
+                      <li>- Suy nghĩ và nhìn vấn đề từ nhiều góc độ.</li>
+                      <li>- Chủ động phát biểu và đặt câu hỏi với giảng viên.</li>
+                    </ul>
+                  </div>
+
+                  <!-- Quote Callout -->
+                  <div style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%); border: 1.5px dashed #f43f5e; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+                    <strong style="color: #be123c; font-size: 11.5px; line-height: 1.4; display: block; margin-bottom: 4px;">“Hành trình vạn dặm, bắt đầu từ MỘT BƯỚC CHÂN”</strong>
+                    <span style="font-size: 10.5px; color: #881337; line-height: 1.3;">Hãy tập trung vào từng hành động nhỏ và cố gắng thực hiện.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. SỰ HỖ TRỢ LUÔN DÀNH CHO NHỮNG NGƯỜI BIẾT LÊN TIẾNG TÌM KIẾM NÓ (Tím / Chàm) -->
+              <div style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 2px solid #8b5cf6; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(139,92,246,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #e9d5ff; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(109,40,217,0.4);">4</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #6d28d9; line-height: 1.3;">“Sự hỗ trợ luôn dành cho những người biết lên tiếng tìm kiếm nó”</h4>
+                  </div>
+                  <span style="font-size: 28px;">🎧💬</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; flex: 1;">
+                  <!-- Khi nào cần tìm hỗ trợ -->
+                  <div style="background: #ffffff; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 12px; color: #6d28d9; margin-bottom: 6px; background: #f3e8ff; padding: 3px 6px; border-radius: 6px; text-align: center;">Khi nào cần tìm hỗ trợ?</div>
+                    <div style="font-weight: 900; color: #b91c1c; font-size: 13px; margin-bottom: 4px; text-align: center;">- BẤT CỨ KHI NÀO!</div>
+                    <p style="font-size: 11.5px; color: #334155; line-height: 1.45; margin: 0; text-align: justify;">
+                      - Không có một quy tắc cố định, việc tìm kiếm sự hỗ trợ không đánh giá bạn, nó cho thấy bạn đang nỗ lực tìm cách giải quyết vấn đề của mình.
+                    </p>
+                  </div>
+
+                  <!-- Nơi Hỗ trợ -->
+                  <div style="background: #ffffff; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 12px; color: #6d28d9; margin-bottom: 6px; background: #f3e8ff; padding: 3px 6px; border-radius: 6px; text-align: center;">Nơi Hỗ trợ?</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11.5px; color: #334155;">
+                      <li>• <strong style="color: #0284c7;">Trung tâm Hỗ trợ học vụ.</strong></li>
+                      <li>• Khoa, Giảng viên, Giáo viên chủ nhiệm.</li>
+                      <li>• Phòng Ban-Đơn vị Nhà Trường.</li>
+                      <li>• Gia đình, bạn bè.</li>
+                      <li>• ...</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 3: Card 5 & Card 6 -->
+            <div class="grid-2col" style="gap: 20px; margin: 0;">
+              
+              <!-- 5. CHĂM SÓC SỨC KHỎE TINH THẦN (Xanh Dương) -->
+              <div style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 2px solid #0284c7; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(2,132,199,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #bae6fd; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(3,105,161,0.4);">5</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #0369a1; text-transform: uppercase;">CHĂM SÓC SỨC KHỎE TINH THẦN</h4>
+                  </div>
+                  <span style="font-size: 28px;">💓🍃</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; flex: 1;">
+                  <!-- Thói quen tinh thần -->
+                  <div style="background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #334155;">
+                      <li>• <strong>Quản lý stress:</strong> Nhận diện, thư giãn.</li>
+                      <li>• <strong>Ngủ đủ giấc:</strong> <span style="background:#e0f2fe; color:#0369a1; padding:1px 6px; border-radius:4px; font-weight:700;">7 - 9 tiếng / ngày.</span></li>
+                      <li>• <strong>Chăm Vận động:</strong> <span style="background:#e0f2fe; color:#0369a1; padding:1px 6px; border-radius:4px; font-weight:700;">30 phút / ngày.</span></li>
+                      <li>• <strong>Đảm bảo Chế độ dinh dưỡng.</strong></li>
+                    </ul>
+                  </div>
+
+                  <!-- Kênh hỗ trợ tâm lý -->
+                  <div style="background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; font-size: 11.5px; color: #334155; text-align: justify;">
+                      <li>• <strong>Tìm hiểu thêm về Sức khỏe tinh thần</strong> (UEF tổ chức rất nhiều hoạt động, sự kiện về chủ đề này).</li>
+                      <li>• <strong>Liên hệ Trung tâm Tham vấn tâm lý và Hỗ trợ pháp luật</strong> nếu cần hỗ trợ về sức khỏe tinh thần.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. THEO DÕI TIẾN ĐỘ HẰNG NGÀY (Xanh Ngọc / Teal) -->
+              <div style="background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%); border: 2px solid #0891b2; border-radius: 18px; padding: 16px; box-shadow: 0 4px 16px rgba(8,145,178,0.1); display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid #a5f3fc; padding-bottom: 10px; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%); color: white; border-radius: 50%; font-size: 16px; font-weight: 900; box-shadow: 0 2px 8px rgba(14,116,144,0.4);">6</span>
+                    <h4 style="margin: 0; font-size: 13.5px; font-weight: 900; color: #0e7490; text-transform: uppercase;">THEO DÕI TIẾN ĐỘ HẰNG NGÀY</h4>
+                  </div>
+                  <span style="font-size: 28px;">📈</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; flex: 1;">
+                  <!-- Ngày -->
+                  <div style="background: #ffffff; border: 1.5px solid #a5f3fc; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #0e7490; margin-bottom: 5px; text-align: center; background: #cffafe; padding: 2px 4px; border-radius: 6px;">🕒 Ngày</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: #334155;">
+                      <li>- Thức dậy sớm.</li>
+                      <li>- Đi học đúng giờ.</li>
+                      <li>- Ngủ đủ giấc.</li>
+                      <li>- Học bài & làm bài.</li>
+                      <li>- ...</li>
+                    </ul>
+                  </div>
+
+                  <!-- Tuần -->
+                  <div style="background: #ffffff; border: 1.5px solid #a5f3fc; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #0e7490; margin-bottom: 5px; text-align: center; background: #cffafe; padding: 2px 4px; border-radius: 6px;">⏳ Tuần</div>
+                    <p style="font-size: 10.5px; color: #334155; line-height: 1.4; margin: 0; text-align: justify;">
+                      <strong>Hãy nhìn lại:</strong> Tiếp tục duy trì những điều đã làm tốt, tìm hiểu nguyên nhân và cải thiện những việc chưa làm tốt.
+                    </p>
+                  </div>
+
+                  <!-- Mục tiêu -->
+                  <div style="background: #ffffff; border: 1.5px solid #a5f3fc; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #0e7490; margin-bottom: 5px; text-align: center; background: #cffafe; padding: 2px 4px; border-radius: 6px;">📝 Mục tiêu</div>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 10.5px; color: #334155; text-align: justify;">
+                      <li>- Kiểm tra xem bạn đã tiến được bao nhiêu so với mục tiêu đã đặt ra.</li>
+                      <li>- Tìm hiểu nguyên nhân và điều chỉnh phần kế hoạch chưa phù hợp (nếu có).</li>
+                    </ul>
+                  </div>
+
+                  <!-- Phần thưởng -->
+                  <div style="background: #ffffff; border: 1.5px solid #a5f3fc; border-radius: 12px; padding: 9px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 800; font-size: 11.5px; color: #0e7490; margin-bottom: 5px; text-align: center; background: #cffafe; padding: 2px 4px; border-radius: 6px;">😊 Phần thưởng</div>
+                    <p style="font-size: 10.5px; color: #334155; line-height: 1.35; margin: 0; text-align: justify;">
+                      Chia mục tiêu lớn thành nhiều mục tiêu nhỏ. Khi hoàn thành một mục tiêu nhỏ, bạn có thể tự thưởng để duy trì động lực.<br>
+                      <em>VD: 30 phút chơi game khi đã hoàn thành bài tập.</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
