@@ -354,35 +354,97 @@ const SHGVCN_DATA = {
             </div>
             <p style="font-size: 12.5px; color: #1e3a8a; margin-bottom: 10px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
             
-            <!-- Danh sách 10 ngành xếp thành 2 cột ngăn nắp -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin-bottom: 14px;">
+                        <!-- Danh sách 10 ngành xếp thành 10 thẻ độc lập trong lưới 2 cột đối xứng -->
+            <div class="grid-2col" style="gap: 10px; margin-bottom: 16px;">
               
-              <!-- Cột 1: Khoa Tài chính - Kế toán (5 ngành) -->
-              <div style="background: white; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                <div style="font-weight: 800; font-size: 12px; color: #0369a1; border-bottom: 1px solid #e0f2fe; padding-bottom: 4px; margin-bottom: 6px;">
-                  Khoa Tài chính - Kế toán (5 ngành)
+              <!-- Ngành 1 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #0284c7; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">1</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Kế toán</strong>
                 </div>
-                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #334155;">
-                  <li><strong>1.</strong> Kế toán</li>
-                  <li><strong>2.</strong> Kiểm toán</li>
-                  <li><strong>3.</strong> Tài chính - Ngân hàng</li>
-                  <li><strong>4.</strong> Tài chính quốc tế</li>
-                  <li><strong>5.</strong> Công nghệ tài chính</li>
-                </ul>
+                <span style="font-size: 11px; color: #0369a1; background: #f0f9ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0f2fe;">Khoa Tài chính - Kế toán</span>
               </div>
 
-              <!-- Cột 2: Các Khoa còn lại (5 ngành) -->
-              <div style="background: white; border: 1px solid #bae6fd; border-radius: 8px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                <div style="font-weight: 800; font-size: 12px; color: #0369a1; border-bottom: 1px solid #e0f2fe; padding-bottom: 4px; margin-bottom: 6px;">
-                  Khoa Quản trị kinh doanh, Marketing, Kinh tế (5 ngành)
+              <!-- Ngành 2 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #0284c7; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">2</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Kiểm toán</strong>
                 </div>
-                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #334155;">
-                  <li><strong>6.</strong> Kinh doanh thương mại <small style="color: #64748b;">(Khoa Quản trị kinh doanh)</small></li>
-                  <li><strong>7.</strong> Marketing <small style="color: #64748b;">(Khoa Marketing)</small></li>
-                  <li><strong>8.</strong> Digital Marketing <small style="color: #64748b;">(Khoa Marketing)</small></li>
-                  <li><strong>9.</strong> Quản trị sự kiện <small style="color: #64748b;">(Khoa Marketing)</small></li>
-                  <li><strong>10.</strong> Kinh doanh quốc tế <small style="color: #64748b;">(Khoa Kinh tế)</small></li>
-                </ul>
+                <span style="font-size: 11px; color: #0369a1; background: #f0f9ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0f2fe;">Khoa Tài chính - Kế toán</span>
+              </div>
+
+              <!-- Ngành 3 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #0284c7; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">3</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Tài chính - Ngân hàng</strong>
+                </div>
+                <span style="font-size: 11px; color: #0369a1; background: #f0f9ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0f2fe;">Khoa Tài chính - Kế toán</span>
+              </div>
+
+              <!-- Ngành 4 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #0284c7; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">4</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Tài chính quốc tế</strong>
+                </div>
+                <span style="font-size: 11px; color: #0369a1; background: #f0f9ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0f2fe;">Khoa Tài chính - Kế toán</span>
+              </div>
+
+              <!-- Ngành 5 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #bae6fd; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #0284c7; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">5</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Công nghệ tài chính</strong>
+                </div>
+                <span style="font-size: 11px; color: #0369a1; background: #f0f9ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0f2fe;">Khoa Tài chính - Kế toán</span>
+              </div>
+
+              <!-- Ngành 6 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #fed7aa; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #ea580c; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">6</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Kinh doanh thương mại</strong>
+                </div>
+                <span style="font-size: 11px; color: #c2410c; background: #fff7ed; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #ffedd5;">Khoa Quản trị kinh doanh</span>
+              </div>
+
+              <!-- Ngành 7 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #db2777; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">7</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Marketing</strong>
+                </div>
+                <span style="font-size: 11px; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #fce7f3;">Khoa Marketing</span>
+              </div>
+
+              <!-- Ngành 8 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #db2777; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">8</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Digital Marketing</strong>
+                </div>
+                <span style="font-size: 11px; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #fce7f3;">Khoa Marketing</span>
+              </div>
+
+              <!-- Ngành 9 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #db2777; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">9</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Quản trị sự kiện</strong>
+                </div>
+                <span style="font-size: 11px; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #fce7f3;">Khoa Marketing</span>
+              </div>
+
+              <!-- Ngành 10 -->
+              <div style="display: flex; align-items: center; justify-content: space-between; background: #ffffff; border: 1.5px solid #c7d2fe; border-radius: 10px; padding: 10px 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #4f46e5; color: white; border-radius: 6px; font-weight: 800; font-size: 11.5px;">10</span>
+                  <strong style="color: #0f2b52; font-size: 12.5px;">Kinh doanh quốc tế</strong>
+                </div>
+                <span style="font-size: 11px; color: #4338ca; background: #eef2ff; padding: 2px 6px; border-radius: 4px; font-weight: 600; border: 1px solid #e0e7ff;">Khoa Kinh tế</span>
               </div>
 
             </div>
