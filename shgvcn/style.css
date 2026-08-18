@@ -855,3 +855,19 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =========================================================
+   TEXT JUSTIFICATION FOR ALL CARDS AND CONTENT BLOCKS
+   ========================================================= */
+.info-bento-card,
+.info-bento-card p,
+.bento-desc,
+.bento-list li,
+.topic-detail p,
+.callout-text,
+.callout-text p,
+.info-alert-callout .callout-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
