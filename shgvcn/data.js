@@ -34,19 +34,19 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13.5px; font-weight: 700; color: var(--uef-blue-dark); margin-bottom: 12px;">
+          <p style="font-size: 14px; font-weight: 800; color: #0f2b52; margin-bottom: 14px;">
             Trung tâm Hỗ trợ học vụ thực hiện các nhiệm vụ chính sau:
           </p>
 
           <div class="grid-5-balanced">
             <!-- Row 1: 2 Cards -->
             <div class="grid-5-row-2">
-              <div class="info-bento-card bento-blue">
+              <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd;">
                 <div class="bento-header">
-                  <span class="bento-icon">1️⃣</span>
-                  <h4 class="bento-title">1. Tiếp nhận, tư vấn và giải đáp</h4>
+                  <span class="bento-icon" style="background: #0284c7; color: white; border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.3);">💬</span>
+                  <h4 class="bento-title" style="color: #0369a1;">1. Tiếp nhận, tư vấn và giải đáp</h4>
                 </div>
-                <p class="bento-desc">Tiếp nhận, tư vấn và giải đáp cho sinh viên/phụ huynh về:</p>
+                <p class="bento-desc" style="color: #334155;">Tiếp nhận, tư vấn và giải đáp cho sinh viên/phụ huynh về:</p>
                 <ul class="bento-list">
                   <li>Các quy định, quy chế;</li>
                   <li>Các thông báo liên quan đến vấn đề học tập;</li>
@@ -57,12 +57,12 @@ const SHGVCN_DATA = {
                 </ul>
               </div>
 
-              <div class="info-bento-card bento-green">
+              <div class="info-bento-card bento-green" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0;">
                 <div class="bento-header">
-                  <span class="bento-icon">2️⃣</span>
-                  <h4 class="bento-title">2. Giải quyết thủ tục học vụ</h4>
+                  <span class="bento-icon" style="background: #059669; color: white; border: none; box-shadow: 0 2px 6px rgba(5,150,105,0.3);">📝</span>
+                  <h4 class="bento-title" style="color: #15803d;">2. Giải quyết thủ tục học vụ</h4>
                 </div>
-                <p class="bento-desc">Giải quyết các thủ tục học vụ cho sinh viên:</p>
+                <p class="bento-desc" style="color: #334155;">Giải quyết các thủ tục học vụ cho sinh viên:</p>
                 <ul class="bento-list">
                   <li>Bảo lưu kết quả học tập;</li>
                   <li>Nhập học lại;</li>
@@ -76,32 +76,32 @@ const SHGVCN_DATA = {
 
             <!-- Row 2: 3 Cards -->
             <div class="grid-5-row-3">
-              <div class="info-bento-card bento-red">
+              <div class="info-bento-card bento-red" style="background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border: 1.5px solid #fecdd3;">
                 <div class="bento-header">
-                  <span class="bento-icon">3️⃣</span>
-                  <h4 class="bento-title">3. Chăm sóc, hỗ trợ học vụ</h4>
+                  <span class="bento-icon" style="background: #dc2626; color: white; border: none; box-shadow: 0 2px 6px rgba(220,38,38,0.3);">❤️</span>
+                  <h4 class="bento-title" style="color: #b91c1c;">3. Chăm sóc, hỗ trợ học vụ</h4>
                 </div>
-                <p class="bento-desc">
+                <p class="bento-desc" style="color: #334155;">
                   Chăm sóc, hỗ trợ học vụ đối với sinh viên có kết quả học tập chưa tốt, tư vấn và đề xuất các phương án giúp sinh viên cải thiện kết quả học tập.
                 </p>
               </div>
 
-              <div class="info-bento-card bento-purple">
+              <div class="info-bento-card bento-purple" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff;">
                 <div class="bento-header">
-                  <span class="bento-icon">4️⃣</span>
-                  <h4 class="bento-title">4. Phối hợp với Khoa</h4>
+                  <span class="bento-icon" style="background: #7c3aed; color: white; border: none; box-shadow: 0 2px 6px rgba(124,58,237,0.3);">🤝</span>
+                  <h4 class="bento-title" style="color: #6d28d9;">4. Phối hợp với Khoa</h4>
                 </div>
-                <p class="bento-desc">
+                <p class="bento-desc" style="color: #334155;">
                   Phối hợp với Khoa để tư vấn chuyên ngành, chương trình và lộ trình học cho sinh viên/phụ huynh, qua đó giúp sinh viên xây dựng: <strong>Kế hoạch học tập hợp lý; Phương pháp học hiệu quả.</strong>
                 </p>
               </div>
 
-              <div class="info-bento-card bento-amber">
+              <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a;">
                 <div class="bento-header">
-                  <span class="bento-icon">5️⃣</span>
-                  <h4 class="bento-title">5. Thông báo, cung cấp thông tin</h4>
+                  <span class="bento-icon" style="background: #d97706; color: white; border: none; box-shadow: 0 2px 6px rgba(217,119,6,0.3);">📢</span>
+                  <h4 class="bento-title" style="color: #b45309;">5. Thông báo, cung cấp thông tin</h4>
                 </div>
-                <p class="bento-desc">
+                <p class="bento-desc" style="color: #334155;">
                   Thông báo, cung cấp thông tin đến sinh viên/phụ huynh về: Kế hoạch giảng dạy - học tập của học kỳ/năm học; Các lưu ý về học vụ; Kết quả học tập của sinh viên; Các thông tin liên quan khác.
                 </p>
               </div>
@@ -109,29 +109,29 @@ const SHGVCN_DATA = {
           </div>
 
           <!-- Thời gian làm việc -->
-          <div class="info-alert-callout callout-blue">
-            <span class="callout-icon">⏰</span>
+          <div class="info-alert-callout callout-blue" style="box-shadow: 0 2px 8px rgba(2,132,199,0.08);">
+            <span class="callout-icon" style="font-size: 24px;">⏰</span>
             <div class="callout-text">
-              <strong>Thời gian làm việc:</strong><br>
+              <strong style="color: #0369a1; font-size: 13.5px;">Thời gian làm việc:</strong><br>
               • Từ Thứ Hai đến Thứ Sáu và sáng Thứ Bảy.<br>
-              • Buổi sáng: <strong>07:30 - 11:30</strong>.<br>
-              • Buổi chiều: <strong>13:30 - 16:30</strong>.<br>
-              • <strong>Liên hệ trực tiếp:</strong> Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.
+              • Buổi sáng: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">07:30 - 11:30</strong>.<br>
+              • Buổi chiều: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">13:30 - 16:30</strong>.<br>
+              • <strong>Liên hệ trực tiếp:</strong> 📍 Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.
             </div>
           </div>
 
           <!-- Liên hệ trực tuyến -->
-          <div class="info-alert-callout callout-green">
-            <span class="callout-icon">📞</span>
+          <div class="info-alert-callout callout-green" style="box-shadow: 0 2px 8px rgba(5,150,105,0.08);">
+            <span class="callout-icon" style="font-size: 24px;">📞</span>
             <div class="callout-text">
-              <strong>Liên hệ trực tuyến:</strong><br>
-              • <strong>Gmail:</strong> <a href="mailto:hotrohocvu@uef.edu.vn">hotrohocvu@uef.edu.vn</a><br>
-              • <strong>Website:</strong> <a href="https://uef.edu.vn/tththv" target="_blank">uef.edu.vn/tththv</a><br>
-              • <strong>Zalopage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="http://zalo.me/2106368086678348926" target="_blank">zalo.me/2106368086678348926</a>)<br>
-              • <strong>Fanpage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="https://facebook.com/TrungtamHTHV" target="_blank">facebook.com/TrungtamHTHV</a>)<br>
-              • <strong>Chat Zalo:</strong> 0908 560 999<br>
-              • <strong>Hotline:</strong> 028 2236 1111 hoặc 028 2235 1111<br>
-              • <strong>Tổng đài:</strong> 028 2236 3333 hoặc 070 397 7799 số nội bộ: <code>2050, 2051, 2052, 2053, 2054, 2055, 2056, 2058, 2059, 2062</code>
+              <strong style="color: #15803d; font-size: 13.5px;">Liên hệ trực tuyến:</strong><br>
+              • <strong>Gmail:</strong> <a href="mailto:hotrohocvu@uef.edu.vn" style="color:#0284c7; font-weight:700;">hotrohocvu@uef.edu.vn</a><br>
+              • <strong>Website:</strong> <a href="https://uef.edu.vn/tththv" target="_blank" style="color:#0284c7; font-weight:700;">uef.edu.vn/tththv</a><br>
+              • <strong>Zalopage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="http://zalo.me/2106368086678348926" target="_blank" style="color:#0284c7; font-weight:700;">zalo.me/2106368086678348926</a>)<br>
+              • <strong>Fanpage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="https://facebook.com/TrungtamHTHV" target="_blank" style="color:#0284c7; font-weight:700;">facebook.com/TrungtamHTHV</a>)<br>
+              • <strong>Chat Zalo:</strong> <strong style="color:#15803d;">0908 560 999</strong><br>
+              • <strong>Hotline:</strong> <strong style="color:#dc2626;">028 2236 1111</strong> hoặc <strong style="color:#dc2626;">028 2235 1111</strong><br>
+              • <strong>Tổng đài:</strong> <strong style="color:#0f2b52;">028 2236 3333</strong> hoặc <strong style="color:#0f2b52;">070 397 7799</strong> số nội bộ: <code style="background:#e0f2fe; color:#0369a1; padding:2px 4px; border-radius:4px; font-weight:700;">2050, 2051, 2052, 2053, 2054, 2055, 2056, 2058, 2059, 2062</code>
             </div>
           </div>
 
@@ -151,31 +151,31 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-red">
+          <div class="grid-2col">
+            <div class="info-bento-card bento-red" style="background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border: 1.5px solid #fecdd3;">
               <div class="bento-header">
-                <span class="bento-icon">🪪</span>
-                <h4 class="bento-title">1. Đeo thẻ sinh viên khi đến trường</h4>
+                <span class="bento-icon" style="background: #dc2626; color: white; border: none; box-shadow: 0 2px 6px rgba(220,38,38,0.3);">🪪</span>
+                <h4 class="bento-title" style="color: #b91c1c;">1. Đeo thẻ sinh viên khi đến trường</h4>
               </div>
               <ul class="bento-list">
-                <li>Sinh viên tham gia thi <strong>phải xuất trình Thẻ Sinh viên</strong>.</li>
-                <li><strong>Hội đồng thi sẽ không giải quyết</strong> trường hợp sinh viên không có Thẻ Sinh viên khi tham gia thi.</li>
+                <li>Sinh viên tham gia thi <strong style="color: #dc2626;">phải xuất trình Thẻ Sinh viên</strong>.</li>
+                <li><strong style="color: #b91c1c;">Hội đồng thi sẽ không giải quyết</strong> trường hợp sinh viên không có Thẻ Sinh viên khi tham gia thi.</li>
                 <li>Khi sinh viên liên hệ với các Phòng/Viện/Trung tâm của Nhà trường để được hỗ trợ, tư vấn hoặc xử lý các vấn đề học vụ, sinh viên cần xuất trình Thẻ Sinh viên để các đơn vị chức năng xác nhận thông tin.</li>
-                <li>Trường hợp quên hoặc mất thẻ, sinh viên liên hệ <strong>Phòng Công tác sinh viên - tầng 6, trụ sở 141 Điện Biên Phủ</strong> để thực hiện cấp Thẻ Sinh viên.</li>
+                <li>Trường hợp quên hoặc mất thẻ, sinh viên liên hệ <strong style="background: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px;">Phòng Công tác sinh viên - tầng 6, trụ sở 141 Điện Biên Phủ</strong> để thực hiện cấp Thẻ Sinh viên.</li>
               </ul>
             </div>
 
-            <div class="info-bento-card bento-blue">
+            <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd;">
               <div class="bento-header">
-                <span class="bento-icon">📧</span>
-                <h4 class="bento-title">2. Thường xuyên kiểm tra email, tin nhắn từ Nhà trường</h4>
+                <span class="bento-icon" style="background: #0284c7; color: white; border: none; box-shadow: 0 2px 6px rgba(2,132,199,0.3);">📧</span>
+                <h4 class="bento-title" style="color: #0369a1;">2. Thường xuyên kiểm tra email, tin nhắn từ Nhà trường</h4>
               </div>
               <ul class="bento-list">
-                <li>Sinh viên cần đăng nhập và sử dụng <strong>Email UEF</strong>, thường xuyên kiểm tra email và tin nhắn để tiếp nhận các thông tin, thông báo quan trọng về học tập từ: <strong>Trung tâm Hỗ trợ học vụ; Khoa; Các Phòng/Ban chức năng của Nhà trường</strong>.</li>
+                <li>Sinh viên cần đăng nhập và sử dụng <strong style="color: #0284c7;">Email UEF</strong>, thường xuyên kiểm tra email và tin nhắn để tiếp nhận các thông tin, thông báo quan trọng về học tập từ: <strong>Trung tâm Hỗ trợ học vụ; Khoa; Các Phòng/Ban chức năng của Nhà trường</strong>.</li>
                 <li>Trường hợp cần hỗ trợ về tài khoản Email UEF, sinh viên liên hệ <strong>Phòng Công nghệ thông tin và Chuyển đổi số</strong>:
-                  <br>+ Trực tiếp: <strong>Tầng 4, Trụ sở 141-145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh</strong>
-                  <br>+ Email: <code>it@uef.edu.vn</code>
-                  <br>+ Điện thoại: <code>028 2236 3333 - ext 2160</code>.
+                  <br>+ Trực tiếp: <span style="background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Tầng 4, Trụ sở 141-145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh</span>
+                  <br>+ Email: <code style="background: #f1f5f9; color: #0284c7; font-weight: 700;">it@uef.edu.vn</code>
+                  <br>+ Điện thoại: <strong style="color: #0f2b52;">028 2236 3333 - ext 2160</strong>.
                 </li>
               </ul>
             </div>
@@ -186,7 +186,7 @@ const SHGVCN_DATA = {
     },
 
     // -------------------------------------------------------------------------
-    // MỤC III: KẾ HOẠCH HỌC TẬP
+    // MỤC III: KẾ HOẠCH HỌC TẬP (Giữ nguyên phần đã hoàn thiện)
     // -------------------------------------------------------------------------
     {
       id: "ke-hoach-hoc-tap",
@@ -354,7 +354,7 @@ const SHGVCN_DATA = {
             </div>
             <p style="font-size: 12.5px; color: #1e3a8a; margin-bottom: 10px;">Khóa 2023 - Nhóm 1 (Thực tập tốt nghiệp đợt tháng 10/2026), gồm các ngành:</p>
             
-                        <!-- Danh sách 10 ngành xếp thành 10 thẻ độc lập trong lưới 2 cột đối xứng -->
+            <!-- Danh sách 10 ngành xếp thành 10 thẻ độc lập trong lưới 2 cột đối xứng -->
             <div class="grid-2col" style="gap: 10px; margin-bottom: 16px;">
               
               <!-- Ngành 1 -->
@@ -543,7 +543,7 @@ const SHGVCN_DATA = {
           </div>
 
         </div>
-`
+      `
     },
 
     // -------------------------------------------------------------------------
@@ -558,43 +558,64 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13.5px; font-weight: 700; color: var(--uef-blue-dark); margin-bottom: 12px;">
+          <p style="font-size: 14px; font-weight: 800; color: #0f2b52; margin-bottom: 14px;">
             Để được xét tốt nghiệp, sinh viên cần đảm bảo đầy đủ các điều kiện:
           </p>
 
           <div class="grid-7-balanced">
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">1️⃣</span><h4 class="bento-title">Kỷ luật & Tư cách</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); border: 1.5px solid #cbd5e1; border-left: 4px solid #0f2b52;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #0f2b52; color: white; border: none;">1️⃣</span>
+                <h4 class="bento-title" style="color: #0f2b52;">Kỷ luật & Tư cách</h4>
+              </div>
               <p class="bento-desc">- Tại thời điểm xét tốt nghiệp, không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">2️⃣</span><h4 class="bento-title">Học phần & Tín chỉ</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #0284c7; color: white; border: none;">2️⃣</span>
+                <h4 class="bento-title" style="color: #0369a1;">Học phần & Tín chỉ</h4>
+              </div>
               <p class="bento-desc">- Tích lũy đủ học phần, số tín chỉ và hoàn thành các nội dung bắt buộc khác theo yêu cầu của chương trình đào tạo;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">3️⃣</span><h4 class="bento-title">Điểm trung bình tích lũy</h4></div>
-              <p class="bento-desc">- Điểm trung bình tích lũy toàn khóa đạt từ <strong>2.00 trở lên</strong>;</p>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #059669; color: white; border: none;">3️⃣</span>
+                <h4 class="bento-title" style="color: #15803d;">Điểm trung bình tích lũy</h4>
+              </div>
+              <p class="bento-desc">- Điểm trung bình tích lũy toàn khóa đạt từ <strong style="color: #15803d; font-size: 13.5px; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">2.00 trở lên</strong>;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">4️⃣</span><h4 class="bento-title">Chuyên đề / Khóa luận tốt nghiệp</h4></div>
-              <p class="bento-desc">- Riêng điểm của học phần Chuyên đề / Khóa luận tốt nghiệp phải đạt từ <strong>điểm C trở lên</strong>;</p>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%); border: 1.5px solid #fed7aa; border-left: 4px solid #ea580c;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #ea580c; color: white; border: none;">4️⃣</span>
+                <h4 class="bento-title" style="color: #c2410c;">Chuyên đề / Khóa luận tốt nghiệp</h4>
+              </div>
+              <p class="bento-desc">- Riêng điểm của học phần Chuyên đề / Khóa luận tốt nghiệp phải đạt từ <strong style="color: #c2410c; font-size: 13.5px; background: #ffedd5; padding: 2px 6px; border-radius: 4px;">điểm C trở lên</strong>;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">5️⃣</span><h4 class="bento-title">GDQP & GDTC</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff; border-left: 4px solid #7c3aed;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #7c3aed; color: white; border: none;">5️⃣</span>
+                <h4 class="bento-title" style="color: #6d28d9;">GDQP & GDTC</h4>
+              </div>
               <p class="bento-desc">- Có Chứng chỉ Giáo dục Quốc phòng và Hoàn thành đủ số học phần Giáo dục thể chất theo quy định;</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">6️⃣</span><h4 class="bento-title">Chuẩn đầu ra</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%); border: 1.5px solid #a5f3fc; border-left: 4px solid #0891b2;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #0891b2; color: white; border: none;">6️⃣</span>
+                <h4 class="bento-title" style="color: #0e7490;">Chuẩn đầu ra</h4>
+              </div>
               <p class="bento-desc">- Có các chứng chỉ khác đạt chuẩn đầu ra theo quy định của Trường;</p>
             </div>
 
-            <div class="info-bento-card bento-green card-full-span">
-              <div class="bento-header"><span class="bento-icon">7️⃣</span><h4 class="bento-title">Học phí & Nghĩa vụ Khác</h4></div>
+            <div class="info-bento-card card-full-span" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-left: 4px solid #d97706;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #d97706; color: white; border: none;">7️⃣</span>
+                <h4 class="bento-title" style="color: #b45309;">Học phí & Nghĩa vụ</h4>
+              </div>
               <p class="bento-desc">- Thanh toán đầy đủ học phí, lệ phí và hoàn thành các nghĩa vụ khác theo quy định của Trường.</p>
             </div>
           </div>
@@ -615,15 +636,15 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card">
-            <div class="placeholder-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: var(--vivid-blue);">
+          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 2px dashed #38bdf8;">
+            <div class="placeholder-icon-wrap" style="background: #e0f2fe; border-color: #bae6fd;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #0284c7;">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
             </div>
-            <h4 class="placeholder-title">V. ĐIỀU KIỆN CHỨNG CHỈ TIẾNG ANH, TIN HỌC CHUẨN ĐẦU RA</h4>
+            <h4 class="placeholder-title" style="color: #0369a1;">V. ĐIỀU KIỆN CHỨNG CHỈ TIẾNG ANH, TIN HỌC CHUẨN ĐẦU RA</h4>
             <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic nội dung chuẩn đầu ra Tiếng Anh & Tin học)</p>
           </div>
 
@@ -643,37 +664,43 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13.5px; font-weight: 700; color: var(--uef-blue-dark); margin-bottom: 8px;">Sinh viên cần:</p>
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-purple">
+          <div class="grid-2col">
+            <!-- Cột 1 -->
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff; border-left: 4px solid #7c3aed;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #7c3aed; color: white; border: none;">🎯</span>
+                <h4 class="bento-title" style="color: #6d28d9;">Sinh viên cần:</h4>
+              </div>
               <ul class="bento-list">
                 <li>1. Đảm bảo tham gia học tập chính xác theo tiến độ và Chương trình đào tạo.</li>
-                <li>2. Đối với các học phần chưa đạt theo tiến độ - bao gồm học phần nhận điểm F hoặc học phần chưa đăng ký theo đúng tiến độ - sinh viên cần: <strong>Theo dõi kế hoạch; Sớm đăng ký; Tham gia học tập; Hoàn thành theo quy định.</strong></li>
-                <li>3. Sinh viên có học phần chưa đạt theo tiến độ cần <strong>liên hệ ngay Trung tâm Hỗ trợ học vụ để được hỗ trợ kịp thời</strong>.</li>
+                <li>2. Đối với các học phần chưa đạt theo tiến độ - bao gồm học phần nhận điểm F hoặc học phần chưa đăng ký theo đúng tiến độ - sinh viên cần: <strong style="color: #6d28d9;">Theo dõi kế hoạch; Sớm đăng ký; Tham gia học tập; Hoàn thành theo quy định.</strong></li>
+                <li>3. Sinh viên có học phần chưa đạt theo tiến độ cần <strong style="color: #dc2626;">liên hệ ngay Trung tâm Hỗ trợ học vụ để được hỗ trợ kịp thời</strong>.</li>
               </ul>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #0284c7; color: white; border: none;">📖</span>
+                <h4 class="bento-title" style="color: #0369a1;">Khái niệm “Học phần chưa đạt theo tiến độ”</h4>
+              </div>
+              <p class="bento-desc">“Học phần chưa đạt theo tiến độ” là học phần sinh viên chưa hoàn thành theo tiến độ, kế hoạch học tập của khóa học, bao gồm:</p>
+              <ul class="bento-list">
+                <li>- Học phần sinh viên đã đăng ký nhưng không đạt; hoặc</li>
+                <li>- Học phần sinh viên chưa đăng ký học.</li>
+              </ul>
+              <p class="bento-desc" style="margin-top: 8px;">Sau khi năm học/học kỳ kết thúc, nếu học phần sinh viên cần hoàn thành theo sơ đồ kế hoạch học tập của năm học/học kỳ đó chưa được hoàn thành thì được xác định là học phần chưa đạt theo tiến độ.</p>
             </div>
           </div>
 
-          <h4 style="font-size: 14.5px; font-weight: 800; color: var(--uef-blue-dark); margin: 20px 0 8px 0;">Khái niệm “Học phần chưa đạt theo tiến độ”</h4>
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 8px;">
-            “Học phần chưa đạt theo tiến độ” là học phần sinh viên chưa hoàn thành theo tiến độ, kế hoạch học tập của khóa học, bao gồm:
-          </p>
-          <ul style="margin-left: 20px; font-size: 13px; margin-bottom: 10px;">
-            <li>- Học phần sinh viên đã đăng ký nhưng không đạt; hoặc</li>
-            <li>- Học phần sinh viên chưa đăng ký học.</li>
-          </ul>
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
-            Sau khi năm học/học kỳ kết thúc, nếu học phần sinh viên cần hoàn thành theo sơ đồ kế hoạch học tập của năm học/học kỳ đó chưa được hoàn thành thì được xác định là học phần chưa đạt theo tiến độ.
-          </p>
-
-          <div class="info-alert-callout callout-blue">
+          <div class="info-alert-callout callout-amber" style="margin-top: 16px;">
             <span class="callout-icon">💡</span>
             <div class="callout-text">
-              <strong>Ví dụ:</strong><br>
+              <strong style="color: #b45309; font-size: 13.5px;">Ví dụ:</strong><br>
               “Pháp luật đại cương” là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1.<br>
               Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này.<br>
               Do đó, Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ.<br><br>
-              <strong>Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.</strong>
+              <strong style="color: #b45309;">Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.</strong>
             </div>
           </div>
 
@@ -693,46 +720,71 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+          <p style="font-size: 13.5px; color: #334155; margin-bottom: 14px;">
             Sinh viên được xếp loại học lực theo Điểm Trung bình học kỳ, Điểm Trung bình năm học hoặc Điểm Trung bình tích lũy (theo thang điểm hệ 4) như sau:
           </p>
 
-          <div class="info-table-wrap">
-            <table class="info-table">
-              <thead><tr><th>Xếp loại</th><th>Điểm trung bình</th></tr></thead>
+          <div class="info-table-wrap" style="box-shadow: 0 4px 14px rgba(15,43,82,0.08); border: 1.5px solid #cbd5e1;">
+            <table class="info-table" style="font-size: 12.5px;">
+              <thead>
+                <tr style="background: linear-gradient(135deg, #0f2b52 0%, #1e3a8a 100%); color: #ffffff;">
+                  <th style="padding: 10px 14px; font-weight: 800; width: 220px;">Xếp loại</th>
+                  <th style="padding: 10px 14px; font-weight: 800;">Điểm trung bình</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr style="background:#f0fdf4;"><td><strong style="color:#15803d;">XUẤT SẮC</strong></td><td>Điểm trung bình từ 3.60 đến 4.00</td></tr>
-                <tr style="background:#f0fdf4;"><td><strong style="color:#15803d;">GIỎI</strong></td><td>Điểm trung bình từ 3.20 đến 3.59</td></tr>
-                <tr><td><strong style="color:#0284c7;">KHÁ</strong></td><td>Điểm trung bình từ 2.50 đến 3.19</td></tr>
-                <tr><td><strong style="color:#d97706;">TRUNG BÌNH</strong></td><td>Điểm trung bình từ 2.00 đến 2.49</td></tr>
-                <tr style="background:#fff1f2;"><td><strong style="color:#dc2626;">YẾU</strong></td><td>Điểm trung bình từ 1.00 đến 1.99</td></tr>
-                <tr style="background:#fee2e2;"><td><strong style="color:#991b1b;">KÉM</strong></td><td>Điểm trung bình dưới 1.00</td></tr>
+                <tr style="background:#f0fdf4; border-bottom: 1px solid #bbf7d0;">
+                  <td style="padding: 10px 14px;"><strong style="color:#15803d; font-size: 13px;">🌟 XUẤT SẮC</strong></td>
+                  <td style="padding: 10px 14px;"><span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.60 đến 4.00</span></td>
+                </tr>
+                <tr style="background:#f0fdf4; border-bottom: 1px solid #bbf7d0;">
+                  <td style="padding: 10px 14px;"><strong style="color:#15803d; font-size: 13px;">✨ GIỎI</strong></td>
+                  <td style="padding: 10px 14px;"><span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.20 đến 3.59</span></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 10px 14px;"><strong style="color:#0284c7; font-size: 13px;">👍 KHÁ</strong></td>
+                  <td style="padding: 10px 14px;"><span style="background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.50 đến 3.19</span></td>
+                </tr>
+                <tr style="background: #fffbeb; border-bottom: 1.5px solid #fde68a;">
+                  <td style="padding: 10px 14px;"><strong style="color:#d97706; font-size: 13px;">⚠️ TRUNG BÌNH</strong></td>
+                  <td style="padding: 10px 14px;">
+                    <span style="background: #fef3c7; color: #b45309; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.00 đến 2.49</span>
+                    <span style="margin-left: 8px; font-size: 11.5px; color: #b45309; font-weight: 700;">(Mức sàn tối thiểu để đủ điều kiện xét Tốt nghiệp)</span>
+                  </td>
+                </tr>
+                <tr style="background:#fff1f2; border-bottom: 1px solid #fecdd3;">
+                  <td style="padding: 10px 14px;"><strong style="color:#dc2626; font-size: 13px;">❗ YẾU</strong></td>
+                  <td style="padding: 10px 14px;"><span style="background: #fee2e2; color: #b91c1c; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 1.00 đến 1.99</span></td>
+                </tr>
+                <tr style="background:#fee2e2;">
+                  <td style="padding: 10px 14px;"><strong style="color:#991b1b; font-size: 13px;">🚨 KÉM</strong></td>
+                  <td style="padding: 10px 14px;"><span style="background: #fecdd3; color: #991b1b; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình dưới 1.00</span></td>
+                </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="info-alert-callout callout-blue">
-            <span class="callout-icon">📝</span>
-            <div class="callout-text">
-              <strong>Ghi chú:</strong><br>
-              - <strong>Điểm Trung bình Học kỳ:</strong> Điểm Trung bình của những học phần sinh viên đã học trong một học kỳ.<br>
-              - <strong>Điểm Trung bình Năm học</strong> (áp dụng tính điểm các học kỳ chính gồm: HK 1A, 1B, 2A, 2B và không tính HK hè): Điểm Trung bình của những học phần sinh viên đã học trong một năm học.<br>
-              - <strong>Điểm Trung bình Tích lũy:</strong> Điểm Trung bình của những học phần sinh viên đã học tính từ đầu khóa học.
+          <div class="grid-2col" style="margin-top: 16px;">
+            <div class="info-alert-callout callout-blue" style="margin: 0;">
+              <span class="callout-icon">📝</span>
+              <div class="callout-text">
+                <strong style="color: #0369a1; font-size: 13px;">Ghi chú:</strong><br>
+                - <strong>Điểm Trung bình Học kỳ:</strong> Điểm Trung bình của những học phần sinh viên đã học trong một học kỳ.<br>
+                - <strong>Điểm Trung bình Năm học</strong> (áp dụng tính điểm các học kỳ chính gồm: HK 1A, 1B, 2A, 2B và không tính HK hè): Điểm Trung bình của những học phần sinh viên đã học trong một năm học.<br>
+                - <strong>Điểm Trung bình Tích lũy:</strong> Điểm Trung bình của những học phần sinh viên đã học tính từ đầu khóa học.
+              </div>
             </div>
-          </div>
 
-          <div class="info-alert-callout callout-amber">
-            <span class="callout-icon">🎯</span>
-            <div class="callout-text">
-              <strong style="font-size: 13.5px;">Sinh viên cần đảm bảo:</strong><br>
-              <strong style="color:#b91c1c;">Điểm Trung bình học kỳ, Điểm Trung bình năm học và Điểm Trung bình tích lũy ≥ 2.00 (theo thang điểm hệ 4)</strong><br><br>
-              <strong>1. NỖ LỰC HỌC TẬP:</strong><br>
-              Bạn cần nỗ lực, chuyên cần học tập để cải thiện kết quả ngay từ HK 1A/NH 2026-2027.<br>
-              <em>Điểm Trung bình học kỳ / Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)</em><br><br>
-              <strong>2. ĐIỀU KIỆN XÉT TỐT NGHIỆP:</strong><br>
-              Một trong những điều kiện để Xét tốt nghiệp => SV phải đạt <strong>Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)</strong><br><br>
-              <strong>3. LIÊN HỆ HỖ TRỢ NGAY!</strong><br>
-              Trường hợp cần tư vấn và hỗ trợ về việc Học cải thiện nhằm đạt kết quả học tập theo Quy định, bạn liên hệ ngay Trung tâm Hỗ trợ học vụ để được tư vấn và hỗ trợ ngay nhé!
+            <div class="info-alert-callout callout-amber" style="margin: 0;">
+              <span class="callout-icon">🎯</span>
+              <div class="callout-text">
+                <strong style="font-size: 13px; color: #92400e;">Sinh viên cần đảm bảo:</strong><br>
+                <strong style="color:#b91c1c; font-size: 13.5px; background: #fee2e2; padding: 2px 6px; border-radius: 4px; display: inline-block; margin: 4px 0;">Điểm Trung bình học kỳ, Điểm Trung bình năm học và Điểm Trung bình tích lũy ≥ 2.00 (theo thang điểm hệ 4)</strong><br>
+                <strong>1. NỖ LỰC HỌC TẬP:</strong> Bạn cần nỗ lực, chuyên cần học tập để cải thiện kết quả ngay từ HK 1A/NH 2026-2027.<br>
+                <em>Điểm Trung bình học kỳ / Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)</em><br>
+                <strong>2. ĐIỀU KIỆN XÉT TỐT NGHIỆP:</strong> Một trong những điều kiện để Xét tốt nghiệp => SV phải đạt Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)<br>
+                <strong>3. LIÊN HỆ HỖ TRỢ NGAY!</strong> Trường hợp cần tư vấn và hỗ trợ về việc Học cải thiện nhằm đạt kết quả học tập theo Quy định, bạn liên hệ ngay Trung tâm Hỗ trợ học vụ để được tư vấn và hỗ trợ ngay nhé!
+              </div>
             </div>
           </div>
 
@@ -752,15 +804,15 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card">
-            <div class="placeholder-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: var(--vivid-amber);">
+          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 2px dashed #f59e0b;">
+            <div class="placeholder-icon-wrap" style="background: #fef3c7; border-color: #fde68a;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #d97706;">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
             </div>
-            <h4 class="placeholder-title">VIII. ĐIỀU KIỆN DUY TRÌ HỌC BỔNG TUYỂN SINH</h4>
+            <h4 class="placeholder-title" style="color: #b45309;">VIII. ĐIỀU KIỆN DUY TRÌ HỌC BỔNG TUYỂN SINH</h4>
             <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic điều kiện duy trì học bổng tuyển sinh)</p>
           </div>
 
@@ -780,30 +832,43 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 10px;">
-            Nếu sinh viên học chuyên cần nhưng không theo kịp bài trong quá trình học của HK 1A và cần phụ đạo để củng cố kiến thức, sinh viên có thể đăng ký nguyện vọng học phụ đạo.
-          </p>
-
-          <div class="info-alert-callout callout-amber">
-            <span class="callout-icon">⏰</span>
-            <div class="callout-text">
-              <strong>Thời hạn đăng ký:</strong> Trước ngày <strong>10/10/2026</strong>, tức hết tuần thứ 5 của HK 1A.
+          <div class="info-stat-strip" style="margin-bottom: 16px;">
+            <div class="stat-pill-box" style="background: #f0fdf4; border: 1.5px solid #86efac;">
+              <div class="stat-value" style="color: #15803d;">100% MIỄN PHÍ</div>
+              <div class="stat-label">Hỗ trợ tối đa sinh viên</div>
+            </div>
+            <div class="stat-pill-box" style="background: #fef2f2; border: 1.5px solid #fca5a5;">
+              <div class="stat-value" style="color: #dc2626;">TRƯỚC 10/10/2026</div>
+              <div class="stat-label">Hạn đăng ký (Hết tuần 5 HK 1A)</div>
             </div>
           </div>
 
-          <p style="font-size: 13px; font-weight: 700; color: var(--uef-blue-dark); margin: 16px 0 8px 0;">
-            Trung tâm Hỗ trợ học vụ tổ chức lớp học phụ đạo nhằm:
+          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+            Nếu sinh viên học chuyên cần nhưng không theo kịp bài trong quá trình học của HK 1A và cần phụ đạo để củng cố kiến thức, sinh viên có thể đăng ký nguyện vọng học phụ đạo.
           </p>
-          <ul style="margin-left: 20px; font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
-            <li>- Giúp sinh viên nắm vững kiến thức chuyên môn;</li>
-            <li>- Hỗ trợ sinh viên đạt kết quả cao hơn trong học tập;</li>
-            <li>- Bổ trợ kiến thức trước kỳ thi.</li>
-          </ul>
 
-          <div class="info-alert-callout callout-green">
-            <span class="callout-icon">🎁</span>
-            <div class="callout-text">
-              Các lớp phụ đạo dự kiến được tổ chức vào các tuần học cuối, trước khi kỳ thi diễn ra và <strong>hoàn toàn miễn phí</strong>.
+          <div class="grid-2col">
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #059669; color: white; border: none;">🎯</span>
+                <h4 class="bento-title" style="color: #15803d;">Mục đích Lớp Phụ đạo</h4>
+              </div>
+              <p class="bento-desc" style="margin-bottom: 6px;">Trung tâm Hỗ trợ học vụ tổ chức lớp học phụ đạo nhằm:</p>
+              <ul class="bento-list">
+                <li>- Giúp sinh viên nắm vững kiến thức chuyên môn;</li>
+                <li>- Hỗ trợ sinh viên đạt kết quả cao hơn trong học tập;</li>
+                <li>- Bổ trợ kiến thức trước kỳ thi.</li>
+              </ul>
+            </div>
+
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
+              <div class="bento-header">
+                <span class="bento-icon" style="background: #0284c7; color: white; border: none;">📅</span>
+                <h4 class="bento-title" style="color: #0369a1;">Thời gian & Hình thức</h4>
+              </div>
+              <p class="bento-desc">
+                Các lớp phụ đạo dự kiến được tổ chức vào các <strong>tuần học cuối</strong>, trước khi kỳ thi diễn ra và <strong>hoàn toàn miễn phí</strong>.
+              </p>
             </div>
           </div>
 
@@ -823,38 +888,38 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+          <p style="font-size: 13.5px; color: #334155; margin-bottom: 14px;">
             Kết quả học tập được đánh giá sau <strong>từng học kỳ</strong> hoặc sau <strong>từng năm học</strong>, dựa trên kết quả các học phần nằm trong yêu cầu của chương trình đào tạo mà sinh viên đã học và có điểm theo tiêu chí sau đây:
           </p>
 
           <div class="grid-3col">
-            <div class="info-bento-card bento-red">
-              <div class="bento-header"><span class="bento-icon">❌</span><h4 class="bento-title">Tổng số tín chỉ không đạt</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border: 1.5px solid #fecdd3; border-top: 3px solid #dc2626;">
+              <div class="bento-header"><span class="bento-icon" style="background: #dc2626; color: white; border: none;">❌</span><h4 class="bento-title" style="color: #b91c1c;">Tín chỉ không đạt</h4></div>
               <p class="bento-desc">- Tổng số tín chỉ của những học phần mà sinh viên không đạt trong một học kỳ, trong một năm học hoặc nợ đọng từ đầu khóa học.</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">✅</span><h4 class="bento-title">Số tín chỉ tích lũy</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-top: 3px solid #059669;">
+              <div class="bento-header"><span class="bento-icon" style="background: #059669; color: white; border: none;">✅</span><h4 class="bento-title" style="color: #15803d;">Tín chỉ tích lũy</h4></div>
               <p class="bento-desc">- Tổng số tín chỉ của những học phần mà sinh viên đã đạt từ đầu khóa học (số tín chỉ tích lũy), tính cả các học phần được miễn học, được công nhận tín chỉ.</p>
             </div>
 
-            <div class="info-bento-card bento-blue">
-              <div class="bento-header"><span class="bento-icon">📊</span><h4 class="bento-title">Điểm trung bình học phần</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-top: 3px solid #0284c7;">
+              <div class="bento-header"><span class="bento-icon" style="background: #0284c7; color: white; border: none;">📊</span><h4 class="bento-title" style="color: #0369a1;">ĐTB học phần</h4></div>
               <p class="bento-desc">- Điểm trung bình của những học phần mà sinh viên đã học trong một học kỳ (điểm trung bình học kỳ), trong một năm học (điểm trung bình năm học) hoặc tính từ đầu khóa học (điểm trung bình tích lũy), tính theo điểm chính thức của học phần và trọng số là số tín chỉ của học phần đó.</p>
             </div>
 
-            <div class="info-bento-card bento-amber">
-              <div class="bento-header"><span class="bento-icon">⚠️</span><h4 class="bento-title">Điểm trung bình học kỳ</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-top: 3px solid #d97706;">
+              <div class="bento-header"><span class="bento-icon" style="background: #d97706; color: white; border: none;">⚠️</span><h4 class="bento-title" style="color: #b45309;">ĐTB học kỳ</h4></div>
               <p class="bento-desc">- Điểm trung bình học kỳ dùng để xếp loại học lực sinh viên theo học kỳ và xử lý kết quả học tập (cảnh báo học tập, buộc thôi học).</p>
             </div>
 
-            <div class="info-bento-card bento-purple">
-              <div class="bento-header"><span class="bento-icon">🏆</span><h4 class="bento-title">Điểm trung bình năm học</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff; border-top: 3px solid #7c3aed;">
+              <div class="bento-header"><span class="bento-icon" style="background: #7c3aed; color: white; border: none;">🏆</span><h4 class="bento-title" style="color: #6d28d9;">ĐTB năm học</h4></div>
               <p class="bento-desc">- Điểm trung bình năm học (chỉ tính học kỳ chính) dùng để xét điều kiện duy trì học bổng tuyển sinh, cấp học bổng tài năng cho sinh viên.</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">🎓</span><h4 class="bento-title">Điểm trung bình tích lũy toàn khóa</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%); border: 1.5px solid #a5f3fc; border-top: 3px solid #0891b2;">
+              <div class="bento-header"><span class="bento-icon" style="background: #0891b2; color: white; border: none;">🎓</span><h4 class="bento-title" style="color: #0e7490;">ĐTB tích lũy toàn khóa</h4></div>
               <p class="bento-desc">- Điểm trung bình tích luỹ được tính theo điểm học phần cao nhất trong các lần học của sinh viên. Điểm trung bình tích lũy toàn khóa học dùng để xếp hạng tốt nghiệp chỉ tính đối với các học phần theo chương trình đào tạo.</p>
             </div>
           </div>
@@ -875,15 +940,15 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card">
-            <div class="placeholder-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: var(--vivid-blue);">
+          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 2px dashed #38bdf8;">
+            <div class="placeholder-icon-wrap" style="background: #e0f2fe; border-color: #bae6fd;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #0284c7;">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
             </div>
-            <h4 class="placeholder-title">XI. HƯỚNG DẪN CÁCH TÍNH ĐIỂM</h4>
+            <h4 class="placeholder-title" style="color: #0369a1;">XI. HƯỚNG DẪN CÁCH TÍNH ĐIỂM</h4>
             <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic hướng dẫn cách tính điểm)</p>
           </div>
 
@@ -903,29 +968,29 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-red">
-              <div class="bento-header"><span class="bento-icon">🔁</span><h4 class="bento-title">HỌC LẠI</h4></div>
+          <div class="grid-2col">
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border: 1.5px solid #fecdd3; border-left: 4px solid #dc2626;">
+              <div class="bento-header"><span class="bento-icon" style="background: #dc2626; color: white; border: none;">🔁</span><h4 class="bento-title" style="color: #b91c1c;">HỌC LẠI</h4></div>
               <p class="bento-desc"><strong>Đối với học phần bắt buộc hoặc học phần lựa chọn bắt buộc theo ngành, chuyên ngành:</strong><br>
               Sinh viên có điểm tổng kết học phần không đạt bắt buộc phải đăng ký học lại khi học phần đó được tổ chức giảng dạy.</p>
               <p class="bento-desc" style="margin-top: 8px;"><strong>Đối với học phần tự chọn:</strong><br>
               Sinh viên có thể chọn đăng ký học lại chính học phần đó hoặc chọn học các học phần tự chọn khác cùng nhóm để bảo đảm tích lũy đủ số tín chỉ.</p>
             </div>
 
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">📈</span><h4 class="bento-title">HỌC CẢI THIỆN</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
+              <div class="bento-header"><span class="bento-icon" style="background: #059669; color: white; border: none;">📈</span><h4 class="bento-title" style="color: #15803d;">HỌC CẢI THIỆN</h4></div>
               <p class="bento-desc"><strong>Đối với các học phần bất kỳ đã có kết quả đạt:</strong><br>
               Sinh viên được phép đăng ký học để cải thiện điểm trung bình tích lũy.</p>
-              <p class="bento-desc" style="margin-top: 8px;"><strong>Điểm cao nhất giữa các lần học sẽ được lấy để tính điểm trung bình tích lũy dùng để xếp hạng tốt nghiệp.</strong></p>
+              <p class="bento-desc" style="margin-top: 8px;"><strong style="color: #15803d; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">Điểm cao nhất giữa các lần học sẽ được lấy để tính điểm trung bình tích lũy dùng để xếp hạng tốt nghiệp.</strong></p>
             </div>
           </div>
 
-          <div class="info-alert-callout callout-amber">
+          <div class="info-alert-callout callout-amber" style="margin-top: 16px;">
             <span class="callout-icon">⚠️</span>
             <div class="callout-text">
-              <strong>Đối với sinh viên có điểm trung bình tích lũy toàn khóa xuất sắc và giỏi:</strong><br>
-              Hạng tốt nghiệp sẽ bị giảm đi một mức nếu khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ của toàn bộ chương trình.<br><br>
-              Khối lượng học tập (tính bằng số tín chỉ) tối đa không vượt quá 3/2 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn.<br><br>
+              <strong style="color: #92400e;">Đối với sinh viên có điểm trung bình tích lũy toàn khóa xuất sắc và giỏi:</strong><br>
+              Hạng tốt nghiệp sẽ bị <strong style="color: #b91c1c;">giảm đi một mức</strong> nếu khối lượng của các học phần phải học lại <strong style="color: #b91c1c;">vượt quá 5%</strong> so với tổng số tín chỉ của toàn bộ chương trình.<br><br>
+              Khối lượng học tập (tính bằng số tín chỉ) tối đa không vượt quá <strong>3/2 khối lượng trung bình</strong> một học kỳ theo kế hoạch học tập chuẩn.<br><br>
               <strong>Do đó, khi đăng ký học lại hoặc học cải thiện học phần, Sinh viên cần đảm bảo số tín chỉ tối đa trong học kỳ theo đúng quy định.</strong>
             </div>
           </div>
@@ -946,16 +1011,24 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+          <p style="font-size: 13.5px; color: #334155; margin-bottom: 14px;">
             Học cùng lúc hai chương trình đào tạo theo hình thức song bằng hoặc song ngành dành cho sinh viên có đủ điều kiện theo quy định và có nhu cầu đăng ký học thêm một chương trình thứ hai để khi tốt nghiệp được cấp hai văn bằng, hoặc giấy chứng nhận hoàn thành chương trình song ngành.
           </p>
 
-          <p style="font-weight: 800; color: var(--uef-blue-dark); margin-bottom: 10px;">ƯU ĐIỂM NỔI TRỘI KHI ĐĂNG KÝ HỌC CHƯƠNG TRÌNH</p>
+          <div class="info-alert-callout callout-green" style="margin-bottom: 16px;">
+            <span class="callout-icon" style="font-size: 24px;">🎁</span>
+            <div class="callout-text" style="font-size: 14px;">
+              TẠI CHƯƠNG TRÌNH ĐÀO TẠO CỦA NGÀNH HỌC THỨ HAI SINH VIÊN ĐƯỢC:<br>
+              <strong style="color: #b91c1c; font-size: 18px; display: inline-block; margin-top: 4px;">MIỄN GIẢM 50% HỌC PHÍ SUỐT KHÓA HỌC!</strong>
+            </div>
+          </div>
 
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">🎓</span><h4 class="bento-title">SONG BẰNG</h4></div>
-              <p class="bento-desc">Nhận 2 Bằng tốt nghiệp cho 2 ngành học tương ứng khi hoàn thành chương trình đào tạo của ngành.</p>
+          <p style="font-weight: 800; color: #0f2b52; margin-bottom: 10px;">ƯU ĐIỂM NỔI TRỘI KHI ĐĂNG KÝ HỌC CHƯƠNG TRÌNH</p>
+
+          <div class="grid-2col">
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
+              <div class="bento-header"><span class="bento-icon" style="background: #059669; color: white; border: none;">🎓</span><h4 class="bento-title" style="color: #15803d;">SONG BẰNG</h4></div>
+              <p class="bento-desc">Nhận <strong>2 Bằng tốt nghiệp</strong> cho 2 ngành học tương ứng khi hoàn thành chương trình đào tạo của ngành.</p>
               <p class="bento-desc" style="margin-top: 6px;">Sinh viên chỉ cần học đạt 1 lần tại ngành học thứ 1:</p>
               <ul class="bento-list">
                 <li>Học phần giống nhau giữa 2 ngành</li>
@@ -963,24 +1036,16 @@ const SHGVCN_DATA = {
               </ul>
             </div>
 
-            <div class="info-bento-card bento-blue">
-              <div class="bento-header"><span class="bento-icon">📜</span><h4 class="bento-title">SONG NGÀNH</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
+              <div class="bento-header"><span class="bento-icon" style="background: #0284c7; color: white; border: none;">📜</span><h4 class="bento-title" style="color: #0369a1;">SONG NGÀNH</h4></div>
               <p class="bento-desc">Sinh viên sẽ học và hoàn thành các học phần theo quy định của chương trình đào tạo song ngành.</p>
-              <p class="bento-desc" style="margin-top: 6px;">Nhận 1 Bằng tốt nghiệp cho ngành học thứ 1 và Giấy chứng nhận hoàn thành chương trình song ngành (khi hoàn thành các chương trình theo quy định).</p>
+              <p class="bento-desc" style="margin-top: 6px;">Nhận <strong>1 Bằng tốt nghiệp</strong> cho ngành học thứ 1 và <strong>Giấy chứng nhận</strong> hoàn thành chương trình song ngành (khi hoàn thành các chương trình theo quy định).</p>
             </div>
           </div>
 
-          <div class="info-alert-callout callout-green">
-            <span class="callout-icon">🎁</span>
-            <div class="callout-text" style="font-size: 13.5px;">
-              TẠI CHƯƠNG TRÌNH ĐÀO TẠO CỦA NGÀNH HỌC THỨ HAI SINH VIÊN ĐƯỢC:<br>
-              <strong style="color: #b91c1c; font-size: 16px;">MIỄN GIẢM 50% HỌC PHÍ SUỐT KHÓA HỌC!</strong>
-            </div>
-          </div>
-
-          <div class="info-bento-grid">
-            <div class="info-bento-card bento-amber">
-              <div class="bento-header"><span class="bento-icon">📋</span><h4 class="bento-title">ĐIỀU KIỆN ĐỂ HỌC CÙNG LÚC 2 CHƯƠNG TRÌNH</h4></div>
+          <div class="grid-2col" style="margin-top: 16px;">
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-left: 4px solid #d97706;">
+              <div class="bento-header"><span class="bento-icon" style="background: #d97706; color: white; border: none;">📋</span><h4 class="bento-title" style="color: #b45309;">ĐIỀU KIỆN ĐỂ HỌC CÙNG LÚC 2 CHƯƠNG TRÌNH</h4></div>
               <ul class="bento-list">
                 <li>a) Đăng ký học sớm nhất sau khi đã kết thúc học kỳ thứ nhất năm học đầu tiên;</li>
                 <li>b) Điểm trung bình tích lũy xếp loại trung bình trở lên (<strong>≥ 2.00</strong>);</li>
@@ -988,8 +1053,8 @@ const SHGVCN_DATA = {
               </ul>
             </div>
 
-            <div class="info-bento-card bento-purple">
-              <div class="bento-header"><span class="bento-icon">⚖️</span><h4 class="bento-title">QUY ĐỊNH KHI HỌC CÙNG LÚC 2 CHƯƠNG TRÌNH</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff; border-left: 4px solid #7c3aed;">
+              <div class="bento-header"><span class="bento-icon" style="background: #7c3aed; color: white; border: none;">⚖️</span><h4 class="bento-title" style="color: #6d28d9;">QUY ĐỊNH KHI HỌC CÙNG LÚC 2 CHƯƠNG TRÌNH</h4></div>
               <ul class="bento-list">
                 <li>a) <strong>THỜI GIAN TỐI ĐA</strong> được phép học đối với SV học cùng lúc hai chương trình là thời gian tối đa quy định cho <strong>CHƯƠNG TRÌNH THỨ NHẤT</strong>;</li>
                 <li>b) Khi học chương trình thứ hai, sinh viên được <strong>CÔNG NHẬN KẾT QUẢ</strong> của những học phần có nội dung và khối lượng kiến thức tương đương có trong chương trình thứ nhất;</li>
@@ -998,7 +1063,7 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-          <div class="info-alert-callout callout-blue">
+          <div class="info-alert-callout callout-blue" style="margin-top: 16px;">
             <span class="callout-icon">💬</span>
             <div class="callout-text">
               Vậy trong trường hợp có nguyện vọng, Bạn hãy liên hệ ngay <strong>Trung tâm Hỗ trợ học vụ</strong> để được tư vấn và hỗ trợ chi tiết bạn nhé!
@@ -1021,15 +1086,15 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card">
-            <div class="placeholder-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: var(--vivid-blue);">
+          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 2px dashed #38bdf8;">
+            <div class="placeholder-icon-wrap" style="background: #e0f2fe; border-color: #bae6fd;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #0284c7;">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
             </div>
-            <h4 class="placeholder-title">XIV. HƯỚNG DẪN SỬ DỤNG CỔNG THÔNG TIN QUẢN LÝ ĐÀO TẠO VÀ DỊCH VỤ TRỰC TUYẾN</h4>
+            <h4 class="placeholder-title" style="color: #0369a1;">XIV. HƯỚNG DẪN SỬ DỤNG CỔNG THÔNG TIN QUẢN LÝ ĐÀO TẠO VÀ DỊCH VỤ TRỰC TUYẾN</h4>
             <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic hướng dẫn sử dụng Cổng thông tin Quản lý đào tạo và Dịch vụ trực tuyến)</p>
           </div>
 
@@ -1042,17 +1107,17 @@ const SHGVCN_DATA = {
     // -------------------------------------------------------------------------
     {
       id: "cam-nang-ho-tro-hoc-vu",
-      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>`,
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 6.5 2z"></path></svg>`,
       title: "XV. CẨM NANG HỖ TRỢ HỌC VỤ",
       bgColor: "pastel-amber",
       accentColor: "#d97706",
       content: `
         <div class="topic-detail">
           
-          <div class="info-alert-callout callout-blue">
-            <span class="callout-icon">📖</span>
-            <div class="callout-text" style="font-size: 13.5px; line-height: 1.6;">
-              Cẩm nang là nguồn thông tin hỗ trợ sinh viên tra cứu các quy định, hướng dẫn và nội dung học vụ cần thiết trong quá trình học tập.
+          <div class="info-alert-callout callout-blue" style="background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; box-shadow: 0 4px 12px rgba(2,132,199,0.08);">
+            <span class="callout-icon" style="font-size: 28px;">📖</span>
+            <div class="callout-text" style="font-size: 14px; line-height: 1.6; color: #0f2b52;">
+              <strong>Cẩm nang</strong> là nguồn thông tin hỗ trợ sinh viên tra cứu các quy định, hướng dẫn và nội dung học vụ cần thiết trong quá trình học tập.
             </div>
           </div>
 
@@ -1072,15 +1137,15 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <div class="infographic-placeholder-card">
-            <div class="placeholder-icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: var(--vivid-green);">
+          <div class="infographic-placeholder-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 2px dashed #4ade80;">
+            <div class="placeholder-icon-wrap" style="background: #dcfce7; border-color: #bbf7d0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 42px; height: 42px; color: #059669;">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <circle cx="8.5" cy="8.5" r="1.5"></circle>
                 <polyline points="21 15 16 10 5 21"></polyline>
               </svg>
             </div>
-            <h4 class="placeholder-title">XVI. MỘT SỐ GIẢI PHÁP HỖ TRỢ SINH VIÊN HỌC TẬP HIỆU QUẢ</h4>
+            <h4 class="placeholder-title" style="color: #15803d;">XVI. MỘT SỐ GIẢI PHÁP HỖ TRỢ SINH VIÊN HỌC TẬP HIỆU QUẢ</h4>
             <p class="placeholder-desc">(Khu vực hiển thị hình ảnh infographic giải pháp hỗ trợ sinh viên học tập hiệu quả)</p>
           </div>
 
@@ -1100,33 +1165,33 @@ const SHGVCN_DATA = {
       content: `
         <div class="topic-detail">
           
-          <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px;">
+          <p style="font-size: 13.5px; color: #334155; margin-bottom: 14px;">
             Giáo viên chủ nhiệm thực hiện lấy ý kiến phản hồi, góp ý của sinh viên về:
           </p>
 
           <div class="grid-2x2">
-            <div class="info-bento-card bento-green">
-              <div class="bento-header"><span class="bento-icon">🏢</span><h4 class="bento-title">Cơ sở vật chất</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
+              <div class="bento-header"><span class="bento-icon" style="background: #0284c7; color: white; border: none;">🏢</span><h4 class="bento-title" style="color: #0369a1;">Cơ sở vật chất</h4></div>
               <p class="bento-desc">Ghi nhận các ý kiến phản ánh về cơ sở vật chất, trang thiết bị học tập.</p>
             </div>
 
-            <div class="info-bento-card bento-blue">
-              <div class="bento-header"><span class="bento-icon">📚</span><h4 class="bento-title">Chương trình đào tạo</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
+              <div class="bento-header"><span class="bento-icon" style="background: #059669; color: white; border: none;">📚</span><h4 class="bento-title" style="color: #15803d;">Chương trình đào tạo</h4></div>
               <p class="bento-desc">Ghi nhận ý kiến đóng góp về chương trình và kế hoạch giảng dạy.</p>
             </div>
 
-            <div class="info-bento-card bento-purple">
-              <div class="bento-header"><span class="bento-icon">❓</span><h4 class="bento-title">Các thắc mắc về học tập, học vụ</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%); border: 1.5px solid #e9d5ff; border-left: 4px solid #7c3aed;">
+              <div class="bento-header"><span class="bento-icon" style="background: #7c3aed; color: white; border: none;">❓</span><h4 class="bento-title" style="color: #6d28d9;">Các thắc mắc về học tập, học vụ</h4></div>
               <p class="bento-desc">Tiếp nhận và giải đáp các vướng mắc trong quá trình học vụ.</p>
             </div>
 
-            <div class="info-bento-card bento-amber">
-              <div class="bento-header"><span class="bento-icon">💬</span><h4 class="bento-title">Tình hình học tập; Các nội dung khác nếu có</h4></div>
+            <div class="info-bento-card" style="background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%); border: 1.5px solid #fed7aa; border-left: 4px solid #ea580c;">
+              <div class="bento-header"><span class="bento-icon" style="background: #ea580c; color: white; border: none;">💬</span><h4 class="bento-title" style="color: #c2410c;">Tình hình học tập; Các nội dung khác nếu có</h4></div>
               <p class="bento-desc">Lắng nghe tâm tư, nguyện vọng và tình hình học tập thực tế của sinh viên.</p>
             </div>
           </div>
 
-          <div class="info-alert-callout callout-green">
+          <div class="info-alert-callout callout-green" style="margin-top: 16px;">
             <span class="callout-icon">🤝</span>
             <div class="callout-text">
               Các phản hồi của sinh viên được ghi nhận để phục vụ công tác hỗ trợ và cải thiện hoạt động học tập, học vụ.
