@@ -1065,21 +1065,32 @@ const SHGVCN_DATA = {
 
           <p style="font-weight: 800; color: #0f2b52; margin-bottom: 10px;">ƯU ĐIỂM NỔI TRỘI KHI ĐĂNG KÝ HỌC CHƯƠNG TRÌNH</p>
 
-          <div class="grid-2col">
-            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-left: 4px solid #059669;">
-              <div class="bento-header"><span class="bento-icon" style="background: #059669; color: white; border: none;">🎓</span><h4 class="bento-title" style="color: #15803d;">SONG BẰNG</h4></div>
-              <p class="bento-desc">Nhận <strong>2 Bằng tốt nghiệp</strong> cho 2 ngành học tương ứng khi hoàn thành chương trình đào tạo của ngành.</p>
-              <p class="bento-desc" style="margin-top: 6px;">Sinh viên chỉ cần học đạt 1 lần tại ngành học thứ 1:</p>
-              <ul class="bento-list">
-                <li>Học phần giống nhau giữa 2 ngành</li>
-                <li>Học phần Thực tập tốt nghiệp</li>
-              </ul>
+                    <div class="grid-2col">
+            <!-- Song bằng -->
+            <div class="info-bento-card bento-green" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-radius: 14px; padding: 16px; display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #dcfce7; padding-bottom: 8px;">
+                <span style="font-size: 20px;">🎓</span>
+                <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #15803d;">SONG BẰNG</h4>
+              </div>
+              <div style="font-size: 12px; line-height: 1.6; color: #334155; text-align: justify;">
+                <p style="margin: 0 0 8px 0;">Sau khi hoàn thành Chương trình đào tạo và đạt các điều kiện tốt nghiệp của từng ngành thì được Nhà trường cấp hai bằng tốt nghiệp.</p>
+                <p style="margin: 0 0 4px 0; font-weight: 700; color: #15803d;">Sinh viên chỉ cần học đạt 1 lần tại ngành học thứ 1:</p>
+                <ul class="bento-list" style="margin: 0;">
+                  <li>Học phần giống nhau giữa 2 ngành;</li>
+                  <li>Học phần Thực tập tốt nghiệp.</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="info-bento-card" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-left: 4px solid #0284c7;">
-              <div class="bento-header"><span class="bento-icon" style="background: #0284c7; color: white; border: none;">📜</span><h4 class="bento-title" style="color: #0369a1;">SONG NGÀNH</h4></div>
-              <p class="bento-desc">Sinh viên sẽ học và hoàn thành các học phần theo quy định của chương trình đào tạo song ngành.</p>
-              <p class="bento-desc" style="margin-top: 6px;">Nhận <strong>1 Bằng tốt nghiệp</strong> cho ngành học thứ 1 và <strong>Giấy chứng nhận</strong> hoàn thành chương trình song ngành (khi hoàn thành các chương trình theo quy định).</p>
+            <!-- Song ngành -->
+            <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 16px; display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #e0f2fe; padding-bottom: 8px;">
+                <span style="font-size: 20px;">📜</span>
+                <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #0369a1;">SONG NGÀNH</h4>
+              </div>
+              <div style="font-size: 12px; line-height: 1.6; color: #334155; text-align: justify;">
+                <p style="margin: 0;">Sau khi hoàn thành chương trình đào tạo và đat các điều kiện tốt nghiệp của ngành chính thứ nhất thì được Nhà trường cấp Bằng tốt nghiệp đối với ngành chính thứ nhất; sau khi hoàn thành các học phần theo quy định của ngành thứ hai thì được Nhà trường cấp thêm Giấy chứng nhận hoàn thành chương trình đào tạo Song ngành.</p>
+              </div>
             </div>
           </div>
 
