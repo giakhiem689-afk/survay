@@ -763,26 +763,44 @@ const SHGVCN_DATA = {
             </table>
           </div>
 
-          <div class="grid-2col" style="margin-top: 16px;">
-            <div class="info-alert-callout callout-blue" style="margin: 0;">
-              <span class="callout-icon">📝</span>
-              <div class="callout-text">
-                <strong style="color: #0369a1; font-size: 13px;">Ghi chú:</strong><br>
-                - <strong>Điểm Trung bình Học kỳ:</strong> Điểm Trung bình của những học phần sinh viên đã học trong một học kỳ.<br>
-                - <strong>Điểm Trung bình Năm học</strong> (áp dụng tính điểm các học kỳ chính gồm: HK 1A, 1B, 2A, 2B và không tính HK hè): Điểm Trung bình của những học phần sinh viên đã học trong một năm học.<br>
-                - <strong>Điểm Trung bình Tích lũy:</strong> Điểm Trung bình của những học phần sinh viên đã học tính từ đầu khóa học.
+                    <div class="grid-2col" style="margin-top: 16px;">
+            <!-- Khung 1: Ghi chú -->
+            <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 16px; display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #e0f2fe; padding-bottom: 8px;">
+                <span style="font-size: 20px;">📝</span>
+                <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #0369a1;">Ghi chú:</h4>
+              </div>
+              <div style="font-size: 12px; line-height: 1.6; color: #334155; text-align: justify;">
+                <p style="margin: 0 0 8px 0;">- <strong>Điểm Trung bình Học kỳ:</strong> Điểm Trung bình của những học phần sinh viên đã học trong một học kỳ.</p>
+                <p style="margin: 0 0 8px 0;">- <strong>Điểm Trung bình Năm học</strong> (áp dụng tính điểm các học kỳ chính gồm: HK 1A, 1B, 2A, 2B và không tính HK hè): Điểm Trung bình của những học phần sinh viên đã học trong một năm học.</p>
+                <p style="margin: 0;">- <strong>Điểm Trung bình Tích lũy:</strong> Điểm Trung bình của những học phần sinh viên đã học tính từ đầu khóa học.</p>
               </div>
             </div>
 
-            <div class="info-alert-callout callout-amber" style="margin: 0;">
-              <span class="callout-icon">🎯</span>
-              <div class="callout-text">
-                <strong style="font-size: 13px; color: #92400e;">Sinh viên cần đảm bảo:</strong><br>
-                <strong style="color:#b91c1c; font-size: 13.5px; background: #fee2e2; padding: 2px 6px; border-radius: 4px; display: inline-block; margin: 4px 0;">Điểm Trung bình học kỳ, Điểm Trung bình năm học và Điểm Trung bình tích lũy ≥ 2.00 (theo thang điểm hệ 4)</strong><br>
-                <strong>1. NỖ LỰC HỌC TẬP:</strong> Bạn cần nỗ lực, chuyên cần học tập để cải thiện kết quả ngay từ HK 1A/NH 2026-2027.<br>
-                <em>Điểm Trung bình học kỳ / Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)</em><br>
-                <strong>2. ĐIỀU KIỆN XÉT TỐT NGHIỆP:</strong> Một trong những điều kiện để Xét tốt nghiệp => SV phải đạt Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)<br>
-                <strong>3. LIÊN HỆ HỖ TRỢ NGAY!</strong> Trường hợp cần tư vấn và hỗ trợ về việc Học cải thiện nhằm đạt kết quả học tập theo Quy định, bạn liên hệ ngay Trung tâm Hỗ trợ học vụ để được tư vấn và hỗ trợ ngay nhé!
+            <!-- Khung 2: Sinh viên cần đảm bảo -->
+            <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-radius: 14px; padding: 16px; display: flex; flex-direction: column;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #fef3c7; padding-bottom: 8px;">
+                <span style="font-size: 20px;">🎯</span>
+                <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #b45309;">Sinh viên cần đảm bảo:</h4>
+              </div>
+              
+              <div style="text-align: center; margin-bottom: 12px;">
+                <strong style="color: #b91c1c; font-size: 12.5px; background: #fee2e2; border: 1px solid #fecdd3; padding: 6px 10px; border-radius: 8px; display: block; line-height: 1.4; text-align: center;">
+                  Điểm Trung bình học kỳ, Điểm Trung bình năm học và Điểm Trung bình tích lũy ≥ 2.00 (theo thang điểm hệ 4)
+                </strong>
+              </div>
+
+              <div style="font-size: 12px; line-height: 1.6; color: #334155; text-align: justify; display: flex; flex-direction: column; gap: 8px;">
+                <div>
+                  <strong style="color: #b45309;">1. NỖ LỰC HỌC TẬP:</strong> Bạn cần nỗ lực, chuyên cần học tập để cải thiện kết quả ngay từ HK 1A/NH 2026-2027.<br>
+                  <em>Điểm Trung bình học kỳ / Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)</em>
+                </div>
+                <div>
+                  <strong style="color: #b45309;">2. ĐIỀU KIỆN XÉT TỐT NGHIỆP:</strong> Một trong những điều kiện để Xét tốt nghiệp => SV phải đạt Điểm Trung bình tích lũy ≥ 2.00 (điểm hệ 4)
+                </div>
+                <div>
+                  <strong style="color: #b45309;">3. LIÊN HỆ HỖ TRỢ NGAY!</strong> Trường hợp cần tư vấn và hỗ trợ về việc Học cải thiện nhằm đạt kết quả học tập theo Quy định, bạn liên hệ ngay Trung tâm Hỗ trợ học vụ để được tư vấn và hỗ trợ ngay nhé!
+                </div>
               </div>
             </div>
           </div>
