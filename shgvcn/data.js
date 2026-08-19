@@ -109,29 +109,33 @@ const SHGVCN_DATA = {
           </div>
 
           <!-- Thời gian làm việc -->
-          <div class="info-alert-callout callout-blue" style="box-shadow: 0 2px 8px rgba(2,132,199,0.08);">
-            <span class="callout-icon" style="font-size: 24px;">⏰</span>
-            <div class="callout-text">
-              <strong style="color: #0369a1; font-size: 13.5px;">Thời gian làm việc:</strong><br>
-              • Từ Thứ Hai đến Thứ Sáu và sáng Thứ Bảy.<br>
-              • Buổi sáng: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">07:30 - 11:30</strong>.<br>
-              • Buổi chiều: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">13:30 - 16:30</strong>.<br>
-              • <strong>Liên hệ trực tiếp:</strong> 📍 Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.
+          <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 16px; margin: 16px 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #e0f2fe; padding-bottom: 8px;">
+              <span style="font-size: 20px;">⏰</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #0369a1;">Thời gian làm việc:</h4>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
+              <p style="margin: 0 0 6px 0;">• Từ Thứ Hai đến Thứ Sáu và sáng Thứ Bảy.</p>
+              <p style="margin: 0 0 6px 0;">• Buổi sáng: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">07:30 - 11:30</strong>.</p>
+              <p style="margin: 0 0 6px 0;">• Buổi chiều: <strong style="color: #0369a1; background: #e0f2fe; padding: 1px 6px; border-radius: 4px;">13:30 - 16:30</strong>.</p>
+              <p style="margin: 0;">• <strong>Liên hệ trực tiếp:</strong> 📍 Tầng 2, trụ sở 141 - 145 Điện Biên Phủ, Phường Gia Định, TP. Hồ Chí Minh.</p>
             </div>
           </div>
 
           <!-- Liên hệ trực tuyến -->
-          <div class="info-alert-callout callout-green" style="box-shadow: 0 2px 8px rgba(5,150,105,0.08);">
-            <span class="callout-icon" style="font-size: 24px;">📞</span>
-            <div class="callout-text">
-              <strong style="color: #15803d; font-size: 13.5px;">Liên hệ trực tuyến:</strong><br>
-              • <strong>Gmail:</strong> <a href="mailto:hotrohocvu@uef.edu.vn" style="color:#0284c7; font-weight:700;">hotrohocvu@uef.edu.vn</a><br>
-              • <strong>Website:</strong> <a href="https://uef.edu.vn/tththv" target="_blank" style="color:#0284c7; font-weight:700;">uef.edu.vn/tththv</a><br>
-              • <strong>Zalopage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="http://zalo.me/2106368086678348926" target="_blank" style="color:#0284c7; font-weight:700;">zalo.me/2106368086678348926</a>)<br>
-              • <strong>Fanpage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="https://facebook.com/TrungtamHTHV" target="_blank" style="color:#0284c7; font-weight:700;">facebook.com/TrungtamHTHV</a>)<br>
-              • <strong>Chat Zalo:</strong> <strong style="color:#15803d;">0908 560 999</strong><br>
-              • <strong>Hotline:</strong> <strong style="color:#dc2626;">028 2236 1111</strong> hoặc <strong style="color:#dc2626;">028 2235 1111</strong><br>
-              • <strong>Tổng đài:</strong> <strong style="color:#0f2b52;">028 2236 3333</strong> hoặc <strong style="color:#0f2b52;">070 397 7799</strong> số nội bộ: <code style="background:#e0f2fe; color:#0369a1; padding:2px 4px; border-radius:4px; font-weight:700;">2050, 2051, 2052, 2053, 2054, 2055, 2056, 2058, 2059, 2062</code>
+          <div class="info-bento-card bento-green" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-radius: 14px; padding: 16px; margin: 16px 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #dcfce7; padding-bottom: 8px;">
+              <span style="font-size: 20px;">📞</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #15803d;">Liên hệ trực tuyến:</h4>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
+              <p style="margin: 0 0 6px 0;">• <strong>Gmail:</strong> <a href="mailto:hotrohocvu@uef.edu.vn" style="color:#0284c7; font-weight:700;">hotrohocvu@uef.edu.vn</a></p>
+              <p style="margin: 0 0 6px 0;">• <strong>Website:</strong> <a href="https://uef.edu.vn/tththv" target="_blank" style="color:#0284c7; font-weight:700;">uef.edu.vn/tththv</a></p>
+              <p style="margin: 0 0 6px 0;">• <strong>Zalopage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="http://zalo.me/2106368086678348926" target="_blank" style="color:#0284c7; font-weight:700;">zalo.me/2106368086678348926</a>)</p>
+              <p style="margin: 0 0 6px 0;">• <strong>Fanpage:</strong> UEF Trung tâm Hỗ trợ học vụ (<a href="https://facebook.com/TrungtamHTHV" target="_blank" style="color:#0284c7; font-weight:700;">facebook.com/TrungtamHTHV</a>)</p>
+              <p style="margin: 0 0 6px 0;">• <strong>Chat Zalo:</strong> <strong style="color:#15803d;">0908 560 999</strong></p>
+              <p style="margin: 0 0 6px 0;">• <strong>Hotline:</strong> <strong style="color:#dc2626;">028 2236 1111</strong> hoặc <strong style="color:#dc2626;">028 2235 1111</strong></p>
+              <p style="margin: 0;">• <strong>Tổng đài:</strong> <strong style="color:#0f2b52;">028 2236 3333</strong> hoặc <strong style="color:#0f2b52;">070 397 7799</strong> số nội bộ: <code style="background:#e0f2fe; color:#0369a1; padding:2px 4px; border-radius:4px; font-weight:700;">2050, 2051, 2052, 2053, 2054, 2055, 2056, 2058, 2059, 2062</code></p>
             </div>
           </div>
 
@@ -1012,20 +1016,20 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-                    <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-radius: 14px; padding: 16px; margin-top: 16px;">
+                              <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-radius: 14px; padding: 16px; margin-top: 16px;">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #fef3c7; padding-bottom: 8px;">
-              <span style="font-size: 20px;">💡</span>
-              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #b45309;">Ví dụ:</h4>
+              <span style="font-size: 20px;">⚠️</span>
+              <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #b45309;">Đối với sinh viên có điểm trung bình tích lũy toàn khóa xuất sắc và giỏi:</h4>
             </div>
             
             <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
-              <p style="margin: 0 0 6px 0;">“Pháp luật đại cương” là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1.</p>
-              <p style="margin: 0 0 6px 0;">Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này.</p>
-              <p style="margin: 0 0 10px 0;">Do đó, Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ.</p>
+              <p style="margin: 0 0 8px 0;">Hạng tốt nghiệp sẽ bị <strong style="color: #b91c1c;">giảm đi một mức</strong> nếu khối lượng của các học phần phải học lại <strong style="color: #b91c1c;">vượt quá 5%</strong> so với tổng số tín chỉ của toàn bộ chương trình.</p>
+              
+              <p style="margin: 0 0 10px 0;">Khối lượng học tập (tính bằng số tín chỉ) tối đa không vượt quá <strong>3/2 khối lượng trung bình</strong> một học kỳ theo kế hoạch học tập chuẩn.</p>
               
               <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; text-align: justify;">
                 <strong style="color: #92400e; font-size: 12.5px; display: block; line-height: 1.5;">
-                  Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.
+                  Do đó, khi đăng ký học lại hoặc học cải thiện học phần, Sinh viên cần đảm bảo số tín chỉ tối đa trong học kỳ theo đúng quy định.
                 </strong>
               </div>
             </div>
@@ -1099,9 +1103,12 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-          <div class="info-alert-callout callout-blue" style="margin-top: 16px;">
-            <span class="callout-icon">💬</span>
-            <div class="callout-text">
+          <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 16px; margin-top: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; border-bottom: 1px solid #e0f2fe; padding-bottom: 8px;">
+              <span style="font-size: 20px;">💬</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #0369a1;">Tư vấn & Hỗ trợ chi tiết:</h4>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
               Vậy trong trường hợp có nguyện vọng, Bạn hãy liên hệ ngay <strong>Trung tâm Hỗ trợ học vụ</strong> để được tư vấn và hỗ trợ chi tiết bạn nhé!
             </div>
           </div>
@@ -1500,9 +1507,12 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-          <div class="info-alert-callout callout-green" style="margin-top: 16px;">
-            <span class="callout-icon">🤝</span>
-            <div class="callout-text">
+          <div class="info-bento-card bento-green" style="background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%); border: 1.5px solid #bbf7d0; border-radius: 14px; padding: 16px; margin-top: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; border-bottom: 1px solid #dcfce7; padding-bottom: 8px;">
+              <span style="font-size: 20px;">🤝</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #15803d;">Mục đích ghi nhận:</h4>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
               Các phản hồi của sinh viên được ghi nhận để phục vụ công tác hỗ trợ và cải thiện hoạt động học tập, học vụ.
             </div>
           </div>
