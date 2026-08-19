@@ -331,12 +331,14 @@ const SHGVCN_DATA = {
           </div>
 
           <!-- Ghi chú về Khóa 2023 (nhóm 1) và Khóa 2023 (nhóm 2) ngay dưới phần 1 -->
-          <div class="info-alert-callout callout-blue" style="margin: 14px 0 24px 0;">
-            <span class="callout-icon">📌</span>
-            <div class="callout-text" style="font-size: 12.5px; line-height: 1.6;">
-              <strong>Ghi chú phân nhóm Khóa 2023:</strong><br>
-              • <strong>Khóa 2023 (nhóm 1):</strong> Gồm 10 ngành đào tạo đi Thực tập tốt nghiệp đợt tháng 10/2026 (Kế toán, Kiểm toán, Tài chính - Ngân hàng, Tài chính quốc tế, Công nghệ tài chính, Kinh doanh thương mại, Marketing, Digital Marketing, Quản trị sự kiện, Kinh doanh quốc tế).<br>
-              • <strong>Khóa 2023 (nhóm 2):</strong> Gồm tất cả các ngành đào tạo còn lại đi Thực tập tốt nghiệp đợt tháng 04/2027.
+          <div class="info-bento-card bento-blue" style="background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 16px; margin: 14px 0 24px 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; border-bottom: 1px solid #e0f2fe; padding-bottom: 8px;">
+              <span style="font-size: 20px;">📌</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #0369a1;">Ghi chú phân nhóm Khóa 2023:</h4>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
+              <p style="margin: 0 0 6px 0;">• <strong>Khóa 2023 (nhóm 1):</strong> Gồm 10 ngành đào tạo đi Thực tập tốt nghiệp đợt tháng 10/2026 (Kế toán, Kiểm toán, Tài chính - Ngân hàng, Tài chính quốc tế, Công nghệ tài chính, Kinh doanh thương mại, Marketing, Digital Marketing, Quản trị sự kiện, Kinh doanh quốc tế).</p>
+              <p style="margin: 0;">• <strong>Khóa 2023 (nhóm 2):</strong> Gồm tất cả các ngành đào tạo còn lại đi Thực tập tốt nghiệp đợt tháng 04/2027.</p>
             </div>
           </div>
 
@@ -693,14 +695,22 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-          <div class="info-alert-callout callout-amber" style="margin-top: 16px;">
-            <span class="callout-icon">💡</span>
-            <div class="callout-text">
-              <strong style="color: #b45309; font-size: 13.5px;">Ví dụ:</strong><br>
-              “Pháp luật đại cương” là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1.<br>
-              Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này.<br>
-              Do đó, Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ.<br><br>
-              <strong style="color: #b45309;">Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.</strong>
+                    <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-radius: 14px; padding: 16px; margin-top: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #fef3c7; padding-bottom: 8px;">
+              <span style="font-size: 20px;">💡</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #b45309;">Ví dụ:</h4>
+            </div>
+            
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
+              <p style="margin: 0 0 6px 0;">“Pháp luật đại cương” là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1.</p>
+              <p style="margin: 0 0 6px 0;">Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này.</p>
+              <p style="margin: 0 0 10px 0;">Do đó, Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ.</p>
+              
+              <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; text-align: justify;">
+                <strong style="color: #92400e; font-size: 12.5px; display: block; line-height: 1.5;">
+                  Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.
+                </strong>
+              </div>
             </div>
           </div>
 
@@ -1002,13 +1012,22 @@ const SHGVCN_DATA = {
             </div>
           </div>
 
-          <div class="info-alert-callout callout-amber" style="margin-top: 16px;">
-            <span class="callout-icon">⚠️</span>
-            <div class="callout-text">
-              <strong style="color: #92400e;">Đối với sinh viên có điểm trung bình tích lũy toàn khóa xuất sắc và giỏi:</strong><br>
-              Hạng tốt nghiệp sẽ bị <strong style="color: #b91c1c;">giảm đi một mức</strong> nếu khối lượng của các học phần phải học lại <strong style="color: #b91c1c;">vượt quá 5%</strong> so với tổng số tín chỉ của toàn bộ chương trình.<br><br>
-              Khối lượng học tập (tính bằng số tín chỉ) tối đa không vượt quá <strong>3/2 khối lượng trung bình</strong> một học kỳ theo kế hoạch học tập chuẩn.<br><br>
-              <strong>Do đó, khi đăng ký học lại hoặc học cải thiện học phần, Sinh viên cần đảm bảo số tín chỉ tối đa trong học kỳ theo đúng quy định.</strong>
+                    <div class="info-bento-card bento-amber" style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 1.5px solid #fde68a; border-radius: 14px; padding: 16px; margin-top: 16px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #fef3c7; padding-bottom: 8px;">
+              <span style="font-size: 20px;">💡</span>
+              <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #b45309;">Ví dụ:</h4>
+            </div>
+            
+            <div style="font-size: 12.5px; line-height: 1.6; color: #334155; text-align: justify;">
+              <p style="margin: 0 0 6px 0;">“Pháp luật đại cương” là học phần sinh viên cần hoàn thành trong Học kỳ 2A của Năm 1.</p>
+              <p style="margin: 0 0 6px 0;">Tuy nhiên, sau khi kết thúc Năm 1, sinh viên chưa đăng ký và chưa tham gia học học phần này.</p>
+              <p style="margin: 0 0 10px 0;">Do đó, Pháp luật đại cương được xác định là học phần sinh viên chưa đạt theo tiến độ.</p>
+              
+              <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 12px; text-align: justify;">
+                <strong style="color: #92400e; font-size: 12.5px; display: block; line-height: 1.5;">
+                  Đối với các học phần chưa đạt theo tiến độ, sinh viên cần nhanh chóng đăng ký và hoàn thành nhằm đảm bảo kế hoạch học tập của mình.
+                </strong>
+              </div>
             </div>
           </div>
 
