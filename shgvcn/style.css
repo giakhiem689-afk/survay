@@ -1102,3 +1102,414 @@ body {
     max-height: 380px;
   }
 }
+
+
+/* =========================================================
+   ISOLATED SHGVCN HEADER WITH 5 ACTION BUTTONS
+   ========================================================= */
+.portal-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.shgvcn-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.shgvcn-nav-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.shgvcn-nav-tab:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background: #f0f9ff;
+  transform: translateY(-1px);
+}
+
+.shgvcn-nav-tab.active {
+  background: #0f2b52 !important;
+  color: #ffffff !important;
+  border-color: #0f2b52 !important;
+  box-shadow: 0 3px 10px rgba(15, 43, 82, 0.3) !important;
+}
+
+/* =========================================================
+   MODERN OPEN HERO TYPOGRAPHY (No Heavy Frame Box)
+   ========================================================= */
+.shgvcn-modern-hero {
+  padding: 32px 20px 20px 20px;
+  background: radial-gradient(circle at 50% 15%, #f0f9ff 0%, #ffffff 75%);
+  text-align: center;
+}
+
+.hero-institution-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.inst-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 5px 16px;
+  border-radius: 100px;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 4px 14px rgba(15, 43, 82, 0.06);
+}
+
+.inst-logo-badge {
+  font-weight: 900;
+  font-size: 14px;
+  color: #dc2626;
+  letter-spacing: 0.5px;
+}
+
+.inst-name {
+  font-size: 11px;
+  font-weight: 800;
+  color: #0f2b52;
+}
+
+.inst-divider {
+  color: #cbd5e1;
+  font-weight: 900;
+}
+
+.inst-stars {
+  font-size: 10px;
+  font-weight: 800;
+  color: #d97706;
+}
+
+.inst-dept-pill {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #ffffff;
+  padding: 5px 16px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+  border: 1.5px solid #ffffff;
+}
+
+.hero-typography-group {
+  margin-bottom: 22px;
+}
+
+.hero-main-title {
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.15;
+}
+
+.hero-sub-title {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #047857 0%, #064e3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.hero-semester-meta {
+  margin-bottom: 14px;
+}
+
+.semester-tag {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f2b52;
+  background: #f0f9ff;
+  border: 1.5px solid #bae6fd;
+  padding: 4px 18px;
+  border-radius: 100px;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
+}
+
+.hero-target-pill-modern {
+  display: inline-block;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 900;
+  padding: 6px 26px;
+  border-radius: 100px;
+  box-shadow: 0 4px 16px rgba(185, 28, 28, 0.3);
+  border: 1.5px solid #fecdd3;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+/* =========================================================
+   STICKY COLLAPSIBLE SIDEBAR & CENTERED CONTENT AREA
+   ========================================================= */
+.shgvcn-main {
+  width: 100%;
+  max-width: 100%;
+  margin: 16px 0 60px 0;
+  padding: 0;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 24px 0 16px;
+  margin: 0;
+  align-items: flex-start;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sidebar Container */
+.sidebar-nav {
+  position: sticky;
+  top: 76px;
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+  height: calc(100vh - 96px);
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 16px;
+  padding: 14px 10px 20px 12px;
+  box-shadow: 0 4px 16px rgba(15, 43, 82, 0.06);
+  z-index: 80;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), min-width 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sidebar Header Bar (Title + Toggle Button) */
+.sidebar-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--border-card);
+}
+
+.sidebar-title-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.sidebar-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle-btn:hover {
+  background: #e0f2fe;
+  color: #0284c7;
+  border-color: #0284c7;
+  transform: scale(1.05);
+}
+
+.toggle-icon-svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+
+.toggle-svg-collapse { display: block; }
+.toggle-svg-expand { display: none; }
+
+/* Full Title Display in Sidebar Nav (No Truncation) */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 1.5px solid transparent;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.nav-icon-box {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-icon-box svg {
+  width: 16px;
+  height: 16px;
+}
+
+.nav-title-text {
+  flex: 1;
+  min-width: 0;
+  display: block;
+}
+
+.nav-item:hover {
+  background: var(--pastel-blue-bg);
+  color: var(--vivid-blue);
+  border-color: var(--pastel-blue-border);
+}
+
+.nav-item.active {
+  background: var(--uef-blue-dark) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border-color: var(--uef-blue-dark) !important;
+  box-shadow: 0 3px 10px rgba(15, 43, 82, 0.22) !important;
+}
+
+.nav-item.active svg {
+  stroke: #ffffff !important;
+}
+
+/* =========================================================
+   COLLAPSED SIDEBAR STATE
+   ========================================================= */
+.sidebar-nav.collapsed {
+  width: 64px;
+  min-width: 64px;
+  max-width: 64px;
+  padding: 14px 6px;
+}
+
+.sidebar-nav.collapsed .sidebar-title-text {
+  display: none;
+}
+
+.sidebar-nav.collapsed .sidebar-header-bar {
+  justify-content: center;
+  padding-bottom: 6px;
+}
+
+.sidebar-nav.collapsed .sidebar-title-icon {
+  display: none;
+}
+
+.sidebar-nav.collapsed .toggle-svg-collapse {
+  display: none;
+}
+
+.sidebar-nav.collapsed .toggle-svg-expand {
+  display: block;
+}
+
+.sidebar-nav.collapsed .nav-item {
+  justify-content: center;
+  padding: 9px 0;
+}
+
+.sidebar-nav.collapsed .nav-title-text {
+  display: none;
+}
+
+/* =========================================================
+   RIGHT CONTENT AREA (Centered with Balanced Side Margins)
+   ========================================================= */
+.content-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 40px 20px;
+}
+
+.content-centered-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .main-layout {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  .sidebar-nav {
+    position: static;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;
+  }
+  .sidebar-nav.collapsed {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .content-area {
+    padding: 0;
+  }
+}

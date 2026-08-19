@@ -8,12 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const sectionHeading = document.getElementById('sectionHeading');
   const heroTargetPill = document.getElementById('heroTargetPill');
 
+  // Sidebar Elements
+  const stickySidebarNav = document.getElementById('stickySidebarNav');
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+
   // 5 Header Navigation Tabs
   const headerNavTabs = document.querySelectorAll('.shgvcn-nav-tab');
 
   let searchQuery = '';
   let selectedKhoa = 'all'; // Mặc định là 'Tổng hợp'
   let activeTopicIndex = 0; // Mặc định mở ngay Mục 1: Trung tâm Hỗ trợ học vụ
+
+  // 0. Initialize Sidebar Collapsed State from localStorage
+  const isSidebarCollapsed = localStorage.getItem('shgvcn_sidebar_collapsed') === 'true';
+  if (isSidebarCollapsed && stickySidebarNav) {
+    stickySidebarNav.classList.add('collapsed');
+  }
+
+  if (sidebarToggleBtn && stickySidebarNav) {
+    sidebarToggleBtn.addEventListener('click', () => {
+      stickySidebarNav.classList.toggle('collapsed');
+      const collapsed = stickySidebarNav.classList.contains('collapsed');
+      localStorage.setItem('shgvcn_sidebar_collapsed', collapsed);
+    });
+  }
 
   const khoaTitles = {
     all: { pill: "Dành cho tất cả các Khóa sinh viên", heading: "Nội dung Thông tin Học vụ (Tổng hợp)" },
@@ -70,9 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const isActive = originalIndex === activeTopicIndex ? 'active' : '';
 
       return `
-        <button type="button" class="nav-item ${isActive}" data-index="${originalIndex}" data-id="${topic.id}">
+        <button type="button" class="nav-item ${isActive}" data-index="${originalIndex}" data-id="${topic.id}" title="${escapeHtml(topic.title)}">
           <span class="nav-icon-box">${topic.icon}</span>
-          <span class="truncate">${escapeHtml(topic.title)}</span>
+          <span class="nav-title-text">${escapeHtml(topic.title)}</span>
         </button>
       `;
     }).join('');

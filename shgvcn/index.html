@@ -11,13 +11,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=35.0.0">
-  <link rel="stylesheet" href="/header.css?v=35.0.0">
-  <script src="/header.js?v=35.0.0"></script>
+  <link rel="stylesheet" href="style.css?v=36.0.0">
+  <link rel="stylesheet" href="/header.css?v=36.0.0">
+  <script src="/header.js?v=36.0.0"></script>
 </head>
 <body>
 
-  <!-- Isolated Custom Header for SHGVCN with 5 Action Buttons (Tổng hợp + 4 Khóa) -->
+  <!-- Isolated Header for SHGVCN with 5 Action Buttons (Tổng hợp + 4 Khóa) -->
   <header class="portal-global-header shgvcn-isolated-header">
     <div class="portal-header-container">
       
@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <!-- 5 Menu Header Action Tabs: Tổng hợp + 4 Khóa (Right) -->
+      <!-- 5 Header Action Tabs: Tổng hợp + 4 Khóa (Right) -->
       <nav class="shgvcn-header-nav" id="shgvcnHeaderNav">
         <button type="button" class="shgvcn-nav-tab active" data-khoa="all">
           <span class="tab-icon">📚</span>
@@ -53,43 +53,36 @@
     </div>
   </header>
 
-  <!-- Hero Section: Pure CSS 3D Cloud Cover Banner (Drawn in Code, No Heavy Image) -->
-  <section class="shgvcn-hero">
+  <!-- Modern Hero Section (Aesthetic, Open Layout, No Heavy Frame Box) -->
+  <section class="shgvcn-modern-hero">
     <div class="hero-inner">
 
-      <!-- 3D Cloud Title Board Component -->
-      <div class="shgvcn-hero-board">
-        
-        <!-- Top Institutional Badges -->
-        <div class="hero-top-badges">
-          <div class="uef-institution-pill">
-            <span class="uef-red-badge">UEF</span>
-            <div class="uef-sub-titles">
-              <span class="uef-uni-name">ĐẠI HỌC KINH TẾ - TÀI CHÍNH TP.HCM</span>
-              <span class="qs-stars-badge">★★★★ QS STARS RATING SYSTEM</span>
-            </div>
-          </div>
-          <div class="dept-capsule-badge">TRUNG TÂM HỖ TRỢ HỌC VỤ</div>
+      <!-- Top Branding Pill -->
+      <div class="hero-institution-strip">
+        <div class="inst-pill">
+          <span class="inst-logo-badge">UEF</span>
+          <span class="inst-name">ĐẠI HỌC KINH TẾ - TÀI CHÍNH TP.HCM</span>
+          <span class="inst-divider">•</span>
+          <span class="inst-stars">★★★★ QS STARS</span>
         </div>
-
-        <!-- 3D Cloud Wavy Card Body -->
-        <div class="hero-cloud-card">
-          <div class="cloud-layer-back"></div>
-          <div class="cloud-layer-front">
-            <h1 class="hero-title-line-1">THÔNG TIN HỌC VỤ</h1>
-            <h2 class="hero-title-line-2">SINH HOẠT GIÁO VIÊN CHỦ NHIỆM</h2>
-            <h3 class="hero-title-line-3">Học kỳ 1A, Năm học 2026-2027</h3>
-            
-            <!-- Dynamic 3D Target Capsule -->
-            <div class="hero-target-pill" id="heroTargetPill">
-              Dành cho tất cả các Khóa sinh viên
-            </div>
-          </div>
-        </div>
-
+        <div class="inst-dept-pill">TRUNG TÂM HỖ TRỢ HỌC VỤ</div>
       </div>
 
-      <!-- Search Box directly below Title Board -->
+      <!-- Main Open Typography -->
+      <div class="hero-typography-group">
+        <h1 class="hero-main-title">THÔNG TIN HỌC VỤ</h1>
+        <h2 class="hero-sub-title">SINH HOẠT GIÁO VIÊN CHỦ NHIỆM</h2>
+        <div class="hero-semester-meta">
+          <span class="semester-tag">Học kỳ 1A • Năm học 2026 - 2027</span>
+        </div>
+        
+        <!-- Dynamic Target Badge -->
+        <div class="hero-target-pill-modern" id="heroTargetPill">
+          Dành cho tất cả các Khóa sinh viên
+        </div>
+      </div>
+
+      <!-- Search Box directly below Title -->
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="search-icon">
           <circle cx="11" cy="11" r="8"></circle>
@@ -102,30 +95,48 @@
     </div>
   </section>
 
-  <!-- Main Content Layout (Sticky Left-Pinned Sidebar) -->
+  <!-- Main Content Layout (Collapsible Left-Pinned Sidebar + Centered Content Area) -->
   <main class="shgvcn-main">
-    <div class="main-layout">
+    <div class="main-layout" id="mainLayout">
       
-      <!-- Left Sticky Sidebar Nav (Pinned firmly on the left) -->
+      <!-- Left Sticky Sidebar Nav (With Collapse / Expand Toggle Button) -->
       <aside class="sidebar-nav" id="stickySidebarNav">
-        <div class="sidebar-title">Mục lục Thông tin Học vụ</div>
+        
+        <div class="sidebar-header-bar">
+          <div class="sidebar-title-group">
+            <span class="sidebar-title-icon">📋</span>
+            <span class="sidebar-title-text">MỤC LỤC HỌC VỤ</span>
+          </div>
+          <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" title="Thu gọn / Mở rộng mục lục">
+            <svg class="toggle-icon-svg toggle-svg-collapse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <svg class="toggle-icon-svg toggle-svg-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
         <nav class="nav-list" id="navList">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </nav>
       </aside>
 
-      <!-- Right Main Content Area -->
+      <!-- Right Main Content Area (Centered with elegant margins) -->
       <section class="content-area">
-        <div class="content-header">
-          <h3 id="sectionHeading">Nội dung Thông tin Học vụ (Tổng hợp)</h3>
-          <span class="topic-count-badge" id="topicCountBadge">17 mục nội dung</span>
-        </div>
+        <div class="content-centered-container">
+          
+          <div class="content-header">
+            <h3 id="sectionHeading">Nội dung Thông tin Học vụ (Tổng hợp)</h3>
+            <span class="topic-count-badge" id="topicCountBadge">17 mục nội dung</span>
+          </div>
 
-        <!-- Single Active Topic Viewer -->
-        <div class="active-topic-container" id="activeTopicViewer">
-          <!-- Dynamically populated from SHGVCN_DATA -->
-        </div>
+          <!-- Single Active Topic Viewer -->
+          <div class="active-topic-container" id="activeTopicViewer">
+            <!-- Dynamically populated from SHGVCN_DATA -->
+          </div>
 
+        </div>
       </section>
 
     </div>
@@ -231,7 +242,7 @@
     </div>
   </footer>
 
-  <script src="data.js?v=35.0.0"></script>
-  <script src="main.js?v=35.0.0"></script>
+  <script src="data.js?v=36.0.0"></script>
+  <script src="main.js?v=36.0.0"></script>
 </body>
 </html>
