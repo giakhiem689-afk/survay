@@ -28,7 +28,7 @@ const SHGVCN_DATA = {
     {
       id: "trung-tam-ho-tro-hoc-vu",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
-      title: "I. TRUNG TÂM HỖ TRỢ HỌC VỤ",
+      title: "I. Trung tâm hỗ trợ học vụ",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
       content: `
@@ -664,7 +664,7 @@ const SHGVCN_DATA = {
     {
       id: "tien-do-dao-tao",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`,
-      title: "VI. TIẾN ĐỘ ĐÀO TẠO",
+      title: "VI. Tiến độ đào tạo",
       bgColor: "pastel-purple",
       accentColor: "#7c3aed",
       content: `
@@ -728,7 +728,7 @@ const SHGVCN_DATA = {
     {
       id: "xep-loai-hoc-luc",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>`,
-      title: "VII. XẾP LOẠI HỌC LỰC",
+      title: "VII. Xếp loại học lực",
       bgColor: "pastel-green",
       accentColor: "#059669",
       content: `
@@ -829,7 +829,7 @@ const SHGVCN_DATA = {
     {
       id: "dieu-kien-duy-tri-hoc-bong-tuyen-sinh",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>`,
-      title: "VIII. ĐIỀU KIỆN DUY TRÌ HỌC BỔNG TUYỂN SINH",
+      title: "VIII. Điều kiện duy trì học bổng tuyển sinh",
       bgColor: "pastel-amber",
       accentColor: "#d97706",
       content: `
@@ -993,7 +993,7 @@ const SHGVCN_DATA = {
     {
       id: "hoc-lai-va-hoc-cai-thien",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>`,
-      title: "XII. HỌC LẠI VÀ HỌC CẢI THIỆN",
+      title: "XII. Học lại và học cải thiện",
       bgColor: "pastel-red",
       accentColor: "#dc2626",
       content: `
@@ -1045,7 +1045,7 @@ const SHGVCN_DATA = {
     {
       id: "dang-ky-chuong-trinh-hoc-song-bang-song-nganh",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
-      title: "XIII. ĐĂNG KÝ CHƯƠNG TRÌNH HỌC SONG BẰNG/SONG NGÀNH",
+      title: "XIII. Học song bằng/song ngành",
       bgColor: "pastel-green",
       accentColor: "#059669",
       content: `
@@ -1162,7 +1162,7 @@ const SHGVCN_DATA = {
     {
       id: "cam-nang-ho-tro-hoc-vu",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 6.5 2z"></path></svg>`,
-      title: "XV. CẨM NANG HỖ TRỢ HỌC VỤ",
+      title: "XV. Cẩm nang hỗ trợ học vụ",
       bgColor: "pastel-amber",
       accentColor: "#d97706",
       content: `
@@ -1185,7 +1185,7 @@ const SHGVCN_DATA = {
     {
       id: "mot-so-giai-phap-ho-tro-sinh-vien-hoc-tap-hieu-qua",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>`,
-      title: "XVI. MỘT SỐ GIẢI PHÁP HỖ TRỢ SINH VIÊN HỌC TẬP HIỆU QUẢ",
+      title: "XVI. Phương pháp học tập hiệu quả",
       bgColor: "pastel-green",
       accentColor: "#059669",
       content: `
