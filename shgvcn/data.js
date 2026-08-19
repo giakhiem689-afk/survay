@@ -724,41 +724,40 @@ const SHGVCN_DATA = {
             Sinh viên được xếp loại học lực theo Điểm Trung bình học kỳ, Điểm Trung bình năm học hoặc Điểm Trung bình tích lũy (theo thang điểm hệ 4) như sau:
           </p>
 
-          <div class="info-table-wrap" style="box-shadow: 0 4px 14px rgba(15,43,82,0.08); border: 1.5px solid #cbd5e1;">
-            <table class="info-table" style="font-size: 12.5px;">
+                    <div class="info-table-wrap" style="box-shadow: 0 4px 14px rgba(15,43,82,0.08); border: 1.5px solid #cbd5e1; max-width: 700px; margin: 16px auto;">
+            <table class="info-table" style="font-size: 12.5px; text-align: center;">
               <thead>
                 <tr style="background: linear-gradient(135deg, #0f2b52 0%, #1e3a8a 100%); color: #ffffff;">
-                  <th style="padding: 10px 14px; font-weight: 800; width: 220px;">Xếp loại</th>
-                  <th style="padding: 10px 14px; font-weight: 800;">Điểm trung bình</th>
+                  <th style="padding: 10px 14px; font-weight: 800; width: 40%; text-align: center; border-right: 1px solid rgba(255,255,255,0.15);">Xếp loại</th>
+                  <th style="padding: 10px 14px; font-weight: 800; text-align: center;">Điểm trung bình</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="background:#f0fdf4; border-bottom: 1px solid #bbf7d0;">
-                  <td style="padding: 10px 14px;"><strong style="color:#15803d; font-size: 13px;">🌟 XUẤT SẮC</strong></td>
-                  <td style="padding: 10px 14px;"><span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.60 đến 4.00</span></td>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #bbf7d0;"><strong style="color:#15803d; font-size: 13px;">🌟 XUẤT SẮC</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;"><span style="background: #dcfce7; color: #15803d; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.60 đến 4.00</span></td>
                 </tr>
                 <tr style="background:#f0fdf4; border-bottom: 1px solid #bbf7d0;">
-                  <td style="padding: 10px 14px;"><strong style="color:#15803d; font-size: 13px;">✨ GIỎI</strong></td>
-                  <td style="padding: 10px 14px;"><span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.20 đến 3.59</span></td>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #bbf7d0;"><strong style="color:#15803d; font-size: 13px;">✨ GIỎI</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;"><span style="background: #dcfce7; color: #15803d; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 3.20 đến 3.59</span></td>
                 </tr>
                 <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 10px 14px;"><strong style="color:#0284c7; font-size: 13px;">👍 KHÁ</strong></td>
-                  <td style="padding: 10px 14px;"><span style="background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.50 đến 3.19</span></td>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #e2e8f0;"><strong style="color:#0284c7; font-size: 13px;">👍 KHÁ</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;"><span style="background: #e0f2fe; color: #0369a1; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.50 đến 3.19</span></td>
                 </tr>
                 <tr style="background: #fffbeb; border-bottom: 1.5px solid #fde68a;">
-                  <td style="padding: 10px 14px;"><strong style="color:#d97706; font-size: 13px;">⚠️ TRUNG BÌNH</strong></td>
-                  <td style="padding: 10px 14px;">
-                    <span style="background: #fef3c7; color: #b45309; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.00 đến 2.49</span>
-                    <span style="margin-left: 8px; font-size: 11.5px; color: #b45309; font-weight: 700;">(Mức sàn tối thiểu để đủ điều kiện xét Tốt nghiệp)</span>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #fde68a;"><strong style="color:#d97706; font-size: 13px;">⚠️ TRUNG BÌNH</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;">
+                    <span style="background: #fef3c7; color: #b45309; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 2.00 đến 2.49</span>
                   </td>
                 </tr>
                 <tr style="background:#fff1f2; border-bottom: 1px solid #fecdd3;">
-                  <td style="padding: 10px 14px;"><strong style="color:#dc2626; font-size: 13px;">❗ YẾU</strong></td>
-                  <td style="padding: 10px 14px;"><span style="background: #fee2e2; color: #b91c1c; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 1.00 đến 1.99</span></td>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #fecdd3;"><strong style="color:#dc2626; font-size: 13px;">❗ YẾU</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;"><span style="background: #fee2e2; color: #b91c1c; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình từ 1.00 đến 1.99</span></td>
                 </tr>
                 <tr style="background:#fee2e2;">
-                  <td style="padding: 10px 14px;"><strong style="color:#991b1b; font-size: 13px;">🚨 KÉM</strong></td>
-                  <td style="padding: 10px 14px;"><span style="background: #fecdd3; color: #991b1b; padding: 3px 10px; border-radius: 6px; font-weight: 800;">Điểm trung bình dưới 1.00</span></td>
+                  <td style="padding: 10px 14px; text-align: center; border-right: 1px solid #fee2e2;"><strong style="color:#991b1b; font-size: 13px;">🚨 KÉM</strong></td>
+                  <td style="padding: 10px 14px; text-align: center;"><span style="background: #fecdd3; color: #991b1b; padding: 3px 12px; border-radius: 6px; font-weight: 800;">Điểm trung bình dưới 1.00</span></td>
                 </tr>
               </tbody>
             </table>
