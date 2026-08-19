@@ -149,7 +149,7 @@ const SHGVCN_DATA = {
     {
       id: "thong-tin-luu-y-quan-trong",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 1 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`,
-      title: "II. MỘT SỐ THÔNG TIN LƯU Ý QUAN TRỌNG",
+      title: "II. Lưu ý quan trọng",
       bgColor: "pastel-red",
       accentColor: "#dc2626",
       content: `
@@ -195,7 +195,7 @@ const SHGVCN_DATA = {
     {
       id: "ke-hoach-hoc-tap",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
-      title: "III. KẾ HOẠCH HỌC TẬP",
+      title: "III. Kế hoạch học tập",
       bgColor: "pastel-amber",
       accentColor: "#d97706",
       content: `
@@ -558,7 +558,7 @@ const SHGVCN_DATA = {
     {
       id: "checklist-cac-dieu-kien-xet-tot-nghiep",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>`,
-      title: "IV. CHECKLIST CÁC ĐIỀU KIỆN XÉT TỐT NGHIỆP",
+      title: "IV. Điều kiện xét tốt nghiệp",
       bgColor: "pastel-green",
       accentColor: "#059669",
       content: `
@@ -636,7 +636,7 @@ const SHGVCN_DATA = {
     {
       id: "dieu-kien-chung-chi-tieng-anh-tin-hoc-chuan-dau-ra",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
-      title: "V. ĐIỀU KIỆN CHỨNG CHỈ TIẾNG ANH, TIN HỌC CHUẨN ĐẦU RA",
+      title: "V. Chuẩn đầu ra tiếng anh, tin học",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
       content: `
@@ -857,7 +857,7 @@ const SHGVCN_DATA = {
     {
       id: "dang-ky-hoc-phu-dao-hoan-toan-mien-phi",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`,
-      title: "IX. ĐĂNG KÝ HỌC PHỤ ĐẠO - HOÀN TOÀN MIỄN PHÍ",
+      title: "IX. Đăng ký học phụ đạo (miễn phí)",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
       content: `
@@ -913,7 +913,7 @@ const SHGVCN_DATA = {
     {
       id: "danh-gia-ket-qua-hoc-tap",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>`,
-      title: "X. ĐÁNH GIÁ KẾT QUẢ HỌC TẬP",
+      title: "X. Đánh giá kết quả học tập",
       bgColor: "pastel-purple",
       accentColor: "#7c3aed",
       content: `
@@ -965,7 +965,7 @@ const SHGVCN_DATA = {
     {
       id: "huong-dan-cach-tinh-diem",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
-      title: "XI. HƯỚNG DẪN CÁCH TÍNH ĐIỂM",
+      title: "XI. Hướng dẫn cách tính điểm",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
       content: `
@@ -1134,7 +1134,7 @@ const SHGVCN_DATA = {
     {
       id: "huong-dan-su-dung-cong-thong-tin-quan-ly-dao-tao",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
-      title: "XIV. HƯỚNG DẪN SỬ DỤNG CỔNG THÔNG TIN QUẢN LÝ ĐÀO TẠO VÀ DỊCH VỤ TRỰC TUYẾN",
+      title: "XIV. Hướng dẫn cổng thông đào tạo",
       bgColor: "pastel-blue",
       accentColor: "#0284c7",
       content: `
@@ -1492,7 +1492,7 @@ const SHGVCN_DATA = {
     {
       id: "ghi-nhan-phan-hoi-gop-y-tu-sinh-vien",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`,
-      title: "XVII. GHI NHẬN PHẢN HỒI, GÓP Ý TỪ SINH VIÊN",
+      title: "XVII. Ghi nhận phản hồi, góp ý từ sinh viên",
       bgColor: "pastel-green",
       accentColor: "#059669",
       content: `
