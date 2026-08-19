@@ -223,7 +223,7 @@ body {
   max-width: 1300px !important;
   margin: 0 auto !important;
   display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr) minmax(0, 1.2fr) !important;
   gap: 16px !important;
   align-items: stretch !important;
   padding-bottom: 16px !important;
@@ -401,7 +401,13 @@ body {
 
 @media (max-width: 992px) {
   .portal-footer-container {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr) minmax(0, 1.2fr) !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
 }

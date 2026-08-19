@@ -15,9 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=40.0.0">
-  <link rel="stylesheet" href="/header.css?v=40.0.0">
-  <script src="/header.js?v=40.0.0"></script>
+  <link rel="stylesheet" href="style.css?v=41.0.0">
+  <link rel="stylesheet" href="/header.css?v=41.0.0">
+  <script src="/header.js?v=41.0.0"></script>
 </head>
 <body>
 
@@ -58,10 +58,11 @@
   </header>
 
   <!-- Modern Hero Section (Aesthetic, Open Layout, No Heavy Frame Box) -->
+    <!-- Modern Hero Section (Single Line Title, Prominent Semester, No Heavy Box) -->
   <section class="shgvcn-modern-hero">
-    <div class="hero-inner">
+    <div class="hero-inner modern-hero-content">
 
-      <!-- Top Branding Pill -->
+      <!-- Top Branding Strip -->
       <div class="hero-institution-strip">
         <div class="inst-pill">
           <span class="inst-logo-badge">UEF</span>
@@ -72,16 +73,15 @@
         <div class="inst-dept-pill">TRUNG TÂM HỖ TRỢ HỌC VỤ</div>
       </div>
 
-      <!-- Main Open Typography -->
+      <!-- Main Open Typography on Single Line -->
       <div class="hero-typography-group">
-        <h1 class="hero-main-title">THÔNG TIN HỌC VỤ</h1>
-        <h2 class="hero-sub-title">SINH HOẠT GIÁO VIÊN CHỦ NHIỆM</h2>
-        <div class="hero-semester-meta">
-          <span class="semester-tag">Học kỳ 1A • Năm học 2026 - 2027</span>
+        <h1 class="modern-hero-title">Thông tin Học vụ Sinh hoạt Giáo viên Chủ nhiệm</h1>
+        <div class="hero-semester-meta" style="margin: 8px 0 10px 0;">
+          <span class="modern-hero-badge-semester">🎓 Học kỳ 1A / Năm học 2026-2027</span>
         </div>
         
-        <!-- Dynamic Target Badge -->
-        <div class="hero-target-pill-modern" id="heroTargetPill">
+        <!-- Dynamic Target Badge (Hidden on Tổng hợp) -->
+        <div class="hero-target-pill-modern cohort-tag-hidden" id="heroTargetPill">
           Dành cho tất cả các Khóa sinh viên
         </div>
       </div>
@@ -92,7 +92,7 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Tra cứu nội dung thông tin học vụ (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại)...">
+        <input type="text" id="searchInput" placeholder="Tra cứu nội dung thông tin học vụ (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại, UEF ID, LMS)...">
         <button type="button" id="clearSearchBtn" class="clear-btn hidden">✕</button>
       </div>
 
@@ -211,11 +211,11 @@
           </li>
           <li>
             <span class="link-label">Zalopage:</span>
-            <a href="https://zalo.me/2106368086678348926" target="_blank" rel="noopener" class="footer-link">zalo.me/2106368086678348926</a>
+            <a href="https://zalo.me/2106368086678348926" target="_blank" rel="noopener" class="footer-link">UEF Trung tâm Hỗ trợ học vụ</a>
           </li>
           <li>
             <span class="link-label">Fanpage:</span>
-            <a href="https://www.facebook.com/UEF.TTHocVu" target="_blank" rel="noopener" class="footer-link">UEF - Trung tâm Hỗ trợ học vụ</a>
+            <a href="https://www.facebook.com/TrungtamHTHV" target="_blank" rel="noopener" class="footer-link">UEF Trung tâm Hỗ trợ học vụ</a>
           </li>
           <li>
             <span class="link-label">Chat Zalo:</span>
@@ -246,7 +246,24 @@
     </div>
   </footer>
 
-    <!-- Floating Back to Top Button (Bottom Right Corner) -->
+      <!-- Image Zoom Modal Dialog -->
+  <div class="image-modal-overlay" id="imageModalOverlay" onclick="handleModalOverlayClick(event)">
+    <div class="image-modal-card">
+      <div class="image-modal-topbar">
+        <h4 class="image-modal-title" id="imageModalTitle">Xem hình ảnh chi tiết</h4>
+        <button type="button" class="image-modal-close-btn" onclick="closeImageModal()" title="Đóng">✕</button>
+      </div>
+      <div class="image-modal-body">
+        <img src="" id="imageModalImg" alt="Phóng to hình ảnh" />
+      </div>
+      <div class="image-modal-footer">
+        <a href="" id="imageModalDownloadBtn" download class="btn-action-download">⬇️ Tải ảnh về máy</a>
+        <button type="button" class="btn-action-view" onclick="closeImageModal()">Đóng cửa sổ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button (Bottom Right Corner) -->
   <button type="button" class="back-to-top-btn hidden" id="backToTopBtn" title="Trở về đầu tiêu đề / đầu trang" aria-label="Trở về đầu trang">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="back-to-top-svg">
       <polyline points="18 15 12 9 6 15"></polyline>
@@ -254,7 +271,7 @@
     <span class="back-to-top-text">Về đầu trang</span>
   </button>
 
-  <script src="data.js?v=40.0.0"></script>
-  <script src="main.js?v=40.0.0"></script>
+  <script src="data.js?v=41.0.0"></script>
+  <script src="main.js?v=41.0.0"></script>
 </body>
 </html>
