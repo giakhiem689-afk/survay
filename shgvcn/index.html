@@ -11,15 +11,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=34.0.0">
-  <link rel="stylesheet" href="/header.css?v=34.0.0">
-  <script src="/header.js?v=34.0.0"></script>
+  <link rel="stylesheet" href="style.css?v=35.0.0">
+  <link rel="stylesheet" href="/header.css?v=35.0.0">
+  <script src="/header.js?v=35.0.0"></script>
 </head>
 <body>
 
-    <!-- Static Unified Global Header (Isolated for SHGVCN) -->
-  <header class="portal-global-header">
+  <!-- Isolated Custom Header for SHGVCN with 5 Action Buttons (Tổng hợp + 4 Khóa) -->
+  <header class="portal-global-header shgvcn-isolated-header">
     <div class="portal-header-container">
+      
+      <!-- Brand Group (Left) -->
       <div class="portal-brand-link">
         <span class="portal-uef-logo-text">UEF</span>
         <div class="portal-brand-text-group">
@@ -27,40 +29,67 @@
           <p class="portal-brand-subtitle">Thông tin Học vụ Sinh hoạt GVCN • Học kỳ 1A / Năm học 2026-2027</p>
         </div>
       </div>
+
+      <!-- 5 Menu Header Action Tabs: Tổng hợp + 4 Khóa (Right) -->
+      <nav class="shgvcn-header-nav" id="shgvcnHeaderNav">
+        <button type="button" class="shgvcn-nav-tab active" data-khoa="all">
+          <span class="tab-icon">📚</span>
+          <span class="tab-text">Tổng hợp</span>
+        </button>
+        <button type="button" class="shgvcn-nav-tab" data-khoa="k2023">
+          <span class="tab-text">Khóa 2023</span>
+        </button>
+        <button type="button" class="shgvcn-nav-tab" data-khoa="k2024">
+          <span class="tab-text">Khóa 2024</span>
+        </button>
+        <button type="button" class="shgvcn-nav-tab" data-khoa="k2025">
+          <span class="tab-text">Khóa 2025</span>
+        </button>
+        <button type="button" class="shgvcn-nav-tab" data-khoa="k2026">
+          <span class="tab-text">Khóa 2026</span>
+        </button>
+      </nav>
+
     </div>
   </header>
 
-  <!-- Khóa Selection Hero Section -->
+  <!-- Hero Section: Pure CSS 3D Cloud Cover Banner (Drawn in Code, No Heavy Image) -->
   <section class="shgvcn-hero">
     <div class="hero-inner">
-      <span class="hero-tag">CHÍNH THỨC • HỌC KỲ 1A / NĂM HỌC 2026-2027</span>
-      <h2>Tài liệu Thông tin Học vụ Sinh hoạt Lớp</h2>
-      <p>Tổng hợp đầy đủ quy định, kế hoạch học tập, điều kiện xét tốt nghiệp, chuẩn đầu ra và giải pháp hỗ trợ sinh viên học tập hiệu quả từ Trung tâm Hỗ trợ học vụ UEF.</p>
 
-      <!-- Khóa Tabs Selector (Simple: Khóa 2023, Khóa 2024, ...) -->
-      <div class="khoa-tabs-container">
-        <div class="khoa-tabs" id="khoaTabs">
-          <button type="button" class="khoa-tab-btn active" data-khoa="k2023">
-            <span class="tab-title">Khóa 2023</span>
-          </button>
-          <button type="button" class="khoa-tab-btn" data-khoa="k2024">
-            <span class="tab-title">Khóa 2024</span>
-          </button>
-          <button type="button" class="khoa-tab-btn" data-khoa="k2025">
-            <span class="tab-title">Khóa 2025</span>
-          </button>
-          <button type="button" class="khoa-tab-btn" data-khoa="k2026">
-            <span class="tab-title">Khóa 2026</span>
-          </button>
+      <!-- 3D Cloud Title Board Component -->
+      <div class="shgvcn-hero-board">
+        
+        <!-- Top Institutional Badges -->
+        <div class="hero-top-badges">
+          <div class="uef-institution-pill">
+            <span class="uef-red-badge">UEF</span>
+            <div class="uef-sub-titles">
+              <span class="uef-uni-name">ĐẠI HỌC KINH TẾ - TÀI CHÍNH TP.HCM</span>
+              <span class="qs-stars-badge">★★★★ QS STARS RATING SYSTEM</span>
+            </div>
+          </div>
+          <div class="dept-capsule-badge">TRUNG TÂM HỖ TRỢ HỌC VỤ</div>
         </div>
 
-        <!-- Khóa Banner Preview Card -->
-        <div class="khoa-banner-card" id="khoaBannerCard">
-          <img id="khoaBannerImg" src="assets/bia_khoa_2023.png" alt="Bìa Sinh hoạt GVCN Khóa 2023" loading="lazy">
+        <!-- 3D Cloud Wavy Card Body -->
+        <div class="hero-cloud-card">
+          <div class="cloud-layer-back"></div>
+          <div class="cloud-layer-front">
+            <h1 class="hero-title-line-1">THÔNG TIN HỌC VỤ</h1>
+            <h2 class="hero-title-line-2">SINH HOẠT GIÁO VIÊN CHỦ NHIỆM</h2>
+            <h3 class="hero-title-line-3">Học kỳ 1A, Năm học 2026-2027</h3>
+            
+            <!-- Dynamic 3D Target Capsule -->
+            <div class="hero-target-pill" id="heroTargetPill">
+              Dành cho tất cả các Khóa sinh viên
+            </div>
+          </div>
         </div>
+
       </div>
 
-      <!-- Search Box -->
+      <!-- Search Box directly below Title Board -->
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="search-icon">
           <circle cx="11" cy="11" r="8"></circle>
@@ -69,15 +98,16 @@
         <input type="text" id="searchInput" placeholder="Tra cứu nội dung thông tin học vụ (ví dụ: tốt nghiệp, chuẩn đầu ra, học bổng, GPA, phụ đạo, học lại)...">
         <button type="button" id="clearSearchBtn" class="clear-btn hidden">✕</button>
       </div>
+
     </div>
   </section>
 
-  <!-- Main Content Layout -->
+  <!-- Main Content Layout (Sticky Left-Pinned Sidebar) -->
   <main class="shgvcn-main">
     <div class="main-layout">
       
-      <!-- Left Sticky Sidebar Nav -->
-      <aside class="sidebar-nav">
+      <!-- Left Sticky Sidebar Nav (Pinned firmly on the left) -->
+      <aside class="sidebar-nav" id="stickySidebarNav">
         <div class="sidebar-title">Mục lục Thông tin Học vụ</div>
         <nav class="nav-list" id="navList">
           <!-- Dynamically populated from SHGVCN_DATA -->
@@ -87,11 +117,11 @@
       <!-- Right Main Content Area -->
       <section class="content-area">
         <div class="content-header">
-          <h3 id="sectionHeading">Nội dung Thông tin Học vụ</h3>
+          <h3 id="sectionHeading">Nội dung Thông tin Học vụ (Tổng hợp)</h3>
           <span class="topic-count-badge" id="topicCountBadge">17 mục nội dung</span>
         </div>
 
-        <!-- Single Active Topic Viewer (Replaces long 13-accordion stack) -->
+        <!-- Single Active Topic Viewer -->
         <div class="active-topic-container" id="activeTopicViewer">
           <!-- Dynamically populated from SHGVCN_DATA -->
         </div>
@@ -102,15 +132,6 @@
   </main>
 
   <!-- Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
-    <!-- Static Unified Global Footer -->
   <footer class="portal-global-footer">
     <div class="portal-footer-container">
       
@@ -210,7 +231,7 @@
     </div>
   </footer>
 
-  <script src="data.js?v=34.0.0"></script>
-  <script src="main.js?v=34.0.0"></script>
+  <script src="data.js?v=35.0.0"></script>
+  <script src="main.js?v=35.0.0"></script>
 </body>
 </html>

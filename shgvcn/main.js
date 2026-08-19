@@ -6,34 +6,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeTopicViewer = document.getElementById('activeTopicViewer');
   const topicCountBadge = document.getElementById('topicCountBadge');
   const sectionHeading = document.getElementById('sectionHeading');
+  const heroTargetPill = document.getElementById('heroTargetPill');
 
-  // Khóa Tabs Elements
-  const khoaTabBtns = document.querySelectorAll('.khoa-tab-btn');
-  const khoaBannerImg = document.getElementById('khoaBannerImg');
+  // 5 Header Navigation Tabs
+  const headerNavTabs = document.querySelectorAll('.shgvcn-nav-tab');
 
   let searchQuery = '';
-  let selectedKhoa = 'k2023';
+  let selectedKhoa = 'all'; // Mặc định là 'Tổng hợp'
   let activeTopicIndex = 0; // Mặc định mở ngay Mục 1: Trung tâm Hỗ trợ học vụ
 
-  const khoaMeta = {
-    k2023: { cover: "assets/bia_khoa_2023.png", alt: "Bìa Sinh hoạt GVCN Khóa 2023" },
-    k2024: { cover: "assets/bia_khoa_2024.png", alt: "Bìa Sinh hoạt GVCN Khóa 2024" },
-    k2025: { cover: "assets/bia_khoa_2025.png", alt: "Bìa Sinh hoạt GVCN Khóa 2025" },
-    k2026: { cover: "assets/bia_khoa_2026.png", alt: "Bìa Sinh hoạt GVCN Khóa 2026" }
+  const khoaTitles = {
+    all: { pill: "Dành cho tất cả các Khóa sinh viên", heading: "Nội dung Thông tin Học vụ (Tổng hợp)" },
+    k2023: { pill: "Dành cho sinh viên Khóa 2023", heading: "Nội dung Thông tin Học vụ (Khóa 2023)" },
+    k2024: { pill: "Dành cho sinh viên Khóa 2024", heading: "Nội dung Thông tin Học vụ (Khóa 2024)" },
+    k2025: { pill: "Dành cho sinh viên Khóa 2025", heading: "Nội dung Thông tin Học vụ (Khóa 2025)" },
+    k2026: { pill: "Dành cho sinh viên Khóa 2026", heading: "Nội dung Thông tin Học vụ (Khóa 2026)" }
   };
 
-  // Khóa Tab Switch Listener
-  khoaTabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      khoaTabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedKhoa = btn.getAttribute('data-khoa');
+  // Header Nav Tab Switch Listener
+  headerNavTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      headerNavTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      selectedKhoa = tab.getAttribute('data-khoa') || 'all';
 
-      const meta = khoaMeta[selectedKhoa];
-      if (meta) {
-        khoaBannerImg.src = meta.cover;
-        khoaBannerImg.alt = meta.alt;
+      const meta = khoaTitles[selectedKhoa] || khoaTitles.all;
+      if (heroTargetPill) {
+        heroTargetPill.textContent = meta.pill;
       }
+      if (sectionHeading && !searchQuery) {
+        sectionHeading.textContent = meta.heading;
+      }
+
+      // Reset or refresh sidebar
+      renderSidebar();
     });
   });
 
@@ -42,15 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return SHGVCN_DATA.topics.filter(topic => {
       if (!searchQuery) return true;
       const q = searchQuery.toLowerCase();
-      const textToSearch = `${topic.title} ${topic.summary} ${topic.content}`.toLowerCase();
+      const textToSearch = `${topic.title} ${topic.summary || ''} ${topic.content}`.toLowerCase();
       return textToSearch.includes(q);
     });
   }
 
-  // 1. Render Sidebar Navigation (Bảng mục lục điều hướng)
+  // 1. Render Sidebar Navigation (Bảng mục lục điều hướng bên trái)
   function renderSidebar() {
     const topics = getFilteredTopics();
-    topicCountBadge.textContent = `${topics.length} mục nội dung`;
+    if (topicCountBadge) {
+      topicCountBadge.textContent = `${topics.length} mục nội dung`;
+    }
 
     if (topics.length === 0) {
       navList.innerHTML = `<p style="font-size: 12px; color: var(--text-muted); padding: 10px;">Không tìm thấy mục nào.</p>`;
@@ -83,15 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index < 0 || index >= SHGVCN_DATA.topics.length) return;
     activeTopicIndex = index;
 
-    // Update Sidebar active state
-    renderSidebar();
+    // Update Sidebar active state without rebuilding the whole list
+    navList.querySelectorAll('.nav-item').forEach(btn => {
+      const btnIndex = parseInt(btn.getAttribute('data-index'), 10);
+      if (btnIndex === activeTopicIndex) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
 
     // Render the active topic's content
     renderActiveTopic();
 
     // Scroll smoothly to the top of content area on mobile/small screens
     const contentArea = document.querySelector('.content-area');
-    if (contentArea && window.innerWidth < 900) {
+    if (contentArea && window.innerWidth < 992) {
       contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
@@ -165,7 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionHeading.textContent = `Kết quả tìm kiếm cho "${searchQuery}"`;
       } else {
         clearSearchBtn.classList.add('hidden');
-        sectionHeading.textContent = 'Nội dung Thông tin Học vụ';
+        const meta = khoaTitles[selectedKhoa] || khoaTitles.all;
+        sectionHeading.textContent = meta.heading;
       }
       renderSidebar();
       const filtered = getFilteredTopics();
@@ -181,7 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.value = '';
       searchQuery = '';
       clearSearchBtn.classList.add('hidden');
-      sectionHeading.textContent = 'Nội dung Thông tin Học vụ';
+      const meta = khoaTitles[selectedKhoa] || khoaTitles.all;
+      sectionHeading.textContent = meta.heading;
       renderSidebar();
       selectTopic(0);
     });
@@ -197,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/'/g, '&#039;');
   }
 
-  // Initial Run: Open Topic 0 (Trung tâm Hỗ trợ Học vụ) by default
+  // Initial Run: Open Topic 0 (Trung tâm Hỗ trợ Học vụ) by default on "Tổng hợp"
   renderSidebar();
   renderActiveTopic();
 });
