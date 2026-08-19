@@ -235,4 +235,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Run: Open Topic 0 (Trung tâm Hỗ trợ Học vụ) by default on "Tổng hợp"
   renderSidebar();
   renderActiveTopic();
+
+  // Floating Back to Top Button Logic
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.remove('hidden');
+      } else {
+        backToTopBtn.classList.add('hidden');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
 });
